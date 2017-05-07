@@ -9,7 +9,7 @@
 
 /*
  *-------------------------------------------------------------------------
- * Application Auto Loader Assemble!
+ * Composer Auto Loader Assemble!
  *-------------------------------------------------------------------------
  *
  * Autoload all the application namespaces, dependencies, and files using
