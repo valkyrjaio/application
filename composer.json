@@ -16,6 +16,7 @@
   ],
   "require"           : {
     "php"               : ">=7.1",
+    "valkyrja/valkyrja" : "^0.1.0@dev",
     "guzzlehttp/guzzle" : "^6.2",
     "twig/twig"         : "^1.33"
   },
