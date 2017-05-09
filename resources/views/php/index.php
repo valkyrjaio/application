@@ -83,12 +83,19 @@
                 font-family     : 'Tangerine', sans-serif;
                 margin          : 0 auto;
                 background      : #936BB8;
-                /*background      : #825ea3;*/
                 border-radius   : 50%;
                 position        : absolute;
                 top             : 10px;
                 left            : auto;
                 right           : 10px;
+                z-index         : 2;
+                text-decoration : none;
+                transition      : background-color 400ms ease-in;
+            }
+
+            .logo-icon:hover
+            {
+                background : #825ea3;
             }
 
             .logo-icon span
@@ -104,22 +111,24 @@
                 font-weight   : 300;
                 padding       : 20px 80px;
                 margin        : 0 auto;
-                border-bottom : 1px solid #636b6f;
+                border-bottom : 1px solid #936BB8;
             }
 
             .title:before,
             .title:after
             {
+                color   : #936BB8;
                 content : '-';
             }
 
             .tolkien
             {
+                color         : #936BB8;
                 font-size     : 30px;
                 font-family   : 'Tangerine', sans-serif;
                 line-height   : 40px;
                 padding       : 40px;
-                border-bottom : 1px solid #636b6f;
+                border-bottom : 1px solid #936BB8;
             }
 
             .links a
@@ -146,7 +155,7 @@
     </head>
     <body>
         <div class="circle"></div>
-        <div class="logo-icon"><span>Vlk</span></div>
+        <a href="http://www.valkyrja.io/" class="logo-icon"><span>Vlk</span></a>
 
         <div class="flex-center position-ref full-height">
             <div class="content">
@@ -161,7 +170,9 @@
 
                 <div class="links">
                     <a href="http://www.valkyrja.io/documentation">Documentation</a>
+                    &middot;
                     <a href="https://github.com/valkyrjaio/valkyrja">GitHub</a>
+                    &middot;
                     <a href="https://github.com/valkyrjaio/valkyrja/issues">Issues</a>
                 </div>
             </div>
