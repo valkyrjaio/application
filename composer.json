@@ -40,7 +40,7 @@
   "suggest"           : {
     "guzzlehttp/guzzle" : "Required for use with Valkyrja Client (^6.2).",
     "twig/twig"         : "Optional templating engine. Required if using TwigServiceProvider (^1.33).",
-    "predis/predis"     : "Required for use with Redis Valkyrja Cache(^1.1)."
+    "predis/predis"     : "Required for use with Redis Valkyrja Cache (^1.1)."
   },
   "minimum-stability" : "dev",
   "extra"             : {
