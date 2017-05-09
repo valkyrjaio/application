@@ -8,7 +8,8 @@
         <title>Valkyrja</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Tangerine"
+              rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
@@ -16,10 +17,21 @@
             {
                 background-color : #fff;
                 color            : #636b6f;
-                font-family      : 'Lato', sans-serif;
-                font-weight      : 100;
+                font-family      : 'Oswald', sans-serif;
+                font-weight      : normal;
+                letter-spacing   : 1px;
                 height           : 100vh;
                 margin           : 0;
+            }
+
+            *
+            {
+                z-index : 1;
+            }
+
+            *::selection
+            {
+                background : rgba(130, 94, 163, .2);
             }
 
             .full-height
@@ -39,24 +51,78 @@
                 position : relative;
             }
 
-            .top-right
-            {
-                position : absolute;
-                right    : 10px;
-                top      : 18px;
-            }
-
             .content
             {
                 text-align : center;
             }
 
-            .title
+            .circle
             {
-                font-size : 84px;
+                width         : 92vw;
+                height        : 92vw;
+                position      : fixed;
+                top           : 50%;
+                left          : 50%;
+                z-index       : 0;
+                margin        : 0 auto;
+                background    : rgba(130, 94, 163, .03);
+                border-radius : 50%;
+                border        : 4vw solid rgba(130, 94, 163, .1);
+                transform     : translate3d(-50%, -50%, 0);
             }
 
-            .links > a
+            .logo-icon
+            {
+                width           : 80px;
+                height          : 80px;
+                color           : #fff;
+                font-size       : 50px;
+                align-items     : center;
+                display         : flex;
+                justify-content : center;
+                font-family     : 'Tangerine', sans-serif;
+                margin          : 0 auto;
+                background      : #936BB8;
+                /*background      : #825ea3;*/
+                border-radius   : 50%;
+                position        : absolute;
+                top             : 10px;
+                left            : auto;
+                right           : 10px;
+            }
+
+            .logo-icon span
+            {
+                margin-top  : 8px;
+                margin-left : -10px;
+            }
+
+            .title
+            {
+                font-size     : 100px;
+                font-family   : 'Tangerine', sans-serif;
+                font-weight   : 300;
+                padding       : 20px 80px;
+                margin        : 0 auto;
+                border-bottom : 1px solid #636b6f;
+            }
+
+            .title:before,
+            .title:after
+            {
+                content : '-';
+            }
+
+            .tolkien
+            {
+                font-size     : 30px;
+                font-family   : 'Tangerine', sans-serif;
+                line-height   : 40px;
+                padding       : 40px;
+                border-bottom : 1px solid #636b6f;
+            }
+
+            .links a
             {
                 color           : #636b6f;
                 padding         : 0 25px;
@@ -67,6 +133,11 @@
                 text-transform  : uppercase;
             }
 
+            .links a:hover
+            {
+                text-decoration : underline;
+            }
+
             .m-b-md
             {
                 margin-bottom : 30px;
@@ -74,15 +145,24 @@
         </style>
     </head>
     <body>
+        <div class="circle"></div>
+        <div class="logo-icon"><span>Vlk</span></div>
+
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title">
                     Valkyrja
                 </div>
 
+                <div class="tolkien m-b-md">
+                    One Framework to rule them all, One Framework to find them, <br />
+                    One Framework to bring them all and in the lightness bind them
+                </div>
+
                 <div class="links">
-                    <a href="#/docs">Documentation</a>
-                    <a href="https://github.com/melechmizrachi/valkyrja">GitHub</a>
+                    <a href="http://www.valkyrja.io/documentation">Documentation</a>
+                    <a href="https://github.com/valkyrjaio/valkyrja">GitHub</a>
+                    <a href="https://github.com/valkyrjaio/valkyrja/issues">Issues</a>
                 </div>
             </div>
         </div>
