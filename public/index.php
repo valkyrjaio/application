@@ -7,6 +7,9 @@
  * @author  Melech Mizrachi
  */
 
+// Set a global constant for when the application as a whole started
+define('APP_START', microtime(true));
+
 /*
  *-------------------------------------------------------------------------
  * Composer Auto Loader Assemble!
