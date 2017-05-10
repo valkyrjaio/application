@@ -5,7 +5,6 @@ namespace App\Controllers;
 use Valkyrja\Contracts\Application;
 use Valkyrja\Contracts\Http\Response;
 use Valkyrja\Contracts\View\View;
-use Valkyrja\Http\RequestMethod;
 use Valkyrja\Routing\Route;
 use Valkyrja\Container\Service;
 use Valkyrja\Container\ServiceAlias;
