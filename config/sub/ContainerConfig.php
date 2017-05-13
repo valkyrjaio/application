@@ -4,10 +4,8 @@ namespace config\sub;
 
 use App\Controllers\HomeController;
 use App\Providers\AppServiceProvider;
-
 use Valkyrja\Config\Sub\ContainerConfig as ValkyrjaContainerConfig;
 use Valkyrja\Contracts\Config\Env;
-use Valkyrja\Providers\TwigServiceProvider;
 
 /**
  * Class ContainerConfig
@@ -28,7 +26,7 @@ class ContainerConfig extends ValkyrjaContainerConfig
         $this->providers = $env::CONTAINER_PROVIDERS
             ?? [
                 AppServiceProvider::class,
-                TwigServiceProvider::class,
+                // TwigServiceProvider::class,
             ];
 
         $this->services = [

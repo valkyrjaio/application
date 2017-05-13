@@ -12,11 +12,8 @@ router()->get(
     (new Route())
         ->setPath('/')
         ->setName('welcome')
-        ->setClosure(
-            function (): Valkyrja\Contracts\View\View {
-                return view('index')->withoutLayout();
-            }
-        )
+        ->setClass(App\Controllers\HomeController::class)
+        ->setProperty('welcome')
 );
 
 /**
@@ -29,11 +26,8 @@ router()->get(
     (new Route())
         ->setPath('/version')
         ->setName('version')
-        ->setClosure(
-            function (): string {
-                return app()->version();
-            }
-        )
+        ->setClass(App\Controllers\HomeController::class)
+        ->setProperty('version')
 );
 
 /**
