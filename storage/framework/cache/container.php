@@ -1,6 +1,27 @@
 <?php return [
     'services' =>
         [
+            'Valkyrja\\Contracts\\Session\\Session'                             =>
+                Valkyrja\Container\Service::__set_state([
+                    'singleton'           => true,
+                    'defaults'            => null,
+                    'id'                  => 'Valkyrja\\Contracts\\Session\\Session',
+                    'name'                => null,
+                    'closure'             => null,
+                    'dependencies'        =>
+                        [
+                            0 => 'Valkyrja\\Contracts\\Application',
+                        ],
+                    'arguments'           => null,
+                    'annotationType'      => null,
+                    'class'               => 'Valkyrja\\Session\\Session',
+                    'property'            => null,
+                    'method'              => null,
+                    'static'              => null,
+                    'function'            => null,
+                    'matches'             => null,
+                    'annotationArguments' => null,
+                ]),
             'Valkyrja\\Contracts\\Annotations\\AnnotationsParser'               =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
@@ -420,7 +441,7 @@
                     'class'               => 'Valkyrja\\View\\View',
                     'property'            => null,
                     'method'              => null,
-                    'static'              => true,
+                    'static'              => null,
                     'function'            => null,
                     'matches'             => null,
                     'annotationArguments' => null,
@@ -436,6 +457,24 @@
                     'arguments'           => null,
                     'annotationType'      => null,
                     'class'               => 'Valkyrja\\Http\\Client',
+                    'property'            => null,
+                    'method'              => null,
+                    'static'              => null,
+                    'function'            => null,
+                    'matches'             => null,
+                    'annotationArguments' => null,
+                ]),
+            'Valkyrja\\Contracts\\Filesystem\\Filesystem'                       =>
+                Valkyrja\Container\Service::__set_state([
+                    'singleton'           => true,
+                    'defaults'            => null,
+                    'id'                  => 'Valkyrja\\Contracts\\Filesystem\\Filesystem',
+                    'name'                => null,
+                    'closure'             => null,
+                    'dependencies'        => null,
+                    'arguments'           => null,
+                    'annotationType'      => null,
+                    'class'               => 'Valkyrja\\Filesystem\\Filesystem',
                     'property'            => null,
                     'method'              => null,
                     'static'              => null,
@@ -561,24 +600,6 @@
                     'property'            => null,
                     'method'              => 'getApplication',
                     'static'              => true,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Session\\Session'                             =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Session\\Session',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Session\\Session',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
                     'function'            => null,
                     'matches'             => null,
                     'annotationArguments' => null,
