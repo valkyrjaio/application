@@ -13,7 +13,7 @@ router()->get(
         ->setPath('/')
         ->setName('welcome')
         ->setClass(App\Controllers\HomeController::class)
-        ->setProperty('welcome')
+        ->setMethod('welcome')
 );
 
 /**
@@ -27,7 +27,7 @@ router()->get(
         ->setPath('/version')
         ->setName('version')
         ->setClass(App\Controllers\HomeController::class)
-        ->setProperty('version')
+        ->setMethod('version')
 );
 
 /**
