@@ -29,7 +29,10 @@
                     'id'                  => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
                     'name'                => null,
                     'closure'             => null,
-                    'dependencies'        => null,
+                    'dependencies'        =>
+                        [
+                            0 => 'Valkyrja\\Contracts\\Config\\Config',
+                        ],
                     'arguments'           => null,
                     'annotationType'      => null,
                     'class'               => 'Valkyrja\\Annotations\\AnnotationsParser',
