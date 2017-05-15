@@ -565,51 +565,8 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'App\\Controllers\\HomeController'                                  =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => null,
-                    'defaults'            => null,
-                    'id'                  => 'App\\Controllers\\HomeController',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => 'Service',
-                    'class'               => 'App\\Controllers\\HomeController',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Application@App\\Controllers\\HomeController' =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => null,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Application@App\\Controllers\\HomeController',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'App\\Controllers\\HomeController',
-                    'property'            => null,
-                    'method'              => 'getApplication',
-                    'static'              => true,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
         ],
     'aliases'  =>
         [
-            'homeController' => 'App\\Controllers\\HomeController',
         ],
 ];
