@@ -1,7 +1,7 @@
 <?php return [
     'services' =>
         [
-            'Valkyrja\\Contracts\\Session\\Session'                             =>
+            'Valkyrja\\Contracts\\Session\\Session'       =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -22,91 +22,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Annotations\\AnnotationsParser'               =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Config\\Config',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Annotations\\AnnotationsParser',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Annotations\\Annotations'                     =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Annotations\\Annotations',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Annotations\\Annotations',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Container\\Annotations\\ContainerAnnotations' =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Container\\Annotations\\ContainerAnnotations',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Container\\Annotations\\ContainerAnnotations',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Events\\Annotations\\ListenerAnnotations'     =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Events\\Annotations\\ListenerAnnotations',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Events\\Annotations\\ListenerAnnotations',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Path\\PathGenerator'                          =>
+            'Valkyrja\\Contracts\\Path\\PathGenerator'    =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -124,7 +40,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Path\\PathParser'                             =>
+            'Valkyrja\\Contracts\\Path\\PathParser'       =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -142,134 +58,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Console\\Console'                             =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Console',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                            1 => 'Valkyrja\\Contracts\\Path\\PathParser',
-                            2 => 'Valkyrja\\Contracts\\Path\\PathGenerator',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Console',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Console\\Kernel'                              =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Kernel',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                            1 => 'Valkyrja\\Contracts\\Console\\Console',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Kernel',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Console\\Input\\Input'                        =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Input\\Input',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Http\\Request',
-                            1 => 'Valkyrja\\Contracts\\Console\\Console',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Input\\Input',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Console\\Output\\OutputFormatter'             =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Output\\OutputFormatter',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Output\\OutputFormatter',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Console\\Output\\Output'                      =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Output\\Output',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Console\\Output\\OutputFormatter',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Output\\Output',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Console\\Annotations\\CommandAnnotations'     =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Console\\Annotations\\CommandAnnotations',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Console\\Annotations\\CommandAnnotations',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Http\\Kernel'                                 =>
+            'Valkyrja\\Contracts\\Http\\Kernel'           =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -291,7 +80,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\Request'                                =>
+            'Valkyrja\\Contracts\\Http\\Request'          =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -309,7 +98,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\Response'                               =>
+            'Valkyrja\\Contracts\\Http\\Response'         =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => null,
                     'defaults'            => null,
@@ -327,7 +116,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\JsonResponse'                           =>
+            'Valkyrja\\Contracts\\Http\\JsonResponse'     =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => null,
                     'defaults'            => null,
@@ -345,7 +134,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\RedirectResponse'                       =>
+            'Valkyrja\\Contracts\\Http\\RedirectResponse' =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => null,
                     'defaults'            => null,
@@ -363,7 +152,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\ResponseBuilder'                        =>
+            'Valkyrja\\Contracts\\Http\\ResponseBuilder'  =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -384,7 +173,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Routing\\Router'                              =>
+            'Valkyrja\\Contracts\\Routing\\Router'        =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
                     'defaults'            => null,
@@ -407,28 +196,7 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Routing\\Annotations\\RouteAnnotations'       =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Routing\\Annotations\\RouteAnnotations',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Annotations\\AnnotationsParser',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Routing\\Annotations\\RouteAnnotations',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\View\\View'                                   =>
+            'Valkyrja\\Contracts\\View\\View'             =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => null,
                     'defaults'            => null,
@@ -449,124 +217,27 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Http\\Client'                                 =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Http\\Client',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Http\\Client',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Filesystem\\Filesystem'                       =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Filesystem\\Filesystem',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Filesystem\\Filesystem',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Monolog\\Handler\\StreamHandler'                                   =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Monolog\\Handler\\StreamHandler',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           =>
-                        [
-                            0 => '/var/www/site/storage/logs/valkyrja.log',
-                            1 => 'debug',
-                        ],
-                    'annotationType'      => null,
-                    'class'               => 'Monolog\\Handler\\StreamHandler',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Psr\\Log\\LoggerInterface'                                         =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Psr\\Log\\LoggerInterface',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        => null,
-                    'arguments'           =>
-                        [
-                            0 => 'ApplicationLog',
-                            1 =>
-                                Valkyrja\Dispatcher\Dispatch::__set_state([
-                                    'id'                  => null,
-                                    'name'                => null,
-                                    'closure'             => null,
-                                    'dependencies'        => null,
-                                    'arguments'           => null,
-                                    'annotationType'      => null,
-                                    'class'               => 'Valkyrja\\Container\\BootstrapContainer',
-                                    'property'            => null,
-                                    'method'              => 'getLoggerHandlers',
-                                    'static'              => true,
-                                    'function'            => null,
-                                    'matches'             => null,
-                                    'annotationArguments' => null,
-                                ]),
-                        ],
-                    'annotationType'      => null,
-                    'class'               => 'Monolog\\Logger',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
-            'Valkyrja\\Contracts\\Logger\\Logger'                               =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Logger\\Logger',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Psr\\Log\\LoggerInterface',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Logger\\Logger',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
         ],
     'aliases'  =>
         [
+        ],
+    'provided' =>
+        [
+            'Valkyrja\\Contracts\\Annotations\\AnnotationsParser'               => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Annotations\\Annotations'                     => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Container\\Annotations\\ContainerAnnotations' => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Events\\Annotations\\ListenerAnnotations'     => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Annotations\\CommandAnnotations'     => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Routing\\Annotations\\RouteAnnotations'       => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+            'Valkyrja\\Contracts\\Http\\Client'                                 => 'Valkyrja\\Http\\Providers\\ClientServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Console'                             => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Kernel'                              => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Input\\Input'                        => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Output\\OutputFormatter'             => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+            'Valkyrja\\Contracts\\Console\\Output\\Output'                      => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+            'Valkyrja\\Contracts\\Filesystem\\Filesystem'                       => 'Valkyrja\\Filesystem\\Providers\\FilesystemServiceProvider',
+            'Monolog\\Handler\\StreamHandler'                                   => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Psr\\Log\\LoggerInterface'                                         => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Valkyrja\\Contracts\\Logger\\Logger'                               => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
         ],
 ];
