@@ -23,5 +23,5 @@ class Env extends ValkyrjaEnv
 
     public const EVENTS_USE_CACHE_FILE = true;
 
-    public const ROUTING_USE_ROUTES_CACHE_FILE = true;
+    public const ROUTING_USE_CACHE_FILE = true;
 }
