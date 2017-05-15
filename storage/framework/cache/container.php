@@ -173,29 +173,6 @@
                     'matches'             => null,
                     'annotationArguments' => null,
                 ]),
-            'Valkyrja\\Contracts\\Routing\\Router'        =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Routing\\Router',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                            1 => 'Valkyrja\\Contracts\\Path\\PathParser',
-                            2 => 'Valkyrja\\Contracts\\Path\\PathGenerator',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Routing\\Router',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
             'Valkyrja\\Contracts\\View\\View'             =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => null,
@@ -235,9 +212,10 @@
             'Valkyrja\\Contracts\\Console\\Input\\Input'                        => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
             'Valkyrja\\Contracts\\Console\\Output\\OutputFormatter'             => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
             'Valkyrja\\Contracts\\Console\\Output\\Output'                      => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
-            'Valkyrja\\Contracts\\Filesystem\\Filesystem'                       => 'Valkyrja\\Filesystem\\Providers\\FilesystemServiceProvider',
-            'Monolog\\Handler\\StreamHandler'                                   => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
-            'Psr\\Log\\LoggerInterface'                                         => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
-            'Valkyrja\\Contracts\\Logger\\Logger'                               => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Valkyrja\\Contracts\\Filesystem\\Filesystem' => 'Valkyrja\\Filesystem\\Providers\\FilesystemServiceProvider',
+            'Monolog\\Handler\\StreamHandler'             => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Psr\\Log\\LoggerInterface'                   => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Valkyrja\\Contracts\\Logger\\Logger'         => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+            'Valkyrja\\Contracts\\Routing\\Router'        => 'Valkyrja\\Routing\\Providers\\RoutingServiceProvider',
         ],
 ];
