@@ -1,27 +1,6 @@
 <?php return [
     'services' =>
         [
-            'Valkyrja\\Contracts\\Session\\Session'       =>
-                Valkyrja\Container\Service::__set_state([
-                    'singleton'           => true,
-                    'defaults'            => null,
-                    'id'                  => 'Valkyrja\\Contracts\\Session\\Session',
-                    'name'                => null,
-                    'closure'             => null,
-                    'dependencies'        =>
-                        [
-                            0 => 'Valkyrja\\Contracts\\Application',
-                        ],
-                    'arguments'           => null,
-                    'annotationType'      => null,
-                    'class'               => 'Valkyrja\\Session\\Session',
-                    'property'            => null,
-                    'method'              => null,
-                    'static'              => null,
-                    'function'            => null,
-                    'matches'             => null,
-                    'annotationArguments' => null,
-                ]),
             'Valkyrja\\Contracts\\Path\\PathGenerator'    =>
                 Valkyrja\Container\Service::__set_state([
                     'singleton'           => true,
@@ -217,5 +196,6 @@
             'Psr\\Log\\LoggerInterface'                                         => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
             'Valkyrja\\Contracts\\Logger\\Logger'                               => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
             'Valkyrja\\Contracts\\Routing\\Router'                              => 'Valkyrja\\Routing\\Providers\\RoutingServiceProvider',
+            'Valkyrja\\Contracts\\Session\\Session'                             => 'Valkyrja\\Session\\Providers\\SessionServiceProvider',
         ],
 ];
