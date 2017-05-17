@@ -2,10 +2,9 @@
 
 namespace config\sub;
 
+use App\Controllers\HomeController;
 use Valkyrja\Config\Sub\RoutingConfig as ValkyrjaRoutingConfig;
 use Valkyrja\Contracts\Config\Env;
-
-use App\Controllers\HomeController;
 
 /**
  * Class RoutingConfig.

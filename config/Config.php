@@ -11,7 +11,6 @@ use config\sub\RoutingConfig;
 use config\sub\SessionConfig;
 use config\sub\StorageConfig;
 use config\sub\ViewsConfig;
-
 use Valkyrja\Config\Config as ValkyrjaConfig;
 use Valkyrja\Contracts\Config\Env;
 

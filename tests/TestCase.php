@@ -4,11 +4,8 @@ namespace tests;
 
 use config\Config;
 use config\EnvTest;
-
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
-
 use tests\traits\TestRequest;
-
 use Valkyrja\Application;
 use Valkyrja\Support\Directory;
 

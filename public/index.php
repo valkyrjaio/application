@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Valkyrja - PHP framework
+ * Valkyrja - PHP framework.
  *
- * @package Valkyrja
  * @author Melech Mizrachi
  */
 

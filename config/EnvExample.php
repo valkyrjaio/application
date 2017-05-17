@@ -7,7 +7,7 @@ use Valkyrja\Config\Env as ValkyrjaEnv;
 /**
  * Class EnvExample.
  */
-class Env extends ValkyrjaEnv
+class EnvExample extends ValkyrjaEnv
 {
     public const APP_ENV      = 'production';
     public const APP_DEBUG    = false;

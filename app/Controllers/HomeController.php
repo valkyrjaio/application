@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     /**
      * Welcome action.
-     * - Example of a view being returned
+     * - Example of a view being returned.
      *
      * @return \Valkyrja\Contracts\View\View
      *
@@ -40,7 +40,7 @@ class HomeController extends Controller
 
     /**
      * Application version action.
-     * - Example of string being returned
+     * - Example of string being returned.
      *
      * @return string
      *
