@@ -11,7 +11,7 @@
 
 use Valkyrja\Routing\Route;
 
-/**
+/*
  * Welcome Route.
  * - Example of a view being returned
  *
@@ -25,7 +25,7 @@ router()->get(
         ->setMethod('welcome')
 );
 
-/**
+/*
  * Framework Version Route.
  * - Example of string being returned
  *
@@ -39,7 +39,7 @@ router()->get(
         ->setMethod('version')
 );
 
-/**
+/*
  * Property Routing Example Route.
  * - Example of string being returned from a property
  *

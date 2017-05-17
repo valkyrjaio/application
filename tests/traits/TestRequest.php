@@ -15,13 +15,13 @@ trait TestRequest
     /**
      * Call the given URI and return the Response.
      *
-     * @param  string $uri        The uri to call
-     * @param  string $method     [optional] The method to use
-     * @param  array  $parameters [optional] Query parameters for the request
-     * @param  array  $cookies    [optional] Cookies for the request
-     * @param  array  $files      [optional] Files for the request
-     * @param  array  $server     [optional] Server variables for the request
-     * @param  string $content    [optional] Content for the request
+     * @param string $uri        The uri to call
+     * @param string $method     [optional] The method to use
+     * @param array  $parameters [optional] Query parameters for the request
+     * @param array  $cookies    [optional] Cookies for the request
+     * @param array  $files      [optional] Files for the request
+     * @param array  $server     [optional] Server variables for the request
+     * @param string $content    [optional] Content for the request
      *
      * @return \Valkyrja\Contracts\Http\Response
      */
@@ -33,8 +33,7 @@ trait TestRequest
         $files = [],
         $server = [],
         $content = null
-    ): Response
-    {
+    ): Response {
         /** @var \Valkyrja\Contracts\Http\Request $request */
         $request = container()->get(Request::class);
 
@@ -53,13 +52,13 @@ trait TestRequest
     /**
      * Assert that a given call has an ok status code.
      *
-     * @param  string $uri        The uri to call
-     * @param  string $method     [optional] The method to use
-     * @param  array  $parameters [optional] Query parameters for the request
-     * @param  array  $cookies    [optional] Cookies for the request
-     * @param  array  $files      [optional] Files for the request
-     * @param  array  $server     [optional] Server variables for the request
-     * @param  string $content    [optional] Content for the request
+     * @param string $uri        The uri to call
+     * @param string $method     [optional] The method to use
+     * @param array  $parameters [optional] Query parameters for the request
+     * @param array  $cookies    [optional] Cookies for the request
+     * @param array  $files      [optional] Files for the request
+     * @param array  $server     [optional] Server variables for the request
+     * @param string $content    [optional] Content for the request
      *
      * @return void
      */
@@ -71,8 +70,7 @@ trait TestRequest
         $files = [],
         $server = [],
         $content = null
-    ): void
-    {
+    ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
         $this->assertEquals(ResponseCode::HTTP_OK, $response->getStatusCode());
@@ -81,13 +79,13 @@ trait TestRequest
     /**
      * Assert that a given call has a 404 not found status code.
      *
-     * @param  string $uri        The uri to call
-     * @param  string $method     [optional] The method to use
-     * @param  array  $parameters [optional] Query parameters for the request
-     * @param  array  $cookies    [optional] Cookies for the request
-     * @param  array  $files      [optional] Files for the request
-     * @param  array  $server     [optional] Server variables for the request
-     * @param  string $content    [optional] Content for the request
+     * @param string $uri        The uri to call
+     * @param string $method     [optional] The method to use
+     * @param array  $parameters [optional] Query parameters for the request
+     * @param array  $cookies    [optional] Cookies for the request
+     * @param array  $files      [optional] Files for the request
+     * @param array  $server     [optional] Server variables for the request
+     * @param string $content    [optional] Content for the request
      *
      * @return void
      */
@@ -99,8 +97,7 @@ trait TestRequest
         $files = [],
         $server = [],
         $content = null
-    ): void
-    {
+    ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
         $this->assertEquals(ResponseCode::HTTP_NOT_FOUND, $response->getStatusCode());
@@ -109,13 +106,13 @@ trait TestRequest
     /**
      * Assert that a given call has a redirect status code.
      *
-     * @param  string $uri        The uri to call
-     * @param  string $method     [optional] The method to use
-     * @param  array  $parameters [optional] Query parameters for the request
-     * @param  array  $cookies    [optional] Cookies for the request
-     * @param  array  $files      [optional] Files for the request
-     * @param  array  $server     [optional] Server variables for the request
-     * @param  string $content    [optional] Content for the request
+     * @param string $uri        The uri to call
+     * @param string $method     [optional] The method to use
+     * @param array  $parameters [optional] Query parameters for the request
+     * @param array  $cookies    [optional] Cookies for the request
+     * @param array  $files      [optional] Files for the request
+     * @param array  $server     [optional] Server variables for the request
+     * @param string $content    [optional] Content for the request
      *
      * @return void
      */
@@ -127,8 +124,7 @@ trait TestRequest
         $files = [],
         $server = [],
         $content = null
-    ): void
-    {
+    ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
         $this->assertEquals(true, $response->isRedirect());
@@ -137,13 +133,13 @@ trait TestRequest
     /**
      * Assert that a given call has a redirect or not found status code.
      *
-     * @param  string $uri        The uri to call
-     * @param  string $method     [optional] The method to use
-     * @param  array  $parameters [optional] Query parameters for the request
-     * @param  array  $cookies    [optional] Cookies for the request
-     * @param  array  $files      [optional] Files for the request
-     * @param  array  $server     [optional] Server variables for the request
-     * @param  string $content    [optional] Content for the request
+     * @param string $uri        The uri to call
+     * @param string $method     [optional] The method to use
+     * @param array  $parameters [optional] Query parameters for the request
+     * @param array  $cookies    [optional] Cookies for the request
+     * @param array  $files      [optional] Files for the request
+     * @param array  $server     [optional] Server variables for the request
+     * @param string $content    [optional] Content for the request
      *
      * @return void
      */
@@ -155,8 +151,7 @@ trait TestRequest
         $files = [],
         $server = [],
         $content = null
-    ): void
-    {
+    ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
         $this->assertEquals(true, $response->isRedirect() || $response->isNotFound());
