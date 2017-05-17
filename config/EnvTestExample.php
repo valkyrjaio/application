@@ -5,6 +5,6 @@ namespace config;
 /**
  * Class EnvTest.
  */
-class EnvTestExample extends Env
+class EnvTest extends Env
 {
 }
