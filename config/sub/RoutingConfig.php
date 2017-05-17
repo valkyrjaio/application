@@ -8,11 +8,7 @@ use Valkyrja\Contracts\Config\Env;
 use App\Controllers\HomeController;
 
 /**
- * Class RoutingConfig
- *
- * @package Valkyrja\Config\Sub
- *
- * @author  Melech Mizrachi
+ * Class RoutingConfig.
  */
 class RoutingConfig extends ValkyrjaRoutingConfig
 {

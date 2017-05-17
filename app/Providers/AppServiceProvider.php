@@ -5,9 +5,7 @@ namespace App\Providers;
 use Valkyrja\Support\ServiceProvider;
 
 /**
- * Class AppServiceProvider
- *
- * @package Valkyrja\Providers
+ * Class AppServiceProvider.
  */
 class AppServiceProvider extends ServiceProvider
 {

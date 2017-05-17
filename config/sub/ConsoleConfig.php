@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\ConsoleConfig as ValkyrjaConsoleConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class ConsoleConfig
- *
- * @package config\sub
+ * Class ConsoleConfig.
  */
 class ConsoleConfig extends ValkyrjaConsoleConfig
 {

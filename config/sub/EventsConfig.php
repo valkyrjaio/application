@@ -8,9 +8,7 @@ use Valkyrja\Config\Sub\EventsConfig as ValkyrjaEventsConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class EventsConfig
- *
- * @package config\sub
+ * Class EventsConfig.
  */
 class EventsConfig extends ValkyrjaEventsConfig
 {

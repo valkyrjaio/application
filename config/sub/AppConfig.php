@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\AppConfig as ValkyrjaAppConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class AppConfig
- *
- * @package config\sub
+ * Class AppConfig.
  */
 class AppConfig extends ValkyrjaAppConfig
 {

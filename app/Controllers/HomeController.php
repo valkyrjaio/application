@@ -8,9 +8,7 @@ use Valkyrja\Contracts\View\View;
 use Valkyrja\Routing\Route;
 
 /**
- * Class HomeController
- *
- * @package App\Controllers
+ * Class HomeController.
  *
  * @Route(path = '/', name = 'home')
  * @Service(id = App\Controllers\HomeController)

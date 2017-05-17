@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\AnnotationsConfig as ValkyrjaAnnotationsConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class AnnotationsConfig
- *
- * @package config\sub
+ * Class AnnotationsConfig.
  */
 class AnnotationsConfig extends ValkyrjaAnnotationsConfig
 {

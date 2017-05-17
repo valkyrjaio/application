@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\ViewsConfig as ValkyrjaViewsConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class ViewsConfig
- *
- * @package config\sub
+ * Class ViewsConfig.
  */
 class ViewsConfig extends ValkyrjaViewsConfig
 {

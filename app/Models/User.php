@@ -3,9 +3,7 @@
 namespace App\Models;
 
 /**
- * Class User
- *
- * @package App\Models
+ * Class User.
  */
 class User
 {

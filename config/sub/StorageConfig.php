@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\StorageConfig as ValkyrjaStorageConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class StorageConfig
- *
- * @package config\sub
+ * Class StorageConfig.
  */
 class StorageConfig extends ValkyrjaStorageConfig
 {

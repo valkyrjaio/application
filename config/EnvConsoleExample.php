@@ -3,9 +3,7 @@
 namespace config;
 
 /**
- * Class EnvConsoleExample
- *
- * @package config
+ * Class EnvConsoleExample.
  */
 class EnvConsoleExample extends Env
 {

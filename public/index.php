@@ -4,7 +4,7 @@
  * Valkyrja - PHP framework
  *
  * @package Valkyrja
- * @author  Melech Mizrachi
+ * @author Melech Mizrachi
  */
 
 // Set a global constant for when the application as a whole started

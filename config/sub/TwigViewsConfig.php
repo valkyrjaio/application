@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\TwigViewsConfig as ValkyrjaTwigViewsConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class TwigViewsConfig
- *
- * @package config\sub
+ * Class TwigViewsConfig.
  */
 class TwigViewsConfig extends ValkyrjaTwigViewsConfig
 {

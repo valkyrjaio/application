@@ -3,9 +3,7 @@
 namespace config;
 
 /**
- * Class EnvTest
- *
- * @package config
+ * Class EnvTest.
  */
 class EnvTest extends Env
 {

@@ -5,9 +5,7 @@ namespace App\Controllers;
 use Valkyrja\Http\Controller as BaseController;
 
 /**
- * Class Controller
- *
- * @package App\Controllers
+ * Class Controller.
  */
 abstract class Controller extends BaseController
 {

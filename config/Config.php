@@ -16,9 +16,7 @@ use Valkyrja\Config\Config as ValkyrjaConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class Config
- *
- * @package config
+ * Class Config.
  */
 class Config extends ValkyrjaConfig
 {
@@ -31,14 +29,14 @@ class Config extends ValkyrjaConfig
     {
         parent::__construct($env);
 
-        $this->app = new AppConfig($env);
+        $this->app         = new AppConfig($env);
         $this->annotations = new AnnotationsConfig($env);
-        $this->container = new ContainerConfig($env);
-        $this->events = new EventsConfig($env);
-        $this->logger = new LoggerConfig($env);
-        $this->routing = new RoutingConfig($env);
-        $this->session = new SessionConfig($env);
-        $this->storage = new StorageConfig($env);
-        $this->views = new ViewsConfig($env);
+        $this->container   = new ContainerConfig($env);
+        $this->events      = new EventsConfig($env);
+        $this->logger      = new LoggerConfig($env);
+        $this->routing     = new RoutingConfig($env);
+        $this->session     = new SessionConfig($env);
+        $this->storage     = new StorageConfig($env);
+        $this->views       = new ViewsConfig($env);
     }
 }

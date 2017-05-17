@@ -8,9 +8,7 @@ use Valkyrja\Http\RequestMethod;
 use Valkyrja\Http\ResponseCode;
 
 /**
- * Trait TestRequest
- *
- * @package tests\traits
+ * Trait TestRequest.
  */
 trait TestRequest
 {

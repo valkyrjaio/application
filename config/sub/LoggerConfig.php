@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\LoggerConfig as ValkyrjaLoggerConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class LoggerConfig
- *
- * @package config\sub
+ * Class LoggerConfig.
  */
 class LoggerConfig extends ValkyrjaLoggerConfig
 {

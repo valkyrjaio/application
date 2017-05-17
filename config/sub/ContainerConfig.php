@@ -8,9 +8,7 @@ use Valkyrja\Config\Sub\ContainerConfig as ValkyrjaContainerConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class ContainerConfig
- *
- * @package config\sub
+ * Class ContainerConfig.
  */
 class ContainerConfig extends ValkyrjaContainerConfig
 {

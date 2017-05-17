@@ -13,9 +13,7 @@ use Valkyrja\Application;
 use Valkyrja\Support\Directory;
 
 /**
- * Class TestCase
- *
- * @package tests
+ * Class TestCase.
  */
 class TestCase extends PHPUnitTestCase
 {

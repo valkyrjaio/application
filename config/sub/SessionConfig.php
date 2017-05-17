@@ -6,9 +6,7 @@ use Valkyrja\Config\Sub\SessionConfig as ValkyrjaSessionConfig;
 use Valkyrja\Contracts\Config\Env;
 
 /**
- * Class SessionConfig
- *
- * @package config\sub
+ * Class SessionConfig.
  */
 class SessionConfig extends ValkyrjaSessionConfig
 {
