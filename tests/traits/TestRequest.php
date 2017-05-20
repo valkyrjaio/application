@@ -4,8 +4,8 @@ namespace tests\traits;
 
 use Valkyrja\Contracts\Http\Request;
 use Valkyrja\Contracts\Http\Response;
-use Valkyrja\Http\RequestMethod;
-use Valkyrja\Http\ResponseCode;
+use Valkyrja\Http\Enums\RequestMethod;
+use Valkyrja\Http\Enums\StatusCode;
 
 /**
  * Trait TestRequest.
@@ -73,7 +73,7 @@ trait TestRequest
     ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
-        $this->assertEquals(ResponseCode::HTTP_OK, $response->getStatusCode());
+        $this->assertEquals(StatusCode::OK, $response->getStatusCode());
     }
 
     /**
@@ -100,7 +100,7 @@ trait TestRequest
     ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
-        $this->assertEquals(ResponseCode::HTTP_NOT_FOUND, $response->getStatusCode());
+        $this->assertEquals(StatusCode::NOT_FOUND, $response->getStatusCode());
     }
 
     /**
