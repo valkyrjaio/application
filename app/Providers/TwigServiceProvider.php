@@ -6,7 +6,6 @@ use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Valkyrja\Container\Service;
 use Valkyrja\Contracts\View\View;
-use Valkyrja\Support\Directory;
 use Valkyrja\Support\ServiceProvider;
 use Valkyrja\View\TwigView;
 
@@ -28,23 +27,63 @@ class TwigServiceProvider extends ServiceProvider
     /**
      * Publish the service provider.
      *
+     * @throws \Twig_Error_Loader
+     *
      * @return void
      */
     public function publish(): void
     {
-        // Set the env variable for views directory if its not set
-        $this->app->config()->views->twig->dir = $this->app->config()->views->twig->dir
-            ?? Directory::resourcesPath('views/twig');
+        $this->bindTwigEnvironment();
+        $this->bindTwigView();
+    }
 
-        $this->app->container()->bind(
-            (new Service())
-                ->setId(Twig_Environment::class)
-                ->setSingleton(true)
-                ->setClass(static::class)
-                ->setMethod('getTwigEnvironment')
-                ->setStatic(true)
+    /**
+     * Bind the twig environment to the container.
+     *
+     * @throws \Twig_Error_Loader
+     *
+     * @return void
+     */
+    protected function bindTwigEnvironment(): void
+    {
+        // Get the twig filesystem loader
+        $loader = new Twig_Loader_Filesystem();
+
+        // Iterate through the dirs and add each as a path in the twig loader
+        foreach ($this->app->config()->views->twig->dirs as $namespace => $dir) {
+            $loader->addPath($dir, $namespace);
+        }
+
+        // Create a new twig environment
+        $twig = new Twig_Environment(
+            $loader,
+            [
+                'cache'   => $this->app->config()->views->twig->compiledDir,
+                'debug'   => $this->app->config()->app->debug,
+                'charset' => 'utf-8',
+            ]
         );
 
+        // Iterate through the extensions
+        foreach ($this->app->config()->views->twig->extensions as $extension) {
+            // And add each extension to the twig environment
+            $twig->addExtension(new $extension());
+        }
+
+        // Set the twig environment as a singleton in the container
+        $this->app->container()->singleton(
+            Twig_Environment::class,
+            $twig
+        );
+    }
+
+    /**
+     * Bind the twig view as the view in the container.
+     *
+     * @return void
+     */
+    protected function bindTwigView(): void
+    {
         $this->app->container()->bind(
             (new Service())
                 ->setId(View::class)
@@ -52,38 +91,6 @@ class TwigServiceProvider extends ServiceProvider
                 ->setMethod('getTwigView')
                 ->setStatic(true)
         );
-    }
-
-    /**
-     * Get the twig environment.
-     *
-     * @return \Twig_Environment
-     */
-    public static function getTwigEnvironment(): Twig_Environment
-    {
-        // TODO: Ability to do loader for third party vendors
-        // config()->views->twig->map [ 'name' => 'directory' ]
-        $loader = new Twig_Loader_Filesystem(config()->views->twig->dir);
-
-        $twig = new Twig_Environment(
-            $loader,
-            [
-                'cache'   => config()->views->twig->compiledDir,
-                'debug'   => config()->app->debug,
-                'charset' => 'utf-8',
-            ]
-        );
-
-        $extensions = config()->views->twig->extensions ?? [];
-
-        // Twig Extensions registration
-        if (is_array($extensions)) {
-            foreach ($extensions as $extension) {
-                $twig->addExtension(new $extension());
-            }
-        }
-
-        return $twig;
     }
 
     /**
