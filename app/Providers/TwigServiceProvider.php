@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use config\sub\TwigViewsConfig;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Valkyrja\Container\Service;
@@ -33,6 +34,8 @@ class TwigServiceProvider extends ServiceProvider
      */
     public function publish(): void
     {
+        $this->app->config()->views->twig = new TwigViewsConfig($this->app->env());
+
         $this->bindTwigEnvironment();
         $this->bindTwigView();
     }
