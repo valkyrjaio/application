@@ -39,8 +39,10 @@
   },
   "suggest"           : {
     "guzzlehttp/guzzle" : "Required for use with Valkyrja Client (^6.2).",
-    "twig/twig"         : "Optional templating engine. Required if using TwigServiceProvider (^1.33).",
-    "predis/predis"     : "Required for use with Redis Valkyrja Cache (^1.1)."
+    "league/flysystem"  : "Required for use with Valkyrja FileSystem (^1.0).",
+    "monolog/monolog"   : "Required for use with Valkyrja Logger (^1.22).",
+    "predis/predis"     : "Required for use with Redis Valkyrja Cache (^1.1).",
+    "twig/twig"         : "Optional templating engine. Required if using TwigServiceProvider (^1.33)."
   },
   "minimum-stability" : "dev",
   "extra"             : {
