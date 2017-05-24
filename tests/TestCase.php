@@ -31,6 +31,8 @@ class TestCase extends PHPUnitTestCase
 
         $config = require \Valkyrja\Support\Directory::configPath('configuration.php');
 
-        $this->app = new Application($config, EnvTest::class);
+        \Valkyrja\Application::env(EnvTest::class);
+
+        $this->app = new Application($config);
     }
 }
