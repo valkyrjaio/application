@@ -5,7 +5,7 @@ namespace config;
 use Valkyrja\Config\Env as ValkyrjaEnv;
 
 /**
- * Class EnvExample.
+ * Class Env.
  */
 class Env extends ValkyrjaEnv
 {

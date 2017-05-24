@@ -3,7 +3,7 @@
 namespace config;
 
 /**
- * Class EnvConsoleExample.
+ * Class EnvConsole.
  */
 class EnvConsole extends Env
 {

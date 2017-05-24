@@ -24,6 +24,19 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 /*
  *-------------------------------------------------------------------------
+ * Set The Base Directory
+ *-------------------------------------------------------------------------
+ *
+ * Let's set the base directory within the web server for our application
+ * so that when we locate directories and files within the application
+ * we have a standard location from which to do so.
+ *
+ */
+
+Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/../');
+
+/*
+ *-------------------------------------------------------------------------
  * Setup The Application
  *-------------------------------------------------------------------------
  *
@@ -34,8 +47,22 @@ require_once __DIR__ . '/../vendor/autoload.php';
  *
  */
 
-/** @var \Valkyrja\Contracts\Application $app */
-$app = require __DIR__ . '/../bootstrap/app.php';
+$config = require \Valkyrja\Support\Directory::configPath('config.php');
+
+Valkyrja\Application::env(config\Env::class);
+
+/*
+ *-------------------------------------------------------------------------
+ * Start Up The Application
+ *-------------------------------------------------------------------------
+ *
+ * Let's start up the application by creating a new instance of the
+ * application class. This is going to bind all the various
+ * components together into a singular hub.
+ *
+ */
+
+$app = new Valkyrja\Application($config);
 
 /*
  *-------------------------------------------------------------------------
