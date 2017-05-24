@@ -2,7 +2,6 @@
 
 namespace tests;
 
-use config\Config;
 use config\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use tests\traits\TestRequest;
@@ -30,6 +29,8 @@ class TestCase extends PHPUnitTestCase
     {
         Directory::$BASE_PATH = realpath(__DIR__ . '/../');
 
-        $this->app = new Application(new Config(new EnvTest()));
+        $config = require \Valkyrja\Support\Directory::configPath('configuration.php');
+
+        $this->app = new Application($config, EnvTest::class);
     }
 }

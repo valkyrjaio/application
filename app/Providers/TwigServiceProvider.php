@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use config\sub\TwigViewsConfig;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Valkyrja\Container\Service;
 use Valkyrja\Contracts\View\View;
+use Valkyrja\Support\Directory;
 use Valkyrja\Support\ServiceProvider;
 use Valkyrja\View\TwigView;
 
@@ -34,7 +34,7 @@ class TwigServiceProvider extends ServiceProvider
      */
     public function publish(): void
     {
-        $this->app->config()->views->twig = new TwigViewsConfig($this->app->env());
+        $this->app->config()['view']['twig'] = require Directory::configPath('twig-views.php');
 
         $this->bindTwigEnvironment();
         $this->bindTwigView();
@@ -53,7 +53,7 @@ class TwigServiceProvider extends ServiceProvider
         $loader = new Twig_Loader_Filesystem();
 
         // Iterate through the dirs and add each as a path in the twig loader
-        foreach ($this->app->config()->views->twig->dirs as $namespace => $dir) {
+        foreach ($this->app->config()['view']['twig']['dirs'] as $namespace => $dir) {
             $loader->addPath($dir, $namespace);
         }
 
@@ -61,14 +61,14 @@ class TwigServiceProvider extends ServiceProvider
         $twig = new Twig_Environment(
             $loader,
             [
-                'cache'   => $this->app->config()->views->twig->compiledDir,
-                'debug'   => $this->app->config()->app->debug,
+                'cache'   => $this->app->config()['view']['twig']['compiledDir'],
+                'debug'   => $this->app->debug(),
                 'charset' => 'utf-8',
             ]
         );
 
         // Iterate through the extensions
-        foreach ($this->app->config()->views->twig->extensions as $extension) {
+        foreach ($this->app->config()['view']['twig']['extensions'] as $extension) {
             // And add each extension to the twig environment
             $twig->addExtension(new $extension());
         }

@@ -35,11 +35,11 @@ trait TestRequest
         $content = null
     ): Response {
         /** @var \Valkyrja\Contracts\Http\Request $request */
-        $request = container()->get(Request::class);
+        $request = $this->app->request();
 
         // If all routes should have a trailing slash
         // and the uri doesn't already end with a slash
-        if (config()->routing->trailingSlash && false === strpos($uri, '/', -1)) {
+        if (true === config()['routing']['trailingSlash'] && false === strpos($uri, '/', -1)) {
             // Add a trailing slash
             $uri .= '/';
         }

@@ -11,6 +11,8 @@
  *
  */
 
+use config\Env;
+
 Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/../');
 
 /*
@@ -24,8 +26,6 @@ Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/../');
  *
  */
 
-return new Valkyrja\Application(
-    new config\Config(
-        new config\Env()
-    )
-);
+$config = require \Valkyrja\Support\Directory::configPath('configuration.php');
+
+return new Valkyrja\Application($config, Env::class);
