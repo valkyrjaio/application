@@ -43,7 +43,7 @@
     ),
     'filePath' => '/var/www/site/bootstrap/commands.php',
     'cacheFilePath' => '/var/www/site/storage/framework/cache/commands.php',
-    'useCacheFile' => false,
+    'useCacheFile' => true,
   ),
   'container' => 
   array (
@@ -79,7 +79,7 @@
     ),
     'filePath' => '/var/www/site/bootstrap/container.php',
     'cacheFilePath' => '/var/www/site/storage/framework/cache/container.php',
-    'useCacheFile' => false,
+    'useCacheFile' => true,
   ),
   'events' => 
   array (
@@ -90,7 +90,7 @@
     ),
     'filePath' => '/var/www/site/bootstrap/events.php',
     'cacheFilePath' => '/var/www/site/storage/framework/cache/events.php',
-    'useCacheFile' => false,
+    'useCacheFile' => true,
   ),
   'filesystem' => 
   array (
@@ -111,7 +111,7 @@
     ),
     'filePath' => '/var/www/site/routes/routes.php',
     'cacheFilePath' => '/var/www/site/storage/framework/cache/routes.php',
-    'useCacheFile' => false,
+    'useCacheFile' => true,
   ),
   'session' => 
   array (
