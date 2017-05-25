@@ -1,1 +1,131 @@
-<?php return 'YToxMzp7czozOiJhcHAiO2E6OTp7czozOiJlbnYiO3M6NToibG9jYWwiO3M6NToiZGVidWciO2I6MTtzOjM6InVybCI7czo5OiJsb2NhbGhvc3QiO3M6ODoidGltZXpvbmUiO3M6MzoiVVRDIjtzOjc6InZlcnNpb24iO3M6OToiMSAoQUxQSEEpIjtzOjk6ImNvbnRhaW5lciI7czoyODoiVmFsa3lyamFcQ29udGFpbmVyXENvbnRhaW5lciI7czoxMDoiZGlzcGF0Y2hlciI7czozMDoiVmFsa3lyamFcRGlzcGF0Y2hlclxEaXNwYXRjaGVyIjtzOjY6ImV2ZW50cyI7czoyMjoiVmFsa3lyamFcRXZlbnRzXEV2ZW50cyI7czoxMjoicGF0aFJlZ2V4TWFwIjthOjc6e3M6MzoibnVtIjtzOjU6IihcZCspIjtzOjQ6InNsdWciO3M6MTU6IihbYS16QS1aMC05LV0rKSI7czo1OiJhbHBoYSI7czoxMToiKFthLXpBLVpdKykiO3M6MTU6ImFscGhhLWxvd2VyY2FzZSI7czo4OiIoW2Etel0rKSI7czoxNToiYWxwaGEtdXBwZXJjYXNlIjtzOjg6IihbQS1aXSspIjtzOjk6ImFscGhhLW51bSI7czoxNDoiKFthLXpBLVowLTldKykiO3M6MjA6ImFscGhhLW51bS11bmRlcnNjb3JlIjtzOjU6IihcdyspIjt9fXM6MTE6ImFubm90YXRpb25zIjthOjM6e3M6NzoiZW5hYmxlZCI7YjoxO3M6ODoiY2FjaGVEaXIiO3M6NDA6Ii92YXIvd3d3L3NpdGUvc3RvcmFnZS92ZW5kb3IvYW5ub3RhdGlvbnMiO3M6MzoibWFwIjthOjY6e3M6NzoiQ29tbWFuZCI7czoyNDoiVmFsa3lyamFcQ29uc29sZVxDb21tYW5kIjtzOjg6Ikxpc3RlbmVyIjtzOjI0OiJWYWxreXJqYVxFdmVudHNcTGlzdGVuZXIiO3M6NToiUm91dGUiO3M6MjI6IlZhbGt5cmphXFJvdXRpbmdcUm91dGUiO3M6NzoiU2VydmljZSI7czoyNjoiVmFsa3lyamFcQ29udGFpbmVyXFNlcnZpY2UiO3M6MTI6IlNlcnZpY2VBbGlhcyI7czozMToiVmFsa3lyamFcQ29udGFpbmVyXFNlcnZpY2VBbGlhcyI7czoxNDoiU2VydmljZUNvbnRleHQiO3M6MzM6IlZhbGt5cmphXENvbnRhaW5lclxTZXJ2aWNlQ29udGV4dCI7fX1zOjc6ImNvbnNvbGUiO2E6Njp7czoxNDoidXNlQW5ub3RhdGlvbnMiO2I6MDtzOjI1OiJ1c2VBbm5vdGF0aW9uc0V4Y2x1c2l2ZWx5IjtiOjA7czo4OiJoYW5kbGVycyI7YTowOnt9czo4OiJmaWxlUGF0aCI7czozNjoiL3Zhci93d3cvc2l0ZS9ib290c3RyYXAvY29tbWFuZHMucGhwIjtzOjEzOiJjYWNoZUZpbGVQYXRoIjtzOjUwOiIvdmFyL3d3dy9zaXRlL3N0b3JhZ2UvZnJhbWV3b3JrL2NhY2hlL2NvbW1hbmRzLnBocCI7czoxMjoidXNlQ2FjaGVGaWxlIjtiOjE7fXM6OToiY29udGFpbmVyIjthOjEwOntzOjk6InByb3ZpZGVycyI7YTowOnt9czoxMzoiY29yZVByb3ZpZGVycyI7YToxMzp7aTowO3M6NTc6IlZhbGt5cmphXEFubm90YXRpb25zXFByb3ZpZGVyc1xBbm5vdGF0aW9uc1NlcnZpY2VQcm92aWRlciI7aToxO3M6NDU6IlZhbGt5cmphXEh0dHBcUHJvdmlkZXJzXENsaWVudFNlcnZpY2VQcm92aWRlciI7aToyO3M6NDk6IlZhbGt5cmphXENvbnNvbGVcUHJvdmlkZXJzXENvbnNvbGVTZXJ2aWNlUHJvdmlkZXIiO2k6MztzOjU1OiJWYWxreXJqYVxGaWxlc3lzdGVtXFByb3ZpZGVyc1xGaWxlc3lzdGVtU2VydmljZVByb3ZpZGVyIjtpOjQ7czo0MzoiVmFsa3lyamFcSHR0cFxQcm92aWRlcnNcSHR0cFNlcnZpY2VQcm92aWRlciI7aTo1O3M6NTE6IlZhbGt5cmphXEh0dHBcUHJvdmlkZXJzXEpzb25SZXNwb25zZVNlcnZpY2VQcm92aWRlciI7aTo2O3M6NDc6IlZhbGt5cmphXExvZ2dlclxQcm92aWRlcnNcTG9nZ2VyU2VydmljZVByb3ZpZGVyIjtpOjc7czo0MzoiVmFsa3lyamFcUGF0aFxQcm92aWRlcnNcUGF0aFNlcnZpY2VQcm92aWRlciI7aTo4O3M6NTU6IlZhbGt5cmphXEh0dHBcUHJvdmlkZXJzXFJlZGlyZWN0UmVzcG9uc2VTZXJ2aWNlUHJvdmlkZXIiO2k6OTtzOjU0OiJWYWxreXJqYVxIdHRwXFByb3ZpZGVyc1xSZXNwb25zZUJ1aWxkZXJTZXJ2aWNlUHJvdmlkZXIiO2k6MTA7czo0OToiVmFsa3lyamFcUm91dGluZ1xQcm92aWRlcnNcUm91dGluZ1NlcnZpY2VQcm92aWRlciI7aToxMTtzOjQ5OiJWYWxreXJqYVxTZXNzaW9uXFByb3ZpZGVyc1xTZXNzaW9uU2VydmljZVByb3ZpZGVyIjtpOjEyO3M6NDM6IlZhbGt5cmphXFZpZXdcUHJvdmlkZXJzXFZpZXdTZXJ2aWNlUHJvdmlkZXIiO31zOjEyOiJkZXZQcm92aWRlcnMiO2E6MDp7fXM6MTQ6InVzZUFubm90YXRpb25zIjtiOjA7czoyNToidXNlQW5ub3RhdGlvbnNFeGNsdXNpdmVseSI7YjowO3M6ODoic2VydmljZXMiO2E6MDp7fXM6MTU6ImNvbnRleHRTZXJ2aWNlcyI7YTowOnt9czo4OiJmaWxlUGF0aCI7czozNzoiL3Zhci93d3cvc2l0ZS9ib290c3RyYXAvY29udGFpbmVyLnBocCI7czoxMzoiY2FjaGVGaWxlUGF0aCI7czo1MToiL3Zhci93d3cvc2l0ZS9zdG9yYWdlL2ZyYW1ld29yay9jYWNoZS9jb250YWluZXIucGhwIjtzOjEyOiJ1c2VDYWNoZUZpbGUiO2I6MTt9czo2OiJldmVudHMiO2E6Njp7czoxNDoidXNlQW5ub3RhdGlvbnMiO2I6MDtzOjI1OiJ1c2VBbm5vdGF0aW9uc0V4Y2x1c2l2ZWx5IjtiOjA7czo3OiJjbGFzc2VzIjthOjA6e31zOjg6ImZpbGVQYXRoIjtzOjM0OiIvdmFyL3d3dy9zaXRlL2Jvb3RzdHJhcC9ldmVudHMucGhwIjtzOjEzOiJjYWNoZUZpbGVQYXRoIjtzOjQ4OiIvdmFyL3d3dy9zaXRlL3N0b3JhZ2UvZnJhbWV3b3JrL2NhY2hlL2V2ZW50cy5waHAiO3M6MTI6InVzZUNhY2hlRmlsZSI7YjoxO31zOjEwOiJmaWxlc3lzdGVtIjthOjA6e31zOjY6ImxvZ2dlciI7YToyOntzOjQ6Im5hbWUiO3M6MTQ6IkFwcGxpY2F0aW9uTG9nIjtzOjg6ImZpbGVQYXRoIjtzOjM5OiIvdmFyL3d3dy9zaXRlL3N0b3JhZ2UvbG9ncy92YWxreXJqYS5sb2ciO31zOjc6InJvdXRpbmciO2E6ODp7czoxMzoidHJhaWxpbmdTbGFzaCI7YjowO3M6MTU6InVzZUFic29sdXRlVXJscyI7YjowO3M6MTQ6InVzZUFubm90YXRpb25zIjtiOjA7czoyNToidXNlQW5ub3RhdGlvbnNFeGNsdXNpdmVseSI7YjowO3M6MTE6ImNvbnRyb2xsZXJzIjthOjA6e31zOjg6ImZpbGVQYXRoIjtzOjMxOiIvdmFyL3d3dy9zaXRlL3JvdXRlcy9yb3V0ZXMucGhwIjtzOjEzOiJjYWNoZUZpbGVQYXRoIjtzOjQ4OiIvdmFyL3d3dy9zaXRlL3N0b3JhZ2UvZnJhbWV3b3JrL2NhY2hlL3JvdXRlcy5waHAiO3M6MTI6InVzZUNhY2hlRmlsZSI7YjoxO31zOjc6InNlc3Npb24iO2E6Mjp7czoyOiJpZCI7TjtzOjQ6Im5hbWUiO047fXM6Nzoic3RvcmFnZSI7YToxOntzOjEwOiJ1cGxvYWRzRGlyIjtzOjI1OiIvdmFyL3d3dy9zaXRlL3N0b3JhZ2UvYXBwIjt9czo1OiJ2aWV3cyI7YToxOntzOjM6ImRpciI7czozMzoiL3Zhci93d3cvc2l0ZS9yZXNvdXJjZXMvdmlld3MvcGhwIjt9czoxMzoiY2FjaGVGaWxlUGF0aCI7czo0ODoiL3Zhci93d3cvc2l0ZS9zdG9yYWdlL2ZyYW1ld29yay9jYWNoZS9jb25maWcucGhwIjtzOjEyOiJ1c2VDYWNoZUZpbGUiO2I6MTt9';
+<?php return array (
+  'app' => 
+  array (
+    'env' => 'local',
+    'debug' => true,
+    'url' => 'localhost',
+    'timezone' => 'UTC',
+    'version' => '1 (ALPHA)',
+    'container' => 'Valkyrja\\Container\\Container',
+    'dispatcher' => 'Valkyrja\\Dispatcher\\Dispatcher',
+    'events' => 'Valkyrja\\Events\\Events',
+    'pathRegexMap' => 
+    array (
+      'num' => '(\\d+)',
+      'slug' => '([a-zA-Z0-9-]+)',
+      'alpha' => '([a-zA-Z]+)',
+      'alpha-lowercase' => '([a-z]+)',
+      'alpha-uppercase' => '([A-Z]+)',
+      'alpha-num' => '([a-zA-Z0-9]+)',
+      'alpha-num-underscore' => '(\\w+)',
+    ),
+  ),
+  'annotations' => 
+  array (
+    'enabled' => true,
+    'cacheDir' => '/var/www/site/storage/vendor/annotations',
+    'map' => 
+    array (
+      'Command' => 'Valkyrja\\Console\\Command',
+      'Listener' => 'Valkyrja\\Events\\Listener',
+      'Route' => 'Valkyrja\\Routing\\Route',
+      'Service' => 'Valkyrja\\Container\\Service',
+      'ServiceAlias' => 'Valkyrja\\Container\\ServiceAlias',
+      'ServiceContext' => 'Valkyrja\\Container\\ServiceContext',
+    ),
+  ),
+  'console' => 
+  array (
+    'useAnnotations' => false,
+    'useAnnotationsExclusively' => false,
+    'handlers' => 
+    array (
+    ),
+    'filePath' => '/var/www/site/bootstrap/commands.php',
+    'cacheFilePath' => '/var/www/site/storage/framework/cache/commands.php',
+    'useCacheFile' => false,
+  ),
+  'container' => 
+  array (
+    'providers' => 
+    array (
+    ),
+    'coreProviders' => 
+    array (
+      0 => 'Valkyrja\\Annotations\\Providers\\AnnotationsServiceProvider',
+      1 => 'Valkyrja\\Http\\Providers\\ClientServiceProvider',
+      2 => 'Valkyrja\\Console\\Providers\\ConsoleServiceProvider',
+      3 => 'Valkyrja\\Filesystem\\Providers\\FilesystemServiceProvider',
+      4 => 'Valkyrja\\Http\\Providers\\HttpServiceProvider',
+      5 => 'Valkyrja\\Http\\Providers\\JsonResponseServiceProvider',
+      6 => 'Valkyrja\\Logger\\Providers\\LoggerServiceProvider',
+      7 => 'Valkyrja\\Path\\Providers\\PathServiceProvider',
+      8 => 'Valkyrja\\Http\\Providers\\RedirectResponseServiceProvider',
+      9 => 'Valkyrja\\Http\\Providers\\ResponseBuilderServiceProvider',
+      10 => 'Valkyrja\\Routing\\Providers\\RoutingServiceProvider',
+      11 => 'Valkyrja\\Session\\Providers\\SessionServiceProvider',
+      12 => 'Valkyrja\\View\\Providers\\ViewServiceProvider',
+    ),
+    'devProviders' => 
+    array (
+    ),
+    'useAnnotations' => false,
+    'useAnnotationsExclusively' => false,
+    'services' => 
+    array (
+    ),
+    'contextServices' => 
+    array (
+    ),
+    'filePath' => '/var/www/site/bootstrap/container.php',
+    'cacheFilePath' => '/var/www/site/storage/framework/cache/container.php',
+    'useCacheFile' => false,
+  ),
+  'events' => 
+  array (
+    'useAnnotations' => false,
+    'useAnnotationsExclusively' => false,
+    'classes' => 
+    array (
+    ),
+    'filePath' => '/var/www/site/bootstrap/events.php',
+    'cacheFilePath' => '/var/www/site/storage/framework/cache/events.php',
+    'useCacheFile' => false,
+  ),
+  'filesystem' => 
+  array (
+  ),
+  'logger' => 
+  array (
+    'name' => 'ApplicationLog',
+    'filePath' => '/var/www/site/storage/logs/valkyrja.log',
+  ),
+  'routing' => 
+  array (
+    'trailingSlash' => false,
+    'useAbsoluteUrls' => false,
+    'useAnnotations' => false,
+    'useAnnotationsExclusively' => false,
+    'controllers' => 
+    array (
+    ),
+    'filePath' => '/var/www/site/routes/routes.php',
+    'cacheFilePath' => '/var/www/site/storage/framework/cache/routes.php',
+    'useCacheFile' => false,
+  ),
+  'session' => 
+  array (
+    'id' => NULL,
+    'name' => NULL,
+  ),
+  'storage' => 
+  array (
+    'uploadsDir' => '/var/www/site/storage/app',
+  ),
+  'views' => 
+  array (
+    'dir' => '/var/www/site/resources/views/php',
+  ),
+  'cacheFilePath' => '/var/www/site/storage/framework/cache/config.php',
+  'useCacheFile' => true,
+);
