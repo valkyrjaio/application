@@ -9,46 +9,34 @@
  * file that was distributed with this source code.
  */
 
-use Valkyrja\Support\Directory;
-
 /*
  *-------------------------------------------------------------------------
- * Twig Views Configuration
+ * Session Configuration
  *-------------------------------------------------------------------------
  *
- * //
+ * You'll need to keep track of some stuff across requests, and that's
+ * where the session comes in handy. Here you'll find all necessary
+ * configurations to make the session work properly.
  *
  */
 return [
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Directories
+     * Session Id
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'dirs'        => env()::VIEWS_TWIG_DIRS ?? [
-            env()::VIEWS_TWIG_DIR_NS ?? Twig_Loader_Filesystem::MAIN_NAMESPACE => env()::VIEWS_TWIG_DIR ?? Directory::resourcesPath('views'),
-        ],
+    'id'   => env()::SESSION_ID,
 
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Compiled Directory Path
+     * Session Name
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'compiledDir' => env()::VIEWS_TWIG_COMPILED_DIR ?? Directory::storagePath('views'),
-
-    /*
-     *-------------------------------------------------------------------------
-     * Twig Views Extensions
-     *-------------------------------------------------------------------------
-     *
-     * //
-     *
-     */
-    'extensions'  => env()::VIEWS_TWIG_EXTENSIONS ?? [],
+    'name' => env()::SESSION_NAME,
 ];

@@ -13,42 +13,41 @@ use Valkyrja\Support\Directory;
 
 /*
  *-------------------------------------------------------------------------
- * Twig Views Configuration
+ * Annotations Configuration
  *-------------------------------------------------------------------------
  *
- * //
+ * Anything and everything to do with annotations and how they are
+ * configured to work within the application can be found here.
  *
  */
 return [
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Directories
+     * Annotations Enabled
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'dirs'        => env()::VIEWS_TWIG_DIRS ?? [
-            env()::VIEWS_TWIG_DIR_NS ?? Twig_Loader_Filesystem::MAIN_NAMESPACE => env()::VIEWS_TWIG_DIR ?? Directory::resourcesPath('views'),
-        ],
+    'enabled'  => env()::ANNOTATIONS_ENABLED ?? false,
 
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Compiled Directory Path
+     * Annotations Cache Dir
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'compiledDir' => env()::VIEWS_TWIG_COMPILED_DIR ?? Directory::storagePath('views'),
+    'cacheDir' => env()::ANNOTATIONS_CACHE_DIR ?? Directory::storagePath('vendor/annotations'),
 
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Extensions
+     * Annotations Map
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'extensions'  => env()::VIEWS_TWIG_EXTENSIONS ?? [],
+    'map'      => env()::ANNOTATIONS_MAP ?? [],
 ];

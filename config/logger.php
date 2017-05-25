@@ -13,42 +13,32 @@ use Valkyrja\Support\Directory;
 
 /*
  *-------------------------------------------------------------------------
- * Twig Views Configuration
+ * Logger Configuration
  *-------------------------------------------------------------------------
  *
- * //
+ * Logging is very helpful in understanding what occurs within your
+ * application when its deployed and used by multiple users aside
+ * from you and your developers. Configure that helpfulness here.
  *
  */
 return [
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Directories
+     * Logger Log Name
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'dirs'        => env()::VIEWS_TWIG_DIRS ?? [
-            env()::VIEWS_TWIG_DIR_NS ?? Twig_Loader_Filesystem::MAIN_NAMESPACE => env()::VIEWS_TWIG_DIR ?? Directory::resourcesPath('views'),
-        ],
+    'name'     => env()::LOGGER_NAME ?? 'ApplicationLog',
 
     /*
      *-------------------------------------------------------------------------
-     * Twig Views Compiled Directory Path
+     * Logger Log File Path
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    'compiledDir' => env()::VIEWS_TWIG_COMPILED_DIR ?? Directory::storagePath('views'),
-
-    /*
-     *-------------------------------------------------------------------------
-     * Twig Views Extensions
-     *-------------------------------------------------------------------------
-     *
-     * //
-     *
-     */
-    'extensions'  => env()::VIEWS_TWIG_EXTENSIONS ?? [],
+    'filePath' => env()::LOGGER_FILE_PATH ?? Directory::storagePath('logs/valkyrja.log'),
 ];

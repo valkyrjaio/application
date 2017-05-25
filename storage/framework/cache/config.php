@@ -124,8 +124,9 @@
   ),
   'views' => 
   array (
-    'dir' => '/var/www/site/resources/views/php',
+    'dir' => '/var/www/site/resources/views',
   ),
   'cacheFilePath' => '/var/www/site/storage/framework/cache/config.php',
   'useCacheFile' => true,
+  'filePath' => '/var/www/site/config/config.php',
 );

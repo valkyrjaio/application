@@ -1,5 +1,7 @@
 <?php
 
+use Valkyrja\Support\Directory;
+
 /*
  *-------------------------------------------------------------------------
  * Application Configurations
@@ -22,7 +24,7 @@ return [
      * settings for the application as a whole.
      *
      */
-    'app'         => [],
+    'app'           => require __DIR__ . '/app.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -33,7 +35,7 @@ return [
      * configured to work within the application can be found here.
      *
      */
-    'annotations' => [],
+    'annotations'   => require __DIR__ . '/annotations.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -45,7 +47,7 @@ return [
      * work can be found here.
      *
      */
-    'console'     => [],
+    'console'       => require __DIR__ . '/console.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -57,7 +59,7 @@ return [
      * necessary to make it run correctly can be found here.
      *
      */
-    'container'   => [],
+    'container'     => require __DIR__ . '/container.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -69,7 +71,7 @@ return [
      * events work without a hitch.
      *
      */
-    'events'      => [],
+    'events'        => require __DIR__ . '/events.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -81,7 +83,7 @@ return [
      * applications. Configure that manipulative module here.
      *
      */
-    'filesystem'  => [],
+    'filesystem'    => require __DIR__ . '/filesystem.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -93,7 +95,7 @@ return [
      * from you and your developers. Configure that helpfulness here.
      *
      */
-    'logger'      => [],
+    'logger'        => require __DIR__ . '/logger.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -106,7 +108,7 @@ return [
      * all the configurations for routing can be found here.
      *
      */
-    'routing'     => [],
+    'routing'       => require __DIR__ . '/routing.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -118,7 +120,7 @@ return [
      * configurations to make the session work properly.
      *
      */
-    'session'     => [],
+    'session'       => require __DIR__ . '/session.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -131,7 +133,7 @@ return [
      * that setup the storage of all the things.
      *
      */
-    'storage'     => [],
+    'storage'       => require __DIR__ . '/storage.php',
 
     /*
      *-------------------------------------------------------------------------
@@ -143,5 +145,35 @@ return [
      * all the configurations necessary to make that work properly.
      *
      */
-    'views'       => [],
+    'views'         => require __DIR__ . '/views.php',
+
+    /*
+     *-------------------------------------------------------------------------
+     * Config File Path
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'filePath' => env()::CONFIG_CACHE_FILE_PATH ?? Directory::configPath('config.php'),
+
+    /*
+     *-------------------------------------------------------------------------
+     * Config Cache File Path
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'cacheFilePath' => env()::CONFIG_CACHE_FILE_PATH ?? Directory::cachePath('config.php'),
+
+    /*
+     *-------------------------------------------------------------------------
+     * Config Use Cache File
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'useCacheFile'  => env()::CONFIG_USE_CACHE_FILE ?? true,
 ];
