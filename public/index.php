@@ -47,9 +47,14 @@ Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/../');
  *
  */
 
-$config = require \Valkyrja\Support\Directory::configPath('config.php');
-
+// Here we'll set the env file to use
 Valkyrja\Application::env(config\Env::class);
+
+// If we should use the cache file there's no point in loading the config
+// file since it'll be overridden by the cached config file
+$config = env()::CONFIG_USE_CACHE_FILE
+    ? null
+    : require Valkyrja\Support\Directory::configPath('config.php');
 
 /*
  *-------------------------------------------------------------------------
