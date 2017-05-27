@@ -23,15 +23,19 @@ class TestCase extends PHPUnitTestCase
     /**
      * Setup the test environment.
      *
+     * @throws \Valkyrja\Exceptions\InvalidContainerImplementation
+     * @throws \Valkyrja\Exceptions\InvalidDispatcherImplementation
+     * @throws \Valkyrja\Exceptions\InvalidEventsImplementation
+     *
      * @return void
      */
     public function setUp(): void
     {
         Directory::$BASE_PATH = realpath(__DIR__ . '/../');
 
-        $config = require \Valkyrja\Support\Directory::configPath('configuration.php');
+        Application::env(EnvTest::class);
 
-        \Valkyrja\Application::env(EnvTest::class);
+        $config = require Directory::configPath('configuration.php');
 
         $this->app = new Application($config);
     }
