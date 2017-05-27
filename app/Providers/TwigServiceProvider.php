@@ -4,18 +4,18 @@ namespace App\Providers;
 
 use Twig_Environment;
 use Twig_Loader_Filesystem;
+use Valkyrja\Contracts\Application;
 use Valkyrja\Contracts\View\View;
-use Valkyrja\Support\Directory;
-use Valkyrja\Support\ServiceProvider;
+use Valkyrja\Support\Provider;
 use Valkyrja\View\TwigView;
 
 /**
  * Class TwigServiceProvider.
  */
-class TwigServiceProvider extends ServiceProvider
+class TwigServiceProvider extends Provider
 {
     /**
-     * What services are provided.
+     * What items are provided.
      *
      * @var array
      */
@@ -25,34 +25,36 @@ class TwigServiceProvider extends ServiceProvider
     ];
 
     /**
-     * Publish the service provider.
+     * Publish the provider.
+     *
+     * @param \Valkyrja\Contracts\Application $app The application
      *
      * @throws \Twig_Error_Loader
      *
      * @return void
      */
-    public function publish(): void
+    public static function publish(Application $app): void
     {
-        $this->app->config()['views']['twig'] = require Directory::configPath('twig-views.php');
-
-        $this->bindTwigEnvironment();
-        $this->bindTwigView();
+        static::bindTwigEnvironment($app);
+        static::bindTwigView($app);
     }
 
     /**
      * Bind the twig environment to the container.
      *
+     * @param \Valkyrja\Contracts\Application $app The application
+     *
      * @throws \Twig_Error_Loader
      *
      * @return void
      */
-    protected function bindTwigEnvironment(): void
+    protected static function bindTwigEnvironment(Application $app): void
     {
         // Get the twig filesystem loader
         $loader = new Twig_Loader_Filesystem();
 
         // Iterate through the dirs and add each as a path in the twig loader
-        foreach ($this->app->config()['views']['twig']['dirs'] as $namespace => $dir) {
+        foreach ($app->config()['views']['twig']['dirs'] as $namespace => $dir) {
             $loader->addPath($dir, $namespace);
         }
 
@@ -60,20 +62,20 @@ class TwigServiceProvider extends ServiceProvider
         $twig = new Twig_Environment(
             $loader,
             [
-                'cache'   => $this->app->config()['views']['twig']['compiledDir'],
-                'debug'   => $this->app->debug(),
+                'cache'   => $app->config()['views']['twig']['compiledDir'],
+                'debug'   => $app->debug(),
                 'charset' => 'utf-8',
             ]
         );
 
         // Iterate through the extensions
-        foreach ($this->app->config()['views']['twig']['extensions'] as $extension) {
+        foreach ($app->config()['views']['twig']['extensions'] as $extension) {
             // And add each extension to the twig environment
             $twig->addExtension(new $extension());
         }
 
         // Set the twig environment as a singleton in the container
-        $this->app->container()->singleton(
+        $app->container()->singleton(
             Twig_Environment::class,
             $twig
         );
@@ -82,29 +84,30 @@ class TwigServiceProvider extends ServiceProvider
     /**
      * Bind the twig view as the view in the container.
      *
+     * @param \Valkyrja\Contracts\Application $app The application
+     *
      * @return void
      */
-    protected function bindTwigView(): void
+    protected static function bindTwigView(Application $app): void
     {
-        $this->app->container()->singleton(
+        $app->container()->singleton(
             View::class,
-            $this->getTwigView()
+            self::getTwigView($app)
         );
     }
 
     /**
      * Get the twig view when building a service container item.
      *
-     * @param string $template  The template
-     * @param array  $variables The variables
+     * @param \Valkyrja\Contracts\Application $app The application
      *
      * @return \Valkyrja\View\TwigView
      */
-    public function getTwigView($template = '', array $variables = []): TwigView
+    public static function getTwigView(Application $app): TwigView
     {
-        $view = new TwigView($this->app, $template, $variables);
+        $view = new TwigView($app);
 
-        $view->setTwig($this->app->container()->getSingleton(Twig_Environment::class));
+        $view->setTwig($app->container()->getSingleton(Twig_Environment::class));
 
         return $view;
     }
