@@ -33,17 +33,19 @@ require_once __DIR__ . '/../vendor/autoload.php';
  *
  */
 
-Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/../');
+Valkyrja\Support\Directory::$BASE_PATH = __DIR__ . '/../';
 
 /*
  *-------------------------------------------------------------------------
  * Setup The Application
  *-------------------------------------------------------------------------
  *
- * Let's setup the application by bootstrapping it. This will instantiate
- * the main application as well as add any required classes to the
- * service container, add environment variables, add config
- * variables, and add all the application routes.
+ * Let's setup the application by bootstrapping it. This will set the
+ * correct environment class file to use, and appropriate the config
+ * that should be loaded by the application. In dev you'll want to
+ * use the default config out of the root config directory, but
+ * when you're on a production environment definitely have
+ * your config cached and the flag set in your env class.
  *
  */
 
