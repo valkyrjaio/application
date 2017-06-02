@@ -15,7 +15,7 @@
     'Valkyrja\\Contracts\\Console\\Annotations\\CommandAnnotations' => 'Valkyrja\\Console\\Annotations\\CommandAnnotations',
     'Valkyrja\\Contracts\\Container\\Annotations\\ContainerAnnotations' => 'Valkyrja\\Container\\Annotations\\ContainerAnnotations',
     'Valkyrja\\Contracts\\Events\\Annotations\\ListenerAnnotations' => 'Valkyrja\\Events\\Annotations\\ListenerAnnotations',
-    'Valkyrja\\Contracts\\Filesystem\\Filesystem' => 'Valkyrja\\Filesystem\\Filesystem',
+    'Valkyrja\\Filesystem\\Filesystem' => 'Valkyrja\\Filesystem\\FlyFilesystem',
     'Valkyrja\\Contracts\\Http\\Client' => 'Valkyrja\\Http\\Client',
     'Valkyrja\\Contracts\\Http\\Kernel' => 'Valkyrja\\Http\\Kernel',
     'Valkyrja\\Contracts\\Http\\Request' => 'Valkyrja\\Http\\Request',

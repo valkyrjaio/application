@@ -1,5 +1,7 @@
 <?php
 
+use Valkyrja\Support\Directory;
+
 /*
  *-------------------------------------------------------------------------
  * Filesystem Configuration
@@ -11,4 +13,37 @@
  *
  */
 return [
+    /*
+     *-------------------------------------------------------------------------
+     * Filesystem Default Adapter
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'default'  => env()::FILESYSTEM_DEFAULT ?? 'local',
+
+    /*
+     *-------------------------------------------------------------------------
+     * Filesystem Adapters
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'adapters' => [
+        'local' => [
+            'dir' => env()::FILESYSTEM_LOCAL_DIR ?? Directory::storagePath('app'),
+        ],
+
+        's3' => [
+            'key'     => env()::FILESYSTEM_S3_KEY,
+            'secret'  => env()::FILESYSTEM_S3_SECRET,
+            'region'  => env()::FILESYSTEM_S3_REGION,
+            'version' => env()::FILESYSTEM_S3_VERSION,
+            'bucket'  => env()::FILESYSTEM_S3_BUCKET,
+            'dir'     => env()::FILESYSTEM_S3_DIR ?? '',
+            'options' => env()::FILESYSTEM_S3_OPTIONS ?? [],
+        ],
+    ],
 ];
