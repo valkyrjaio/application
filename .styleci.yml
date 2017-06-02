@@ -16,3 +16,9 @@ enabled:
 disabled:
   - concat_without_spaces
   - unalign_equals
+
+finder:
+  exclude:
+    - "config/EnvExample.php"
+    - "config/EnvConsoleExample.php"
+    - "config/EnvTestExample.php"
