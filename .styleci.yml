@@ -19,6 +19,9 @@ disabled:
 
 finder:
   exclude:
+    - "tests"
+    - "storage"
+  name:
     - "config/EnvExample.php"
     - "config/EnvConsoleExample.php"
     - "config/EnvTestExample.php"
