@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use Valkyrja\Container\Service;
-use Valkyrja\Container\ServiceAlias;
+use Valkyrja\Container\Annotations\Service;
+use Valkyrja\Container\Annotations\ServiceAlias;
 use Valkyrja\Contracts\View\View;
-use Valkyrja\Routing\Route;
+use Valkyrja\Routing\Annotations\Route;
 
 /**
  * Class HomeController.
