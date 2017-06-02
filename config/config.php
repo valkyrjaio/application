@@ -165,7 +165,7 @@ return [
      * //
      *
      */
-    'filePath' => env()::CONFIG_CACHE_FILE_PATH ?? Directory::configPath('config.php'),
+    'filePath'      => env()::CONFIG_CACHE_FILE_PATH ?? Directory::configPath('config.php'),
 
     /*
      *-------------------------------------------------------------------------
