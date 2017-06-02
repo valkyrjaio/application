@@ -92,5 +92,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env()::ROUTING_USE_CACHE_FILE ?? true,
+    'useCacheFile'              => env()::ROUTING_USE_CACHE_FILE ?? false,
 ];

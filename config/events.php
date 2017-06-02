@@ -71,5 +71,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env()::EVENTS_USE_CACHE_FILE ?? true,
+    'useCacheFile'              => env()::EVENTS_USE_CACHE_FILE ?? false,
 ];

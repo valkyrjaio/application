@@ -91,5 +91,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env()::CONSOLE_USE_CACHE_FILE ?? true,
+    'useCacheFile'              => env()::CONSOLE_USE_CACHE_FILE ?? false,
 ];

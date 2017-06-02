@@ -185,5 +185,5 @@ return [
      * //
      *
      */
-    'useCacheFile'  => env()::CONFIG_USE_CACHE_FILE ?? true,
+    'useCacheFile'  => env()::CONFIG_USE_CACHE_FILE ?? false,
 ];

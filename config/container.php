@@ -31,7 +31,7 @@ return [
      * //
      *
      */
-    'coreProviders'             => env()::CONTAINER_APP_PROVIDERS ?? [],
+    'coreProviders'             => env()::CONTAINER_CORE_PROVIDERS ?? [],
 
     /*
      *-------------------------------------------------------------------------
@@ -111,5 +111,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env()::CONTAINER_USE_CACHE_FILE ?? true,
+    'useCacheFile'              => env()::CONTAINER_USE_CACHE_FILE ?? false,
 ];
