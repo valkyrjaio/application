@@ -1,10 +1,5 @@
 <?php
 
-use Valkyrja\Container\ContainerImpl;
-use Valkyrja\Application;
-use Valkyrja\Dispatcher\DispatcherImpl;
-use Valkyrja\Events\EventsImpl;
-
 /*
  *-------------------------------------------------------------------------
  * Application Configuration
@@ -63,7 +58,7 @@ return [
      * //
      *
      */
-    'version'      => env()::APP_VERSION ?? Application::VERSION,
+    'version'      => env()::APP_VERSION ?? Valkyrja\Application::VERSION,
 
     /*
      *-------------------------------------------------------------------------
@@ -73,7 +68,7 @@ return [
      * //
      *
      */
-    'container'    => env()::APP_CONTAINER ?? ContainerImpl::class,
+    'container'    => env()::APP_CONTAINER ?? Valkyrja\Container\ContainerImpl::class,
 
     /*
      *-------------------------------------------------------------------------
@@ -83,7 +78,7 @@ return [
      * //
      *
      */
-    'dispatcher'   => env()::APP_DISPATCHER ?? DispatcherImpl::class,
+    'dispatcher'   => env()::APP_DISPATCHER ?? Valkyrja\Dispatcher\DispatcherImpl::class,
 
     /*
      *-------------------------------------------------------------------------
@@ -93,7 +88,7 @@ return [
      * //
      *
      */
-    'events'       => env()::APP_EVENTS ?? EventsImpl::class,
+    'events'       => env()::APP_EVENTS ?? Valkyrja\Events\EventsImpl::class,
 
     /*
      *-------------------------------------------------------------------------
@@ -103,5 +98,13 @@ return [
      * //
      *
      */
-    'pathRegexMap' => env()::APP_PATH_REGEX_MAP ?? [],
+    'pathRegexMap' => env()::APP_PATH_REGEX_MAP ?? [
+            'num'                  => '(\d+)',
+            'slug'                 => '([a-zA-Z0-9-]+)',
+            'alpha'                => '([a-zA-Z]+)',
+            'alpha-lowercase'      => '([a-z]+)',
+            'alpha-uppercase'      => '([A-Z]+)',
+            'alpha-num'            => '([a-zA-Z0-9]+)',
+            'alpha-num-underscore' => '(\w+)',
+        ],
 ];

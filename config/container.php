@@ -21,17 +21,33 @@ return [
      * //
      *
      */
-    'providers'                 => env()::CONTAINER_PROVIDERS ?? [],
-
-    /*
-     *-------------------------------------------------------------------------
-     * Container Core Components Service Providers
-     *-------------------------------------------------------------------------
-     *
-     * //
-     *
-     */
-    'coreProviders'             => env()::CONTAINER_CORE_PROVIDERS ?? [],
+    'providers'                 => env()::CONTAINER_PROVIDERS ?? [
+            Valkyrja\Annotations\AnnotationsParserImpl::class,
+            Valkyrja\Annotations\AnnotationsImpl::class,
+            Valkyrja\Client\GuzzleClient::class,
+            Valkyrja\Console\ConsoleImpl::class,
+            Valkyrja\Console\KernelImpl::class,
+            Valkyrja\Console\Input\InputImpl::class,
+            Valkyrja\Console\Output\OutputImpl::class,
+            Valkyrja\Console\Output\OutputFormatterImpl::class,
+            Valkyrja\Console\Annotations\CommandAnnotationsImpl::class,
+            Valkyrja\Container\Annotations\ContainerAnnotationsImpl::class,
+            Valkyrja\Events\Annotations\ListenerAnnotationsImpl::class,
+            Valkyrja\Filesystem\FlyFilesystem::class,
+            Valkyrja\Http\KernelImpl::class,
+            Valkyrja\Http\RequestImpl::class,
+            Valkyrja\Http\JsonResponseImpl::class,
+            Valkyrja\Http\RedirectResponseImpl::class,
+            Valkyrja\Http\ResponseImpl::class,
+            Valkyrja\Http\ResponseBuilderImpl::class,
+            Valkyrja\Logger\Providers\LoggerServiceProvider::class,
+            Valkyrja\Path\PathGeneratorImpl::class,
+            Valkyrja\Path\PathParserImpl::class,
+            Valkyrja\Routing\RouterImpl::class,
+            Valkyrja\Routing\Annotations\RouteAnnotationsImpl::class,
+            Valkyrja\Session\NativeSession::class,
+            Valkyrja\View\PhpView::class,
+        ],
 
     /*
      *-------------------------------------------------------------------------
