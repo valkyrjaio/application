@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Valkyrja\Container\Annotations\Service;
 use Valkyrja\Container\Annotations\ServiceAlias;
-use Valkyrja\Contracts\View\View;
+use Valkyrja\View\View;
 use Valkyrja\Routing\Annotations\Route;
 
 /**
@@ -29,7 +29,7 @@ class HomeController extends Controller
      * Welcome action.
      * - Example of a view being returned.
      *
-     * @return \Valkyrja\Contracts\View\View
+     * @return \Valkyrja\View\View
      *
      * @Route(path = '/', name = 'welcome')
      */
