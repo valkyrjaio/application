@@ -33,10 +33,8 @@ class TestCase extends PHPUnitTestCase
     {
         Directory::$BASE_PATH = __DIR__ . '/../';
 
-        Valkyrja::env(EnvTest::class);
+        Valkyrja::setEnv(EnvTest::class);
 
-        $config = require Directory::configPath('configuration.php');
-
-        $this->app = new Valkyrja($config);
+        $this->app = new Valkyrja();
     }
 }

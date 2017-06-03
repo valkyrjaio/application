@@ -1,10 +1,8 @@
 <?php
 
-use Valkyrja\Support\Directory;
-
 /*
  *-------------------------------------------------------------------------
- * Application Configurations
+ * Framework Default Configurations
  *-------------------------------------------------------------------------
  *
  * We'll need to run the application somehow, and so we'll need certain
@@ -124,19 +122,6 @@ return [
 
     /*
      *-------------------------------------------------------------------------
-     * Storage Configuration
-     *-------------------------------------------------------------------------
-     *
-     * Storage is a necessity when working with any kind of data, whether
-     * that be user data, or just application data, there needs to be a
-     * place to put all of it. Here you'll find all the configurations
-     * that setup the storage of all the things.
-     *
-     */
-    'storage'       => require __DIR__ . '/storage.php',
-
-    /*
-     *-------------------------------------------------------------------------
      * Views Configuration
      *-------------------------------------------------------------------------
      *
@@ -155,7 +140,7 @@ return [
      * //
      *
      */
-    'providers'     => env()::CONFIG_PROVIDERS ?? [],
+    'providers'     => env('CONFIG_PROVIDERS', []),
 
     /*
      *-------------------------------------------------------------------------
@@ -165,7 +150,7 @@ return [
      * //
      *
      */
-    'filePath'      => env()::CONFIG_FILE_PATH ?? Directory::configPath('config.php'),
+    'filePath'      => env('CONFIG_FILE_PATH', configPath('config.php')),
 
     /*
      *-------------------------------------------------------------------------
@@ -175,7 +160,7 @@ return [
      * //
      *
      */
-    'cacheFilePath' => env()::CONFIG_CACHE_FILE_PATH ?? Directory::cachePath('config.php'),
+    'cacheFilePath' => env('CONFIG_CACHE_FILE_PATH', cachePath('config.php')),
 
     /*
      *-------------------------------------------------------------------------
@@ -185,5 +170,5 @@ return [
      * //
      *
      */
-    'useCacheFile'  => env()::CONFIG_USE_CACHE_FILE ?? false,
+    'useCacheFile'  => env('CONFIG_USE_CACHE_FILE', false),
 ];

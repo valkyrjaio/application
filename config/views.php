@@ -1,7 +1,5 @@
 <?php
 
-use Valkyrja\Support\Directory;
-
 /*
  *-------------------------------------------------------------------------
  * Views Configuration
@@ -21,5 +19,5 @@ return [
      * //
      *
      */
-    'dir' => env()::VIEWS_DIR ?? Directory::resourcesPath('views'),
+    'dir' => env('VIEWS_DIR', resourcesPath('views')),
 ];

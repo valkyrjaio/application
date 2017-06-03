@@ -50,13 +50,7 @@ Valkyrja\Support\Directory::$BASE_PATH = __DIR__ . '/../';
  */
 
 // Here we'll set the env file to use
-Valkyrja\Valkyrja::env(config\Env::class);
-
-// If we should use the cache file there's no point in loading the config
-// file since it'll be overridden by the cached config file
-$config = env()::CONFIG_USE_CACHE_FILE
-    ? null
-    : require Valkyrja\Support\Directory::configPath('config.php');
+Valkyrja\Valkyrja::setEnv(config\Env::class);
 
 /*
  *-------------------------------------------------------------------------
@@ -69,7 +63,7 @@ $config = env()::CONFIG_USE_CACHE_FILE
  *
  */
 
-$app = new Valkyrja\Valkyrja($config);
+$app = new Valkyrja\Valkyrja();
 
 /*
  *-------------------------------------------------------------------------

@@ -19,7 +19,7 @@ return [
      * //
      *
      */
-    'id'   => env()::SESSION_ID,
+    'id'   => env('SESSION_ID'),
 
     /*
      *-------------------------------------------------------------------------
@@ -29,5 +29,5 @@ return [
      * //
      *
      */
-    'name' => env()::SESSION_NAME,
+    'name' => env('SESSION_NAME'),
 ];

@@ -1,7 +1,5 @@
 <?php
 
-use Valkyrja\Support\Directory;
-
 /*
  *-------------------------------------------------------------------------
  * Logger Configuration
@@ -21,7 +19,7 @@ return [
      * //
      *
      */
-    'name'     => env()::LOGGER_NAME ?? 'ApplicationLog',
+    'name'     => env('LOGGER_NAME', 'ApplicationLog'),
 
     /*
      *-------------------------------------------------------------------------
@@ -31,5 +29,5 @@ return [
      * //
      *
      */
-    'filePath' => env()::LOGGER_FILE_PATH ?? Directory::storagePath('logs/valkyrja.log'),
+    'filePath' => env('LOGGER_FILE_PATH', storagePath('logs/valkyrja.log')),
 ];
