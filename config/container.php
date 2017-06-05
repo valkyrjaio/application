@@ -19,7 +19,8 @@ return [
      * //
      *
      */
-    'providers'                 => env('CONTAINER_PROVIDERS',
+    'providers'                 => env(
+        'CONTAINER_PROVIDERS',
         [
             Valkyrja\Annotations\AnnotationsParserImpl::class,
             Valkyrja\Annotations\AnnotationsImpl::class,
@@ -127,5 +128,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env('CONTAINER_USE_CACHE_FILE', false),
+    'useCache'                  => env('CONTAINER_USE_CACHE_FILE', false),
 ];

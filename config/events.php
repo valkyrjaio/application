@@ -69,5 +69,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env('EVENTS_USE_CACHE_FILE', false),
+    'useCache'                  => env('EVENTS_USE_CACHE_FILE', false),
 ];

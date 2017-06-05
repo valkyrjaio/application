@@ -110,5 +110,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env('ROUTING_USE_CACHE_FILE', false),
+    'useCache'                  => env('ROUTING_USE_CACHE_FILE', false),
 ];

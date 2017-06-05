@@ -19,13 +19,15 @@ return [
      * //
      *
      */
-    'providers'                 => env('CONSOLE_PROVIDERS',
+    'providers'                 => env(
+        'CONSOLE_PROVIDERS',
         [
             Valkyrja\Config\Commands\ConfigCache::class,
             Valkyrja\Console\Commands\CacheAllCommand::class,
             Valkyrja\Console\Commands\ConsoleCommands::class,
             Valkyrja\Console\Commands\ConsoleCache::class,
             Valkyrja\Console\Commands\ConsoleCommandsForBash::class,
+            Valkyrja\Console\Commands\Optimize::class,
             Valkyrja\Container\Commands\ContainerCache::class,
             Valkyrja\Events\Commands\EventsCache::class,
             Valkyrja\Routing\Commands\RoutesCacheCommand::class,
@@ -111,5 +113,5 @@ return [
      * //
      *
      */
-    'useCacheFile'              => env('CONSOLE_USE_CACHE_FILE', false),
+    'useCache'                  => env('CONSOLE_USE_CACHE_FILE', false),
 ];
