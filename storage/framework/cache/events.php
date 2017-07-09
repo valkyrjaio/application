@@ -1,1 +1,3 @@
-<?php return 'YTowOnt9';
+<?php return array (
+  'events' => 'YTowOnt9',
+);

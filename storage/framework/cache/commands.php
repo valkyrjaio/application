@@ -7,6 +7,7 @@
     '/^(?:commands)?(?: ([a-zA-Z0-9]+))?$/' => '[commands][ {namespace:[a-zA-Z0-9]+}]',
     '/^console:cache$/' => 'console:cache',
     '/^console:commandsForBash valkyrja(?: ([a-zA-Z0-9\\:]+))?$/' => 'console:commandsForBash valkyrja[ {commandTyped:[a-zA-Z0-9\\:]+}]',
+    '/^optimize$/' => 'optimize',
     '/^container:cache$/' => 'container:cache',
     '/^events:cache$/' => 'events:cache',
     '/^routes:cache$/' => 'routes:cache',
@@ -14,6 +15,16 @@
   ),
   'namedCommands' => 
   array (
+    'config:cache' => 'config:cache',
+    'cache:all' => 'cache:all[ {sync:-s|--sync}]',
+    'commands' => '[commands][ {namespace:[a-zA-Z0-9]+}]',
+    'console:cache' => 'console:cache',
+    'console:commandsForBash' => 'console:commandsForBash valkyrja[ {commandTyped:[a-zA-Z0-9\\:]+}]',
+    'optimize' => 'optimize',
+    'container:cache' => 'container:cache',
+    'events:cache' => 'events:cache',
+    'routes:cache' => 'routes:cache',
+    'routes:list' => 'routes:list',
   ),
   'provided' => 
   array (
@@ -22,6 +33,7 @@
     '[commands][ {namespace:[a-zA-Z0-9]+}]' => 'Valkyrja\\Console\\Commands\\ConsoleCommands',
     'console:cache' => 'Valkyrja\\Console\\Commands\\ConsoleCache',
     'console:commandsForBash valkyrja[ {commandTyped:[a-zA-Z0-9\\:]+}]' => 'Valkyrja\\Console\\Commands\\ConsoleCommandsForBash',
+    'optimize' => 'Valkyrja\\Console\\Commands\\Optimize',
     'container:cache' => 'Valkyrja\\Container\\Commands\\ContainerCache',
     'events:cache' => 'Valkyrja\\Events\\Commands\\EventsCache',
     'routes:cache' => 'Valkyrja\\Routing\\Commands\\RoutesCacheCommand',
