@@ -35,7 +35,19 @@ class HomeController extends Controller
      */
     public function welcome(): View
     {
-        return view('index')->layout();
+        return view('index');
+    }
+
+    /**
+     * Home action.
+     *
+     * @return \Valkyrja\View\View
+     *
+     * @Route(path = '/home', name = 'home')
+     */
+    public function home(): View
+    {
+        return view('home/home');
     }
 
     /**

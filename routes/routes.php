@@ -26,6 +26,19 @@ router()->get(
 );
 
 /*
+ * Home Route.
+ *
+ * @path /home
+ */
+router()->get(
+    (new Route())
+        ->setPath('/home')
+        ->setName('home')
+        ->setClass(App\Controllers\HomeController::class)
+        ->setMethod('home')
+);
+
+/*
  * Framework Version Route.
  * - Example of string being returned
  *
