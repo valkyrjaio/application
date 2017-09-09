@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \Valkyrja\View\View $view
+ */
+?>
+
 <html>
     <head>
         <title>A test application</title>
@@ -6,7 +12,7 @@
         <header>A header</header>
 
         <main>
-            <?php echo $body; ?>
+            <?php echo $view->block('content'); ?>
         </main>
 
         <footer>A footer</footer>

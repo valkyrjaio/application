@@ -35,7 +35,7 @@ class HomeController extends Controller
      */
     public function welcome(): View
     {
-        return view('index')->withoutLayout();
+        return view('index')->layout();
     }
 
     /**
