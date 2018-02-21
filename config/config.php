@@ -61,6 +61,18 @@ return [
 
     /*
      *-------------------------------------------------------------------------
+     * Database Configuration
+     *-------------------------------------------------------------------------
+     *
+     * Persist your application's data through a data store using a database
+     * connection method. All configurations for getting you going with
+     * a few different data stores is available here.
+     *
+     */
+    'database'      => require __DIR__ . '/database.php',
+
+    /*
+     *-------------------------------------------------------------------------
      * Events Configuration
      *-------------------------------------------------------------------------
      *
