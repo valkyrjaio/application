@@ -1,8 +1,8 @@
 <?php
 
-namespace config;
+namespace env;
 
-use Valkyrja\Config\Env as ValkyrjaEnv;
+use Valkyrja\Env\Env as ValkyrjaEnv;
 
 /**
  * Class Env.

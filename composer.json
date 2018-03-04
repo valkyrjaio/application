@@ -27,14 +27,15 @@
     "psr-4" : {
       "App\\"    : "app/",
       "config\\" : "config/",
+      "env\\"    : "env/",
       "tests\\"  : "tests/"
     }
   },
   "scripts"           : {
     "post-root-package-install" : [
-      "php -r \"file_exists('config/Env.php') || copy('config/EnvExample.php', 'config/Env.php');\"",
-      "php -r \"file_exists('config/EnvConsole.php') || copy('config/EnvConsoleExample.php', 'config/EnvConsole.php');\"",
-      "php -r \"file_exists('config/EnvTest.php') || copy('config/EnvTestExample.php', 'config/EnvTest.php');\""
+      "php -r \"file_exists('env/Env.php') || copy('env/EnvExample.php', 'env/Env.php');\"",
+      "php -r \"file_exists('env/EnvConsole.php') || copy('env/EnvConsoleExample.php', 'env/EnvConsole.php');\"",
+      "php -r \"file_exists('env/EnvTest.php') || copy('env/EnvTestExample.php', 'env/EnvTest.php');\""
     ]
   },
   "suggest"           : {

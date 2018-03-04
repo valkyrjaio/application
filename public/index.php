@@ -50,7 +50,7 @@ Valkyrja\Support\Directory::$BASE_PATH = __DIR__ . '/../';
  */
 
 // Here we'll set the env file to use
-Valkyrja\Valkyrja::setEnv(config\Env::class);
+Valkyrja\Valkyrja::setEnv(env\Env::class);
 
 /*
  *-------------------------------------------------------------------------
