@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Http\Controllers;
 
 use Valkyrja\Container\Annotations\Service;
 use Valkyrja\Container\Annotations\ServiceAlias;
@@ -11,8 +11,8 @@ use Valkyrja\Routing\Annotations\Route;
  * Class HomeController.
  *
  * @Route(path = '/', name = 'home')
- * @Service(id = App\Controllers\HomeController)
- * @ServiceAlias(id = App\Controllers\HomeController, name = 'homeController')
+ * @Service(id = App\Http\Controllers\HomeController)
+ * @ServiceAlias(id = App\Http\Controllers\HomeController, name = 'homeController')
  */
 class HomeController extends Controller
 {

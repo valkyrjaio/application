@@ -21,7 +21,7 @@ router()->get(
     (new Route())
         ->setPath('/')
         ->setName('welcome')
-        ->setClass(App\Controllers\HomeController::class)
+        ->setClass(\App\Http\Controllers\HomeController::class)
         ->setMethod('welcome')
 );
 
@@ -34,7 +34,7 @@ router()->get(
     (new Route())
         ->setPath('/home')
         ->setName('home')
-        ->setClass(App\Controllers\HomeController::class)
+        ->setClass(\App\Http\Controllers\HomeController::class)
         ->setMethod('home')
 );
 
@@ -48,7 +48,7 @@ router()->get(
     (new Route())
         ->setPath('/version')
         ->setName('version')
-        ->setClass(App\Controllers\HomeController::class)
+        ->setClass(\App\Http\Controllers\HomeController::class)
         ->setMethod('version')
 );
 
@@ -62,6 +62,6 @@ router()->get(
     (new Route())
         ->setPath('/property')
         ->setName('property')
-        ->setClass(App\Controllers\HomeController::class)
+        ->setClass(\App\Http\Controllers\HomeController::class)
         ->setProperty('propertyRouting')
 );
