@@ -10,9 +10,9 @@ use Valkyrja\Routing\Annotations\Route;
 /**
  * Class HomeController.
  *
- * @Route(path = '/', name = 'home')
- * @Service(id = App\Http\Controllers\HomeController)
- * @ServiceAlias(id = App\Http\Controllers\HomeController, name = 'homeController')
+ * @Route("path" = "/", "name" = "home")
+ * @Service("id" = "App\\Http\\Controllers\\HomeController")
+ * @ServiceAlias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
  */
 class HomeController extends Controller
 {
@@ -21,7 +21,7 @@ class HomeController extends Controller
      *
      * @var string
      *
-     * @Route(path = '/property', name = 'property')
+     * @Route("path" = "/property", "name" = "property")
      */
     public $propertyRouting = 'Property Routing Example';
 
@@ -31,7 +31,7 @@ class HomeController extends Controller
      *
      * @return \Valkyrja\View\View
      *
-     * @Route(path = '/', name = 'welcome')
+     * @Route("path" = "/", "name" = "welcome")
      */
     public function welcome(): View
     {
@@ -43,7 +43,7 @@ class HomeController extends Controller
      *
      * @return \Valkyrja\View\View
      *
-     * @Route(path = '/home', name = 'home')
+     * @Route("path" = "/home", "name" = "home")
      */
     public function home(): View
     {
@@ -56,7 +56,7 @@ class HomeController extends Controller
      *
      * @return string
      *
-     * @Route(path = '/version', name = 'version', requestMethods = [[GET | POST | HEAD]])
+     * @Route("path" = "/version", "name" = "version", "requestMethods" = ["GET", "POST", "HEAD"])
      */
     public function version(): string
     {
