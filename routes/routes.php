@@ -9,6 +9,7 @@
  *
  */
 
+use App\Http\Controllers\HomeController;
 use Valkyrja\Routing\Route;
 
 /*
@@ -21,7 +22,7 @@ router()->get(
     (new Route())
         ->setPath('/')
         ->setName('welcome')
-        ->setClass(\App\Http\Controllers\HomeController::class)
+        ->setClass(HomeController::class)
         ->setMethod('welcome')
 );
 
@@ -34,7 +35,7 @@ router()->get(
     (new Route())
         ->setPath('/home')
         ->setName('home')
-        ->setClass(\App\Http\Controllers\HomeController::class)
+        ->setClass(HomeController::class)
         ->setMethod('home')
 );
 
@@ -48,7 +49,7 @@ router()->get(
     (new Route())
         ->setPath('/version')
         ->setName('version')
-        ->setClass(\App\Http\Controllers\HomeController::class)
+        ->setClass(HomeController::class)
         ->setMethod('version')
 );
 
@@ -62,6 +63,6 @@ router()->get(
     (new Route())
         ->setPath('/property')
         ->setName('property')
-        ->setClass(\App\Http\Controllers\HomeController::class)
+        ->setClass(HomeController::class)
         ->setProperty('propertyRouting')
 );

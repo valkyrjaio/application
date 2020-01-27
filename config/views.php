@@ -19,7 +19,7 @@ return [
      * //
      *
      */
-    'dir' => env('VIEWS_DIR', resourcesPath('views')),
+    'dir'   => env('VIEWS_DIR', resourcesPath('views')),
 
     /*
      *-------------------------------------------------------------------------

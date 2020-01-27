@@ -17,7 +17,7 @@ return [
      * //
      *
      */
-    'key' => env('CRYPT_KEY', 'default_key_phrase'),
+    'key'     => env('CRYPT_KEY', 'default_key_phrase'),
 
     /*
      *-------------------------------------------------------------------------

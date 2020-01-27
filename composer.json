@@ -15,8 +15,8 @@
     }
   ],
   "require"           : {
-    "php"               : ">=7.1",
-    "valkyrja/valkyrja" : "0.9.*"
+    "php"               : ">=7.4",
+    "valkyrja/valkyrja" : "1.0.*"
   },
   "require-dev"       : {
     "fzaninotto/faker" : "~1.4",
@@ -48,7 +48,7 @@
   "minimum-stability" : "dev",
   "extra"             : {
     "branch-alias" : {
-      "dev-master" : "0.9-dev"
+      "dev-master" : "1.0-dev"
     }
   }
 }

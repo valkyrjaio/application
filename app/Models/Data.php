@@ -12,7 +12,7 @@ class Data extends Model
     /**
      * @var int
      */
-    protected $id;
+    protected int $id;
 
     /**
      * @return int

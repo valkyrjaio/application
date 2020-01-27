@@ -12,17 +12,17 @@ class User extends Entity
     /**
      * @var int
      */
-    protected $id;
+    protected int $id;
 
     /**
      * @var string
      */
-    protected $name;
+    protected string $name;
 
     /**
      * @var string
      */
-    protected $email;
+    protected string $email;
 
     /**
      * @return int

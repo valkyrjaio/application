@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Valkyrja\Container\Annotations\Service;
 use Valkyrja\Container\Annotations\ServiceAlias;
-use Valkyrja\View\View;
 use Valkyrja\Routing\Annotations\Route;
+use Valkyrja\View\View;
 
 /**
  * Class HomeController.
@@ -23,13 +23,13 @@ class HomeController extends Controller
      *
      * @Route("path" = "/property", "name" = "property")
      */
-    public $propertyRouting = 'Property Routing Example';
+    public string $propertyRouting = 'Property Routing Example';
 
     /**
      * Welcome action.
      * - Example of a view being returned.
      *
-     * @return \Valkyrja\View\View
+     * @return View
      *
      * @Route("path" = "/", "name" = "welcome")
      */
@@ -41,7 +41,7 @@ class HomeController extends Controller
     /**
      * Home action.
      *
-     * @return \Valkyrja\View\View
+     * @return View
      *
      * @Route("path" = "/home", "name" = "home")
      */
