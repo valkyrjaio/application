@@ -34,7 +34,6 @@ return [
             Valkyrja\Container\Annotations\NativeContainerAnnotations::class,
             Valkyrja\Events\Annotations\NativeListenerAnnotations::class,
             Valkyrja\Filesystem\FlyFilesystem::class,
-            // Valkyrja\Http\NativeKernel::class,
             Valkyrja\Http\NativeRequest::class,
             Valkyrja\Http\NativeJsonResponse::class,
             Valkyrja\Http\NativeRedirectResponse::class,

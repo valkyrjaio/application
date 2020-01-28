@@ -9,6 +9,9 @@
  * settings for the application as a whole.
  *
  */
+
+use Valkyrja\Config\Enums\EnvKey;
+
 return [
     /*
      *-------------------------------------------------------------------------
@@ -18,7 +21,7 @@ return [
      * //
      *
      */
-    'env'              => env('APP_ENV', 'production'),
+    'env'                => env('APP_ENV', 'production'),
 
     /*
      *-------------------------------------------------------------------------
@@ -28,7 +31,7 @@ return [
      * //
      *
      */
-    'debug'            => env('APP_DEBUG', false),
+    'debug'              => env('APP_DEBUG', false),
 
     /*
      *-------------------------------------------------------------------------
@@ -38,7 +41,7 @@ return [
      * //
      *
      */
-    'url'              => env('APP_URL', 'localhost'),
+    'url'                => env('APP_URL', 'localhost'),
 
     /*
      *-------------------------------------------------------------------------
@@ -48,7 +51,7 @@ return [
      * //
      *
      */
-    'timezone'         => env('APP_TIMEZONE', 'UTC'),
+    'timezone'           => env('APP_TIMEZONE', 'UTC'),
 
     /*
      *-------------------------------------------------------------------------
@@ -58,7 +61,7 @@ return [
      * //
      *
      */
-    'version'          => env('APP_VERSION', Valkyrja\Application::VERSION),
+    'version'            => env('APP_VERSION', Valkyrja\Application::VERSION),
 
     /*
      *-------------------------------------------------------------------------
@@ -68,7 +71,17 @@ return [
      * //
      *
      */
-    'key'              => env('APP_KEY', 'some_secret_app_key'),
+    'key'                => env('APP_KEY', 'some_secret_app_key'),
+
+    /*
+     *-------------------------------------------------------------------------
+     * Application Http Exception Class
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    'httpExceptionClass' => env(EnvKey::APP_HTTP_EXCEPTION_CLASS, \Valkyrja\Http\Exceptions\HttpException::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -78,7 +91,7 @@ return [
      * //
      *
      */
-    'container'        => env('APP_CONTAINER', Valkyrja\Container\NativeContainer::class),
+    'container'          => env('APP_CONTAINER', Valkyrja\Container\NativeContainer::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -88,7 +101,7 @@ return [
      * //
      *
      */
-    'dispatcher'       => env('APP_DISPATCHER', Valkyrja\Dispatcher\NativeDispatcher::class),
+    'dispatcher'         => env('APP_DISPATCHER', Valkyrja\Dispatcher\NativeDispatcher::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -98,7 +111,7 @@ return [
      * //
      *
      */
-    'events'           => env('APP_EVENTS', Valkyrja\Events\NativeEvents::class),
+    'events'             => env('APP_EVENTS', Valkyrja\Events\NativeEvents::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -107,7 +120,7 @@ return [
      *
      * //
      */
-    'exceptionHandler' => env('APP_EXCEPTION_HANDLER', App\Exceptions\ExceptionHandler::class),
+    'exceptionHandler'   => env('APP_EXCEPTION_HANDLER', App\Exceptions\ExceptionHandler::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -117,7 +130,7 @@ return [
      * //
      *
      */
-    'pathRegexMap'     => env(
+    'pathRegexMap'       => env(
         'APP_PATH_REGEX_MAP',
         [
             'num'                  => '(\d+)',
