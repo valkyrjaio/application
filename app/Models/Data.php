@@ -12,23 +12,36 @@ class Data extends Model
     /**
      * @var int
      */
-    protected int $id;
+    public int $id;
 
     /**
-     * @return int
+     * @var string
      */
-    public function getId(): int
+    protected string $needsExtraLogic;
+
+    /**
+     * Getter for a property with extra logic.
+     *
+     * @return string
+     */
+    public function getNeedsExtraLogic(): string
     {
-        return $this->id;
+        // Do extra logic before getting
+
+        return $this->needsExtraLogic;
     }
 
     /**
-     * @param int $id
+     * Setter for a property with extra logic.
+     *
+     * @param string $needsExtraLogic
      *
      * @return void
      */
-    public function setId(int $id): void
+    public function setNeedsExtraLogic(string $needsExtraLogic): void
     {
-        $this->id = $id;
+        // Do extra checks before setting
+
+        $this->needsExtraLogic = $needsExtraLogic;
     }
 }

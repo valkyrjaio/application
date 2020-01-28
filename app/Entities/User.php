@@ -12,69 +12,46 @@ class User extends Entity
     /**
      * @var int
      */
-    protected int $id;
+    public int $id;
 
     /**
      * @var string
      */
-    protected string $name;
+    public string $name;
 
     /**
      * @var string
      */
-    protected string $email;
+    public string $email;
 
     /**
-     * @return int
+     * @var string
      */
-    public function getId(): int
-    {
-        return $this->id;
-    }
+    protected string $needsExtraLogic;
 
     /**
-     * @param int $id
+     * Getter for a property with extra logic.
      *
-     * @return void
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return string
      */
-    public function getName(): string
+    public function getNeedsExtraLogic(): string
     {
-        return $this->name;
+        // Do extra logic before getting
+
+        return $this->needsExtraLogic;
     }
 
     /**
-     * @param string $name
+     * Setter for a property with extra logic.
+     *
+     * @param string $needsExtraLogic
      *
      * @return void
      */
-    public function setName(string $name): void
+    public function setNeedsExtraLogic(string $needsExtraLogic): void
     {
-        $this->name = $name;
-    }
+        // Do extra checks before setting
 
-    /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     *
-     * @return void
-     */
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
+        $this->needsExtraLogic = $needsExtraLogic;
     }
 }
