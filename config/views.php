@@ -10,6 +10,10 @@
  * all the configurations necessary to make that work properly.
  *
  */
+
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Enums\EnvKey;
+
 return [
     /*
      *-------------------------------------------------------------------------
@@ -19,7 +23,7 @@ return [
      * //
      *
      */
-    'dir'   => env('VIEWS_DIR', resourcesPath('views')),
+    CKP::DIR   => env(EnvKey::VIEWS_DIR, resourcesPath('views')),
 
     /*
      *-------------------------------------------------------------------------
@@ -29,5 +33,5 @@ return [
      * //
      *
      */
-    'paths' => [],
+    CKP::PATHS => env(EnvKey::VIEWS_PATHS, []),
 ];

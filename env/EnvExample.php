@@ -23,7 +23,7 @@ class Env
     // public const APP_EVENTS            = null;
     // public const APP_EXCEPTION_HANDLER = null;
 
-    /**
+    /*
      * Config env variables.
      */
     // public const CONFIG_PROVIDERS       = null;
@@ -38,11 +38,10 @@ class Env
     // public const ANNOTATIONS_CACHE_DIR = null;
     // public const ANNOTATIONS_MAP       = null;
 
-    /**
+    /*
      * Console env variables.
      */
     // public const CONSOLE_PROVIDERS                   = null;
-    // public const CONSOLE_CORE_PROVIDERS              = null;
     // public const CONSOLE_DEV_PROVIDERS               = null;
     // public const CONSOLE_QUIET                       = null;
     // public const CONSOLE_USE_ANNOTATIONS             = null;
@@ -52,11 +51,10 @@ class Env
     // public const CONSOLE_CACHE_FILE_PATH             = null;
     // public const CONSOLE_USE_CACHE_FILE              = null;
 
-    /**
+    /*
      * Container env variables.
      */
     // public const CONTAINER_PROVIDERS                   = null;
-    // public const CONTAINER_CORE_PROVIDERS              = null;
     // public const CONTAINER_DEV_PROVIDERS               = null;
     // public const CONTAINER_USE_ANNOTATIONS             = null;
     // public const CONTAINER_USE_ANNOTATIONS_EXCLUSIVELY = null;
@@ -66,13 +64,13 @@ class Env
     // public const CONTAINER_CACHE_FILE_PATH             = null;
     // public const CONTAINER_USE_CACHE_FILE              = null;
 
-    /**
+    /*
      * Crypt env variables.
      */
     // public const CRYPT_KEY      = null;
     // public const CRYPT_KEY_PATH = null;
 
-    /**
+    /*
      * Database env variables.
      */
     // public const DB_CONNECTION = null;
@@ -90,7 +88,7 @@ class Env
     // public const DB_SCHEME     = null;
     // public const DB_SSL_MODE   = null;
 
-    /**
+    /*
      * Events env variables.
      */
     // public const EVENTS_USE_ANNOTATIONS             = null;
@@ -100,7 +98,7 @@ class Env
     // public const EVENTS_CACHE_FILE_PATH             = null;
     // public const EVENTS_USE_CACHE_FILE              = null;
 
-    /**
+    /*
      * Filesystem env variables.
      */
     // public const FILESYSTEM_DEFAULT    = null;
@@ -113,17 +111,30 @@ class Env
     // public const FILESYSTEM_S3_DIR     = null;
     // public const FILESYSTEM_S3_OPTIONS = null;
 
-    /**
+    /*
      * Logger env variables.
      */
     // public const LOGGER_NAME      = null;
     // public const LOGGER_FILE_PATH = null;
 
-    /**
+    /*
+     * Mail env variables.
+     */
+    // public const MAIL_HOST         = null;
+    // public const MAIL_PORT         = null;
+    // public const MAIL_FROM_ADDRESS = null;
+    // public const MAIL_FROM_NAME    = null;
+    // public const MAIL_ENCRYPTION   = null;
+    // public const MAIL_USERNAME     = null;
+    // public const MAIL_PASSWORD     = null;
+
+    /*
      * Routing env variables.
      */
     // public const ROUTING_TRAILING_SLASH              = null;
     // public const ROUTING_USE_ABSOLUTE_URLS           = null;
+    // public const ROUTING_MIDDLEWARE                  = null;
+    // public const ROUTING_MIDDLEWARE_GROUPS           = null;
     // public const ROUTING_USE_ANNOTATIONS             = null;
     // public const ROUTING_USE_ANNOTATIONS_EXCLUSIVELY = null;
     // public const ROUTING_CONTROLLERS                 = null;
@@ -131,25 +142,25 @@ class Env
     // public const ROUTING_CACHE_FILE_PATH             = null;
     // public const ROUTING_USE_CACHE_FILE              = null;
 
-    /**
+    /*
      * Session env variables.
      */
     // public const SESSION_ID   = null;
     // public const SESSION_NAME = null;
 
-    /**
+    /*
      * Storage env variables.
      */
     // public const STORAGE_UPLOADS_DIR = null;
     // public const STORAGE_LOGS_DIR    = null;
 
-    /**
+    /*
      * Views env variables.
      */
     // public const VIEWS_DIR   = null;
     // public const VIEWS_PATHS = null;
 
-    /**
+    /*
      * Twig views env variables.
      */
     // public const TWIG_FILE_EXTENSION = null;

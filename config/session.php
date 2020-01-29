@@ -10,6 +10,10 @@
  * configurations to make the session work properly.
  *
  */
+
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Enums\EnvKey;
+
 return [
     /*
      *-------------------------------------------------------------------------
@@ -19,7 +23,7 @@ return [
      * //
      *
      */
-    'id'   => env('SESSION_ID'),
+    CKP::ID   => env(EnvKey::SESSION_ID),
 
     /*
      *-------------------------------------------------------------------------
@@ -29,5 +33,5 @@ return [
      * //
      *
      */
-    'name' => env('SESSION_NAME'),
+    CKP::NAME => env(EnvKey::SESSION_NAME),
 ];

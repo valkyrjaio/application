@@ -10,6 +10,10 @@
  * applications. Configure that manipulative module here.
  *
  */
+
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Enums\EnvKey;
+
 return [
     /*
      *-------------------------------------------------------------------------
@@ -19,7 +23,7 @@ return [
      * //
      *
      */
-    'default'  => env('FILESYSTEM_DEFAULT', 'local'),
+    CKP::DEFAULT  => env(EnvKey::FILESYSTEM_DEFAULT, 'local'),
 
     /*
      *-------------------------------------------------------------------------
@@ -29,19 +33,19 @@ return [
      * //
      *
      */
-    'adapters' => [
-        'local' => [
-            'dir' => env('FILESYSTEM_LOCAL_DIR', storagePath('app')),
+    CKP::ADAPTERS => [
+        CKP::LOCAL => [
+            CKP::DIR => env(EnvKey::FILESYSTEM_LOCAL_DIR, storagePath('app')),
         ],
 
-        's3' => [
-            'key'     => env('FILESYSTEM_S3_KEY'),
-            'secret'  => env('FILESYSTEM_S3_SECRET'),
-            'region'  => env('FILESYSTEM_S3_REGION'),
-            'version' => env('FILESYSTEM_S3_VERSION'),
-            'bucket'  => env('FILESYSTEM_S3_BUCKET'),
-            'dir'     => env('FILESYSTEM_S3_DIR', '/'),
-            'options' => env('FILESYSTEM_S3_OPTIONS', []),
+        CKP::S3 => [
+            CKP::KEY     => env(EnvKey::FILESYSTEM_S3_KEY),
+            CKP::SECRET  => env(EnvKey::FILESYSTEM_S3_SECRET),
+            CKP::REGION  => env(EnvKey::FILESYSTEM_S3_REGION),
+            CKP::VERSION => env(EnvKey::FILESYSTEM_S3_VERSION),
+            CKP::BUCKET  => env(EnvKey::FILESYSTEM_S3_BUCKET),
+            CKP::DIR     => env(EnvKey::FILESYSTEM_S3_DIR, '/'),
+            CKP::OPTIONS => env(EnvKey::FILESYSTEM_S3_OPTIONS, []),
         ],
     ],
 ];

@@ -10,6 +10,7 @@
  *
  */
 
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
 
 return [
@@ -21,7 +22,7 @@ return [
      * //
      *
      */
-    'env'                => env('APP_ENV', 'production'),
+    CKP::ENV                  => env(EnvKey::APP_ENV, 'production'),
 
     /*
      *-------------------------------------------------------------------------
@@ -31,7 +32,7 @@ return [
      * //
      *
      */
-    'debug'              => env('APP_DEBUG', false),
+    CKP::DEBUG                => env(EnvKey::APP_DEBUG, false),
 
     /*
      *-------------------------------------------------------------------------
@@ -41,7 +42,7 @@ return [
      * //
      *
      */
-    'url'                => env('APP_URL', 'localhost'),
+    CKP::URL                  => env(EnvKey::APP_URL, 'localhost'),
 
     /*
      *-------------------------------------------------------------------------
@@ -51,7 +52,7 @@ return [
      * //
      *
      */
-    'timezone'           => env('APP_TIMEZONE', 'UTC'),
+    CKP::TIMEZONE             => env(EnvKey::APP_TIMEZONE, 'UTC'),
 
     /*
      *-------------------------------------------------------------------------
@@ -61,7 +62,7 @@ return [
      * //
      *
      */
-    'version'            => env('APP_VERSION', Valkyrja\Application::VERSION),
+    CKP::VERSION              => env(EnvKey::APP_VERSION, Valkyrja\Application::VERSION),
 
     /*
      *-------------------------------------------------------------------------
@@ -71,7 +72,7 @@ return [
      * //
      *
      */
-    'key'                => env('APP_KEY', 'some_secret_app_key'),
+    CKP::KEY                  => env(EnvKey::APP_KEY, 'some_secret_app_key'),
 
     /*
      *-------------------------------------------------------------------------
@@ -81,7 +82,7 @@ return [
      * //
      *
      */
-    'httpExceptionClass' => env(EnvKey::APP_HTTP_EXCEPTION_CLASS, \Valkyrja\Http\Exceptions\HttpException::class),
+    CKP::HTTP_EXCEPTION_CLASS => env(EnvKey::APP_HTTP_EXCEPTION_CLASS, \Valkyrja\Http\Exceptions\HttpException::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -91,7 +92,7 @@ return [
      * //
      *
      */
-    'container'          => env('APP_CONTAINER', Valkyrja\Container\NativeContainer::class),
+    CKP::CONTAINER            => env(EnvKey::APP_CONTAINER, Valkyrja\Container\NativeContainer::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -101,7 +102,7 @@ return [
      * //
      *
      */
-    'dispatcher'         => env('APP_DISPATCHER', Valkyrja\Dispatcher\NativeDispatcher::class),
+    CKP::DISPATCHER           => env(EnvKey::APP_DISPATCHER, Valkyrja\Dispatcher\NativeDispatcher::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -111,7 +112,7 @@ return [
      * //
      *
      */
-    'events'             => env('APP_EVENTS', Valkyrja\Events\NativeEvents::class),
+    CKP::EVENTS               => env(EnvKey::APP_EVENTS, Valkyrja\Events\NativeEvents::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -119,8 +120,9 @@ return [
      *-------------------------------------------------------------------------
      *
      * //
+     *
      */
-    'exceptionHandler'   => env('APP_EXCEPTION_HANDLER', App\Exceptions\ExceptionHandler::class),
+    CKP::EXCEPTION_HANDLER    => env(EnvKey::APP_EXCEPTION_HANDLER, Valkyrja\Exceptions\NativeExceptionHandler::class),
 
     /*
      *-------------------------------------------------------------------------
@@ -130,8 +132,8 @@ return [
      * //
      *
      */
-    'pathRegexMap'       => env(
-        'APP_PATH_REGEX_MAP',
+    CKP::PATH_REGEX_MAP       => env(
+        EnvKey::APP_PATH_REGEX_MAP,
         [
             'num'                  => '(\d+)',
             'slug'                 => '([a-zA-Z0-9-]+)',

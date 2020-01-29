@@ -11,6 +11,10 @@
  * all the configurations for routing can be found here.
  *
  */
+
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Enums\EnvKey;
+
 return [
     /*
      *-------------------------------------------------------------------------
@@ -20,7 +24,7 @@ return [
      * //
      *
      */
-    'trailingSlash'             => env('ROUTING_TRAILING_SLASH', false),
+    CKP::TRAILING_SLASH              => env(EnvKey::ROUTING_TRAILING_SLASH, false),
 
     /*
      *-------------------------------------------------------------------------
@@ -30,7 +34,7 @@ return [
      * //
      *
      */
-    'useAbsoluteUrls'           => env('ROUTING_USE_ABSOLUTE_URLS', false),
+    CKP::USE_ABSOLUTE_URLS           => env(EnvKey::ROUTING_USE_ABSOLUTE_URLS, false),
 
     /*
      *-------------------------------------------------------------------------
@@ -40,7 +44,7 @@ return [
      * //
      *
      */
-    'middleware'                => env('ROUTING_MIDDLEWARE', []),
+    CKP::MIDDLEWARE                  => env(EnvKey::ROUTING_MIDDLEWARE, []),
 
     /*
      *-------------------------------------------------------------------------
@@ -50,7 +54,7 @@ return [
      * //
      *
      */
-    'middlewareGroups'          => env('ROUTING_MIDDLEWARE_GROUPS', []),
+    CKP::MIDDLEWARE_GROUPS           => env(EnvKey::ROUTING_MIDDLEWARE_GROUPS, []),
 
     /*
      *-------------------------------------------------------------------------
@@ -60,7 +64,7 @@ return [
      * //
      *
      */
-    'useAnnotations'            => env('ROUTING_USE_ANNOTATIONS', false),
+    CKP::USE_ANNOTATIONS             => env(EnvKey::ROUTING_USE_ANNOTATIONS, false),
 
     /*
      *-------------------------------------------------------------------------
@@ -70,7 +74,7 @@ return [
      * //
      *
      */
-    'useAnnotationsExclusively' => env('ROUTING_USE_ANNOTATIONS_EXCLUSIVELY', false),
+    CKP::USE_ANNOTATIONS_EXCLUSIVELY => env(EnvKey::ROUTING_USE_ANNOTATIONS_EXCLUSIVELY, false),
 
     /*
      *-------------------------------------------------------------------------
@@ -80,7 +84,7 @@ return [
      * //
      *
      */
-    'controllers'               => env('ROUTING_CONTROLLERS', []),
+    CKP::CONTROLLERS                 => env(EnvKey::ROUTING_CONTROLLERS, []),
 
     /*
      *-------------------------------------------------------------------------
@@ -90,7 +94,7 @@ return [
      * //
      *
      */
-    'filePath'                  => env('ROUTING_FILE_PATH', routesPath('routes.php')),
+    CKP::FILE_PATH                   => env(EnvKey::ROUTING_FILE_PATH, routesPath('routes.php')),
 
     /*
      *-------------------------------------------------------------------------
@@ -100,7 +104,7 @@ return [
      * //
      *
      */
-    'cacheFilePath'             => env('ROUTING_CACHE_FILE_PATH', cachePath('routes.php')),
+    CKP::CACHE_FILE_PATH             => env(EnvKey::ROUTING_CACHE_FILE_PATH, cachePath('routes.php')),
 
     /*
      *-------------------------------------------------------------------------
@@ -110,5 +114,5 @@ return [
      * //
      *
      */
-    'useCache'                  => env('ROUTING_USE_CACHE_FILE', false),
+    CKP::USE_CACHE                   => env(EnvKey::ROUTING_USE_CACHE_FILE, false),
 ];
