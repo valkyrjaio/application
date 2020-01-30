@@ -2,12 +2,12 @@
 
 /*
  *-------------------------------------------------------------------------
- * Views Configuration
+ * Logging Configuration
  *-------------------------------------------------------------------------
  *
- * Views are what provide users with something to look at and enjoy all
- * the hard work you've put into the application. Here you'll find
- * all the configurations necessary to make that work properly.
+ * Logging is very helpful in understanding what occurs within your
+ * application when its deployed and used by multiple users aside
+ * from you and your developers. Configure that helpfulness here.
  *
  */
 
@@ -17,21 +17,21 @@ use Valkyrja\Config\Enums\EnvKey;
 return [
     /*
      *-------------------------------------------------------------------------
-     * Views Directory
+     * Logging Log Name
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    CKP::DIR   => env(EnvKey::VIEWS_DIR, resourcesPath('views')),
+    CKP::NAME      => env(EnvKey::LOGGER_NAME, 'ApplicationLog'),
 
     /*
      *-------------------------------------------------------------------------
-     * Views Paths
+     * Logging Log File Path
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    CKP::PATHS => env(EnvKey::VIEWS_PATHS, []),
+    CKP::FILE_PATH => env(EnvKey::LOGGER_FILE_PATH, storagePath('logs/valkyrja.log')),
 ];
