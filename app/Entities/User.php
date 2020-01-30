@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Repositories\UserRepository;
 use Valkyrja\ORM\NativeEntity;
 
 /**
@@ -9,6 +10,20 @@ use Valkyrja\ORM\NativeEntity;
  */
 class User extends NativeEntity
 {
+    /**
+     * The table name.
+     *
+     * @var string
+     */
+    protected static string $table = 'user';
+
+    /**
+     * The ORM repository to use.
+     *
+     * @var string|null
+     */
+    protected static ?string $repository = UserRepository::class;
+
     /**
      * @var int
      */
