@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Valkyrja\ORM\Entity;
+use Valkyrja\ORM\NativeEntity;
 
 /**
  * Entity User.
  */
-class User extends Entity
+class User extends NativeEntity
 {
     /**
      * @var int

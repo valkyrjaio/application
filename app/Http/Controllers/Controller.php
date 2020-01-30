@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Valkyrja\Http\Controller as BaseController;
-
 /**
  * Class Controller.
  */
-abstract class Controller extends BaseController
+abstract class Controller
 {
-    // Implement application shared controller methods here.
+    // Implement application shared controller methods here then make sure all your controllers extends this one
 }

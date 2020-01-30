@@ -14,7 +14,7 @@ use Valkyrja\View\View;
  * @Service("id" = "App\\Http\\Controllers\\HomeController")
  * @ServiceAlias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
  */
-class HomeController extends Controller
+class HomeController
 {
     /**
      * Property routing example.
