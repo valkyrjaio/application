@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\ORM\Entities;
 
-use App\Repositories\UserRepository;
+use App\ORM\Repositories\UserRepository;
 use Valkyrja\ORM\NativeEntity;
 
 /**

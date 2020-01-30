@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\ORM\Repositories;
 
 use Valkyrja\ORM\Repositories\NativeRepository;
 
