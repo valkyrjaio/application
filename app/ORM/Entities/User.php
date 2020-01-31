@@ -3,12 +3,12 @@
 namespace App\ORM\Entities;
 
 use App\ORM\Repositories\UserRepository;
-use Valkyrja\ORM\NativeEntity;
+use Valkyrja\ORM\Entities\Entity;
 
 /**
  * Entity User.
  */
-class User extends NativeEntity
+class User extends Entity
 {
     /**
      * The table name.
