@@ -2,31 +2,78 @@
     <img src="https://i.imgur.com/dt0M3Ix.png" width="400">
 </a></p>
 <p align="center">
-    <a href="https://packagist.org/packages/valkyrja/application"><img src="https://poser.pugx.org/valkyrja/application/v/stable.svg" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/valkyrja/application"><img src="https://poser.pugx.org/valkyrja/application/v/unstable" alt="Unstable Version"></a>
-    <a href="https://packagist.org/packages/valkyrja/application"><img src="https://poser.pugx.org/valkyrja/application/license.svg" alt="License"></a>
-    <a href="https://packagist.org/packages/valkyrja/application"><img src="https://poser.pugx.org/valkyrja/application/d/total.svg" alt="Total Downloads"></a>
+    <a href="https://travis-ci.org/valkyrjaio/valkyrja"><img src="https://travis-ci.org/valkyrjaio/valkyrja.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/v/stable.svg" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/d/total.svg" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/license.svg" alt="License"></a>
+</p>
+<p align="center">
+    <!-- <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/v/unstable" alt="Unstable Version"></a> -->
     <a href="https://styleci.io/repos/89089385"><img src="https://styleci.io/repos/89089385/shield?branch=master&style=flat" alt="StyleCI"></a>
 </p>
 
-# Valkyrja Framework
-A simple framework for speed and efficiency
+About Valkyrja
+------------
 
-## MVC
+> **Note:** This repository contains the application code of the Valkyrja framework. If you want to see the core source framework code, visit the [Valkyrja Framework repository](https://github.com/valkyrjaio/valkyrja).
 
-## Environment Variables
+[Valkyrja][1] is a PHP framework for web and console applications
 
-## Dependency Injection
+- Annotations
+- Container
+- Console
+- Events
+- ORM
+- Routing
+- SPEED!
 
-### Service Container
+Installation
+------------
 
-## Routing
+* [Install Valkyrja][4] with Composer (see [requirements details][3]).
+* Valkyrja follows the [semantic versioning][5] strictly, publishes "Long Term
+  Support" (LTS) versions and has a [release process][6] that is predictable and
+  business-friendly.
 
-### Controllers
+Documentation
+-------------
 
-## Views
+* Read the [Getting Started guide][7] if you are new to Valkyrja.
+* Try the [Valkyrja Demo application][2] to learn Valkyrja in practice.
+* Master Valkyrja with the [Guides and Tutorials][8], the [Components docs][9]
+  and the [Best Practices][10] reference.
 
-## Response
+Community
+---------
 
-## Compiled Optimization (WIP)
-TODO: WIP
+* Follow us on [GitHub][11].
+* Read our [Code of Conduct][12]
+
+Contributing
+------------
+
+Valkyrja is an Open Source, community-driven project with thousands of
+[contributors][13]. Join them [contributing code][14] or [contributing documentation][15].
+
+Security Issues
+---------------
+
+If you discover a security vulnerability within Valkyrja, please follow our
+[disclosure procedure][16].
+
+[1]: https://valkyrja.io
+[2]: https://valkyrja.io
+[3]: https://valkyrja.io
+[4]: https://valkyrja.io
+[5]: https://valkyrja.io
+[6]: https://valkyrja.io
+[7]: https://valkyrja.io
+[8]: https://valkyrja.io
+[9]: https://valkyrja.io
+[10]: https://valkyrja.io
+[11]: https://valkyrja.io
+[12]: https://valkyrja.io
+[13]: https://valkyrja.io
+[14]: https://valkyrja.io
+[15]: https://valkyrja.io
+[16]: https://valkyrja.io
