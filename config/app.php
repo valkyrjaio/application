@@ -10,6 +10,7 @@
  *
  */
 
+use Valkyrja\Application\Application;
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
 use Valkyrja\Container\Enums\Provider;
@@ -63,7 +64,7 @@ return [
      * //
      *
      */
-    CKP::VERSION              => env(EnvKey::APP_VERSION, Valkyrja\Application::VERSION),
+    CKP::VERSION              => env(EnvKey::APP_VERSION, Application::VERSION),
 
     /*
      *-------------------------------------------------------------------------
