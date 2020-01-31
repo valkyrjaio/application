@@ -2,12 +2,12 @@
 
 namespace App\ORM\Repositories;
 
-use Valkyrja\ORM\Repositories\NativeRepository;
+use Valkyrja\ORM\Repositories\Repository;
 
 /**
  * Class UserRepository.
  */
-class UserRepository extends NativeRepository
+class UserRepository extends Repository
 {
     // We can do custom stuff for all User entities.
     //  Examples:
