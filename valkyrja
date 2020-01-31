@@ -8,6 +8,9 @@
  * @author Melech Mizrachi
  */
 
+use Valkyrja\Application\Applications\Valkyrja;
+use Valkyrja\Support\Directory;
+
 /*
  *-------------------------------------------------------------------------
  * Application Auto Loader Assemble!
@@ -32,7 +35,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  *
  */
 
-Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/');
+Directory::$BASE_PATH = realpath(__DIR__ . '/');
 
 /*
  *-------------------------------------------------------------------------
@@ -47,7 +50,7 @@ Valkyrja\Support\Directory::$BASE_PATH = realpath(__DIR__ . '/');
  */
 
 // Here we'll set the env file to use
-Valkyrja\Valkyrja::setEnv(env\EnvConsole::class);
+Valkyrja::setEnv(env\EnvConsole::class);
 
 /*
  *-------------------------------------------------------------------------
@@ -60,7 +63,7 @@ Valkyrja\Valkyrja::setEnv(env\EnvConsole::class);
  *
  */
 
-$app = new Valkyrja\Valkyrja();
+$app = new Valkyrja();
 
 /*
  *-------------------------------------------------------------------------

@@ -6,6 +6,9 @@
  * @author Melech Mizrachi
  */
 
+use Valkyrja\Application\Applications\Valkyrja;
+use Valkyrja\Support\Directory;
+
 // Set a global constant for when the application as a whole started
 define('APP_START', microtime(true));
 
@@ -33,7 +36,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  *
  */
 
-Valkyrja\Support\Directory::$BASE_PATH = __DIR__ . '/../';
+Directory::$BASE_PATH = __DIR__ . '/../';
 
 /*
  *-------------------------------------------------------------------------
@@ -50,7 +53,7 @@ Valkyrja\Support\Directory::$BASE_PATH = __DIR__ . '/../';
  */
 
 // Here we'll set the env file to use
-Valkyrja\Valkyrja::setEnv(env\Env::class);
+Valkyrja::setEnv(env\Env::class);
 
 /*
  *-------------------------------------------------------------------------
@@ -63,7 +66,7 @@ Valkyrja\Valkyrja::setEnv(env\Env::class);
  *
  */
 
-$app = new Valkyrja\Valkyrja();
+$app = new Valkyrja();
 
 /*
  *-------------------------------------------------------------------------

@@ -2,10 +2,11 @@
 
 namespace tests;
 
-use config\EnvTest;
+use env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use tests\traits\TestRequest;
-use Valkyrja\Valkyrja;
+use Valkyrja\Application\Application;
+use Valkyrja\Application\Applications\Valkyrja;
 use Valkyrja\Support\Directory;
 
 /**
@@ -16,16 +17,12 @@ class TestCase extends PHPUnitTestCase
     use TestRequest;
 
     /**
-     * @var \Valkyrja\Application
+     * @var Application
      */
     protected $app;
 
     /**
      * Setup the test environment.
-     *
-     * @throws \Valkyrja\Exceptions\InvalidContainerImplementation
-     * @throws \Valkyrja\Exceptions\InvalidDispatcherImplementation
-     * @throws \Valkyrja\Exceptions\InvalidEventsImplementation
      *
      * @return void
      */

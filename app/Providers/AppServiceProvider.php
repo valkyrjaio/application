@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Valkyrja\Application;
+use Valkyrja\Application\Application;
 use Valkyrja\Support\Providers\Provider;
 
 /**
