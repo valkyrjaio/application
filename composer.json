@@ -1,5 +1,5 @@
 {
-  "name"              : "valkyrja/valkyrja-app",
+  "name"              : "valkyrja/application",
   "type"              : "project",
   "description"       : "The Valkyrja Application.",
   "homepage"          : "http://www.valkyrja.io",
