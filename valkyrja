@@ -75,4 +75,15 @@ $app = new Valkyrja();
  *
  */
 
-$app->consoleKernel()->run();
+$exitCode = $app->consoleKernel()->run();
+
+/*
+ *-------------------------------------------------------------------------
+ * Exit
+ *-------------------------------------------------------------------------
+ *
+ * Exit to let the terminal know we're done.
+ *
+ */
+
+exit($exitCode);
