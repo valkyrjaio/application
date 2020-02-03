@@ -2,7 +2,7 @@
 
 /*
  *-------------------------------------------------------------------------
- * Bind Application Console Commands
+ * Define Application Console Commands
  *-------------------------------------------------------------------------
  *
  * TODO: ADD EXPLANATION

@@ -2,7 +2,7 @@
 
 /*
  *-------------------------------------------------------------------------
- * Bind Application Event Listeners
+ * Define Application Event Listeners
  *-------------------------------------------------------------------------
  *
  * TODO: ADD EXPLANATION

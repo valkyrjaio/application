@@ -2,7 +2,7 @@
 
 /*
  *-------------------------------------------------------------------------
- * Bind Application Container Instances
+ * Define Application Container Instances
  *-------------------------------------------------------------------------
  *
  * TODO: ADD EXPLANATION
