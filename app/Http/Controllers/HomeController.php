@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Valkyrja\Container\Annotations\Service;
-use Valkyrja\Container\Annotations\ServiceAlias;
-use Valkyrja\Routing\Annotations\Route;
+use Valkyrja\Container\Annotation\Service;
+use Valkyrja\Container\Annotation\ServiceAlias;
+use Valkyrja\Routing\Annotation\Route;
 use Valkyrja\View\View;
 
 /**
