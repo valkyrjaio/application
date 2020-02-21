@@ -19,6 +19,7 @@
     "valkyrja/valkyrja" : "1.0.*"
   },
   "require-dev"       : {
+    "filp/whoops"      : "2.7.1",
     "fzaninotto/faker" : "~1.4",
     "mockery/mockery"  : "0.9.*",
     "phpunit/phpunit"  : "~6.1"

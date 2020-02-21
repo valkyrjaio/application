@@ -10,7 +10,7 @@
  */
 
 use App\Http\Controllers\HomeController;
-use Valkyrja\Routing\Route;
+use Valkyrja\Routing\Models\Route;
 
 /*
  * Welcome Route.
