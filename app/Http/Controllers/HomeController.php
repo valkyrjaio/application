@@ -12,7 +12,7 @@ use Valkyrja\View\View;
  *
  * @Route("path" = "/", "name" = "home")
  * @Service("id" = "App\\Http\\Controllers\\HomeController")
- * @ServiceAlias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
+ * @Service\Alias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
  */
 class HomeController
 {
