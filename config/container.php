@@ -11,9 +11,10 @@
  *
  */
 
+use App\Http\Kernel;
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
-use Valkyrja\Container\Enums\Provider;
+use Valkyrja\Container\Enums\Config;
 
 return [
     /*
@@ -26,36 +27,12 @@ return [
      */
     CKP::PROVIDERS                   => env(
         EnvKey::CONTAINER_PROVIDERS,
-        [
-            Provider::ANNOTATIONS_PARSER,
-            Provider::ANNOTATIONS,
-            Provider::CLIENT,
-            Provider::CONSOLE,
-            Provider::CONSOLE_KERNEL,
-            Provider::INPUT,
-            Provider::OUTPUT,
-            Provider::OUTPUT_FORMATTER,
-            Provider::COMMAND_ANNOTATIONS,
-            Provider::CONTAINER_ANNOTATIONS,
-            Provider::CRYPT,
-            Provider::LISTENER_ANNOTATIONS,
-            Provider::FILESYSTEM,
-            Provider::KERNEL,
-            Provider::REQUEST,
-            Provider::RESPONSE,
-            Provider::JSON_RESPONSE,
-            Provider::REDIRECT_RESPONSE,
-            Provider::RESPONSE_BUILDER,
-            Provider::LOGGER,
-            Provider::MAIL,
-            Provider::ENTITY_MANAGER,
-            Provider::PATH_GENERATOR,
-            Provider::PATH_PARSER,
-            Provider::ROUTER,
-            Provider::ROUTE_ANNOTATIONS,
-            Provider::SESSION,
-            Provider::VIEW,
-        ]
+        array_merge(
+            Config::PROVIDERS,
+            [
+                Kernel::class,
+            ]
+        )
     ),
 
     /*
