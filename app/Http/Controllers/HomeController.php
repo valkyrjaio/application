@@ -42,6 +42,7 @@ class HomeController
      * @return View
      *
      * @Route("path" = "/", "name" = "welcome")
+     * @Route("path" = "/{dynamicValue:alpha}", "name" = "dynamicValue", "dynamic" = true)
      */
     public function welcome(): View
     {
