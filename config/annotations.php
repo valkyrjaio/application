@@ -10,7 +10,7 @@
  *
  */
 
-use Valkyrja\Annotation\Enums\Annotation;
+use Valkyrja\Annotation\Enums\Config;
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
 
@@ -43,15 +43,15 @@ return [
      * //
      *
      */
-    CKP::MAP       => env(
-        EnvKey::ANNOTATIONS_MAP,
-        [
-            CKP::COMMAND         => Annotation::COMMAND,
-            CKP::LISTENER        => Annotation::LISTENER,
-            CKP::ROUTE           => Annotation::ROUTE,
-            CKP::SERVICE         => Annotation::SERVICE,
-            CKP::SERVICE_ALIAS   => Annotation::SERVICE_ALIAS,
-            CKP::SERVICE_CONTEXT => Annotation::SERVICE_CONTEXT,
-        ]
-    ),
+    CKP::MAP       => env(EnvKey::ANNOTATIONS_MAP, Config::MAP),
+
+    /*
+     *-------------------------------------------------------------------------
+     * Annotations Aliases
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    CKP::ALIASES   => env(EnvKey::ANNOTATIONS_ALIASES, Config::ALIASES),
 ];

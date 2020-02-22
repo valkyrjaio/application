@@ -51,6 +51,7 @@ router()->get(
         ->setName('version')
         ->setClass(HomeController::class)
         ->setMethod('version')
+        ->setStatic(true)
 );
 
 /*

@@ -12,6 +12,7 @@
  *
  */
 
+use App\Http\Controllers\HomeController;
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
 
@@ -84,7 +85,7 @@ return [
      * //
      *
      */
-    CKP::CONTROLLERS                 => env(EnvKey::ROUTING_CONTROLLERS, []),
+    CKP::CONTROLLERS                 => env(EnvKey::ROUTING_CONTROLLERS, [HomeController::class]),
 
     /*
      *-------------------------------------------------------------------------

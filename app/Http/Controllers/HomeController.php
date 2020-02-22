@@ -26,6 +26,16 @@ class HomeController
     public string $propertyRouting = 'Property Routing Example';
 
     /**
+     * Static property routing example.
+     *
+     * @var string
+     *
+     * @Route("path" = "/static-property", "name" = "staticProperty")
+     * @Route\Any("path" = "/static-property-any", "name" = "staticProperty.any")
+     */
+    public static string $staticPropertyRouting = 'Static Property Routing Example';
+
+    /**
      * Welcome action.
      * - Example of a view being returned.
      *
@@ -43,7 +53,7 @@ class HomeController
      *
      * @return View
      *
-     * @Route("path" = "/home", "name" = "home")
+     * @Route("path" = "/home", "name" = "home", "methods" = ["RequestMethod::GET"])
      */
     public function home(): View
     {
@@ -56,9 +66,12 @@ class HomeController
      *
      * @return string
      *
-     * @Route("path" = "/version", "name" = "version", "requestMethods" = ["GET", "POST", "HEAD"])
+     * @Route\Get("path" = "/version", "name" = "version")
+     * @Route\Post("path" = "/version", "name" = "version.post")
+     * @Route\Put("path" = "/version/put", "name" = "version.put")
+     * @Route\Redirect\Permanent\Put("path" = "/version", "to" = "/version/put", "name" = "version.put.redirect")
      */
-    public function version(): string
+    public static function version(): string
     {
         return app()->version();
     }
