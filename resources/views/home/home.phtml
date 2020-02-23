@@ -8,6 +8,10 @@ use Valkyrja\View\View;
 $view->layout('layout');
 ?>
 
+<?php $view->startBlock('title'); ?>
+    Home
+<?php $view->endBlock('title'); ?>
+
 <?php $view->startBlock('content'); ?>
 <article>
     Test Php Home

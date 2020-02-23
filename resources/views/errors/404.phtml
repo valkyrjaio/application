@@ -1,1 +1,13 @@
-404
+<?php
+/**
+ * @var View $view
+ */
+
+use Valkyrja\View\View;
+
+$view->layout('layout');
+?>
+
+<?php $view->startBlock('title'); ?>
+    404
+<?php $view->endBlock('title'); ?>
