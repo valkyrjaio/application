@@ -3,14 +3,14 @@
 namespace App\Http;
 
 use Throwable;
-use Valkyrja\Http\NativeKernel;
+use Valkyrja\Http\Kernels\Kernel as ValkyrjaKernel;
 use Valkyrja\Http\Request;
 use Valkyrja\Http\Response;
 
 /**
  * Class Kernel.
  */
-class Kernel extends NativeKernel
+class Kernel extends ValkyrjaKernel
 {
     /**
      * Handle a request.
