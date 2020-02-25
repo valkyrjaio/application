@@ -13,6 +13,7 @@
 
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
+use Valkyrja\ORM\Adapters\PDOAdapter;
 
 return [
     /*
@@ -24,6 +25,21 @@ return [
      *
      */
     CKP::DEFAULT     => env(EnvKey::DB_CONNECTION, CKP::MYSQL),
+
+    /*
+     *-------------------------------------------------------------------------
+     * Default Database Connection Name
+     *-------------------------------------------------------------------------
+     *
+     * //
+     *
+     */
+    CKP::ADAPTERS    => env(
+        EnvKey::DB_ADAPTERS,
+        [
+            CKP::PDO => PDOAdapter::class,
+        ]
+    ),
 
     /*
      *-------------------------------------------------------------------------
@@ -39,8 +55,8 @@ return [
             CKP::DRIVER      => CKP::MYSQL,
             CKP::HOST        => env(EnvKey::DB_HOST, '127.0.0.1'),
             CKP::PORT        => env(EnvKey::DB_PORT, '3306'),
-            CKP::DB          => env(EnvKey::DB_DATABASE, 'forge'),
-            CKP::USERNAME    => env(EnvKey::DB_USERNAME, 'forge'),
+            CKP::DB          => env(EnvKey::DB_DATABASE, CKP::VALHALLA),
+            CKP::USERNAME    => env(EnvKey::DB_USERNAME, CKP::VALHALLA),
             CKP::PASSWORD    => env(EnvKey::DB_PASSWORD, ''),
             CKP::UNIX_SOCKET => env(EnvKey::DB_SOCKET, ''),
             CKP::CHARSET     => env(EnvKey::DB_CHARSET, 'utf8mb4'),
@@ -48,30 +64,33 @@ return [
             CKP::PREFIX      => env(EnvKey::DB_PREFIX, ''),
             CKP::STRICT      => env(EnvKey::DB_STRICT, true),
             CKP::ENGINE      => env(EnvKey::DB_ENGINE, null),
+            CKP::ADAPTER     => env(EnvKey::DB_ADAPTER, CKP::PDO),
         ],
 
         CKP::PGSQL => [
             CKP::DRIVER   => CKP::PGSQL,
             CKP::HOST     => env(EnvKey::DB_HOST, '127.0.0.1'),
             CKP::PORT     => env(EnvKey::DB_PORT, '5432'),
-            CKP::DB       => env(EnvKey::DB_DATABASE, 'forge'),
-            CKP::USERNAME => env(EnvKey::DB_USERNAME, 'forge'),
+            CKP::DB       => env(EnvKey::DB_DATABASE, CKP::VALHALLA),
+            CKP::USERNAME => env(EnvKey::DB_USERNAME, CKP::VALHALLA),
             CKP::PASSWORD => env(EnvKey::DB_PASSWORD, ''),
             CKP::CHARSET  => env(EnvKey::DB_CHARSET, 'utf8'),
             CKP::PREFIX   => env(EnvKey::DB_PREFIX, ''),
             CKP::SCHEMA   => env(EnvKey::DB_SCHEME, 'public'),
             CKP::SSL_MODE => env(EnvKey::DB_SSL_MODE, 'prefer'),
+            CKP::ADAPTER     => env(EnvKey::DB_ADAPTER, CKP::PDO),
         ],
 
         CKP::SQLSRV => [
             CKP::DRIVER   => CKP::SQLSRV,
             CKP::HOST     => env(EnvKey::DB_HOST, 'localhost'),
             CKP::PORT     => env(EnvKey::DB_PORT, '1433'),
-            CKP::DB       => env(EnvKey::DB_DATABASE, 'forge'),
-            CKP::USERNAME => env(EnvKey::DB_USERNAME, 'forge'),
+            CKP::DB       => env(EnvKey::DB_DATABASE, CKP::VALHALLA),
+            CKP::USERNAME => env(EnvKey::DB_USERNAME, CKP::VALHALLA),
             CKP::PASSWORD => env(EnvKey::DB_PASSWORD, ''),
             CKP::CHARSET  => env(EnvKey::DB_CHARSET, 'utf8'),
             CKP::PREFIX   => env(EnvKey::DB_PREFIX, ''),
+            CKP::ADAPTER     => env(EnvKey::DB_ADAPTER, CKP::PDO),
         ],
 
     ],
