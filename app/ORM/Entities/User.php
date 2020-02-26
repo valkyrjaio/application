@@ -20,9 +20,9 @@ class User extends Entity
     /**
      * The ORM repository to use.
      *
-     * @var string|null
+     * @var string
      */
-    protected static ?string $repository = UserRepository::class;
+    protected static string $repository = UserRepository::class;
 
     /**
      * @var int

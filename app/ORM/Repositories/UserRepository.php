@@ -11,6 +11,5 @@ class UserRepository extends Repository
 {
     // We can do custom stuff for all User entities.
     //  Examples:
-    //      $entityManager->repository(User::class)->create(new User());
-    //      $entityManager->create(new User(), true);
+    //      $entityManager->getRepository(User::class)->create(new User());
 }
