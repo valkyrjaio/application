@@ -13,8 +13,7 @@
 
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
-use Valkyrja\Filesystem\FlysystemLocal;
-use Valkyrja\Filesystem\FlysystemS3;
+use Valkyrja\Filesystem\Enums\Config;
 
 return [
     /*
@@ -29,7 +28,7 @@ return [
 
     /*
      *-------------------------------------------------------------------------
-     * Filesystem Adapter
+     * Filesystem Adapters
      *-------------------------------------------------------------------------
      *
      * //
@@ -37,10 +36,10 @@ return [
      */
     CKP::ADAPTERS => env(
         EnvKey::FILESYSTEM_ADAPTERS,
-        [
-            CKP::LOCAL => FlysystemLocal::class,
-            CKP::S3    => FlysystemS3::class,
-        ]
+        array_merge(
+            Config::ADAPTERS,
+            []
+        )
     ),
 
     /*
