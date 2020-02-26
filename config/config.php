@@ -119,7 +119,7 @@ return [
      * from you and your developers. Configure that helpfulness here.
      *
      */
-    CKP::LOGGER          => require __DIR__ . '/logging.php',
+    CKP::LOG          => require __DIR__ . '/logging.php',
 
     /*
      *-------------------------------------------------------------------------

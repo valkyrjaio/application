@@ -114,8 +114,8 @@ class Env
     /*
      * Logger env variables.
      */
-    // public const LOGGER_NAME      = null;
-    // public const LOGGER_FILE_PATH = null;
+    // public const LOG_NAME      = null;
+    // public const LOG_FILE_PATH = null;
 
     /*
      * Mail env variables.
@@ -157,8 +157,10 @@ class Env
     /*
      * Views env variables.
      */
-    // public const VIEWS_DIR   = null;
-    // public const VIEWS_PATHS = null;
+    // public const VIEW_DIR     = null;
+    // public const VIEW_ENGINE  = null;
+    // public const VIEW_ENGINES = null;
+    // public const VIEW_PATHS   = null;
 
     /*
      * Twig views env variables.

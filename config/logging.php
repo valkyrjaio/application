@@ -23,7 +23,7 @@ return [
      * //
      *
      */
-    CKP::NAME      => env(EnvKey::LOGGER_NAME, 'ApplicationLog'),
+    CKP::NAME      => env(EnvKey::LOG_NAME, 'ApplicationLog'),
 
     /*
      *-------------------------------------------------------------------------
@@ -33,5 +33,5 @@ return [
      * //
      *
      */
-    CKP::FILE_PATH => env(EnvKey::LOGGER_FILE_PATH, storagePath('logs/valkyrja.log')),
+    CKP::FILE_PATH => env(EnvKey::LOG_FILE_PATH, storagePath('logs/valkyrja.log')),
 ];
