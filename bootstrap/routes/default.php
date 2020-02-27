@@ -12,42 +12,46 @@
 use App\Http\Controllers\HomeController;
 use Valkyrja\Routing\Facades\Router;
 
-/*
- * Welcome Route.
- * - Example of a view being returned
- *
- * @path /
- */
-Router::get('/', HomeController::class . '->welcome()', 'welcome');
-Router::get('/{dynamicValue:alpha}', HomeController::class . '->welcome()', 'dynamicValue');
+Router::withController(HomeController::class)->withName('home')->group(
+    static function (\Valkyrja\Routing\Router $router) {
+        /**
+         * Welcome Route.
+         * - Example of a view being returned
+         *
+         * @path /
+         */
+        $router->get('/', '->welcome()', 'welcome');
+        $router->get('/{dynamicValue:alpha}', '->welcome()', 'dynamicValue');
 
-/*
- * Home Route.
- *
- * @path /home
- */
-Router::get('/home', HomeController::class . '->home()', 'home');
+        /**
+         * Home Route.
+         *
+         * @path /home
+         */
+        $router->get('/home', '->home()', 'home');
 
-/*
- * Framework Version Route.
- * - Example of string being returned
- *
- * @path /version
- */
-Router::get('/version', HomeController::class . '::version()', 'version');
+        /**
+         * Framework Version Route.
+         * - Example of string being returned
+         *
+         * @path /version
+         */
+        $router->get('/version', '::version()', 'version');
 
-/*
- * Property Routing Example Route.
- * - Example of string being returned from a property
- *
- * @path /property
- */
-Router::get('/property', HomeController::class . '->propertyRouting', 'property');
+        /**
+         * Property Routing Example Route.
+         * - Example of string being returned from a property
+         *
+         * @path /property
+         */
+        $router->get('/property', '->propertyRouting', 'property');
 
-/*
- * Property Routing Example Route.
- * - Example of string being returned from a property
- *
- * @path /property
- */
-Router::get('/static-property', HomeController::class . '::staticPropertyRouting', 'staticProperty');
+        /**
+         * Property Routing Example Route.
+         * - Example of string being returned from a property
+         *
+         * @path /property
+         */
+        $router->get('/static-property', '::staticPropertyRouting', 'staticProperty');
+    }
+);
