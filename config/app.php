@@ -126,22 +126,4 @@ return [
      *
      */
     CKP::EXCEPTION_HANDLER    => env(EnvKey::APP_EXCEPTION_HANDLER, Provider::EXCEPTION_HANDLER),
-
-    /*
-     *-------------------------------------------------------------------------
-     * Application Path Regex Map
-     *-------------------------------------------------------------------------
-     *
-     * //
-     *
-     */
-    CKP::PATH_REGEX_MAP       => env(
-        EnvKey::APP_PATH_REGEX_MAP,
-        array_merge(
-            Config::REGEX_MAP,
-            [
-                'number' => '(\d+)',
-            ]
-        )
-    ),
 ];

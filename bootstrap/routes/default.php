@@ -10,7 +10,7 @@
  */
 
 use App\Http\Controllers\HomeController;
-use Valkyrja\Routing\Models\Route;
+use Valkyrja\Routing\Facades\Router;
 
 /*
  * Welcome Route.
@@ -18,26 +18,15 @@ use Valkyrja\Routing\Models\Route;
  *
  * @path /
  */
-router()->get(
-    (new Route())
-        ->setPath('/')
-        ->setName('welcome')
-        ->setClass(HomeController::class)
-        ->setMethod('welcome')
-);
+Router::get('/', HomeController::class . '->welcome()', 'welcome');
+Router::get('/{dynamicValue:alpha}', HomeController::class . '->welcome()', 'dynamicValue');
 
 /*
  * Home Route.
  *
  * @path /home
  */
-router()->get(
-    (new Route())
-        ->setPath('/home')
-        ->setName('home')
-        ->setClass(HomeController::class)
-        ->setMethod('home')
-);
+Router::get('/home', HomeController::class . '->home()', 'home');
 
 /*
  * Framework Version Route.
@@ -45,14 +34,7 @@ router()->get(
  *
  * @path /version
  */
-router()->get(
-    (new Route())
-        ->setPath('/version')
-        ->setName('version')
-        ->setClass(HomeController::class)
-        ->setMethod('version')
-        ->setStatic(true)
-);
+Router::get('/version', HomeController::class . '::version()', 'version');
 
 /*
  * Property Routing Example Route.
@@ -60,10 +42,12 @@ router()->get(
  *
  * @path /property
  */
-router()->get(
-    (new Route())
-        ->setPath('/property')
-        ->setName('property')
-        ->setClass(HomeController::class)
-        ->setProperty('propertyRouting')
-);
+Router::get('/property', HomeController::class . '->propertyRouting', 'property');
+
+/*
+ * Property Routing Example Route.
+ * - Example of string being returned from a property
+ *
+ * @path /property
+ */
+Router::get('/static-property', HomeController::class . '::staticPropertyRouting', 'staticProperty');
