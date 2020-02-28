@@ -13,7 +13,7 @@
 
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 use Valkyrja\Config\Enums\EnvKey;
-use Valkyrja\Console\Enums\Provider;
+use Valkyrja\Console\Enums\Config;
 
 return [
     /*
@@ -26,18 +26,10 @@ return [
      */
     CKP::PROVIDERS                   => env(
         EnvKey::CONSOLE_PROVIDERS,
-        [
-            Provider::CONFIG_CACHE_COMMAND,
-            Provider::CONFIG_ALL_COMMAND,
-            Provider::COMMANDS_LIST_COMMAND,
-            Provider::CONSOLE_CACHE_COMMAND,
-            Provider::COMMANDS_LIST_FOR_BASH_COMMAND,
-            Provider::OPTIMIZE_COMMAND,
-            Provider::CONTAINER_CACHE_COMMAND,
-            Provider::EVENTS_CACHE_COMMAND,
-            Provider::ROUTES_CACHE_COMMAND,
-            Provider::ROUTES_LIST_COMMAND,
-        ]
+        array_merge(
+            Config::PROVIDERS,
+            []
+        )
     ),
 
     /*
@@ -48,7 +40,13 @@ return [
      * //
      *
      */
-    CKP::DEV_PROVIDERS               => env(EnvKey::CONSOLE_DEV_PROVIDERS, []),
+    CKP::DEV_PROVIDERS               => env(
+        EnvKey::CONSOLE_DEV_PROVIDERS,
+        array_merge(
+            Config::DEV_PROVIDERS,
+            []
+        )
+    ),
 
     /*
      *-------------------------------------------------------------------------
@@ -82,7 +80,7 @@ return [
 
     /*
      *-------------------------------------------------------------------------
-     * Console Handlers
+     * Console Annotated Handlers
      *-------------------------------------------------------------------------
      *
      * //

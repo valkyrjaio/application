@@ -79,13 +79,18 @@ return [
 
     /*
      *-------------------------------------------------------------------------
-     * Routing Annotation Classes
+     * Routing Annotated Controllers
      *-------------------------------------------------------------------------
      *
      * //
      *
      */
-    CKP::CONTROLLERS                 => env(EnvKey::ROUTING_CONTROLLERS, [HomeController::class]),
+    CKP::CONTROLLERS                 => env(
+        EnvKey::ROUTING_CONTROLLERS,
+        [
+            HomeController::class,
+        ]
+    ),
 
     /*
      *-------------------------------------------------------------------------

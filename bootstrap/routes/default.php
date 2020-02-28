@@ -10,6 +10,7 @@
  */
 
 use App\Http\Controllers\HomeController;
+use Valkyrja\Http\ResponseFactory;
 use Valkyrja\Routing\Facades\Router;
 
 Router::withController(HomeController::class)->withName('home')->group(
@@ -28,7 +29,8 @@ Router::withController(HomeController::class)->withName('home')->group(
          *
          * @path /home
          */
-        $router->get('/home', '->home()', 'home');
+        $router->get('/home', '->home()', 'home')
+               ->setDependencies([ResponseFactory::class]);
 
         /**
          * Framework Version Route.

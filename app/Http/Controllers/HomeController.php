@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Valkyrja\Container\Annotation\Service;
 use Valkyrja\Container\Annotation\ServiceAlias;
-use Valkyrja\Http\Facades\ResponseFactory;
 use Valkyrja\Http\Response;
+use Valkyrja\Http\ResponseFactory;
 use Valkyrja\Routing\Annotation\Route;
 use Valkyrja\View\View;
 
@@ -54,13 +54,15 @@ class HomeController
     /**
      * Home action.
      *
+     * @param ResponseFactory $responseFactory
+     *
      * @return Response
      *
      * @Route("path" = "/home", "name" = "home", "methods" = ["RequestMethod::GET"])
      */
-    public function home(): Response
+    public function home(ResponseFactory $responseFactory): Response
     {
-        return ResponseFactory::view('home/home');
+        return $responseFactory->view('home/home');
     }
 
     /**
