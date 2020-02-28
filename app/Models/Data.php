@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Valkyrja\Model\NativeModel;
+use Valkyrja\Model\Models\Model;
 
 /**
  * Model Data.
  */
-class Data extends NativeModel
+class Data extends Model
 {
     /**
      * @var int
