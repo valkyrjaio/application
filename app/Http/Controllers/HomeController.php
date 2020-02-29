@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Valkyrja\Container\Annotation\Service;
-use Valkyrja\Container\Annotation\ServiceAlias;
 use Valkyrja\Http\Response;
 use Valkyrja\Http\ResponseFactory;
 use Valkyrja\Routing\Annotation\Route;

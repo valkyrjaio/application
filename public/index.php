@@ -36,7 +36,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  *
  */
 
-Directory::$BASE_PATH = __DIR__ . '/../';
+Directory::$BASE_PATH = __DIR__ . '/..';
 
 /*
  *-------------------------------------------------------------------------
@@ -66,7 +66,7 @@ Valkyrja::setEnv(env\Env::class);
  *
  */
 
-$app = new Valkyrja();
+$app = new Valkyrja(/*Config::class*/);
 
 /*
  *-------------------------------------------------------------------------

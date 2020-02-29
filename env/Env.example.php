@@ -10,11 +10,11 @@ class Env
     /**
      * Application env variables.
      */
-    public const APP_ENV      = 'local';
-    public const APP_DEBUG    = true;
-    public const APP_URL      = 'localhost';
-    public const APP_TIMEZONE = 'UTC';
-    public const APP_VERSION  = '1 (ALPHA)';
+    // public const APP_ENV      = 'local';
+    // public const APP_DEBUG    = true;
+    // public const APP_URL      = 'localhost';
+    // public const APP_TIMEZONE = 'UTC';
+    // public const APP_VERSION  = '1 (ALPHA)';
     // public const APP_KEY            = null;
     // public const APP_PATH_REGEX_MAP = null;
     //
