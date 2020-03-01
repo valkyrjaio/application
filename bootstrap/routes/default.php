@@ -29,8 +29,9 @@ Router::withController(HomeController::class)->withName('home')->group(
          *
          * @path /home
          */
-        $router->get('/home', '->home()', 'home')
+        $router->get('/home', '->home()', 'home', false)
                ->setDependencies([ResponseFactory::class]);
+        $router->get('/homeAutoDependencies', '->home()', 'homeAutoDependencies');
 
         /**
          * Framework Version Route.
