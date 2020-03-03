@@ -40,14 +40,14 @@ class HomeController
      * Welcome action.
      * - Example of a view being returned.
      *
-     * @return View
+     * @return Response
      *
      * @Route("path" = "/", "name" = "welcome")
      * @Route("path" = "/{dynamicValue:alpha}", "name" = "dynamicValue")
      */
-    public function welcome(): View
+    public function welcome(): Response
     {
-        return view('index');
+        return response(view('index')->render());
     }
 
     /**
