@@ -68,15 +68,15 @@ class HomeController
      * Application version action.
      * - Example of string being returned.
      *
-     * @return string
+     * @return Response
      *
      * @Route\Get("path" = "/version", "name" = "version")
      * @Route\Post("path" = "/version", "name" = "version.post")
      * @Route\Put("path" = "/version/put", "name" = "version.put")
      * @Route\Redirect\Permanent\Put("path" = "/version", "to" = "/version/put", "name" = "version.put.redirect")
      */
-    public static function version(): string
+    public static function version(): Response
     {
-        return app()->version();
+        return response(app()->version());
     }
 }
