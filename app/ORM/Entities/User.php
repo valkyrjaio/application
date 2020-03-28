@@ -3,31 +3,26 @@
 namespace App\ORM\Entities;
 
 use App\ORM\Repositories\UserRepository;
-use Valkyrja\ORM\Entities\Entity;
+use Valkyrja\Auth\Entities\User as ValkyrjaUser;
+use Valkyrja\ORM\DatedEntity;
+use Valkyrja\ORM\Entities\DatedEntityFields;
+use Valkyrja\ORM\Entities\SoftDeleteEntityFields;
+use Valkyrja\ORM\SoftDeleteEntity;
 
 /**
  * Entity User.
  */
-class User extends Entity
+class User extends ValkyrjaUser implements DatedEntity, SoftDeleteEntity
 {
-    /**
-     * The table name.
-     *
-     * @var string
-     */
-    protected static string $table = 'user';
+    use DatedEntityFields;
+    use SoftDeleteEntityFields;
 
     /**
      * The ORM repository to use.
      *
-     * @var string
+     * @var string|null
      */
-    protected static string $repository = UserRepository::class;
-
-    /**
-     * @var int
-     */
-    public int $id;
+    protected static ?string $repository = UserRepository::class;
 
     /**
      * @var string
@@ -45,11 +40,11 @@ class User extends Entity
     protected string $needsExtraLogic;
 
     /**
-     * Getter for a property with extra logic.
+     * Getter for a property that needs extra logic before getting.
      *
      * @return string
      */
-    public function getNeedsExtraLogic(): string
+    protected function getNeedsExtraLogic(): string
     {
         // Do extra logic before getting
 
@@ -57,13 +52,13 @@ class User extends Entity
     }
 
     /**
-     * Setter for a property with extra logic.
+     * Setter for a property that needs extra logic before setting.
      *
      * @param string $needsExtraLogic
      *
      * @return void
      */
-    public function setNeedsExtraLogic(string $needsExtraLogic): void
+    protected function setNeedsExtraLogic(string $needsExtraLogic): void
     {
         // Do extra checks before setting
 

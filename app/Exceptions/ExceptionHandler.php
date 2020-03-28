@@ -3,13 +3,13 @@
 namespace App\Exceptions;
 
 use Throwable;
-use Valkyrja\Exceptions\NativeExceptionHandler;
+use Valkyrja\Exception\Handlers\ExceptionHandler as ValkyrjaExceptionHandler;
 use Valkyrja\Http\Response;
 
 /**
  * Class ExceptionHandler.
  */
-class ExceptionHandler extends NativeExceptionHandler
+class ExceptionHandler extends ValkyrjaExceptionHandler
 {
     /**
      * Enable debug mode.
@@ -28,6 +28,8 @@ class ExceptionHandler extends NativeExceptionHandler
      * Get a response from a throwable.
      *
      * @param Throwable $exception
+     *
+     * @throws Throwable
      *
      * @return Response
      */

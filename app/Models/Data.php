@@ -24,7 +24,7 @@ class Data extends Model
      *
      * @return string
      */
-    public function getNeedsExtraLogic(): string
+    protected function getNeedsExtraLogic(): string
     {
         // Do extra logic before getting
 
@@ -38,7 +38,7 @@ class Data extends Model
      *
      * @return void
      */
-    public function setNeedsExtraLogic(string $needsExtraLogic): void
+    protected function setNeedsExtraLogic(string $needsExtraLogic): void
     {
         // Do extra checks before setting
 

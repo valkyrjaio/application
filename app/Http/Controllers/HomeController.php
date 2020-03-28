@@ -6,7 +6,10 @@ use Valkyrja\Container\Annotation\Service;
 use Valkyrja\Http\Response;
 use Valkyrja\Http\ResponseFactory;
 use Valkyrja\Routing\Annotation\Route;
-use Valkyrja\View\View;
+
+use function Valkyrja\app;
+use function Valkyrja\response;
+use function Valkyrja\view;
 
 /**
  * Class HomeController.

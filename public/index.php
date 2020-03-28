@@ -6,6 +6,8 @@
  * @author Melech Mizrachi
  */
 
+use Config\Config;
+use env\Env;
 use Valkyrja\Application\Applications\Valkyrja;
 use Valkyrja\Support\Directory;
 
@@ -53,7 +55,7 @@ Directory::$BASE_PATH = __DIR__ . '/..';
  */
 
 // Here we'll set the env file to use
-Valkyrja::setEnv(env\Env::class);
+Valkyrja::setEnv(Env::class);
 
 /*
  *-------------------------------------------------------------------------
@@ -66,7 +68,7 @@ Valkyrja::setEnv(env\Env::class);
  *
  */
 
-$app = new Valkyrja(/*Config::class*/);
+$app = new Valkyrja(Config::class);
 
 /*
  *-------------------------------------------------------------------------
