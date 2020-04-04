@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Crypt as Model;
+use Valkyrja\Crypt\Config\Config as Model;
 
 /**
  * Class Crypt.
@@ -16,9 +16,9 @@ class Crypt extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->key     = 'default_key_phrase';
+        $this->keyPath = null;
 
-        $this->setKey('default_key_phrase');
-        $this->setKeyPath(null);
+        parent::__construct([], false);
     }
 }

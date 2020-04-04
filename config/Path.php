@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Path as Model;
-use Valkyrja\Path\Enums\Config;
+use Valkyrja\Path\Config\Config as Model;
+use Valkyrja\Path\Enums\ConfigValue;
 
 /**
  * Class Path.
@@ -13,19 +13,12 @@ use Valkyrja\Path\Enums\Config;
 class Path extends Model
 {
     /**
-     * The patterns.
-     *
-     * @var array
-     */
-    public array $patterns = [];
-
-    /**
      * Path constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->patterns = array_merge(ConfigValue::PATTERNS, []);
 
-        $this->setPatterns(array_merge(Config::PATTERNS, $this->patterns));
+        parent::__construct([], false);
     }
 }

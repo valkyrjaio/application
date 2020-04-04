@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Session as Model;
+use Valkyrja\Session\Config\Config as Model;
 
 /**
  * Class Session.
@@ -16,9 +16,9 @@ class Session extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->id   = null;
+        $this->name = 'VALKYRJA_SESSION';
 
-        $this->setId(null);
-        $this->setName('SESSION_NAME');
+        parent::__construct([], false);
     }
 }

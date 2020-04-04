@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Log as Model;
+use Valkyrja\Log\Config\Config as Model;
 
 use function Valkyrja\storagePath;
 
@@ -18,9 +18,9 @@ class Log extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->name     = 'ApplicationLog';
+        $this->filePath = storagePath('logs');
 
-        $this->setName('ApplicationLog');
-        $this->setFilePath(storagePath('logs'));
+        parent::__construct([], false);
     }
 }

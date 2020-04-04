@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use App\Http\Controllers\HomeController;
-use Valkyrja\Config\Configs\Routing as Model;
+use Valkyrja\Routing\Config\Config as Model;
 
 use function Valkyrja\cachePath;
 use function Valkyrja\routesPath;
@@ -16,45 +16,24 @@ use function Valkyrja\routesPath;
 class Routing extends Model
 {
     /**
-     * The middleware.
-     *
-     * @var array
-     */
-    public array $middleware = [];
-
-    /**
-     * The middleware groups.
-     *
-     * @var array
-     */
-    public array $middlewareGroups = [];
-
-    /**
-     * The annotated controllers.
-     *
-     * @var array
-     */
-    public array $controllers = [
-        HomeController::class,
-    ];
-
-    /**
      * Routing constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->middleware       = [];
+        $this->middlewareGroups = [];
+        $this->controllers      = [
+            HomeController::class,
+        ];
+        $this->useTrailingSlash = false;
+        $this->useAbsoluteUrls  = false;
 
-        $this->setMiddleware($this->middleware);
-        $this->setMiddlewareGroups($this->middlewareGroups);
-        $this->setControllers($this->controllers);
-        $this->setUseTrailingSlash(false);
-        $this->setUseAbsoluteUrls(false);
+        $this->filePath                  = routesPath('default.php');
+        $this->cacheFilePath             = cachePath('routes.php');
+        $this->useAnnotations            = false;
+        $this->useAnnotationsExclusively = false;
+        $this->useCache                  = false;
 
-        $this->setFilePath(routesPath('default.php'));
-        $this->setCacheFilePath(cachePath('routing.php'));
-        $this->setUseCache(false);
-        $this->setUseAnnotations(false);
-        $this->setUseAnnotationsExclusively(false);
+        parent::__construct([], false);
     }
 }

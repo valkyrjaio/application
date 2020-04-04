@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Api\Enums\ConfigValue;
-use Valkyrja\Config\Configs\Api as Model;
+use Valkyrja\Api\Config\Config as Model;
 
 /**
  * Class Api.
@@ -17,9 +17,9 @@ class Api extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->jsonModel     = ConfigValue::JSON_MODEL;
+        $this->jsonDataModel = ConfigValue::JSON_DATA_MODEL;
 
-        $this->setJsonModel(ConfigValue::JSON_MODEL);
-        $this->setJsonDataModel(ConfigValue::JSON_DATA_MODEL);
+        parent::__construct([], false);
     }
 }

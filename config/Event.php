@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Event as Model;
+use Valkyrja\Event\Config\Config as Model;
 
 use function Valkyrja\cachePath;
 use function Valkyrja\eventsPath;
@@ -15,25 +15,18 @@ use function Valkyrja\eventsPath;
 class Event extends Model
 {
     /**
-     * The annotated listeners.
-     *
-     * @var array
-     */
-    public array $listeners = [];
-
-    /**
      * Event constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->listeners = [];
 
-        $this->setListeners($this->listeners);
+        $this->filePath                  = eventsPath('default.php');
+        $this->cacheFilePath             = cachePath('events.php');
+        $this->useAnnotations            = false;
+        $this->useAnnotationsExclusively = false;
+        $this->useCache                  = false;
 
-        $this->setFilePath(eventsPath('default.php'));
-        $this->setCacheFilePath(cachePath('events.php'));
-        $this->setUseCache(false);
-        $this->setUseAnnotations(false);
-        $this->setUseAnnotationsExclusively(false);
+        parent::__construct([], false);
     }
 }

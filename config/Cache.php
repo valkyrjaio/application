@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Cache as Model;
-use Valkyrja\Config\Enums\ConfigKeyPart;
+use Valkyrja\Cache\Config\Config as Model;
+use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
 
 /**
  * Class Cache.
@@ -17,9 +17,9 @@ class Cache extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->default = CKP::REDIS;
+        $this->stores  = [];
 
-        $this->setDefault(ConfigKeyPart::REDIS);
-        $this->setStores([]);
+        parent::__construct([], false);
     }
 }

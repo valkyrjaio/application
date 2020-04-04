@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Application\Application;
-use Valkyrja\Config\Configs\App as Model;
+use Valkyrja\Application\Config\Config as Model;
 use Valkyrja\Container\Enums\Provider;
 
 /**
@@ -18,18 +18,18 @@ class App extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->env              = 'production';
+        $this->debug            = false;
+        $this->url              = 'localhost';
+        $this->timezone         = 'UTC';
+        $this->version          = Application::VERSION;
+        $this->key              = 'some_secret_app_key';
+        $this->container        = Provider::CONTAINER;
+        $this->dispatcher       = Provider::DISPATCHER;
+        $this->events           = Provider::EVENTS;
+        $this->exceptionHandler = Provider::EXCEPTION_HANDLER;
+        $this->httpException    = Provider::HTTP_EXCEPTION;
 
-        $this->setEnv('production');
-        $this->setDebug(false);
-        $this->setUrl('localhost');
-        $this->setTimezone('UTC');
-        $this->setVersion(Application::VERSION);
-        $this->setKey('some_secret_app_key');
-        $this->setHttpException(Provider::HTTP_EXCEPTION);
-        $this->setContainer(Provider::CONTAINER);
-        $this->setDispatcher(Provider::DISPATCHER);
-        $this->setEvents(Provider::EVENTS);
-        $this->setExceptionHandler(Provider::EXCEPTION_HANDLER);
+        parent::__construct([], false);
     }
 }

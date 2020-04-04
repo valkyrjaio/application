@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Config\ORM\Connections;
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
-use Valkyrja\Config\Configs\ORM as Model;
-use Valkyrja\ORM\Enums\Config;
+use Valkyrja\ORM\Config\Config as Model;
+use Valkyrja\ORM\Enums\ConfigValue;
 use Valkyrja\ORM\Repositories\Repository;
+
+use function Valkyrja\env;
 
 /**
  * Class ORM.
@@ -16,22 +17,31 @@ use Valkyrja\ORM\Repositories\Repository;
 class ORM extends Model
 {
     /**
-     * The adapters.
-     *
-     * @var string[]
-     */
-    public array $adapters = [];
-
-    /**
      * ORM constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->connection  = CKP::MYSQL;
+        $this->adapters    = array_merge(ConfigValue::ADAPTERS, []);
+        $this->repository  = Repository::class;
+        $this->connections = [
+            CKP::MYSQL => [
+                CKP::DRIVER      => CKP::MYSQL,
+                CKP::HOST        => env(EnvKey::DB_HOST, '127.0.0.1'),
+                CKP::PORT        => env(EnvKey::DB_PORT, '3306'),
+                CKP::DB          => env(EnvKey::DB_DATABASE, CKP::VALHALLA),
+                CKP::USERNAME    => env(EnvKey::DB_USERNAME, CKP::VALHALLA),
+                CKP::PASSWORD    => env(EnvKey::DB_PASSWORD, ''),
+                CKP::UNIX_SOCKET => env(EnvKey::DB_SOCKET, ''),
+                CKP::CHARSET     => env(EnvKey::DB_CHARSET, 'utf8mb4'),
+                CKP::COLLATION   => env(EnvKey::DB_COLLATION, 'utf8mb4_unicode_ci'),
+                CKP::PREFIX      => env(EnvKey::DB_PREFIX, ''),
+                CKP::STRICT      => env(EnvKey::DB_STRICT, true),
+                CKP::ENGINE      => env(EnvKey::DB_ENGINE, null),
+                CKP::ADAPTER     => env(EnvKey::DB_ADAPTER, CKP::PDO),
+            ],
+        ];
 
-        $this->setConnection(CKP::MYSQL);
-        $this->setAdapters(array_merge(Config::ADAPTERS, $this->adapters));
-        $this->setRepository(Repository::class);
-        $this->setConnections(new Connections());
+        parent::__construct([], false);
     }
 }

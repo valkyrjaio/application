@@ -4,49 +4,42 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Config as Model;
-use Valkyrja\Support\Providers\Provider;
+use Valkyrja\Config\Config\Config as Model;
 
 use function Valkyrja\cachePath;
 
 /**
- * Class .
+ * Class Config.
  */
 class Config extends Model
 {
-    /**
-     * Array of config providers.
-     *  NOTE: Provider::deferred() is disregarded.
-     *
-     * @var Provider[]|string[]
-     */
-    public array $providers = [];
-
     /**
      *  constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->annotation = new Annotation();
+        $this->api        = new Api();
+        $this->app        = new App();
+        $this->auth       = new Auth();
+        $this->cache      = new Cache();
+        $this->console    = new Console();
+        $this->container  = new Container();
+        $this->crypt      = new Crypt();
+        $this->event      = new Event();
+        $this->filesystem = new Filesystem();
+        $this->log        = new Log();
+        $this->mail       = new Mail();
+        $this->orm        = new ORM();
+        $this->path       = new Path();
+        $this->routing    = new Routing();
+        $this->session    = new Session();
+        $this->view       = new View();
 
-        $this->setAnnotation(new Annotation());
-        $this->setApp(new App());
-        $this->setCache(new Cache());
-        $this->setConsole(new Console());
-        $this->setContainer(new Container());
-        $this->setCrypt(new Crypt());
-        $this->setEvent(new Event());
-        $this->setFilesystem(new Filesystem());
-        $this->setLog(new Log());
-        $this->setMail(new Mail());
-        $this->setOrm(new ORM());
-        $this->setPath(new Path());
-        $this->setRouting(new Routing());
-        $this->setSession(new Session());
-        $this->setView(new View());
+        $this->providers     = [];
+        $this->cacheFilePath = cachePath('config.php');
+        $this->useCache      = false;
 
-        $this->setProviders($this->providers);
-        $this->setCacheFilePath(cachePath('config.php'));
-        $this->setUseCache(false);
+        parent::__construct([], true);
     }
 }

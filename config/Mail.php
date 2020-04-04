@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Mail as Model;
+use Valkyrja\Mail\Config\Config as Model;
 
 /**
  * Class Mail.
@@ -16,14 +16,14 @@ class Mail extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->host        = 'smtp1.example.com;smtp2.example.com';
+        $this->port        = 587;
+        $this->fromAddress = 'hello@example.com';
+        $this->fromName    = 'Example';
+        $this->encryption  = 'tls';
+        $this->username    = '';
+        $this->password    = '';
 
-        $this->setHost('smtp1.example.com;smtp2.example.com');
-        $this->setPort(587);
-        $this->setFromAddress('hello@example.com');
-        $this->setFromName('Example');
-        $this->setEncryption('tls');
-        $this->setUsername('');
-        $this->setPassword('');
+        parent::__construct([], false);
     }
 }

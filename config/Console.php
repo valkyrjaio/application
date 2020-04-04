@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Configs\Console as Model;
-use Valkyrja\Console\Enums\Config;
-use Valkyrja\Support\Providers\Provider;
+use Valkyrja\Console\Config\Config as Model;
+use Valkyrja\Console\Enums\ConfigValue;
 
 use function Valkyrja\cachePath;
 use function Valkyrja\commandsPath;
@@ -17,42 +16,21 @@ use function Valkyrja\commandsPath;
 class Console extends Model
 {
     /**
-     * The annotated command handlers.
-     *
-     * @var string[]
-     */
-    public array $handlers = [];
-
-    /**
-     * The command providers.
-     *
-     * @var Provider[]|string[]
-     */
-    public array $providers = [];
-
-    /**
-     * The dev command providers.
-     *
-     * @var Provider[]|string[]
-     */
-    public array $devProviders = [];
-
-    /**
      * Console constructor.
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->handlers     = [];
+        $this->providers    = array_merge(ConfigValue::PROVIDERS, []);
+        $this->devProviders = array_merge(ConfigValue::DEV_PROVIDERS, []);
+        $this->quiet        = false;
 
-        $this->setHandlers($this->handlers);
-        $this->setProviders(array_merge(Config::PROVIDERS, $this->providers));
-        $this->setDevProviders(array_merge(Config::DEV_PROVIDERS, $this->devProviders));
-        $this->setQuiet(false);
+        $this->useAnnotations            = false;
+        $this->useAnnotationsExclusively = false;
+        $this->filePath                  = commandsPath('default.php');
+        $this->cacheFilePath             = cachePath('commands.php');
+        $this->useCache                  = false;
 
-        $this->setFilePath(commandsPath('default.php'));
-        $this->setCacheFilePath(cachePath('commands.php'));
-        $this->setUseCache(false);
-        $this->setUseAnnotations(false);
-        $this->setUseAnnotationsExclusively(false);
+        parent::__construct([], false);
     }
 }

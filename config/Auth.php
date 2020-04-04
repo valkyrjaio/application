@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Config;
 
+use App\ORM\Entities\User;
 use Valkyrja\Auth\Enums\ConfigValue;
-use Valkyrja\Config\Configs\Auth as Model;
+use Valkyrja\Auth\Config\Config as Model;
 
 /**
  * Class Auth.
@@ -17,15 +18,15 @@ class Auth extends Model
      */
     public function __construct()
     {
-        parent::__construct(false);
+        $this->adapter              = ConfigValue::ADAPTER;
+        $this->userEntity           = User::class;
+        $this->adapters             = array_merge(ConfigValue::ADAPTERS, []);
+        $this->repository           = ConfigValue::REPOSITORY;
+        $this->alwaysAuthenticate   = false;
+        $this->keepUserFresh        = false;
+        $this->authenticateRoute    = ConfigValue::AUTHENTICATE_ROUTE;
+        $this->passwordConfirmRoute = ConfigValue::PASSWORD_CONFIRM_ROUTE;
 
-        $this->setAdapter(ConfigValue::ADAPTER);
-        $this->setUserEntity(ConfigValue::USER);
-        $this->setAdapters(array_merge(ConfigValue::ADAPTERS, []));
-        $this->setRepository(ConfigValue::REPOSITORY);
-        $this->setAlwaysAuthenticate(ConfigValue::ALWAYS_AUTHENTICATE);
-        $this->setKeepUserFresh(ConfigValue::KEEP_USER_FRESH);
-        $this->setAuthenticateRoute(ConfigValue::AUTHENTICATE_ROUTE);
-        $this->setPasswordConfirmRoute(ConfigValue::PASSWORD_CONFIRM_ROUTE);
+        parent::__construct([], false);
     }
 }
