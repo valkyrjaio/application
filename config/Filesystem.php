@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Enums\EnvKey;
 use Valkyrja\Filesystem\Config\Config as Model;
 use Valkyrja\Filesystem\Enums\ConfigValue;
 

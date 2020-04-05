@@ -8,6 +8,7 @@
  * @author Melech Mizrachi
  */
 
+use Config\Config;
 use Valkyrja\Application\Applications\Valkyrja;
 use Valkyrja\Support\Directory;
 
@@ -63,7 +64,7 @@ Valkyrja::setEnv(env\EnvConsole::class);
  *
  */
 
-$app = new Valkyrja();
+$app = new Valkyrja(Config::class);
 
 /*
  *-------------------------------------------------------------------------

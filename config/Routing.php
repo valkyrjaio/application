@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use App\Http\Controllers\HomeController;
+use Valkyrja\Container\Enums\Provider;
 use Valkyrja\Routing\Config\Config as Model;
 
 use function Valkyrja\cachePath;
@@ -25,6 +26,7 @@ class Routing extends Model
         $this->controllers      = [
             HomeController::class,
         ];
+        $this->httpException    = Provider::HTTP_EXCEPTION;
         $this->useTrailingSlash = false;
         $this->useAbsoluteUrls  = false;
 

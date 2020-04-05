@@ -28,7 +28,6 @@ class App extends Model
         $this->dispatcher       = Provider::DISPATCHER;
         $this->events           = Provider::EVENTS;
         $this->exceptionHandler = Provider::EXCEPTION_HANDLER;
-        $this->httpException    = Provider::HTTP_EXCEPTION;
 
         parent::__construct([], false);
     }
