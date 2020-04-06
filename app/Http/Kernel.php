@@ -3,9 +3,9 @@
 namespace App\Http;
 
 use Throwable;
-use Valkyrja\Http\Kernels\Kernel as ValkyrjaKernel;
 use Valkyrja\Http\Request;
 use Valkyrja\Http\Response;
+use Valkyrja\HttpKernel\Kernels\Kernel as ValkyrjaKernel;
 
 /**
  * Class Kernel.
