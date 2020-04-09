@@ -2,9 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Valkyrja\Http\Middleware\Middleware;
 use Valkyrja\Http\Request;
 use Valkyrja\Http\Response;
+use Valkyrja\Routing\Middleware\Middleware;
 
 /**
  * Class ExampleMiddleware.

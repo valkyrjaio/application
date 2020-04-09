@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Valkyrja\Application\Application;
-use Valkyrja\Support\Providers\Provider;
+use Valkyrja\Support\Provider\Provider;
 
 /**
  * Class AppServiceProvider.
