@@ -6,7 +6,7 @@ namespace Config;
 
 use Valkyrja\Application\Application;
 use Valkyrja\Application\Config\Config as Model;
-use Valkyrja\Container\Enums\Provider;
+use Valkyrja\Container\Constants\Provider;
 
 /**
  * Class App.

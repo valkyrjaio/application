@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Api\Enums\ConfigValue;
 use Valkyrja\Api\Config\Config as Model;
+use Valkyrja\Api\Constants\ConfigValue;
 
 /**
  * Class Api.

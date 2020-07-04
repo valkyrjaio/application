@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
-use Valkyrja\Config\Enums\EnvKey;
+use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\ORM\Config\Config as Model;
-use Valkyrja\ORM\Enums\ConfigValue;
+use Valkyrja\ORM\Constants\ConfigValue;
 use Valkyrja\ORM\Repositories\Repository;
 
 use function Valkyrja\env;

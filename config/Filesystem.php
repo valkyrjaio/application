@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
-use Valkyrja\Config\Enums\EnvKey;
+use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\Filesystem\Config\Config as Model;
-use Valkyrja\Filesystem\Enums\ConfigValue;
+use Valkyrja\Filesystem\Constants\ConfigValue;
 
 use function Valkyrja\env;
 use function Valkyrja\storagePath;

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Config;
 
 use App\ORM\Entities\User;
-use Valkyrja\Auth\Enums\ConfigValue;
 use Valkyrja\Auth\Config\Config as Model;
+use Valkyrja\Auth\Constants\ConfigValue;
 
 /**
  * Class Auth.

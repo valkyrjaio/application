@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\View\Config\Config as Model;
-use Valkyrja\View\Enums\ConfigValue;
+use Valkyrja\View\Constants\ConfigValue;
 
 use function Valkyrja\resourcesPath;
 

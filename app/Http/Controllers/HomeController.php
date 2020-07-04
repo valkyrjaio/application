@@ -17,6 +17,7 @@ use function Valkyrja\view;
  * @Route("path" = "/", "name" = "home")
  * @Service("id" = "App\\Http\\Controllers\\HomeController")
  * @Service\Alias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
+ * @Service\Context("id" = "Valkyrja\\Container\\Container", "service" = "SomePackage\\ContainerClass")
  */
 class HomeController
 {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Console\Config\Config as Model;
-use Valkyrja\Console\Enums\ConfigValue;
+use Valkyrja\Console\Constants\ConfigValue;
 
 use function Valkyrja\cachePath;
 use function Valkyrja\commandsPath;

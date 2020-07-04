@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Annotation\Enums\ConfigValue;
 use Valkyrja\Annotation\Config\Config as Model;
+use Valkyrja\Annotation\Constants\ConfigValue;
 
 /**
  * Class Annotation.

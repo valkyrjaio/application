@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Cache\Config\Config as Model;
-use Valkyrja\Config\Enums\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
 
 /**
  * Class Cache.

@@ -6,7 +6,7 @@ namespace Config;
 
 use App\Http\Kernel;
 use Valkyrja\Container\Config\Config as Model;
-use Valkyrja\Container\Enums\ConfigValue;
+use Valkyrja\Container\Constants\ConfigValue;
 
 use function Valkyrja\cachePath;
 use function Valkyrja\servicesPath;
