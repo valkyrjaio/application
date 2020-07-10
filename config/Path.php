@@ -19,6 +19,6 @@ class Path extends Model
     {
         $this->patterns = array_merge(ConfigValue::PATTERNS, []);
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

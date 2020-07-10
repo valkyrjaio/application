@@ -21,6 +21,6 @@ class Log extends Model
         $this->name     = 'ApplicationLog';
         $this->filePath = storagePath('logs');
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

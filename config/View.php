@@ -24,6 +24,6 @@ class View extends Model
         $this->engines = array_merge(ConfigValue::ENGINES, []);
         $this->paths   = [];
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

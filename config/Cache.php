@@ -20,6 +20,6 @@ class Cache extends Model
         $this->default = CKP::REDIS;
         $this->stores  = [];
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

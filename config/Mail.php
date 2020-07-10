@@ -24,6 +24,6 @@ class Mail extends Model
         $this->username    = '';
         $this->password    = '';
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

@@ -19,6 +19,6 @@ class Session extends Model
         $this->id   = null;
         $this->name = 'VALKYRJA_SESSION';
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

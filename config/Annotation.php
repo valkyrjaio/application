@@ -21,6 +21,6 @@ class Annotation extends Model
         $this->map     = array_merge(ConfigValue::MAP, []);
         $this->aliases = array_merge(ConfigValue::ALIASES, []);
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

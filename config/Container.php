@@ -39,6 +39,6 @@ class Container extends Model
         $this->useAnnotationsExclusively = false;
         $this->useCache                  = false;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

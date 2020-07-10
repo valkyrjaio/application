@@ -19,6 +19,6 @@ class Crypt extends Model
         $this->key     = 'default_key_phrase';
         $this->keyPath = null;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

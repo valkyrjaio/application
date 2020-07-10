@@ -27,6 +27,6 @@ class Auth extends Model
         $this->authenticateRoute    = ConfigValue::AUTHENTICATE_ROUTE;
         $this->passwordConfirmRoute = ConfigValue::PASSWORD_CONFIRM_ROUTE;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

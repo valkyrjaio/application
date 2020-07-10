@@ -20,6 +20,6 @@ class Api extends Model
         $this->jsonModel     = ConfigValue::JSON_MODEL;
         $this->jsonDataModel = ConfigValue::JSON_DATA_MODEL;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

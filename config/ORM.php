@@ -43,6 +43,6 @@ class ORM extends Model
             ],
         ];
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

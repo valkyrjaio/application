@@ -41,6 +41,6 @@ class Filesystem extends Model
             ],
         ];
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

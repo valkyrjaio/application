@@ -31,6 +31,6 @@ class Console extends Model
         $this->cacheFilePath             = cachePath('commands.php');
         $this->useCache                  = false;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }

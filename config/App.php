@@ -29,6 +29,6 @@ class App extends Model
         $this->events           = Provider::EVENTS;
         $this->exceptionHandler = Provider::EXCEPTION_HANDLER;
 
-        parent::__construct([], false);
+        parent::__construct([], true);
     }
 }
