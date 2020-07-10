@@ -17,8 +17,9 @@ class Validation extends Model
      */
     public function __construct()
     {
-        $this->rule  = ConfigValue::RULE;
-        $this->rules = array_merge(ConfigValue::RULES, []);
+        $this->rule     = ConfigValue::RULE;
+        $this->rules    = array_merge(ConfigValue::RULES, []);
+        $this->rulesMap = array_merge(ConfigValue::RULES_MAP, []);
 
         parent::__construct([], true);
     }
