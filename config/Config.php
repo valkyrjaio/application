@@ -34,6 +34,7 @@ class Config extends Model
         $this->path       = new Path();
         $this->routing    = new Routing();
         $this->session    = new Session();
+        $this->sms        = new SMS();
         $this->validation = new Validation();
         $this->view       = new View();
 

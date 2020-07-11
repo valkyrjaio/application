@@ -127,6 +127,8 @@ class Env
     // public const MAIL_ENCRYPTION   = null;
     // public const MAIL_USERNAME     = null;
     // public const MAIL_PASSWORD     = null;
+    // public const MAIL_MESSAGE      = null;
+    // public const MAIL_MESSAGES     = null;
 
     /*
      * Routing env variables.
@@ -149,10 +151,25 @@ class Env
     // public const SESSION_NAME = null;
 
     /*
+     * SMS env variables.
+     */
+    // public const SMS_USERNAME = null;
+    // public const SMS_PASSWORD = null;
+    // public const SMS_MESSAGE  = null;
+    // public const SMS_MESSAGES = null;
+
+    /*
      * Storage env variables.
      */
     // public const STORAGE_UPLOADS_DIR = null;
     // public const STORAGE_LOGS_DIR    = null;
+
+    /*
+     * Validation env variables.
+     */
+    // public const VALIDATION_RULE     = null;
+    // public const VALIDATION_RULES     = null;
+    // public const VALIDATION_RULES_MAP = null;
 
     /*
      * Views env variables.
