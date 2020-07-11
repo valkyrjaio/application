@@ -6,6 +6,7 @@ namespace Config;
 
 use Valkyrja\Application\Application;
 use Valkyrja\Application\Config\Config as Model;
+use Valkyrja\Application\Constants\ConfigValue;
 use Valkyrja\Container\Constants\Provider;
 
 /**
@@ -24,10 +25,8 @@ class App extends Model
         $this->timezone         = 'UTC';
         $this->version          = Application::VERSION;
         $this->key              = 'some_secret_app_key';
-        $this->container        = Provider::CONTAINER;
-        $this->dispatcher       = Provider::DISPATCHER;
-        $this->events           = Provider::EVENTS;
         $this->exceptionHandler = Provider::EXCEPTION_HANDLER;
+        $this->providers        = array_merge(ConfigValue::PROVIDERS, []);
 
         parent::__construct([], true);
     }
