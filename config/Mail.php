@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Config;
 
+use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
 use Valkyrja\Mail\Config\Config as Model;
+use Valkyrja\Mail\Constants\ConfigValue;
 
 /**
  * Class Mail.
@@ -23,6 +25,8 @@ class Mail extends Model
         $this->encryption  = 'tls';
         $this->username    = '';
         $this->password    = '';
+        $this->message     = CKP::PHP_MAILER;
+        $this->messages    = array_merge(ConfigValue::MESSAGES, []);
 
         parent::__construct([], true);
     }
