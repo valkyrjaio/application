@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
-use App\Http\Kernel;
+use App\Providers\AppServiceProvider;
 use Valkyrja\Container\Config\Config as Model;
 use Valkyrja\Container\Constants\ConfigValue;
 
@@ -27,7 +27,7 @@ class Container extends Model
         $this->providers       = array_merge(
             ConfigValue::PROVIDERS,
             [
-                Kernel::class,
+                AppServiceProvider::class,
             ]
         );
         $this->devProviders    = array_merge(ConfigValue::DEV_PROVIDERS, []);
