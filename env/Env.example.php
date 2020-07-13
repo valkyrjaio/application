@@ -127,6 +127,8 @@ class Env
      */
     // public const LOG_NAME      = null;
     // public const LOG_FILE_PATH = null;
+    // public const LOG_ADAPTER   = null;
+    // public const LOG_ADAPTERS  = null;
 
     /*
      * Mail env variables.
