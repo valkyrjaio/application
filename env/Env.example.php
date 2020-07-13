@@ -54,6 +54,20 @@ class Env
     // public const AUTH_PASSWORD_CONFIRM_ROUTE = null;
 
     /**
+     * Broadcast env variables.
+     */
+    // public const BROADCAST_ADAPTER        = null;
+    // public const BROADCAST_ADAPTERS       = null;
+    // public const BROADCAST_DISKS          = null;
+    // public const BROADCAST_CACHE_STORE    = null;
+    // public const BROADCAST_LOG_ADAPTER    = null;
+    // public const BROADCAST_PUSHER_KEY     = null;
+    // public const BROADCAST_PUSHER_SECRET  = null;
+    // public const BROADCAST_PUSHER_ID      = null;
+    // public const BROADCAST_PUSHER_CLUSTER = null;
+    // public const BROADCAST_PUSHER_USE_TLS = null;
+
+    /**
      * Cache env variables.
      */
     // public const CACHE_DEFAULT = null;

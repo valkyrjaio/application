@@ -14,7 +14,7 @@ use Valkyrja\Client\Constants\ConfigValue;
 class Client extends Model
 {
     /**
-     * Crypt constructor.
+     * Client constructor.
      */
     public function __construct()
     {
