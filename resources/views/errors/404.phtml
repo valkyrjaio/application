@@ -1,13 +1,13 @@
 <?php
 /**
- * @var PHPEngine $view
+ * @var Template $template
  */
 
-use Valkyrja\View\PHPEngine;
+use Valkyrja\View\Template;
 
-$view->setLayout('layout');
+$template->setLayout('layout');
 ?>
 
-<?php $view->startBlock('title'); ?>
+<?php $template->startBlock('title'); ?>
     404
-<?php $view->endBlock('title'); ?>
+<?php $template->endBlock('title'); ?>

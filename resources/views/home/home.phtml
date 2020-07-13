@@ -1,19 +1,19 @@
 <?php
 /**
- * @var PHPEngine $view
+ * @var Template $template
  */
 
-use Valkyrja\View\PHPEngine;
+use Valkyrja\View\Template;
 
-$view->setLayout('layout');
+$template->setLayout('layout');
 ?>
 
-<?php $view->startBlock('title'); ?>
+<?php $template->startBlock('title'); ?>
     Home
-<?php $view->endBlock('title'); ?>
+<?php $template->endBlock('title'); ?>
 
-<?php $view->startBlock('content'); ?>
+<?php $template->startBlock('content'); ?>
 <article>
     Test Php Home
 </article>
-<?php $view->endBlock('content'); ?>
+<?php $template->endBlock('content'); ?>

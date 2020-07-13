@@ -9,7 +9,7 @@ use Valkyrja\Routing\Annotation\Route;
 
 use function Valkyrja\app;
 use function Valkyrja\response;
-use function Valkyrja\view;
+use function Valkyrja\template;
 
 /**
  * Class HomeController.
@@ -51,7 +51,7 @@ class HomeController
      */
     public function welcome(): Response
     {
-        return response(view('index')->render());
+        return response(template('index')->render());
     }
 
     /**

@@ -1,9 +1,9 @@
 <?php
 /**
- * @var PHPEngine $view
+ * @var Template $template
  */
 
-use Valkyrja\View\PHPEngine;
+use Valkyrja\View\Template;
 
 ?>
 
@@ -95,10 +95,10 @@ use Valkyrja\View\PHPEngine;
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title">
-                    <?php echo $view->getBlock('title'); ?>
+                    <?php echo $template->getBlock('title'); ?>
                 </div>
 
-                <?php echo $view->getBlock('content'); ?>
+                <?php echo $template->getBlock('content'); ?>
             </div>
         </div>
     </body>

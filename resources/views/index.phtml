@@ -1,18 +1,18 @@
 <?php
 /**
- * @var PHPEngine $view
+ * @var Template $template
  */
 
-use Valkyrja\View\PHPEngine;
+use Valkyrja\View\Template;
 
-$view->setLayout('layout');
+$template->setLayout('layout');
 ?>
 
-<?php $view->startBlock('title'); ?>
+<?php $template->startBlock('title'); ?>
     <img src="https://i.imgur.com/bnZA2RT.png" width="400" alt="Valkyrja">
-<?php $view->endBlock('title'); ?>
+<?php $template->endBlock('title'); ?>
 
-<?php $view->startBlock('content'); ?>
+<?php $template->startBlock('content'); ?>
     <div class="links">
         <a href="http://www.valkyrja.io/documentation">Documentation</a>
         &middot;
@@ -20,4 +20,4 @@ $view->setLayout('layout');
         &middot;
         <a href="https://github.com/valkyrjaio/valkyrja/issues">Issues</a>
     </div>
-<?php $view->endBlock('content'); ?>
+<?php $template->endBlock('content'); ?>

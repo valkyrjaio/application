@@ -224,18 +224,12 @@ class Env
     /*
      * Views env variables.
      */
-    // public const VIEW_DIR     = null;
-    // public const VIEW_ENGINE  = null;
-    // public const VIEW_ENGINES = null;
-    // public const VIEW_PATHS   = null;
-
-    /*
-     * Twig views env variables.
-     */
-    // public const TWIG_FILE_EXTENSION = null;
-    // public const TWIG_DIR            = null;
-    // public const TWIG_DIR_NS         = null;
-    // public const TWIG_DIRS           = null;
-    // public const TWIG_COMPILED_DIR   = null;
-    // public const TWIG_EXTENSIONS     = null;
+    // public const VIEW_DIR                = null;
+    // public const VIEW_ENGINE             = null;
+    // public const VIEW_ENGINES            = null;
+    // public const VIEW_PATHS              = null;
+    // public const VIEW_DISKS              = null;
+    // public const VIEW_PHP_FILE_EXTENSION = null;
+    // public const VIEW_TWIG_COMPILED_DIR  = null;
+    // public const VIEW_TWIG_EXTENSIONS    = null;
 }
