@@ -27,19 +27,14 @@ class ORM extends Model
         $this->repository  = Repository::class;
         $this->connections = [
             CKP::MYSQL => [
-                CKP::DRIVER      => CKP::MYSQL,
-                CKP::HOST        => env(EnvKey::DB_HOST, '127.0.0.1'),
-                CKP::PORT        => env(EnvKey::DB_PORT, '3306'),
-                CKP::DB          => env(EnvKey::DB_DATABASE, CKP::VALHALLA),
-                CKP::USERNAME    => env(EnvKey::DB_USERNAME, CKP::VALHALLA),
-                CKP::PASSWORD    => env(EnvKey::DB_PASSWORD, ''),
-                CKP::UNIX_SOCKET => env(EnvKey::DB_SOCKET, ''),
-                CKP::CHARSET     => env(EnvKey::DB_CHARSET, 'utf8mb4'),
-                CKP::COLLATION   => env(EnvKey::DB_COLLATION, 'utf8mb4_unicode_ci'),
-                CKP::PREFIX      => env(EnvKey::DB_PREFIX, ''),
-                CKP::STRICT      => env(EnvKey::DB_STRICT, true),
-                CKP::ENGINE      => env(EnvKey::DB_ENGINE, null),
-                CKP::ADAPTER     => env(EnvKey::DB_ADAPTER, CKP::PDO),
+                CKP::ADAPTER     => env(EnvKey::ORM_MYSQL_ADAPTER, CKP::PDO),
+                CKP::DRIVER      => env(EnvKey::ORM_MYSQL_DRIVER, CKP::MYSQL),
+                CKP::HOST        => env(EnvKey::ORM_MYSQL_HOST, '127.0.0.1'),
+                CKP::PORT        => env(EnvKey::ORM_MYSQL_PORT, '3306'),
+                CKP::DB          => env(EnvKey::ORM_MYSQL_DB, CKP::VALHALLA),
+                CKP::USERNAME    => env(EnvKey::ORM_MYSQL_USERNAME, CKP::VALHALLA),
+                CKP::PASSWORD    => env(EnvKey::ORM_MYSQL_PASSWORD, ''),
+                CKP::CHARSET     => env(EnvKey::ORM_MYSQL_CHARSET, 'utf8mb4'),
             ],
         ];
 

@@ -10,18 +10,15 @@ class Env
     /**
      * Application env variables.
      */
-    // public const APP_ENV      = 'local';
-    // public const APP_DEBUG    = true;
-    // public const APP_URL      = 'localhost';
-    // public const APP_TIMEZONE = 'UTC';
-    // public const APP_VERSION  = '1 (ALPHA)';
-    // public const APP_KEY            = null;
-    // public const APP_PATH_REGEX_MAP = null;
-    //
-    // public const APP_CONTAINER         = null;
-    // public const APP_DISPATCHER        = null;
-    // public const APP_EVENTS            = null;
+    // public const APP_ENV               = 'local';
+    // public const APP_DEBUG             = true;
+    // public const APP_URL               = 'localhost';
+    // public const APP_TIMEZONE          = 'UTC';
+    // public const APP_VERSION           = '1 (ALPHA)';
+    // public const APP_KEY               = null;
+    // public const APP_PATH_REGEX_MAP    = null;
     // public const APP_EXCEPTION_HANDLER = null;
+    // public const APP_PROVIDERS         = null;
 
     /*
      * Config env variables.
@@ -32,11 +29,35 @@ class Env
     // public const CONFIG_USE_CACHE_FILE  = null;
 
     /**
+     * Api env variables.
+     */
+    // public const API_JSON_MODEL      = null;
+    // public const API_JSON_DATA_MODEL = null;
+
+    /**
      * Annotation env variables.
      */
     // public const ANNOTATIONS_ENABLED   = null;
     // public const ANNOTATIONS_CACHE_DIR = null;
     // public const ANNOTATIONS_MAP       = null;
+
+    /**
+     * Auth env variables.
+     */
+    // public const AUTH_ADAPTER                = null;
+    // public const AUTH_USER_ENTITY            = null;
+    // public const AUTH_REPOSITORY             = null;
+    // public const AUTH_ADAPTERS               = null;
+    // public const AUTH_ALWAYS_AUTHENTICATE    = null;
+    // public const AUTH_KEEP_USER_FRESH        = null;
+    // public const AUTH_AUTHENTICATE_ROUTE     = null;
+    // public const AUTH_PASSWORD_CONFIRM_ROUTE = null;
+
+    /**
+     * Cache env variables.
+     */
+    // public const CACHE_DEFAULT = null;
+    // public const CACHE_STORES  = null;
 
     /*
      * Console env variables.
@@ -69,24 +90,6 @@ class Env
      */
     // public const CRYPT_KEY      = null;
     // public const CRYPT_KEY_PATH = null;
-
-    /*
-     * Database env variables.
-     */
-    // public const DB_CONNECTION = null;
-    // public const DB_HOST       = null;
-    // public const DB_PORT       = null;
-    // public const DB_DATABASE   = null;
-    // public const DB_USERNAME   = null;
-    // public const DB_PASSWORD   = null;
-    // public const DB_SOCKET     = null;
-    // public const DB_CHARSET    = null;
-    // public const DB_COLLATION  = null;
-    // public const DB_PREFIX     = null;
-    // public const DB_STRICT     = null;
-    // public const DB_ENGINE     = null;
-    // public const DB_SCHEMA     = null;
-    // public const DB_SSL_MODE   = null;
 
     /*
      * Events env variables.
@@ -129,6 +132,27 @@ class Env
     // public const MAIL_PASSWORD     = null;
     // public const MAIL_MESSAGE      = null;
     // public const MAIL_MESSAGES     = null;
+
+    /*
+     * ORM env variables.
+     */
+    // public const ORM_CONNECTION     = null;
+    // public const ORM_ADAPTERS       = null;
+    // public const ORM_REPOSITORY     = null;
+    // public const ORM_CONNECTIONS    = null;
+    // public const ORM_MYSQL_ADAPTER  = null;
+    // public const ORM_MYSQL_DRIVER   = null;
+    // public const ORM_MYSQL_HOST     = null;
+    // public const ORM_MYSQL_PORT     = null;
+    // public const ORM_MYSQL_DB       = null;
+    // public const ORM_MYSQL_USERNAME = null;
+    // public const ORM_MYSQL_PASSWORD = null;
+    // public const ORM_MYSQL_CHARSET  = null;
+
+    /*
+     * Path env variables.
+     */
+    // public const PATH_PATTERNS = null;
 
     /*
      * Routing env variables.
