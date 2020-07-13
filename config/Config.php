@@ -23,6 +23,7 @@ class Config extends Model
         $this->app        = new App();
         $this->auth       = new Auth();
         $this->cache      = new Cache();
+        $this->client     = new Client();
         $this->console    = new Console();
         $this->container  = new Container();
         $this->crypt      = new Crypt();

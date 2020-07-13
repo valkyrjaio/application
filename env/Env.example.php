@@ -59,6 +59,12 @@ class Env
     // public const CACHE_DEFAULT = null;
     // public const CACHE_STORES  = null;
 
+    /**
+     * Client env variables.
+     */
+    // public const CLIENT_ADAPTER  = 'CLIENT_ADAPTER';
+    // public const CLIENT_ADAPTERS = 'CLIENT_ADAPTERS';
+
     /*
      * Console env variables.
      */
