@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace Config;
 
+use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\View\Config\Config as Model;
 use Valkyrja\View\Constants\ConfigValue;
 
+use function Valkyrja\env;
 use function Valkyrja\resourcesPath;
+use function Valkyrja\storagePath;
 
 /**
  * Class View.
@@ -23,6 +27,12 @@ class View extends Model
         $this->engine  = ConfigValue::ENGINE;
         $this->engines = array_merge(ConfigValue::ENGINES, []);
         $this->paths   = [];
+        $this->disks   = [
+            CKP::TWIG => [
+                CKP::COMPILED_DIR => env(EnvKey::VIEW_TWIG_COMPILED_DIR, storagePath('views')),
+                CKP::EXTENSIONS   => env(EnvKey::VIEW_TWIG_EXTENSIONS, []),
+            ],
+        ];
 
         parent::__construct([], true);
     }
