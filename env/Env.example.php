@@ -173,8 +173,10 @@ class Env
     /*
      * Session env variables.
      */
-    // public const SESSION_ID   = null;
-    // public const SESSION_NAME = null;
+    // public const SESSION_ID       = 'SESSION_ID';
+    // public const SESSION_NAME     = 'SESSION_NAME';
+    // public const SESSION_ADAPTER  = 'SESSION_ADAPTER';
+    // public const SESSION_ADAPTERS = 'SESSION_ADAPTERS';
 
     /*
      * SMS env variables.
