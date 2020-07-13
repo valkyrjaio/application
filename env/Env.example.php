@@ -62,8 +62,8 @@ class Env
     /**
      * Client env variables.
      */
-    // public const CLIENT_ADAPTER  = 'CLIENT_ADAPTER';
-    // public const CLIENT_ADAPTERS = 'CLIENT_ADAPTERS';
+    // public const CLIENT_ADAPTER  = null;
+    // public const CLIENT_ADAPTERS = null;
 
     /*
      * Console env variables.
@@ -179,10 +179,10 @@ class Env
     /*
      * Session env variables.
      */
-    // public const SESSION_ID       = 'SESSION_ID';
-    // public const SESSION_NAME     = 'SESSION_NAME';
-    // public const SESSION_ADAPTER  = 'SESSION_ADAPTER';
-    // public const SESSION_ADAPTERS = 'SESSION_ADAPTERS';
+    // public const SESSION_ID       = null;
+    // public const SESSION_NAME     = null;
+    // public const SESSION_ADAPTER  = null;
+    // public const SESSION_ADAPTERS = null;
 
     /*
      * SMS env variables.
