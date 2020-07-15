@@ -3,19 +3,31 @@
 namespace App\ORM\Entities;
 
 use App\ORM\Repositories\UserRepository;
-use Valkyrja\Auth\Entities\User as ValkyrjaUser;
+use Valkyrja\Auth\EmailableUser;
+use Valkyrja\Auth\Entities\EmailableUserFields;
+use Valkyrja\Auth\Entities\UserFields;
+use Valkyrja\Auth\Entities\VerifiableUserFields;
+use Valkyrja\Auth\User as Contract;
+use Valkyrja\Auth\VerifiableUser;
+use Valkyrja\Notification\Entities\NotifiableUserFields;
+use Valkyrja\Notification\NotifiableUser;
 use Valkyrja\ORM\DatedEntity;
 use Valkyrja\ORM\Entities\DatedEntityFields;
+use Valkyrja\ORM\Entities\Entity;
 use Valkyrja\ORM\Entities\SoftDeleteEntityFields;
 use Valkyrja\ORM\SoftDeleteEntity;
 
 /**
  * Entity User.
  */
-class User extends ValkyrjaUser implements DatedEntity, SoftDeleteEntity
+class User extends Entity implements Contract, DatedEntity, EmailableUser, NotifiableUser, SoftDeleteEntity, VerifiableUser
 {
+    use UserFields;
     use DatedEntityFields;
+    use EmailableUserFields;
+    use NotifiableUserFields;
     use SoftDeleteEntityFields;
+    use VerifiableUserFields;
 
     /**
      * The ORM repository to use.
@@ -25,16 +37,22 @@ class User extends ValkyrjaUser implements DatedEntity, SoftDeleteEntity
     protected static ?string $repository = UserRepository::class;
 
     /**
+     * The table name.
+     *
      * @var string
      */
-    public string $name;
+    protected static string $table = 'user';
 
     /**
+     * The username field.
+     *
      * @var string
      */
-    public string $email;
+    protected static string $usernameField = 'email';
 
     /**
+     * A field that requires extra logic.
+     *
      * @var string
      */
     protected string $needsExtraLogic;
