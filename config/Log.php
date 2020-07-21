@@ -11,12 +11,12 @@ use Valkyrja\Log\Constants\ConfigValue;
 use function Valkyrja\storagePath;
 
 /**
- * Class Logging.
+ * Class Log.
  */
 class Log extends Model
 {
     /**
-     * Logging constructor.
+     * Log constructor.
      */
     public function __construct()
     {

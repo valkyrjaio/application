@@ -66,7 +66,7 @@ class AppServiceProvider extends Provider
                 $container,
                 $container->getSingleton(Events::class),
                 $container->getSingleton(Router::class),
-                (array) $config['routing'],
+                $config['routing'],
                 $config['app']['debug']
             )
         );

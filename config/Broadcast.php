@@ -21,8 +21,10 @@ class Broadcast extends Model
      */
     public function __construct()
     {
-        $this->adapter  = CKP::PUSHER;
+        $this->adapter  = CKP::CRYPT;
         $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->message  = CKP::DEFAULT;
+        $this->messages = array_merge(ConfigValue::MESSAGES, []);
         $this->disks    = [
             CKP::CACHE  => [
                 CKP::ADAPTER => env(EnvKey::BROADCAST_CACHE_STORE, CKP::REDIS),

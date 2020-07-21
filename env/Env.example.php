@@ -58,6 +58,8 @@ class Env
      */
     // public const BROADCAST_ADAPTER        = null;
     // public const BROADCAST_ADAPTERS       = null;
+    // public const BROADCAST_MESSAGE        = null;
+    // public const BROADCAST_MESSAGES       = null;
     // public const BROADCAST_DISKS          = null;
     // public const BROADCAST_CACHE_STORE    = null;
     // public const BROADCAST_LOG_ADAPTER    = null;
@@ -156,6 +158,11 @@ class Env
     // public const MAIL_PASSWORD     = null;
     // public const MAIL_MESSAGE      = null;
     // public const MAIL_MESSAGES     = null;
+
+    /*
+     * Notification env variables.
+     */
+    // public const NOTIFICATION_NOTIFICATIONS = null;
 
     /*
      * ORM env variables.

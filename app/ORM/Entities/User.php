@@ -3,7 +3,6 @@
 namespace App\ORM\Entities;
 
 use App\ORM\Repositories\UserRepository;
-use Valkyrja\Auth\EmailableUser;
 use Valkyrja\Auth\Entities\EmailableUserFields;
 use Valkyrja\Auth\Entities\UserFields;
 use Valkyrja\Auth\Entities\VerifiableUserFields;
@@ -20,7 +19,7 @@ use Valkyrja\ORM\SoftDeleteEntity;
 /**
  * Entity User.
  */
-class User extends Entity implements Contract, DatedEntity, EmailableUser, NotifiableUser, SoftDeleteEntity, VerifiableUser
+class User extends Entity implements Contract, DatedEntity, NotifiableUser, SoftDeleteEntity, VerifiableUser
 {
     use UserFields;
     use DatedEntityFields;
