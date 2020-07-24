@@ -156,6 +156,8 @@ class Env
     // public const MAIL_ENCRYPTION   = null;
     // public const MAIL_USERNAME     = null;
     // public const MAIL_PASSWORD     = null;
+    // public const MAIL_ADAPTER      = null;
+    // public const MAIL_ADAPTERS     = null;
     // public const MAIL_MESSAGE      = null;
     // public const MAIL_MESSAGES     = null;
 
@@ -212,6 +214,8 @@ class Env
      */
     // public const SMS_USERNAME = null;
     // public const SMS_PASSWORD = null;
+    // public const SMS_ADAPTER  = null;
+    // public const SMS_ADAPTERS = null;
     // public const SMS_MESSAGE  = null;
     // public const SMS_MESSAGES = null;
 

@@ -25,7 +25,9 @@ class Mail extends Model
         $this->encryption  = 'tls';
         $this->username    = '';
         $this->password    = '';
-        $this->message     = CKP::PHP_MAILER;
+        $this->adapter     = CKP::PHP_MAILER;
+        $this->adapters    = array_merge(ConfigValue::ADAPTERS, []);
+        $this->message     = CKP::DEFAULT;
         $this->messages    = array_merge(ConfigValue::MESSAGES, []);
 
         parent::__construct([], true);

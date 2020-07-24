@@ -20,7 +20,9 @@ class SMS extends Model
     {
         $this->username = '';
         $this->password = '';
-        $this->message  = CKP::NEXMO;
+        $this->adapter  = CKP::NEXMO;
+        $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->message  = CKP::DEFAULT;
         $this->messages = array_merge(ConfigValue::MESSAGES, []);
 
         parent::__construct([], true);
