@@ -11,18 +11,19 @@
   "authors"           : [
     {
       "name"  : "Melech Mizrachi",
-      "email" : "melechmizrachi@valkyrja.io"
+      "email" : "mel@valkyrja.io"
     }
   ],
   "require"           : {
     "php"               : ">=7.4",
-    "valkyrja/valkyrja" : "1.0.*"
+    "valkyrja/valkyrja" : "^1.0.0",
+    "monolog/monolog"   : "^2.1.0"
   },
   "require-dev"       : {
-    "filp/whoops"      : "2.7.1",
-    "fzaninotto/faker" : "~1.4",
-    "mockery/mockery"  : "0.9.*",
-    "phpunit/phpunit"  : "~6.1"
+    "filp/whoops"      : "^2.7.3",
+    "fzaninotto/faker" : "^1.9.1",
+    "mockery/mockery"  : "^1.4.1",
+    "phpunit/phpunit"  : "^9.2.6"
   },
   "autoload"          : {
     "psr-4" : {
