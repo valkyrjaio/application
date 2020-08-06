@@ -60,9 +60,14 @@ class Env
     // public const BROADCAST_ADAPTERS       = null;
     // public const BROADCAST_MESSAGE        = null;
     // public const BROADCAST_MESSAGES       = null;
-    // public const BROADCAST_DISKS          = null;
+    // public const BROADCAST_CACHE_DRIVER   = null;
     // public const BROADCAST_CACHE_STORE    = null;
+    // public const BROADCAST_CRYPT_DRIVER   = null;
+    // public const BROADCAST_CRYPT_ADAPTER  = null;
+    // public const BROADCAST_LOG_DRIVER     = null;
     // public const BROADCAST_LOG_ADAPTER    = null;
+    // public const BROADCAST_NULL_DRIVER    = null;
+    // public const BROADCAST_PUSHER_DRIVER  = null;
     // public const BROADCAST_PUSHER_KEY     = null;
     // public const BROADCAST_PUSHER_SECRET  = null;
     // public const BROADCAST_PUSHER_ID      = null;
@@ -149,17 +154,24 @@ class Env
     /*
      * Mail env variables.
      */
-    // public const MAIL_HOST         = null;
-    // public const MAIL_PORT         = null;
-    // public const MAIL_FROM_ADDRESS = null;
-    // public const MAIL_FROM_NAME    = null;
-    // public const MAIL_ENCRYPTION   = null;
-    // public const MAIL_USERNAME     = null;
-    // public const MAIL_PASSWORD     = null;
-    // public const MAIL_ADAPTER      = null;
-    // public const MAIL_ADAPTERS     = null;
-    // public const MAIL_MESSAGE      = null;
-    // public const MAIL_MESSAGES     = null;
+    // public const MAIL_FROM_ADDRESS          = null;
+    // public const MAIL_FROM_NAME             = null;
+    // public const MAIL_ADAPTER               = null;
+    // public const MAIL_ADAPTERS              = null;
+    // public const MAIL_MESSAGE               = null;
+    // public const MAIL_MESSAGES              = null;
+    // public const MAIL_LOG_DRIVER            = null;
+    // public const MAIL_LOG_ADAPTER           = null;
+    // public const MAIL_NULL_DRIVER           = null;
+    // public const MAIL_PHP_MAILER_DRIVER     = null;
+    // public const MAIL_PHP_MAILER_HOST       = null;
+    // public const MAIL_PHP_MAILER_PORT       = null;
+    // public const MAIL_PHP_MAILER_ENCRYPTION = null;
+    // public const MAIL_PHP_MAILER_USERNAME   = null;
+    // public const MAIL_PHP_MAILER_PASSWORD   = null;
+    // public const MAIL_MAILGUN_DRIVER        = null;
+    // public const MAIL_MAILGUN_DOMAIN        = null;
+    // public const MAIL_MAILGUN_API_KEY       = null;
 
     /*
      * Notification env variables.
@@ -212,12 +224,16 @@ class Env
     /*
      * SMS env variables.
      */
-    // public const SMS_USERNAME = null;
-    // public const SMS_PASSWORD = null;
-    // public const SMS_ADAPTER  = null;
-    // public const SMS_ADAPTERS = null;
-    // public const SMS_MESSAGE  = null;
-    // public const SMS_MESSAGES = null;
+    // public const SMS_ADAPTER        = null;
+    // public const SMS_ADAPTERS       = null;
+    // public const SMS_MESSAGE        = null;
+    // public const SMS_MESSAGES       = null;
+    // public const SMS_LOG_DRIVER     = null;
+    // public const SMS_LOG_ADAPTER    = null;
+    // public const SMS_NEXMO_DRIVER   = null;
+    // public const SMS_NEXMO_USERNAME = null;
+    // public const SMS_NEXMO_PASSWORD = null;
+    // public const SMS_NULL_DRIVER    = null;
 
     /*
      * Storage env variables.
