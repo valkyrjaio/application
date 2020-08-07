@@ -6,8 +6,9 @@ namespace Config;
 
 use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
 use Valkyrja\Config\Constants\EnvKey;
+use Valkyrja\Filesystem\Adapters\LocalFlysystemAdapter;
+use Valkyrja\Filesystem\Adapters\S3FlysystemAdapter;
 use Valkyrja\Filesystem\Config\Config as Model;
-use Valkyrja\Filesystem\Constants\ConfigValue;
 
 use function Valkyrja\env;
 use function Valkyrja\storagePath;
@@ -23,21 +24,20 @@ class Filesystem extends Model
     public function __construct()
     {
         $this->default  = CKP::LOCAL;
-        $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
-        $this->disks    = [
+        $this->adapters = [
             CKP::LOCAL => [
-                CKP::DIR     => env(EnvKey::FILESYSTEM_LOCAL_DIR, storagePath('app')),
-                CKP::ADAPTER => env(EnvKey::FILESYSTEM_LOCAL_ADAPTER, CKP::LOCAL),
+                CKP::DRIVER => env(EnvKey::FILESYSTEM_LOCAL_DRIVER, LocalFlysystemAdapter::class),
+                CKP::DIR    => env(EnvKey::FILESYSTEM_LOCAL_DIR, storagePath('app')),
             ],
             CKP::S3    => [
+                CKP::DRIVER  => env(EnvKey::FILESYSTEM_S3_DRIVER, S3FlysystemAdapter::class),
                 CKP::KEY     => env(EnvKey::FILESYSTEM_S3_KEY),
                 CKP::SECRET  => env(EnvKey::FILESYSTEM_S3_SECRET),
-                CKP::REGION  => env(EnvKey::FILESYSTEM_S3_REGION),
-                CKP::VERSION => env(EnvKey::FILESYSTEM_S3_VERSION),
+                CKP::REGION  => env(EnvKey::FILESYSTEM_S3_REGION, 'us1'),
+                CKP::VERSION => env(EnvKey::FILESYSTEM_S3_VERSION, 'latest'),
                 CKP::BUCKET  => env(EnvKey::FILESYSTEM_S3_BUCKET),
-                CKP::DIR     => env(EnvKey::FILESYSTEM_S3_DIR, '/'),
-                CKP::OPTIONS => env(EnvKey::FILESYSTEM_S3_OPTIONS, []),
-                CKP::ADAPTER => env(EnvKey::FILESYSTEM_S3_ADAPTER, CKP::S3),
+                CKP::PREFIX  => env(EnvKey::FILESYSTEM_S3_PREFIX, ''),
+                CKP::OPTIONS  => env(EnvKey::FILESYSTEM_S3_OPTIONS, []),
             ],
         ];
 

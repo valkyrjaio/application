@@ -133,15 +133,18 @@ class Env
     /*
      * Filesystem env variables.
      */
-    // public const FILESYSTEM_DEFAULT    = null;
-    // public const FILESYSTEM_LOCAL_DIR  = null;
-    // public const FILESYSTEM_S3_KEY     = null;
-    // public const FILESYSTEM_S3_SECRET  = null;
-    // public const FILESYSTEM_S3_REGION  = null;
-    // public const FILESYSTEM_S3_VERSION = null;
-    // public const FILESYSTEM_S3_BUCKET  = null;
-    // public const FILESYSTEM_S3_DIR     = null;
-    // public const FILESYSTEM_S3_OPTIONS = null;
+    // public const FILESYSTEM_DEFAULT      = null;
+    // public const FILESYSTEM_ADAPTERS     = null;
+    // public const FILESYSTEM_LOCAL_DRIVER = null;
+    // public const FILESYSTEM_LOCAL_DIR    = null;
+    // public const FILESYSTEM_S3_DRIVER    = null;
+    // public const FILESYSTEM_S3_KEY       = null;
+    // public const FILESYSTEM_S3_SECRET    = null;
+    // public const FILESYSTEM_S3_REGION    = null;
+    // public const FILESYSTEM_S3_VERSION   = null;
+    // public const FILESYSTEM_S3_BUCKET    = null;
+    // public const FILESYSTEM_S3_PREFIX    = null;
+    // public const FILESYSTEM_S3_OPTIONS   = null;
 
     /*
      * Logger env variables.
