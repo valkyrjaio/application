@@ -8,14 +8,8 @@
     "valkyrja"
   ],
   "license"           : "MIT",
-  "authors"           : [
-    {
-      "name"  : "Melech Mizrachi",
-      "email" : "mel@valkyrja.io"
-    }
-  ],
   "require"           : {
-    "php"               : ">=7.4",
+    "php"               : "^7.4",
     "valkyrja/valkyrja" : "^1.0.0",
     "monolog/monolog"   : "^2.1.0"
   },
@@ -25,12 +19,21 @@
     "mockery/mockery"  : "^1.4.1",
     "phpunit/phpunit"  : "^9.2.6"
   },
+  "config"            : {
+    "optimize-autoloader" : true,
+    "preferred-install"   : "dist",
+    "sort-packages"       : true
+  },
   "autoload"          : {
     "psr-4" : {
       "App\\"    : "app/",
       "Config\\" : "config/",
-      "env\\"    : "env/",
-      "tests\\"  : "tests/"
+      "Env\\"    : "env/"
+    }
+  },
+  "autoload-dev"      : {
+    "psr-4" : {
+      "Tests\\" : "tests/"
     }
   },
   "scripts"           : {
@@ -43,9 +46,10 @@
   "suggest"           : {
   },
   "minimum-stability" : "dev",
+  "prefer-stable"     : true,
   "extra"             : {
-    "branch-alias" : {
-      "dev-master" : "1.0-dev"
+    "valkyrja" : {
+      "dont-discover" : []
     }
   }
 }

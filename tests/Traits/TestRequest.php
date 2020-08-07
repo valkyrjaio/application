@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\traits;
+namespace Tests\Traits;
 
 use Valkyrja\Http\Response;
 use Valkyrja\Http\RequestMethod;

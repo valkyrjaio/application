@@ -7,7 +7,7 @@
  */
 
 use Config\Config;
-use env\Env;
+use Env\Env;
 use Valkyrja\Application\Applications\Valkyrja;
 use Valkyrja\Support\Directory;
 

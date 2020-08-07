@@ -1,6 +1,6 @@
 <?php
 
-namespace env;
+namespace Env;
 
 /**
  * Class EnvConsole.
