@@ -225,8 +225,9 @@ class Env
      */
     // public const SESSION_ID       = null;
     // public const SESSION_NAME     = null;
-    // public const SESSION_ADAPTER  = null;
+    // public const SESSION_DEFAULT  = null;
     // public const SESSION_ADAPTERS = null;
+    // public const SESSION_SESSIONS = null;
 
     /*
      * SMS env variables.

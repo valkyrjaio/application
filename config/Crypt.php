@@ -29,7 +29,7 @@ class Crypt extends Model
                 CKP::KEY      => env(EnvKey::CRYPT_KEY, 'some_secret_key'),
                 CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH, null),
             ],
-        ];;
+        ];
 
         parent::__construct([], true);
     }
