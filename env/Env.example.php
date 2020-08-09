@@ -227,6 +227,7 @@ class Env
     // public const SESSION_NAME     = null;
     // public const SESSION_DEFAULT  = null;
     // public const SESSION_ADAPTERS = null;
+    // public const SESSION_DRIVERS  = null;
     // public const SESSION_SESSIONS = null;
 
     /*
