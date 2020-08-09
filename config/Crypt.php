@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\Crypt\Config\Config as Model;
 use Valkyrja\Crypt\Constants\ConfigValue;
+
+use function Valkyrja\env;
 
 /**
  * Class Crypt.
@@ -18,10 +21,15 @@ class Crypt extends Model
      */
     public function __construct()
     {
-        $this->key      = 'default_key_phrase';
-        $this->keyPath  = null;
-        $this->adapter  = CKP::SODIUM;
+        $this->default  = CKP::DEFAULT;
         $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->crypts   = [
+            CKP::DEFAULT => [
+                CKP::ADAPTER  => CKP::SODIUM,
+                CKP::KEY      => env(EnvKey::CRYPT_KEY, 'some_secret_key'),
+                CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH, null),
+            ],
+        ];;
 
         parent::__construct([], true);
     }
