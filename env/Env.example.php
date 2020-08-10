@@ -77,8 +77,22 @@ class Env
     /**
      * Cache env variables.
      */
-    // public const CACHE_DEFAULT = null;
-    // public const CACHE_STORES  = null;
+    // public const CACHE_DEFAULT       = null;
+    // public const CACHE_ADAPTERS      = null;
+    // public const CACHE_DRIVERS       = null;
+    // public const CACHE_STORES        = null;
+    // public const CACHE_REDIS_ADAPTER = null;
+    // public const CACHE_REDIS_DRIVER  = null;
+    // public const CACHE_REDIS_HOST    = null;
+    // public const CACHE_REDIS_PORT    = null;
+    // public const CACHE_REDIS_PREFIX  = null;
+    // public const CACHE_NULL_ADAPTER  = null;
+    // public const CACHE_NULL_DRIVER   = null;
+    // public const CACHE_NULL_PREFIX   = null;
+    // public const CACHE_LOG_ADAPTER   = null;
+    // public const CACHE_LOG_DRIVER    = null;
+    // public const CACHE_LOG_LOG       = null;
+    // public const CACHE_LOG_PREFIX    = null;
 
     /**
      * Client env variables.
