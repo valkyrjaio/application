@@ -26,14 +26,17 @@ class Filesystem extends Model
     {
         $this->default  = CKP::LOCAL;
         $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
         $this->disks    = [
             CKP::LOCAL => [
                 CKP::ADAPTER           => env(EnvKey::FILESYSTEM_LOCAL_ADAPTER, CKP::FLYSYSTEM),
+                CKP::DRIVER            => env(EnvKey::FILESYSTEM_LOCAL_DRIVER, CKP::DEFAULT),
                 CKP::FLYSYSTEM_ADAPTER => env(EnvKey::FILESYSTEM_LOCAL_FLYSYSTEM_ADAPTER, Local::class),
                 CKP::DIR               => env(EnvKey::FILESYSTEM_LOCAL_DIR, storagePath('app')),
             ],
             CKP::S3    => [
                 CKP::ADAPTER           => env(EnvKey::FILESYSTEM_S3_ADAPTER, CKP::FLYSYSTEM),
+                CKP::DRIVER            => env(EnvKey::FILESYSTEM_S3_DRIVER, CKP::DEFAULT),
                 CKP::FLYSYSTEM_ADAPTER => env(EnvKey::FILESYSTEM_S3_FLYSYSTEM_ADAPTER, AwsS3Adapter::class),
                 CKP::KEY               => env(EnvKey::FILESYSTEM_S3_KEY),
                 CKP::SECRET            => env(EnvKey::FILESYSTEM_S3_SECRET),

@@ -115,12 +115,14 @@ class Env
     /*
      * Crypt env variables.
      */
-    // public const CRYPT_KEY      = null;
-    // public const CRYPT_KEY_PATH = null;
-    // public const CRYPT_DEFAULT  = null;
-    // public const CRYPT_ADAPTERS = null;
-    // public const CRYPT_DRIVERS  = null;
-    // public const CRYPT_CRYPTS   = null;
+    // public const CRYPT_KEY             = null;
+    // public const CRYPT_KEY_PATH        = null;
+    // public const CRYPT_DEFAULT         = null;
+    // public const CRYPT_ADAPTERS        = null;
+    // public const CRYPT_DRIVERS         = null;
+    // public const CRYPT_CRYPTS          = null;
+    // public const CRYPT_DEFAULT_ADAPTER = null;
+    // public const CRYPT_DEFAULT_DRIVER  = null;
 
     /*
      * Events env variables.
@@ -137,11 +139,14 @@ class Env
      */
     // public const FILESYSTEM_DEFAULT                 = null;
     // public const FILESYSTEM_ADAPTERS                = null;
+    // public const FILESYSTEM_DRIVERS                 = null;
     // public const FILESYSTEM_DISKS                   = null;
     // public const FILESYSTEM_LOCAL_ADAPTER           = null;
+    // public const FILESYSTEM_LOCAL_DRIVER            = null;
     // public const FILESYSTEM_LOCAL_FLYSYSTEM_ADAPTER = null;
     // public const FILESYSTEM_LOCAL_DIR               = null;
     // public const FILESYSTEM_S3_ADAPTER              = null;
+    // public const FILESYSTEM_S3_DRIVER               = null;
     // public const FILESYSTEM_S3_FLYSYSTEM_ADAPTER    = null;
     // public const FILESYSTEM_S3_KEY                  = null;
     // public const FILESYSTEM_S3_SECRET               = null;
