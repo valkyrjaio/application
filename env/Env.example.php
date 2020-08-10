@@ -194,18 +194,20 @@ class Env
     /*
      * ORM env variables.
      */
-    // public const ORM_DEFAULT        = null;
-    // public const ORM_ADAPTERS       = null;
-    // public const ORM_REPOSITORY     = null;
-    // public const ORM_CONNECTIONS    = null;
-    // public const ORM_MYSQL_ADAPTER  = null;
-    // public const ORM_MYSQL_DRIVER   = null;
-    // public const ORM_MYSQL_HOST     = null;
-    // public const ORM_MYSQL_PORT     = null;
-    // public const ORM_MYSQL_DB       = null;
-    // public const ORM_MYSQL_USERNAME = null;
-    // public const ORM_MYSQL_PASSWORD = null;
-    // public const ORM_MYSQL_CHARSET  = null;
+    // public const ORM_DEFAULT          = null;
+    // public const ORM_ADAPTERS         = null;
+    // public const ORM_DRIVERS          = null;
+    // public const ORM_REPOSITORY       = null;
+    // public const ORM_CONNECTIONS      = null;
+    // public const ORM_MYSQL_ADAPTER    = null;
+    // public const ORM_MYSQL_DRIVER     = null;
+    // public const ORM_MYSQL_PDO_DRIVER = null;
+    // public const ORM_MYSQL_HOST       = null;
+    // public const ORM_MYSQL_PORT       = null;
+    // public const ORM_MYSQL_DB         = null;
+    // public const ORM_MYSQL_USERNAME   = null;
+    // public const ORM_MYSQL_PASSWORD   = null;
+    // public const ORM_MYSQL_CHARSET    = null;
 
     /*
      * Path env variables.
