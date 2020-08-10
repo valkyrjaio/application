@@ -23,9 +23,11 @@ class Crypt extends Model
     {
         $this->default  = CKP::DEFAULT;
         $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
         $this->crypts   = [
             CKP::DEFAULT => [
                 CKP::ADAPTER  => CKP::SODIUM,
+                CKP::DRIVER   => CKP::DEFAULT,
                 CKP::KEY      => env(EnvKey::CRYPT_KEY, 'some_secret_key'),
                 CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH, null),
             ],

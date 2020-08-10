@@ -119,6 +119,7 @@ class Env
     // public const CRYPT_KEY_PATH = null;
     // public const CRYPT_DEFAULT  = null;
     // public const CRYPT_ADAPTERS = null;
+    // public const CRYPT_DRIVERS  = null;
     // public const CRYPT_CRYPTS   = null;
 
     /*
