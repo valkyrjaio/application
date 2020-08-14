@@ -9,6 +9,7 @@
 use Config\Config;
 use Env\Env;
 use Valkyrja\Application\Applications\Valkyrja;
+use Valkyrja\Http\Factories\RequestFactory;
 use Valkyrja\Support\Directory;
 
 // Set a global constant for when the application as a whole started
@@ -80,4 +81,4 @@ $app = new Valkyrja(Config::class);
  *
  */
 
-$app->kernel()->run();
+$app->kernel()->run(RequestFactory::fromGlobals());
