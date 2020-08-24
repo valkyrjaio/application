@@ -97,8 +97,10 @@ class Env
     /**
      * Client env variables.
      */
-    // public const CLIENT_ADAPTER  = null;
+    // public const CLIENT_DEFAULT  = null;
     // public const CLIENT_ADAPTERS = null;
+    // public const CLIENT_DRIVERS  = null;
+    // public const CLIENT_CLIENTS  = null;
 
     /*
      * Console env variables.
