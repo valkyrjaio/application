@@ -20,10 +20,17 @@ class Log extends Model
      */
     public function __construct()
     {
-        $this->name     = 'ApplicationLog';
-        $this->filePath = storagePath('logs');
-        $this->adapter  = CKP::PSR;
+        $this->default  = CKP::PSR;
         $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
+        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
+        $this->loggers  = [
+            CKP::PSR => [
+                CKP::ADAPTER   => CKP::PSR,
+                CKP::DRIVER    => CKP::DEFAULT,
+                CKP::NAME      => 'application-log',
+                CKP::FILE_PATH => storagePath('logs'),
+            ],
+        ];
 
         parent::__construct([], true);
     }
