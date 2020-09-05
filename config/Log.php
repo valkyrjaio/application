@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
+use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\Log\Config\Config as Model;
 use Valkyrja\Log\Constants\ConfigValue;
 
+use function Valkyrja\env;
 use function Valkyrja\storagePath;
 
 /**
@@ -27,8 +29,8 @@ class Log extends Model
             CKP::PSR => [
                 CKP::ADAPTER   => CKP::PSR,
                 CKP::DRIVER    => CKP::DEFAULT,
-                CKP::NAME      => 'application-log',
-                CKP::FILE_PATH => storagePath('logs'),
+                CKP::NAME      => env(EnvKey::LOG_NAME, 'application-log'),
+                CKP::FILE_PATH => env(EnvKey::LOG_FILE_PATH, storagePath('logs')),
             ],
         ];
 
