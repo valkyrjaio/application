@@ -14,7 +14,7 @@ use function Valkyrja\cachePath;
 class Config extends Model
 {
     /**
-     *  constructor.
+     * Config constructor.
      */
     public function __construct()
     {
