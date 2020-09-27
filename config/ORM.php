@@ -49,6 +49,8 @@ class ORM extends Model
                 CKP::USERNAME   => env(EnvKey::ORM_PGSQL_USERNAME, CKP::VALHALLA),
                 CKP::PASSWORD   => env(EnvKey::ORM_PGSQL_PASSWORD, ''),
                 CKP::OPTIONS    => env(EnvKey::ORM_PGSQL_OPTIONS, []),
+                CKP::SCHEMA     => env(EnvKey::ORM_PGSQL_SCHEMA, 'public'),
+                CKP::SSL_MODE   => env(EnvKey::ORM_PGSQL_SSL_MODE, 'prefer'),
                 CKP::CHARSET    => env(EnvKey::ORM_PGSQL_CHARSET, 'utf8'),
             ],
         ];
