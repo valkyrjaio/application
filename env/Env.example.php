@@ -224,6 +224,7 @@ class Env
     public const ORM_DRIVERS          = null;
     public const ORM_REPOSITORY       = null;
     public const ORM_CONNECTIONS      = null;
+    public const ORM_MIGRATIONS       = null;
     public const ORM_MYSQL_ADAPTER    = null;
     public const ORM_MYSQL_DRIVER     = null;
     public const ORM_MYSQL_PDO_DRIVER = null;

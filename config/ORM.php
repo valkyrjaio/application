@@ -54,6 +54,7 @@ class ORM extends Model
                 CKP::CHARSET    => env(EnvKey::ORM_PGSQL_CHARSET, 'utf8'),
             ],
         ];
+        $this->migrations  = [];
 
         parent::__construct([], true);
     }
