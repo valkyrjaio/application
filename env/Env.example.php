@@ -219,34 +219,39 @@ class Env
     /*
      * ORM env variables.
      */
-    public const ORM_DEFAULT          = null;
-    public const ORM_ADAPTERS         = null;
-    public const ORM_DRIVERS          = null;
-    public const ORM_REPOSITORY       = null;
-    public const ORM_CONNECTIONS      = null;
-    public const ORM_MIGRATIONS       = null;
-    public const ORM_MYSQL_ADAPTER    = null;
-    public const ORM_MYSQL_DRIVER     = null;
-    public const ORM_MYSQL_PDO_DRIVER = null;
-    public const ORM_MYSQL_HOST       = null;
-    public const ORM_MYSQL_PORT       = null;
-    public const ORM_MYSQL_DB         = null;
-    public const ORM_MYSQL_USERNAME   = null;
-    public const ORM_MYSQL_PASSWORD   = null;
-    public const ORM_MYSQL_CHARSET    = null;
-    public const ORM_MYSQL_OPTIONS    = null;
-    public const ORM_PGSQL_ADAPTER    = null;
-    public const ORM_PGSQL_DRIVER     = null;
-    public const ORM_PGSQL_PDO_DRIVER = null;
-    public const ORM_PGSQL_HOST       = null;
-    public const ORM_PGSQL_PORT       = null;
-    public const ORM_PGSQL_DB         = null;
-    public const ORM_PGSQL_USERNAME   = null;
-    public const ORM_PGSQL_PASSWORD   = null;
-    public const ORM_PGSQL_CHARSET    = null;
-    public const ORM_PGSQL_OPTIONS    = null;
-    public const ORM_PGSQL_SSL_MODE   = null;
-    public const ORM_PGSQL_SCHEMA     = null;
+    public const ORM_DEFAULT             = null;
+    public const ORM_ADAPTERS            = null;
+    public const ORM_DRIVERS             = null;
+    public const ORM_CONNECTIONS         = null;
+    public const ORM_MIGRATIONS          = null;
+    public const ORM_REPOSITORY          = null;
+    public const ORM_MYSQL_ADAPTER       = null;
+    public const ORM_MYSQL_DRIVER        = null;
+    public const ORM_MYSQL_PDO_DRIVER    = null;
+    public const ORM_MYSQL_HOST          = null;
+    public const ORM_MYSQL_PORT          = null;
+    public const ORM_MYSQL_DB            = null;
+    public const ORM_MYSQL_CHARSET       = null;
+    public const ORM_MYSQL_USERNAME      = null;
+    public const ORM_MYSQL_PASSWORD      = null;
+    public const ORM_MYSQL_STRICT        = null;
+    public const ORM_MYSQL_ENGINE        = null;
+    public const ORM_MYSQL_OPTIONS       = null;
+    public const ORM_PGSQL_ADAPTER       = null;
+    public const ORM_PGSQL_DRIVER        = null;
+    public const ORM_PGSQL_PDO_DRIVER    = null;
+    public const ORM_PGSQL_HOST          = null;
+    public const ORM_PGSQL_PORT          = null;
+    public const ORM_PGSQL_DB            = null;
+    public const ORM_PGSQL_USERNAME      = null;
+    public const ORM_PGSQL_PASSWORD      = null;
+    public const ORM_PGSQL_CHARSET       = null;
+    public const ORM_PGSQL_OPTIONS       = null;
+    public const ORM_PGSQL_SSL_MODE      = null;
+    public const ORM_PGSQL_SSL_CERT      = null;
+    public const ORM_PGSQL_SSL_KEY       = null;
+    public const ORM_PGSQL_SSL_ROOT_CERT = null;
+    public const ORM_PGSQL_SCHEMA        = null;
 
     /*
      * Path env variables.
