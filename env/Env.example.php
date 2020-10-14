@@ -275,12 +275,18 @@ class Env
     /*
      * Session env variables.
      */
-    public const SESSION_ID       = null;
-    public const SESSION_NAME     = null;
-    public const SESSION_DEFAULT  = null;
-    public const SESSION_ADAPTERS = null;
-    public const SESSION_DRIVERS  = null;
-    public const SESSION_SESSIONS = null;
+    public const SESSION_ID               = null;
+    public const SESSION_NAME             = null;
+    public const SESSION_COOKIE_LIFETIME  = null;
+    public const SESSION_COOKIE_PATH      = null;
+    public const SESSION_COOKIE_DOMAIN    = null;
+    public const SESSION_COOKIE_SECURE    = null;
+    public const SESSION_COOKIE_HTTP_ONLY = null;
+    public const SESSION_COOKIE_SAME_SITE = null;
+    public const SESSION_DEFAULT          = null;
+    public const SESSION_ADAPTERS         = null;
+    public const SESSION_DRIVERS          = null;
+    public const SESSION_SESSIONS         = null;
 
     /*
      * SMS env variables.

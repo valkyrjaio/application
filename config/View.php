@@ -31,6 +31,9 @@ class View extends Model
             CKP::PHP  => [
                 CKP::FILE_EXTENSION => env(EnvKey::VIEW_PHP_FILE_EXTENSION, '.phtml'),
             ],
+            CKP::ORKA  => [
+                CKP::FILE_EXTENSION => env(EnvKey::VIEW_ORKA_FILE_EXTENSION, '.orka.phtml'),
+            ],
             CKP::TWIG => [
                 CKP::COMPILED_DIR => env(EnvKey::VIEW_TWIG_COMPILED_DIR, storagePath('views')),
                 CKP::EXTENSIONS   => env(EnvKey::VIEW_TWIG_EXTENSIONS, []),

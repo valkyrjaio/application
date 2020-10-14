@@ -26,10 +26,18 @@ class Session extends Model
         $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
         $this->sessions = [
             CKP::DEFAULT => [
-                CKP::ADAPTER => CKP::PHP,
-                CKP::DRIVER  => CKP::DEFAULT,
-                CKP::ID      => env(EnvKey::SESSION_ID, null),
-                CKP::NAME    => env(EnvKey::SESSION_NAME, 'VALKYRJA_SESSION'),
+                CKP::ADAPTER       => CKP::PHP,
+                CKP::DRIVER        => CKP::DEFAULT,
+                CKP::ID            => env(EnvKey::SESSION_ID, null),
+                CKP::NAME          => env(EnvKey::SESSION_NAME, 'VALKYRJA_SESSION'),
+                CKP::COOKIE_PARAMS => [
+                    'lifetime' => env(EnvKey::SESSION_COOKIE_LIFETIME, 0),
+                    'path'     => env(EnvKey::SESSION_COOKIE_PATH, '/'),
+                    'domain'   => env(EnvKey::SESSION_COOKIE_DOMAIN, null),
+                    'secure'   => env(EnvKey::SESSION_COOKIE_SECURE, false),
+                    'httponly' => env(EnvKey::SESSION_COOKIE_HTTP_ONLY, false),
+                    'samesite' => env(EnvKey::SESSION_COOKIE_SAME_SITE, ''),
+                ],
             ],
         ];
 
