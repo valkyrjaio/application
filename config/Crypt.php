@@ -28,9 +28,8 @@ class Crypt extends Model
             CKP::SODIUM => [
                 CKP::ADAPTER  => env(EnvKey::CRYPT_DEFAULT_ADAPTER, CKP::SODIUM),
                 CKP::DRIVER   => env(EnvKey::CRYPT_DEFAULT_DRIVER, CKP::DEFAULT),
-                // Generate a new key with this: base64_encode(random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES))
-                CKP::KEY      => env(EnvKey::CRYPT_KEY, 'some_secret_key'),
-                CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH, null),
+                CKP::KEY      => env(EnvKey::CRYPT_KEY, env(EnvKey::APP_KEY)),
+                CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH),
             ],
         ];
 
