@@ -48,7 +48,7 @@ class Kernel extends ValkyrjaKernel
      *
      * @return void
      */
-    public function run(Request $request = null): void
+    public function run(Request $request): void
     {
         parent::run($request);
     }
