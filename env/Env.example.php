@@ -42,6 +42,16 @@ class Env
     public const ANNOTATIONS_MAP       = null;
 
     /**
+     * Asset env variables.
+     */
+    public const ASSET_DEFAULT          = null;
+    public const ASSET_ADAPTERS         = null;
+    public const ASSET_BUNDLES          = null;
+    public const ASSET_DEFAULT_HOST     = null;
+    public const ASSET_DEFAULT_PATH     = null;
+    public const ASSET_DEFAULT_MANIFEST = null;
+
+    /**
      * Auth env variables.
      */
     public const AUTH_ADAPTER                = null;
