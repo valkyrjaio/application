@@ -236,6 +236,10 @@ class Env
     public const ORM_MIGRATIONS          = null;
     public const ORM_REPOSITORY          = null;
     public const ORM_MYSQL_ADAPTER       = null;
+    public const ORM_MYSQL_QUERY         = null;
+    public const ORM_MYSQL_QUERY_BUILDER = null;
+    public const ORM_MYSQL_PERSISTER     = null;
+    public const ORM_MYSQL_RETRIEVER     = null;
     public const ORM_MYSQL_DRIVER        = null;
     public const ORM_MYSQL_PDO_DRIVER    = null;
     public const ORM_MYSQL_HOST          = null;
@@ -248,6 +252,10 @@ class Env
     public const ORM_MYSQL_ENGINE        = null;
     public const ORM_MYSQL_OPTIONS       = null;
     public const ORM_PGSQL_ADAPTER       = null;
+    public const ORM_PGSQL_QUERY         = null;
+    public const ORM_PGSQL_QUERY_BUILDER = null;
+    public const ORM_PGSQL_PERSISTER     = null;
+    public const ORM_PGSQL_RETRIEVER     = null;
     public const ORM_PGSQL_DRIVER        = null;
     public const ORM_PGSQL_PDO_DRIVER    = null;
     public const ORM_PGSQL_HOST          = null;
