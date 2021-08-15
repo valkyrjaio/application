@@ -47,7 +47,7 @@ class HomeController
      * @return Response
      *
      * @Route("path" = "/", "name" = "welcome")
-     * @Route("path" = "/{dynamicValue:alpha}", "name" = "dynamicValue")
+     * @Route("path" = "/{dynamicValue}", "name" = "dynamicValue", "parameters" = [{"name" = "dynamicValue", "regex" = "[a-zA-Z]+"}])
      */
     public function welcome(): Response
     {
