@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Valkyrja\Container\Annotation\Service;
+use Valkyrja\Container\Annotations\Service;
 use Valkyrja\Http\Response;
 use Valkyrja\Http\ResponseFactory;
-use Valkyrja\Routing\Annotation\Route;
+use Valkyrja\Routing\Annotations\Route;
 
 use function Valkyrja\app;
 use function Valkyrja\response;
@@ -15,9 +15,9 @@ use function Valkyrja\template;
  * Class HomeController.
  *
  * @Route("path" = "/", "name" = "home")
- * @Service("id" = "App\\Http\\Controllers\\HomeController")
- * @Service\Alias("id" = "App\\Http\\Controllers\\HomeController", "name" = "homeController")
- * @Service\Context("id" = "Valkyrja\\Container\\Container", "service" = "SomePackage\\ContainerClass")
+ * @Service("id" = "Some\\Service\\Id")
+ * @Service\Alias("id" = "Some\\Service\\Id", "name" = "homeController")
+ * @Service\Context("id" = "Some\\Other\\Service\\Id", "service" = "From\\Some\\Package")
  */
 class HomeController
 {
