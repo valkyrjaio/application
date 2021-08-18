@@ -19,7 +19,7 @@ use function Valkyrja\template;
  * @Service\Alias("id" = "Some\\Service\\Id", "name" = "homeController")
  * @Service\Context("id" = "Some\\Other\\Service\\Id", "service" = "From\\Some\\Package")
  */
-class HomeController
+class HomeController extends \Valkyrja\Routing\Support\Controller
 {
     /**
      * Property routing example.
@@ -51,7 +51,7 @@ class HomeController
      */
     public function welcome(): Response
     {
-        return response(template('index')->render());
+        return self::$responseFactory->createResponse(template('index')->render());
     }
 
     /**

@@ -22,7 +22,8 @@ use Valkyrja\Routing\Collector;
          * @path /
          */
         $collector->get('/', '->welcome()', 'welcome');
-        $collector->get('/{dynamicValue:alpha}', '->welcome()', 'dynamicValue');
+        $collector->get('/{dynamicValue}', '->welcome()', 'dynamicValue')
+                  ->addParameter('dynamicValue', '[a-zA-Z]+');
 
         /**
          * Home Route.
