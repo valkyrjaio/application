@@ -25,6 +25,9 @@ class Auth extends Model
         $this->alwaysAuthenticate   = false;
         $this->keepUserFresh        = false;
         $this->authenticateRoute    = ConfigValue::AUTHENTICATE_ROUTE;
+        $this->authenticateUrl      = ConfigValue::AUTHENTICATE_URL;
+        $this->notAuthenticateRoute = ConfigValue::NOT_AUTHENTICATE_ROUTE;
+        $this->notAuthenticateUrl   = ConfigValue::NOT_AUTHENTICATE_URL;
         $this->passwordConfirmRoute = ConfigValue::PASSWORD_CONFIRM_ROUTE;
         $this->useSession           = true;
         $this->useToken             = false;
