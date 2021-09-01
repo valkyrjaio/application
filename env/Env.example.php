@@ -301,6 +301,8 @@ class Env
      */
     public const SESSION_ID               = null;
     public const SESSION_NAME             = null;
+    public const SESSION_ADAPTER          = null;
+    public const SESSION_DRIVER           = null;
     public const SESSION_COOKIE_LIFETIME  = null;
     public const SESSION_COOKIE_PATH      = null;
     public const SESSION_COOKIE_DOMAIN    = null;
