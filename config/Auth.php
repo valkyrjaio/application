@@ -34,7 +34,6 @@ class Auth extends Model
         $this->notAuthenticateUrl   = ConfigValue::NOT_AUTHENTICATE_URL;
         $this->passwordConfirmRoute = ConfigValue::PASSWORD_CONFIRM_ROUTE;
         $this->useSession           = true;
-        $this->useToken             = false;
 
         parent::__construct([], true);
     }

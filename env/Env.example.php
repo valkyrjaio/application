@@ -67,7 +67,6 @@ class Env
     public const AUTH_AUTHENTICATE_ROUTE     = null;
     public const AUTH_PASSWORD_CONFIRM_ROUTE = null;
     public const AUTH_USE_SESSION            = null;
-    public const AUTH_USE_TOKEN              = null;
 
     /**
      * Broadcast env variables.
