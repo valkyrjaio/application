@@ -23,13 +23,14 @@ class ORM extends Model
     public function __construct()
     {
         $this->default     = CKP::MYSQL;
+        $this->adapter     = CKP::PDO;
         $this->adapters    = array_merge(ConfigValue::ADAPTERS, []);
         $this->drivers     = array_merge(ConfigValue::DRIVERS, []);
         $this->repository  = Repository::class;
         $this->connections = [
             CKP::MYSQL => [
-                CKP::ADAPTER       => env(EnvKey::ORM_MYSQL_ADAPTER, CKP::PDO),
-                CKP::DRIVER        => env(EnvKey::ORM_MYSQL_DRIVER, CKP::DEFAULT),
+                CKP::ADAPTER       => env(EnvKey::ORM_MYSQL_ADAPTER),
+                CKP::DRIVER        => env(EnvKey::ORM_MYSQL_DRIVER, CKP::PDO_MYSQL_DRIVER),
                 CKP::QUERY         => env(EnvKey::ORM_MYSQL_QUERY),
                 CKP::QUERY_BUILDER => env(EnvKey::ORM_MYSQL_QUERY_BUILDER),
                 CKP::PERSISTER     => env(EnvKey::ORM_MYSQL_PERSISTER),
@@ -46,8 +47,8 @@ class ORM extends Model
                 CKP::OPTIONS       => env(EnvKey::ORM_MYSQL_OPTIONS),
             ],
             CKP::PGSQL => [
-                CKP::ADAPTER       => env(EnvKey::ORM_PGSQL_ADAPTER, CKP::PDO),
-                CKP::DRIVER        => env(EnvKey::ORM_PGSQL_DRIVER, CKP::DEFAULT),
+                CKP::ADAPTER       => env(EnvKey::ORM_PGSQL_ADAPTER),
+                CKP::DRIVER        => env(EnvKey::ORM_PGSQL_DRIVER, CKP::PDO_PGSQL_DRIVER),
                 CKP::QUERY         => env(EnvKey::ORM_PGSQL_QUERY),
                 CKP::QUERY_BUILDER => env(EnvKey::ORM_PGSQL_QUERY_BUILDER),
                 CKP::PERSISTER     => env(EnvKey::ORM_PGSQL_PERSISTER),

@@ -235,6 +235,7 @@ class Env
      * ORM env variables.
      */
     public const ORM_DEFAULT             = null;
+    public const ORM_ADAPTER             = null;
     public const ORM_ADAPTERS            = null;
     public const ORM_DRIVERS             = null;
     public const ORM_CONNECTIONS         = null;
