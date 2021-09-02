@@ -60,9 +60,6 @@ class Env
     public const AUTH_REPOSITORY             = null;
     public const AUTH_GATE                   = null;
     public const AUTH_POLICY                 = null;
-    public const AUTH_ADAPTERS               = null;
-    public const AUTH_GATES                  = null;
-    public const AUTH_POLICIES               = null;
     public const AUTH_ALWAYS_AUTHENTICATE    = null;
     public const AUTH_KEEP_USER_FRESH        = null;
     public const AUTH_AUTHENTICATE_ROUTE     = null;

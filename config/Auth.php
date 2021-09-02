@@ -20,12 +20,9 @@ class Auth extends Model
     {
         $this->adapter              = ConfigValue::ADAPTER;
         $this->userEntity           = User::class;
-        $this->adapters             = array_merge(ConfigValue::ADAPTERS, []);
         $this->repository           = ConfigValue::REPOSITORY;
         $this->gate                 = ConfigValue::GATE;
-        $this->gates                = array_merge(ConfigValue::GATES, []);
         $this->policy               = ConfigValue::POLICY;
-        $this->policies             = array_merge(ConfigValue::POLICIES, []);
         $this->alwaysAuthenticate   = false;
         $this->keepUserFresh        = false;
         $this->authenticateRoute    = ConfigValue::AUTHENTICATE_ROUTE;
