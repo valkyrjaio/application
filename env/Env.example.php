@@ -18,6 +18,7 @@ class Env
     public const APP_KEY               = null;
     public const APP_PATH_REGEX_MAP    = null;
     public const APP_EXCEPTION_HANDLER = null;
+    public const APP_HTTP_KERNEL       = null;
     public const APP_PROVIDERS         = null;
 
     /*

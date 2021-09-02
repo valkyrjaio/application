@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
+use App\Http\Kernel;
 use Valkyrja\Application\Application;
 use Valkyrja\Application\Config\Config as Model;
 use Valkyrja\Application\Constants\ConfigValue;
@@ -25,6 +26,7 @@ class App extends Model
         $this->version          = Application::VERSION;
         $this->key              = 'some_secret_app_key';
         $this->exceptionHandler = ConfigValue::EXCEPTION_HANDLER;
+        $this->httpKernel       = Kernel::class;
         $this->providers        = array_merge(ConfigValue::PROVIDERS, []);
 
         parent::__construct([], true);
