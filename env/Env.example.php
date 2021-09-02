@@ -237,18 +237,21 @@ class Env
      */
     public const ORM_DEFAULT             = null;
     public const ORM_ADAPTER             = null;
-    public const ORM_ADAPTERS            = null;
-    public const ORM_DRIVERS             = null;
+    public const ORM_DRIVER              = null;
+    public const ORM_QUERY               = null;
+    public const ORM_QUERY_BUILDER       = null;
+    public const ORM_PERSISTER           = null;
+    public const ORM_RETRIEVER           = null;
+    public const ORM_REPOSITORY          = null;
     public const ORM_CONNECTIONS         = null;
     public const ORM_MIGRATIONS          = null;
-    public const ORM_REPOSITORY          = null;
     public const ORM_MYSQL_ADAPTER       = null;
     public const ORM_MYSQL_QUERY         = null;
     public const ORM_MYSQL_QUERY_BUILDER = null;
     public const ORM_MYSQL_PERSISTER     = null;
     public const ORM_MYSQL_RETRIEVER     = null;
     public const ORM_MYSQL_DRIVER        = null;
-    public const ORM_MYSQL_PDO_DRIVER    = null;
+    public const ORM_MYSQL_PDO           = null;
     public const ORM_MYSQL_HOST          = null;
     public const ORM_MYSQL_PORT          = null;
     public const ORM_MYSQL_DB            = null;
@@ -264,7 +267,7 @@ class Env
     public const ORM_PGSQL_PERSISTER     = null;
     public const ORM_PGSQL_RETRIEVER     = null;
     public const ORM_PGSQL_DRIVER        = null;
-    public const ORM_PGSQL_PDO_DRIVER    = null;
+    public const ORM_PGSQL_PDO           = null;
     public const ORM_PGSQL_HOST          = null;
     public const ORM_PGSQL_PORT          = null;
     public const ORM_PGSQL_DB            = null;
