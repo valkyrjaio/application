@@ -21,13 +21,13 @@ class Crypt extends Model
      */
     public function __construct()
     {
-        $this->default  = CKP::SODIUM;
-        $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
-        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
-        $this->crypts   = [
+        $this->default = CKP::SODIUM;
+        $this->adapter = ConfigValue::ADAPTER;
+        $this->driver  = ConfigValue::DRIVER;
+        $this->crypts  = [
             CKP::SODIUM => [
-                CKP::ADAPTER  => env(EnvKey::CRYPT_DEFAULT_ADAPTER, CKP::SODIUM),
-                CKP::DRIVER   => env(EnvKey::CRYPT_DEFAULT_DRIVER, CKP::DEFAULT),
+                CKP::ADAPTER  => env(EnvKey::CRYPT_DEFAULT_ADAPTER),
+                CKP::DRIVER   => env(EnvKey::CRYPT_DEFAULT_DRIVER),
                 CKP::KEY      => env(EnvKey::CRYPT_KEY, env(EnvKey::APP_KEY)),
                 CKP::KEY_PATH => env(EnvKey::CRYPT_KEY_PATH),
             ],
