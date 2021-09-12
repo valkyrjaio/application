@@ -9,6 +9,7 @@ use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\ORM\Adapters\PDOAdapter;
 use Valkyrja\ORM\Config\Config as Model;
 use Valkyrja\ORM\Drivers\Driver;
+use Valkyrja\ORM\Drivers\PgSqlDriver;
 use Valkyrja\ORM\PDOs\MySqlPDO;
 use Valkyrja\ORM\PDOs\PgSqlPDO;
 use Valkyrja\ORM\Persisters\Persister;
@@ -40,7 +41,7 @@ class ORM extends Model
         $this->connections  = [
             CKP::MYSQL => [
                 CKP::ADAPTER       => env(EnvKey::ORM_MYSQL_ADAPTER),
-                CKP::DRIVER        => env(EnvKey::ORM_MYSQL_DRIVER, CKP::DEFAULT),
+                CKP::DRIVER        => env(EnvKey::ORM_MYSQL_DRIVER),
                 CKP::QUERY         => env(EnvKey::ORM_MYSQL_QUERY),
                 CKP::QUERY_BUILDER => env(EnvKey::ORM_MYSQL_QUERY_BUILDER),
                 CKP::PERSISTER     => env(EnvKey::ORM_MYSQL_PERSISTER),
@@ -61,7 +62,7 @@ class ORM extends Model
             ],
             CKP::PGSQL => [
                 CKP::ADAPTER       => env(EnvKey::ORM_PGSQL_ADAPTER),
-                CKP::DRIVER        => env(EnvKey::ORM_PGSQL_DRIVER, CKP::DEFAULT),
+                CKP::DRIVER        => env(EnvKey::ORM_PGSQL_DRIVER, PgSqlDriver::class),
                 CKP::QUERY         => env(EnvKey::ORM_PGSQL_QUERY),
                 CKP::QUERY_BUILDER => env(EnvKey::ORM_PGSQL_QUERY_BUILDER),
                 CKP::PERSISTER     => env(EnvKey::ORM_PGSQL_PERSISTER),
