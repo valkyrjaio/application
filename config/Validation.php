@@ -21,6 +21,6 @@ class Validation extends Model
         $this->rules    = array_merge(ConfigValue::RULES, []);
         $this->rulesMap = array_merge(ConfigValue::RULES_MAP, []);
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

@@ -9,7 +9,6 @@ use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
 use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\Filesystem\Config\Config as Model;
-use Valkyrja\Filesystem\Constants\ConfigValue;
 
 use function Valkyrja\env;
 use function Valkyrja\storagePath;
@@ -24,19 +23,16 @@ class Filesystem extends Model
      */
     public function __construct()
     {
-        $this->default  = CKP::LOCAL;
-        $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
-        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
-        $this->disks    = [
+        $this->disks = [
             CKP::LOCAL => [
-                CKP::ADAPTER           => env(EnvKey::FILESYSTEM_LOCAL_ADAPTER, CKP::FLYSYSTEM),
-                CKP::DRIVER            => env(EnvKey::FILESYSTEM_LOCAL_DRIVER, CKP::DEFAULT),
+                CKP::ADAPTER           => env(EnvKey::FILESYSTEM_LOCAL_ADAPTER),
+                CKP::DRIVER            => env(EnvKey::FILESYSTEM_LOCAL_DRIVER),
                 CKP::FLYSYSTEM_ADAPTER => env(EnvKey::FILESYSTEM_LOCAL_FLYSYSTEM_ADAPTER, Local::class),
                 CKP::DIR               => env(EnvKey::FILESYSTEM_LOCAL_DIR, storagePath('app')),
             ],
             CKP::S3    => [
-                CKP::ADAPTER           => env(EnvKey::FILESYSTEM_S3_ADAPTER, CKP::FLYSYSTEM),
-                CKP::DRIVER            => env(EnvKey::FILESYSTEM_S3_DRIVER, CKP::DEFAULT),
+                CKP::ADAPTER           => env(EnvKey::FILESYSTEM_S3_ADAPTER),
+                CKP::DRIVER            => env(EnvKey::FILESYSTEM_S3_DRIVER),
                 CKP::FLYSYSTEM_ADAPTER => env(EnvKey::FILESYSTEM_S3_FLYSYSTEM_ADAPTER, AwsS3Adapter::class),
                 CKP::KEY               => env(EnvKey::FILESYSTEM_S3_KEY),
                 CKP::SECRET            => env(EnvKey::FILESYSTEM_S3_SECRET),
@@ -48,6 +44,6 @@ class Filesystem extends Model
             ],
         ];
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

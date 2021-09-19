@@ -31,7 +31,7 @@ class View extends Model
             CKP::PHP  => [
                 CKP::FILE_EXTENSION => env(EnvKey::VIEW_PHP_FILE_EXTENSION, '.phtml'),
             ],
-            CKP::ORKA  => [
+            CKP::ORKA => [
                 CKP::FILE_EXTENSION => env(EnvKey::VIEW_ORKA_FILE_EXTENSION, '.orka.phtml'),
             ],
             CKP::TWIG => [
@@ -40,6 +40,6 @@ class View extends Model
             ],
         ];
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

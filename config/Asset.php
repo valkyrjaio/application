@@ -32,6 +32,6 @@ class Asset extends Model
             ],
         ];
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

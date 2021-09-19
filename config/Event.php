@@ -27,6 +27,6 @@ class Event extends Model
         $this->useAnnotationsExclusively = false;
         $this->useCache                  = false;
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

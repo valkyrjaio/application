@@ -43,6 +43,6 @@ class Config extends Model
         $this->cacheFilePath = cachePath('config.php');
         $this->useCache      = false;
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

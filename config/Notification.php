@@ -19,6 +19,6 @@ class Notification extends Model
     {
         $this->notifications = array_merge(ConfigValue::NOTIFICATIONS, []);
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

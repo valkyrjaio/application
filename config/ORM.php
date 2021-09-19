@@ -87,6 +87,6 @@ class ORM extends Model
         ];
         $this->migrations   = [];
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

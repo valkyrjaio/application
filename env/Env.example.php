@@ -69,30 +69,32 @@ class Env
     /**
      * Broadcast env variables.
      */
-    public const BROADCAST_ADAPTER        = null;
-    public const BROADCAST_ADAPTERS       = null;
-    public const BROADCAST_MESSAGE        = null;
-    public const BROADCAST_MESSAGES       = null;
-    public const BROADCAST_CACHE_DRIVER   = null;
-    public const BROADCAST_CACHE_STORE    = null;
-    public const BROADCAST_CRYPT_DRIVER   = null;
-    public const BROADCAST_CRYPT_ADAPTER  = null;
-    public const BROADCAST_LOG_DRIVER     = null;
-    public const BROADCAST_LOG_ADAPTER    = null;
-    public const BROADCAST_NULL_DRIVER    = null;
-    public const BROADCAST_PUSHER_DRIVER  = null;
-    public const BROADCAST_PUSHER_KEY     = null;
-    public const BROADCAST_PUSHER_SECRET  = null;
-    public const BROADCAST_PUSHER_ID      = null;
-    public const BROADCAST_PUSHER_CLUSTER = null;
-    public const BROADCAST_PUSHER_USE_TLS = null;
+    public const BROADCAST_DEFAULT         = null;
+    public const BROADCAST_DEFAULT_MESSAGE = null;
+    public const BROADCAST_ADAPTER         = null;
+    public const BROADCAST_DRIVER          = null;
+    public const BROADCAST_MESSAGE         = null;
+    public const BROADCAST_BROADCASTERS    = null;
+    public const BROADCAST_MESSAGES        = null;
+    public const BROADCAST_LOG_ADAPTER     = null;
+    public const BROADCAST_LOG_DRIVER      = null;
+    public const BROADCAST_LOG_LOGGER      = null;
+    public const BROADCAST_NULL_ADAPTER    = null;
+    public const BROADCAST_NULL_DRIVER     = null;
+    public const BROADCAST_PUSHER_ADAPTER  = null;
+    public const BROADCAST_PUSHER_DRIVER   = null;
+    public const BROADCAST_PUSHER_KEY      = null;
+    public const BROADCAST_PUSHER_SECRET   = null;
+    public const BROADCAST_PUSHER_ID       = null;
+    public const BROADCAST_PUSHER_CLUSTER  = null;
+    public const BROADCAST_PUSHER_USE_TLS  = null;
 
     /**
      * Cache env variables.
      */
     public const CACHE_DEFAULT       = null;
-    public const CACHE_ADAPTERS      = null;
-    public const CACHE_DRIVERS       = null;
+    public const CACHE_ADAPTER       = null;
+    public const CACHE_DRIVER        = null;
     public const CACHE_STORES        = null;
     public const CACHE_REDIS_ADAPTER = null;
     public const CACHE_REDIS_DRIVER  = null;
@@ -104,16 +106,16 @@ class Env
     public const CACHE_NULL_PREFIX   = null;
     public const CACHE_LOG_ADAPTER   = null;
     public const CACHE_LOG_DRIVER    = null;
-    public const CACHE_LOG_LOG       = null;
+    public const CACHE_LOG_LOGGER    = null;
     public const CACHE_LOG_PREFIX    = null;
 
     /**
      * Client env variables.
      */
-    public const CLIENT_DEFAULT  = null;
-    public const CLIENT_ADAPTERS = null;
-    public const CLIENT_DRIVERS  = null;
-    public const CLIENT_CLIENTS  = null;
+    public const CLIENT_DEFAULT = null;
+    public const CLIENT_ADAPTER = null;
+    public const CLIENT_DRIVER  = null;
+    public const CLIENT_CLIENTS = null;
 
     /*
      * Console env variables.
@@ -167,8 +169,8 @@ class Env
      * Filesystem env variables.
      */
     public const FILESYSTEM_DEFAULT                 = null;
-    public const FILESYSTEM_ADAPTERS                = null;
-    public const FILESYSTEM_DRIVERS                 = null;
+    public const FILESYSTEM_ADAPTER                 = null;
+    public const FILESYSTEM_DRIVER                  = null;
     public const FILESYSTEM_DISKS                   = null;
     public const FILESYSTEM_LOCAL_ADAPTER           = null;
     public const FILESYSTEM_LOCAL_DRIVER            = null;
@@ -191,8 +193,8 @@ class Env
     public const LOG_NAME      = null;
     public const LOG_FILE_PATH = null;
     public const LOG_DEFAULT   = null;
-    public const LOG_ADAPTERS  = null;
-    public const LOG_DRIVERS   = null;
+    public const LOG_ADAPTER   = null;
+    public const LOG_DRIVER    = null;
     public const LOG_LOGGERS   = null;
 
     /*
@@ -201,11 +203,10 @@ class Env
     public const MAIL_FROM_ADDRESS          = null;
     public const MAIL_FROM_NAME             = null;
     public const MAIL_DEFAULT               = null;
-    public const MAIL_ADAPTERS              = null;
-    public const MAIL_DRIVERS               = null;
+    public const MAIL_ADAPTER               = null;
+    public const MAIL_DRIVER                = null;
+    public const MAIL_MESSAGE               = null;
     public const MAIL_MAILERS               = null;
-    public const MAIL_DEFAULT_MESSAGE       = null;
-    public const MAIL_MESSAGE_ADAPTERS      = null;
     public const MAIL_MESSAGES              = null;
     public const MAIL_LOG_DRIVER            = null;
     public const MAIL_LOG_ADAPTER           = null;
@@ -300,6 +301,8 @@ class Env
     /*
      * Session env variables.
      */
+    public const SESSION_DEFAULT          = null;
+    public const SESSION_SESSIONS         = null;
     public const SESSION_ID               = null;
     public const SESSION_NAME             = null;
     public const SESSION_ADAPTER          = null;
@@ -310,18 +313,15 @@ class Env
     public const SESSION_COOKIE_SECURE    = null;
     public const SESSION_COOKIE_HTTP_ONLY = null;
     public const SESSION_COOKIE_SAME_SITE = null;
-    public const SESSION_DEFAULT          = null;
-    public const SESSION_ADAPTERS         = null;
-    public const SESSION_DRIVERS          = null;
-    public const SESSION_SESSIONS         = null;
 
     /*
      * SMS env variables.
      */
     public const SMS_ADAPTER        = null;
-    public const SMS_ADAPTERS       = null;
+    public const SMS_DRIVER         = null;
     public const SMS_MESSAGE        = null;
     public const SMS_MESSAGES       = null;
+    public const SMS_MESSENGERS     = null;
     public const SMS_LOG_DRIVER     = null;
     public const SMS_LOG_ADAPTER    = null;
     public const SMS_NEXMO_DRIVER   = null;

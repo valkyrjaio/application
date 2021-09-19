@@ -7,7 +7,6 @@ namespace Config;
 use Valkyrja\Config\Constants\ConfigKeyPart as CKP;
 use Valkyrja\Config\Constants\EnvKey;
 use Valkyrja\Session\Config\Config as Model;
-use Valkyrja\Session\Constants\ConfigValue;
 
 use function Valkyrja\env;
 
@@ -21,14 +20,11 @@ class Session extends Model
      */
     public function __construct()
     {
-        $this->default  = CKP::DEFAULT;
-        $this->adapters = array_merge(ConfigValue::ADAPTERS, []);
-        $this->drivers  = array_merge(ConfigValue::DRIVERS, []);
         $this->sessions = [
             CKP::DEFAULT => [
-                CKP::ADAPTER       => env(EnvKey::SESSION_ADAPTER, CKP::PHP),
-                CKP::DRIVER        => env(EnvKey::SESSION_DRIVER, CKP::DEFAULT),
-                CKP::ID            => env(EnvKey::SESSION_ID, null),
+                CKP::ADAPTER       => null,
+                CKP::DRIVER        => null,
+                CKP::ID            => env(EnvKey::SESSION_ID),
                 CKP::NAME          => env(EnvKey::SESSION_NAME, 'VALKYRJA_SESSION'),
                 CKP::COOKIE_PARAMS => [
                     'lifetime' => env(EnvKey::SESSION_COOKIE_LIFETIME, 0),
@@ -41,6 +37,6 @@ class Session extends Model
             ],
         ];
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }

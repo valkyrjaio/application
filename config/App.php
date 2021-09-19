@@ -29,6 +29,6 @@ class App extends Model
         $this->httpKernel       = Kernel::class;
         $this->providers        = array_merge(ConfigValue::PROVIDERS, []);
 
-        parent::__construct([], true);
+        parent::__construct(null, true);
     }
 }
