@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Config;
 
 use Valkyrja\Validation\Config\Config as Model;
-use Valkyrja\Validation\Constants\ConfigValue;
 
 /**
  * Class Validation.
@@ -17,9 +16,7 @@ class Validation extends Model
      */
     public function __construct()
     {
-        $this->rule     = ConfigValue::RULE;
-        $this->rules    = array_merge(ConfigValue::RULES, []);
-        $this->rulesMap = array_merge(ConfigValue::RULES_MAP, []);
+        $this->rulesMap = array_merge($this->rulesMap, []);
 
         parent::__construct(null, true);
     }
