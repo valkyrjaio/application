@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var Exception $exception
+ */
+?>
+
+@layout('layout')
+
+@startblock('title')
+Error - {{ $exception->getMessage() }}
+@endblock

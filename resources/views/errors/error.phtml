@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var Template  $template
+ * @var Exception $exception
+ */
+
+use Valkyrja\View\Template;
+
+$template->setLayout('layout');
+?>
+
+<?php
+$template->startBlock('title'); ?>
+Error - <?= $template->escape($exception->getMessage()) ?>
+<?php
+$template->endBlock(); ?>
