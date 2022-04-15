@@ -188,6 +188,27 @@ class Env
     public const FILESYSTEM_S3_OPTIONS              = null;
 
     /*
+     * JWT env variables.
+     */
+    public const JWT_DEFAULT           = null;
+    public const JWT_ADAPTER           = null;
+    public const JWT_DRIVER            = null;
+    public const JWT_ALGOS             = null;
+    public const JWT_HS_ADAPTER        = null;
+    public const JWT_HS_DRIVER         = null;
+    public const JWT_HS_KEY            = null;
+    public const JWT_RS_ADAPTER        = null;
+    public const JWT_RS_DRIVER         = null;
+    public const JWT_RS_PRIVATE_KEY    = null;
+    public const JWT_RS_PUBLIC_KEY     = null;
+    public const JWT_RS_KEY_PATH       = null;
+    public const JWT_RS_PASSPHRASE     = null;
+    public const JWT_EDDSA_ADAPTER     = null;
+    public const JWT_EDDSA_DRIVER      = null;
+    public const JWT_EDDSA_PRIVATE_KEY = null;
+    public const JWT_EDDSA_PUBLIC_KEY  = null;
+
+    /*
      * Logger env variables.
      */
     public const LOG_NAME      = null;

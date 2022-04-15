@@ -29,6 +29,7 @@ class Config extends Model
         $this->crypt      = new Crypt();
         $this->event      = new Event();
         $this->filesystem = new Filesystem();
+        $this->jwt        = new JWT();
         $this->log        = new Log();
         $this->mail       = new Mail();
         $this->orm        = new ORM();
