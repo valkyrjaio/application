@@ -120,28 +120,26 @@ class Env
     /*
      * Console env variables.
      */
-    public const CONSOLE_PROVIDERS                   = null;
-    public const CONSOLE_DEV_PROVIDERS               = null;
-    public const CONSOLE_QUIET                       = null;
-    public const CONSOLE_USE_ANNOTATIONS             = null;
-    public const CONSOLE_USE_ANNOTATIONS_EXCLUSIVELY = null;
-    public const CONSOLE_HANDLERS                    = null;
-    public const CONSOLE_FILE_PATH                   = null;
-    public const CONSOLE_CACHE_FILE_PATH             = null;
-    public const CONSOLE_USE_CACHE_FILE              = null;
+    public const CONSOLE_PROVIDERS       = null;
+    public const CONSOLE_DEV_PROVIDERS   = null;
+    public const CONSOLE_QUIET           = null;
+    public const CONSOLE_USE_ANNOTATIONS = null;
+    public const CONSOLE_HANDLERS        = null;
+    public const CONSOLE_FILE_PATH       = null;
+    public const CONSOLE_CACHE_FILE_PATH = null;
+    public const CONSOLE_USE_CACHE_FILE  = null;
 
     /*
      * Container env variables.
      */
-    public const CONTAINER_PROVIDERS                   = null;
-    public const CONTAINER_DEV_PROVIDERS               = null;
-    public const CONTAINER_USE_ANNOTATIONS             = null;
-    public const CONTAINER_USE_ANNOTATIONS_EXCLUSIVELY = null;
-    public const CONTAINER_SERVICES                    = null;
-    public const CONTAINER_CONTEXT_SERVICES            = null;
-    public const CONTAINER_FILE_PATH                   = null;
-    public const CONTAINER_CACHE_FILE_PATH             = null;
-    public const CONTAINER_USE_CACHE_FILE              = null;
+    public const CONTAINER_PROVIDERS        = null;
+    public const CONTAINER_DEV_PROVIDERS    = null;
+    public const CONTAINER_USE_ANNOTATIONS  = null;
+    public const CONTAINER_SERVICES         = null;
+    public const CONTAINER_CONTEXT_SERVICES = null;
+    public const CONTAINER_FILE_PATH        = null;
+    public const CONTAINER_CACHE_FILE_PATH  = null;
+    public const CONTAINER_USE_CACHE_FILE   = null;
 
     /*
      * Crypt env variables.
@@ -158,12 +156,11 @@ class Env
     /*
      * Events env variables.
      */
-    public const EVENT_USE_ANNOTATIONS             = null;
-    public const EVENT_USE_ANNOTATIONS_EXCLUSIVELY = null;
-    public const EVENT_LISTENERS                   = null;
-    public const EVENT_FILE_PATH                   = null;
-    public const EVENT_CACHE_FILE_PATH             = null;
-    public const EVENTS_USE_CACHE_FILE             = null;
+    public const EVENT_USE_ANNOTATIONS = null;
+    public const EVENT_LISTENERS       = null;
+    public const EVENT_FILE_PATH       = null;
+    public const EVENT_CACHE_FILE_PATH = null;
+    public const EVENTS_USE_CACHE_FILE = null;
 
     /*
      * Filesystem env variables.
@@ -308,16 +305,15 @@ class Env
     /*
      * Routing env variables.
      */
-    public const ROUTING_TRAILING_SLASH              = null;
-    public const ROUTING_USE_ABSOLUTE_URLS           = null;
-    public const ROUTING_MIDDLEWARE                  = null;
-    public const ROUTING_MIDDLEWARE_GROUPS           = null;
-    public const ROUTING_USE_ANNOTATIONS             = null;
-    public const ROUTING_USE_ANNOTATIONS_EXCLUSIVELY = null;
-    public const ROUTING_CONTROLLERS                 = null;
-    public const ROUTING_FILE_PATH                   = null;
-    public const ROUTING_CACHE_FILE_PATH             = null;
-    public const ROUTING_USE_CACHE_FILE              = null;
+    public const ROUTING_TRAILING_SLASH    = null;
+    public const ROUTING_USE_ABSOLUTE_URLS = null;
+    public const ROUTING_MIDDLEWARE        = null;
+    public const ROUTING_MIDDLEWARE_GROUPS = null;
+    public const ROUTING_USE_ANNOTATIONS   = null;
+    public const ROUTING_CONTROLLERS       = null;
+    public const ROUTING_FILE_PATH         = null;
+    public const ROUTING_CACHE_FILE_PATH   = null;
+    public const ROUTING_USE_CACHE_FILE    = null;
 
     /*
      * Session env variables.

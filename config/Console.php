@@ -25,11 +25,10 @@ class Console extends Model
         $this->devProviders = array_merge(ConfigValue::DEV_PROVIDERS, []);
         $this->quiet        = false;
 
-        $this->useAnnotations            = false;
-        $this->useAnnotationsExclusively = false;
-        $this->filePath                  = commandsPath('default.php');
-        $this->cacheFilePath             = cachePath('commands.php');
-        $this->useCache                  = false;
+        $this->useAnnotations = false;
+        $this->filePath       = commandsPath('default.php');
+        $this->cacheFilePath  = cachePath('commands.php');
+        $this->useCache       = false;
 
         parent::__construct(null, true);
     }

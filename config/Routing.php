@@ -28,11 +28,10 @@ class Routing extends Model
         $this->useTrailingSlash = false;
         $this->useAbsoluteUrls  = false;
 
-        $this->filePath                  = routesPath('default.php');
-        $this->cacheFilePath             = cachePath('routes.php');
-        $this->useAnnotations            = false;
-        $this->useAnnotationsExclusively = false;
-        $this->useCache                  = false;
+        $this->filePath       = routesPath('default.php');
+        $this->cacheFilePath  = cachePath('routes.php');
+        $this->useAnnotations = false;
+        $this->useCache       = false;
 
         parent::__construct(null, true);
     }

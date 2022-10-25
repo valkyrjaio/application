@@ -21,11 +21,10 @@ class Event extends Model
     {
         $this->listeners = [];
 
-        $this->filePath                  = eventsPath('default.php');
-        $this->cacheFilePath             = cachePath('events.php');
-        $this->useAnnotations            = false;
-        $this->useAnnotationsExclusively = false;
-        $this->useCache                  = false;
+        $this->filePath       = eventsPath('default.php');
+        $this->cacheFilePath  = cachePath('events.php');
+        $this->useAnnotations = false;
+        $this->useCache       = false;
 
         parent::__construct(null, true);
     }

@@ -33,11 +33,10 @@ class Container extends Model
         $this->devProviders    = array_merge(ConfigValue::DEV_PROVIDERS, []);
         $this->setupFacade     = true;
 
-        $this->filePath                  = servicesPath('default.php');
-        $this->cacheFilePath             = cachePath('container.php');
-        $this->useAnnotations            = false;
-        $this->useAnnotationsExclusively = false;
-        $this->useCache                  = false;
+        $this->filePath       = servicesPath('default.php');
+        $this->cacheFilePath  = cachePath('container.php');
+        $this->useAnnotations = false;
+        $this->useCache       = false;
 
         parent::__construct(null, true);
     }
