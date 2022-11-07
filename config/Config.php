@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Config;
 
+use App\Http\Kernel;
+use App\ORM\Entities\User;
+use App\Providers\AppServiceProvider;
 use JsonException;
 use Valkyrja\Annotation\Config\Annotation;
 use Valkyrja\Api\Config\Api;
@@ -65,6 +68,17 @@ class Config extends Model
         $this->sms        = new SMS($properties['sms'] ?? null, true);
         $this->validation = new Validation($properties['validation'] ?? null, true);
         $this->view       = new View($properties['view'] ?? null, true);
+
+        $this->app->httpKernel = Kernel::class;
+
+        $this->auth->userEntity = User::class;
+
+        $this->container->providers = [
+            ...$this->container->providers,
+            ...[
+                AppServiceProvider::class,
+            ],
+        ];
 
         $this->providers     = [];
         $this->cacheFilePath = cachePath('config.php');
