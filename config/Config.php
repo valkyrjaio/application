@@ -4,7 +4,30 @@ declare(strict_types=1);
 
 namespace Config;
 
+use JsonException;
+use Valkyrja\Annotation\Config\Annotation;
+use Valkyrja\Api\Config\Api;
+use Valkyrja\Application\Config\App;
+use Valkyrja\Auth\Config\Auth;
+use Valkyrja\Broadcast\Config\Broadcast;
+use Valkyrja\Cache\Config\Cache;
+use Valkyrja\Client\Config\Client;
 use Valkyrja\Config\Config\Config as Model;
+use Valkyrja\Console\Config\Console;
+use Valkyrja\Container\Config\Container;
+use Valkyrja\Crypt\Config\Crypt;
+use Valkyrja\Event\Config\Event;
+use Valkyrja\Filesystem\Config\Filesystem;
+use Valkyrja\JWT\Config\JWT;
+use Valkyrja\Log\Config\Log;
+use Valkyrja\Mail\Config\Mail;
+use Valkyrja\ORM\Config\ORM;
+use Valkyrja\Path\Config\Path;
+use Valkyrja\Routing\Config\Routing;
+use Valkyrja\Session\Config\Session;
+use Valkyrja\SMS\Config\SMS;
+use Valkyrja\Validation\Config\Validation;
+use Valkyrja\View\Config\View;
 
 use function Valkyrja\cachePath;
 
@@ -14,36 +37,37 @@ use function Valkyrja\cachePath;
 class Config extends Model
 {
     /**
-     * Config constructor.
+     * @inheritDoc
+     *
+     * @throws JsonException
      */
-    public function __construct()
+    protected function setup(array $properties = null): void
     {
-        $this->annotation = new Annotation();
-        $this->api        = new Api();
-        $this->app        = new App();
-        $this->auth       = new Auth();
-        $this->cache      = new Cache();
-        $this->client     = new Client();
-        $this->console    = new Console();
-        $this->container  = new Container();
-        $this->crypt      = new Crypt();
-        $this->event      = new Event();
-        $this->filesystem = new Filesystem();
-        $this->jwt        = new JWT();
-        $this->log        = new Log();
-        $this->mail       = new Mail();
-        $this->orm        = new ORM();
-        $this->path       = new Path();
-        $this->routing    = new Routing();
-        $this->session    = new Session();
-        $this->sms        = new SMS();
-        $this->validation = new Validation();
-        $this->view       = new View();
+        $this->annotation = new Annotation($properties['annotation'] ?? null, true);
+        $this->api        = new Api($properties['api'] ?? null, true);
+        $this->app        = new App($properties['app'] ?? null, true);
+        $this->auth       = new Auth($properties['auth'] ?? null, true);
+        $this->broadcast  = new Broadcast($properties['broadcast'] ?? null, true);
+        $this->cache      = new Cache($properties['cache'] ?? null, true);
+        $this->client     = new Client($properties['client'] ?? null, true);
+        $this->console    = new Console($properties['console'] ?? null, true);
+        $this->container  = new Container($properties['container'] ?? null, true);
+        $this->crypt      = new Crypt($properties['crypt'] ?? null, true);
+        $this->event      = new Event($properties['event'] ?? null, true);
+        $this->filesystem = new Filesystem($properties['filesystem'] ?? null, true);
+        $this->jwt        = new JWT($properties['jwt'] ?? null, true);
+        $this->log        = new Log($properties['log'] ?? null, true);
+        $this->mail       = new Mail($properties['mail'] ?? null, true);
+        $this->orm        = new ORM($properties['orm'] ?? null, true);
+        $this->path       = new Path($properties['path'] ?? null, true);
+        $this->routing    = new Routing($properties['routing'] ?? null, true);
+        $this->session    = new Session($properties['session'] ?? null, true);
+        $this->sms        = new SMS($properties['sms'] ?? null, true);
+        $this->validation = new Validation($properties['validation'] ?? null, true);
+        $this->view       = new View($properties['view'] ?? null, true);
 
         $this->providers     = [];
         $this->cacheFilePath = cachePath('config.php');
         $this->useCache      = false;
-
-        parent::__construct(null, true);
     }
 }
