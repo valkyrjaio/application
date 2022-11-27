@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Valkyrja\Support\Model\Classes\Model;
+use Valkyrja\Model\Classes\Model;
 
 /**
  * Model Data.
