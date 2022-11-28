@@ -19,7 +19,7 @@ About Valkyrja
 ------------
 
 > **Note:** This repository contains the application code of the Valkyrja framework.
-> If you want to see the core source framework code, visit the [Valkyrja Framework repository][Valkyrja Framework repository].
+> If you want to see the core source framework code, visit the [Valkyrja Framework repository][github framework repo].
 
 [Valkyrja][Valkyrja] is a PHP framework for web and console applications.
 
@@ -64,33 +64,33 @@ The Valkyrja framework is open-sourced software licensed under the [MIT license]
 
 [github main]: https://github.com/valkyrjaio
 
-[github app repo]: https://github.com/valkyrjaio/application
+[github framework repo]: https://github.com/valkyrjaio/valkyrja
 
 [github demo app repo]: https://github.com/valkyrjaio/application
 
-[docs]: ./docs
+[docs]: https://github.com/valkyrjaio/valkyrja/docs
 
-[getting started]: ./docs/getting-started
+[getting started]: https://github.com/valkyrjaio/valkyrja/docs/getting-started
 
-[install]: ./docs/getting-started/installation
+[install]: https://github.com/valkyrjaio/valkyrja/docs/getting-started/installation
 
-[requirements]: ./docs/getting-started/requirements
+[requirements]: https://github.com/valkyrjaio/valkyrja/docs/getting-started/requirements
 
-[basics]: ./docs/basics
+[basics]: https://github.com/valkyrjaio/valkyrja/docs/basics
 
-[best practices]: ./docs/basics/best-practices
+[best practices]: https://github.com/valkyrjaio/valkyrja/docs/basics/best-practices
 
-[advanced]: ./docs/advanced
+[advanced]: https://github.com/valkyrjaio/valkyrja/docs/advanced
 
-[modules]: ./docs/Modules
+[modules]: https://github.com/valkyrjaio/valkyrja/docs/Modules
 
-[contributing]: ./docs/contributing
+[contributing]: https://github.com/valkyrjaio/valkyrja/docs/contributing
 
-[code of conduct]: ./docs/contributing/code-of-conduct
+[code of conduct]: https://github.com/valkyrjaio/valkyrja/docs/contributing/code-of-conduct
 
-[contribute code]: ./docs/contributing/code
+[contribute code]: https://github.com/valkyrjaio/valkyrja/docs/contributing/code
 
-[security vulnerabilities]: ./docs/contributing/security-vulnerabilities
+[security vulnerabilities]: https://github.com/valkyrjaio/valkyrja/docs/contributing/security-vulnerabilities
 
 [semantic versioning]: https://semver.org/
 
