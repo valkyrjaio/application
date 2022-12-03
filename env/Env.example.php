@@ -5,6 +5,6 @@ namespace Env;
 /**
  * Class Env.
  */
-class Env extends \Valkyrja\Env
+class Env extends \Valkyrja\Application\Env
 {
 }
