@@ -8,3 +8,7 @@
  * TODO: ADD EXPLANATION
  *
  */
+
+use Valkyrja\Console\Console;
+
+/** @var Console $this */

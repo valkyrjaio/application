@@ -8,3 +8,7 @@
  * TODO: ADD EXPLANATION
  *
  */
+
+use Valkyrja\Container\Container;
+
+/** @var Container $this */
