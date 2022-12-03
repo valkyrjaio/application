@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Valkyrja\Support\Exception\Classes\ExceptionHandler as ValkyrjaExceptionHandler;
+use Valkyrja\Exception\Classes\ExceptionHandler as ValkyrjaExceptionHandler;
 
 /**
  * Class ExceptionHandler.
