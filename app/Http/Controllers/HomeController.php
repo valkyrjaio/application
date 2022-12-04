@@ -19,7 +19,7 @@ use function Valkyrja\template;
  * @Service\Alias("id" = "Some\\Service\\Id", "name" = "homeController")
  * @Service\Context("id" = "Some\\Other\\Service\\Id", "service" = "From\\Some\\Package")
  */
-class HomeController extends \Valkyrja\Routing\Support\Controller
+class HomeController extends \Valkyrja\Routing\Controllers\Controller
 {
     /**
      * Property routing example.
