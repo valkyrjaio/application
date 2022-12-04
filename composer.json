@@ -9,8 +9,8 @@
   ],
   "license"           : "MIT",
   "require"           : {
-    "php"               : ">=7.4",
-    "valkyrja/valkyrja" : "^1.0.0",
+    "php"               : ">=8.1",
+    "valkyrja/valkyrja" : "dev-master",
     "monolog/monolog"   : "^2.1.0"
   },
   "require-dev"       : {
