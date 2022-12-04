@@ -51,7 +51,7 @@ class HomeController extends \Valkyrja\Routing\Support\Controller
      */
     public function welcome(): Response
     {
-        return self::$responseFactory->createResponse(template('index')->render());
+        return self::getResponseFactory()->createResponse(template('index')->render());
     }
 
     /**
