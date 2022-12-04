@@ -2,7 +2,7 @@
 
 namespace App\ORM\Repositories;
 
-use Valkyrja\ORM\Repositories\Repository;
+use Valkyrja\Orm\Repositories\Repository;
 
 /**
  * Class UserRepository.

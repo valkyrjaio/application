@@ -9,11 +9,11 @@ use Valkyrja\Auth\User as Contract;
 use Valkyrja\Auth\VerifiableUser;
 use Valkyrja\Notification\Entities\NotifiableUserTrait;
 use Valkyrja\Notification\NotifiableUser;
-use Valkyrja\ORM\DatedEntity;
-use Valkyrja\ORM\Entities\DatedEntityTrait;
-use Valkyrja\ORM\Entities\Entity;
-use Valkyrja\ORM\Entities\SoftDeleteEntityTrait;
-use Valkyrja\ORM\SoftDeleteEntity;
+use Valkyrja\Orm\DatedEntity;
+use Valkyrja\Orm\Entities\DatedEntityTrait;
+use Valkyrja\Orm\Entities\Entity;
+use Valkyrja\Orm\Entities\SoftDeleteEntityTrait;
+use Valkyrja\Orm\SoftDeleteEntity;
 
 /**
  * Entity User.
