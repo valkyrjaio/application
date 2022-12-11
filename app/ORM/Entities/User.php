@@ -10,9 +10,9 @@ use Valkyrja\Auth\VerifiableUser;
 use Valkyrja\Notification\Entities\NotifiableUserTrait;
 use Valkyrja\Notification\NotifiableUser;
 use Valkyrja\Orm\DatedEntity;
-use Valkyrja\Orm\Entities\DatedEntityTrait;
+use Valkyrja\Orm\Entities\Dateable;
 use Valkyrja\Orm\Entities\Entity;
-use Valkyrja\Orm\Entities\SoftDeleteEntityTrait;
+use Valkyrja\Orm\Entities\SoftDeletable;
 use Valkyrja\Orm\SoftDeleteEntity;
 
 /**
@@ -21,10 +21,10 @@ use Valkyrja\Orm\SoftDeleteEntity;
 class User extends Entity implements Contract, DatedEntity, NotifiableUser, SoftDeleteEntity, VerifiableUser
 {
     use UserTrait;
-    use DatedEntityTrait;
+    use Dateable;
     use MailableUserTrait;
     use NotifiableUserTrait;
-    use SoftDeleteEntityTrait;
+    use SoftDeletable;
     use VerifiableUserTrait;
 
     /**
