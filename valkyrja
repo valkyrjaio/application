@@ -1,91 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-/**
- * Valkyrja - PHP framework
- *
- * @package Valkyrja
- * @author Melech Mizrachi
- */
+declare(strict_types=1);
 
+use App\App;
 use Config\Config;
-use Env\Env;
-use Valkyrja\Application\Applications\Valkyrja;
-use Valkyrja\Support\Directory;
-
-/*
- *-------------------------------------------------------------------------
- * Application Auto Loader Assemble!
- *-------------------------------------------------------------------------
- *
- * Autoload all the application namespaces, dependencies, and files using
- * composer to both manage all dependencies as well as register everything
- * for us to use within the application.
- *
- */
+use Env\EnvConsole;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-/*
- *-------------------------------------------------------------------------
- * Set The Base Directory
- *-------------------------------------------------------------------------
- *
- * Let's set the base directory within the web server for our application
- * so that when we locate directories and files within the application
- * we have a standard location from which to do so.
- *
- */
-
-Directory::$BASE_PATH = realpath(__DIR__ . '/');
-
-/*
- *-------------------------------------------------------------------------
- * Setup The Application
- *-------------------------------------------------------------------------
- *
- * Let's setup the application by bootstrapping it. This will instantiate
- * the main application as well as add any required classes to the
- * service container, add environment variables, add config
- * variables, and add all the application routes.
- *
- */
-
-// Here we'll set the env file to use
-Valkyrja::setEnv(EnvConsole::class);
-
-/*
- *-------------------------------------------------------------------------
- * Start Up The Application
- *-------------------------------------------------------------------------
- *
- * Let's start up the application by creating a new instance of the
- * application class. This is going to bind all the various
- * components together into a singular hub.
- *
- */
-
-$app = new Valkyrja(Config::class);
-
-/*
- *-------------------------------------------------------------------------
- * Run The Application
- *-------------------------------------------------------------------------
- *
- * Now that the application has been bootstrapped and setup correctly
- * with all our requirements lets run it!
- *
- */
-
-$exitCode = $app->consoleKernel()->run();
-
-/*
- *-------------------------------------------------------------------------
- * Exit
- *-------------------------------------------------------------------------
- *
- * Exit to let the terminal know we're done.
- *
- */
-
-exit($exitCode);
+App::console(__DIR__, EnvConsole::class, Config::class);
