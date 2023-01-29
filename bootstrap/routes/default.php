@@ -1,13 +1,6 @@
 <?php
 
-/*
- *-------------------------------------------------------------------------
- * Define Application Routes
- *-------------------------------------------------------------------------
- *
- * TODO: ADD EXPLANATION
- *
- */
+declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
 use Valkyrja\Http\ResponseFactory;

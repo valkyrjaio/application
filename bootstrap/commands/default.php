@@ -1,13 +1,6 @@
 <?php
 
-/*
- *-------------------------------------------------------------------------
- * Define Application Console Commands
- *-------------------------------------------------------------------------
- *
- * TODO: ADD EXPLANATION
- *
- */
+declare(strict_types=1);
 
 use Valkyrja\Console\Console;
 

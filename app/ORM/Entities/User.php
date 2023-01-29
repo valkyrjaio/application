@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\ORM\Entities;
 
 use Valkyrja\Auth\Entities\MailableUserTrait;

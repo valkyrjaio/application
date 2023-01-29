@@ -1,13 +1,6 @@
 <?php
 
-/*
- *-------------------------------------------------------------------------
- * Define Application Event Listeners
- *-------------------------------------------------------------------------
- *
- * TODO: ADD EXPLANATION
- *
- */
+declare(strict_types=1);
 
 use Valkyrja\Event\Events;
 

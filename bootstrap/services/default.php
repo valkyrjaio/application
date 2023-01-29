@@ -1,13 +1,6 @@
 <?php
 
-/*
- *-------------------------------------------------------------------------
- * Define Application Container Instances
- *-------------------------------------------------------------------------
- *
- * TODO: ADD EXPLANATION
- *
- */
+declare(strict_types=1);
 
 use Valkyrja\Container\Container;
 
