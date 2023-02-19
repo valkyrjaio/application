@@ -17,5 +17,5 @@ class SimpleModel
     /**
      * @var string|null
      */
-    public ?string $propertyNullable = null;
+    public string|null $propertyNullable = null;
 }
