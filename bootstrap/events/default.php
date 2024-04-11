@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use Valkyrja\Event\Events;
+use Valkyrja\Event\Collection;
 
-/** @var Events $this */
+/** @var Collection $collection */
