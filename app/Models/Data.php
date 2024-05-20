@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use Valkyrja\Model\Models\Model;
+use Valkyrja\Type\Model\Model;
 
 /**
  * Model Data.
