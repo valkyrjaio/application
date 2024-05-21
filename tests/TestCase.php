@@ -5,8 +5,8 @@ namespace Tests;
 use Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Tests\Traits\TestRequest;
-use Valkyrja\Application\Application;
-use Valkyrja\Application\Applications\Valkyrja;
+use Valkyrja\Application\Contract\Application;
+use Valkyrja\Application\Valkyrja;
 use Valkyrja\Support\Directory;
 
 /**
