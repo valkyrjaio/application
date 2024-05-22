@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Http;
 
 use Throwable;
-use Valkyrja\Http\Request;
-use Valkyrja\Http\Response;
+use Valkyrja\Http\Request\Contract\ServerRequest;
+use Valkyrja\Http\Response\Contract\Response;
 use Valkyrja\HttpKernel\Kernel as ValkyrjaKernel;
 
 /**
@@ -17,13 +17,13 @@ class Kernel extends ValkyrjaKernel
     /**
      * Handle a request.
      *
-     * @param Request $request The request
+     * @param ServerRequest $request The request
      *
      * @throws Throwable
      *
      * @return Response
      */
-    public function handle(Request $request): Response
+    public function handle(ServerRequest $request): Response
     {
         return parent::handle($request);
     }
@@ -31,12 +31,12 @@ class Kernel extends ValkyrjaKernel
     /**
      * Terminate the kernel request.
      *
-     * @param Request  $request  The request
-     * @param Response $response The response
+     * @param ServerRequest $request  The request
+     * @param Response      $response The response
      *
      * @return void
      */
-    public function terminate(Request $request, Response $response): void
+    public function terminate(ServerRequest $request, Response $response): void
     {
         parent::terminate($request, $response);
     }
@@ -44,13 +44,13 @@ class Kernel extends ValkyrjaKernel
     /**
      * Run the kernel.
      *
-     * @param Request $request The request
+     * @param ServerRequest $request The request
      *
      * @throws Throwable
      *
      * @return void
      */
-    public function run(Request $request): void
+    public function run(ServerRequest $request): void
     {
         parent::run($request);
     }

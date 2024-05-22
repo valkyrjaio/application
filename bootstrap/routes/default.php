@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
-use Valkyrja\Http\ResponseFactory;
+use Valkyrja\Http\Factory\Contract\ResponseFactory;
 use Valkyrja\Routing\Collector;
 
 /** @var Collector $collector */
