@@ -1,23 +1,23 @@
 <?php
 /**
- * @var Template $template
+ * @var \Valkyrja\View\Template\Contract\Template $template
  */
 
-use Valkyrja\View\Template;
+use Valkyrja\View\Template\Contract\Template;
 
 $template->setLayout('layout');
 ?>
 
 <?php $template->startBlock('title'); ?>
-    <img src="https://i.imgur.com/bnZA2RT.png" width="400" alt="Valkyrja">
+<img src="https://i.imgur.com/bnZA2RT.png" width="400" alt="Valkyrja">
 <?php $template->endBlock('title'); ?>
 
 <?php $template->startBlock('content'); ?>
-    <div class="links">
-        <a href="http://www.valkyrja.io/documentation">Documentation</a>
-        &middot;
-        <a href="https://github.com/valkyrjaio/valkyrja">GitHub</a>
-        &middot;
-        <a href="https://github.com/valkyrjaio/valkyrja/issues">Issues</a>
-    </div>
+<div class="links">
+    <a href="http://www.valkyrja.io/documentation">Documentation</a>
+    &middot;
+    <a href="https://github.com/valkyrjaio/valkyrja">GitHub</a>
+    &middot;
+    <a href="https://github.com/valkyrjaio/valkyrja/issues">Issues</a>
+</div>
 <?php $template->endBlock('content'); ?>

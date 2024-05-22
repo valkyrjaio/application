@@ -1,15 +1,15 @@
 <?php
 /**
- * @var Template $template
+ * @var \Valkyrja\View\Template\Contract\Template $template
  */
 
-use Valkyrja\View\Template;
+use Valkyrja\View\Template\Contract\Template;
 
 $template->setLayout('layout');
 ?>
 
 <?php $template->startBlock('title'); ?>
-    Home
+Home
 <?php $template->endBlock('title'); ?>
 
 <?php $template->startBlock('content'); ?>
