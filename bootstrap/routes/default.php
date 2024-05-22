@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
 use Valkyrja\Http\Factory\Contract\ResponseFactory;
-use Valkyrja\Routing\Collector;
+use Valkyrja\Routing\Collector\Contract\Collector;
 
 /** @var Collector $collector */
 
@@ -18,7 +18,7 @@ $collector->withController(HomeController::class)->withName('home')->group(
          */
         $collector->get('/', '->welcome()', 'welcome');
         $collector->get('/{dynamicValue}', '->welcome()', 'dynamicValue')
-            ->addParameter('dynamicValue', '[a-zA-Z]+');
+                  ->addParameter('dynamicValue', '[a-zA-Z]+');
 
         /**
          * Home Route.
@@ -26,7 +26,7 @@ $collector->withController(HomeController::class)->withName('home')->group(
          * @path /home
          */
         $collector->get('/home', '->home()', 'home', false)
-            ->setDependencies([ResponseFactory::class]);
+                  ->setDependencies([ResponseFactory::class]);
         $collector->get('/homeAutoDependencies', '->home()', 'homeAutoDependencies');
 
         /**

@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 use Valkyrja\Container\Annotation\Service;
 use Valkyrja\Http\Factory\Contract\ResponseFactory;
 use Valkyrja\Http\Response\Contract\Response;
-use Valkyrja\Routing\Annotations\Route;
+use Valkyrja\Routing\Annotation\Route;
 
 use function Valkyrja\app;
 use function Valkyrja\response;
@@ -21,7 +21,7 @@ use function Valkyrja\template;
  * @Service\Alias("id" = "Some\\Service\\Id", "name" = "homeController")
  * @Service\Context("id" = "Some\\Other\\Service\\Id", "service" = "From\\Some\\Package")
  */
-class HomeController extends \Valkyrja\Routing\Controllers\Controller
+class HomeController extends \Valkyrja\Routing\Controller\Controller
 {
     /**
      * Property routing example.
