@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\ORM\Entities;
 
-use Valkyrja\Auth\Entities\MailableUserTrait;
-use Valkyrja\Auth\Entities\UserTrait;
-use Valkyrja\Auth\Entities\VerifiableUserTrait;
-use Valkyrja\Auth\User as Contract;
-use Valkyrja\Auth\VerifiableUser;
+use Valkyrja\Auth\Entity\Contract\User as Contract;
+use Valkyrja\Auth\Entity\Contract\VerifiableUser;
+use Valkyrja\Auth\Entity\MailableUserTrait;
+use Valkyrja\Auth\Entity\UserTrait;
+use Valkyrja\Auth\Entity\VerifiableUserTrait;
 use Valkyrja\Notification\Entities\NotifiableUserTrait;
 use Valkyrja\Notification\NotifiableUser;
 use Valkyrja\Orm\DatedEntity;
