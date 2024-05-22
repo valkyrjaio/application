@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Valkyrja\Container\Container;
+use Valkyrja\Container\Contract\Container;
 use Valkyrja\Container\Support\Provider;
 
 /**

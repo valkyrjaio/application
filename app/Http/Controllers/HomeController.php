@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Valkyrja\Container\Annotations\Service;
+use Valkyrja\Container\Annotation\Service;
 use Valkyrja\Http\Response;
 use Valkyrja\Http\ResponseFactory;
 use Valkyrja\Routing\Annotations\Route;
