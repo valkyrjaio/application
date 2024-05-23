@@ -2,8 +2,8 @@
 
 namespace Tests\Traits;
 
+use Valkyrja\Http\Message\Response\Contract\Response;
 use Valkyrja\Http\RequestMethod;
-use Valkyrja\Http\Response\Contract\Response;
 use Valkyrja\Http\StatusCode;
 
 /**
@@ -22,7 +22,7 @@ trait TestRequest
      * @param array  $server     [optional] Server variables for the request
      * @param string $content    [optional] Content for the request
      *
-     * @return \Valkyrja\Http\Response\Contract\Response
+     * @return \Valkyrja\Http\Message\Response\Contract\Response
      */
     public function call(
         $uri,
@@ -33,7 +33,7 @@ trait TestRequest
         $server = [],
         $content = null
     ): Response {
-        /** @var \Valkyrja\Http\Request\Contract\ServerRequest $request */
+        /** @var \Valkyrja\Http\Message\Request\Contract\ServerRequest $request */
         $request = $this->app->request();
 
         // If all routes should have a trailing slash

@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Http;
 
 use Throwable;
-use Valkyrja\Http\Request\Contract\ServerRequest;
-use Valkyrja\Http\Response\Contract\Response;
-use Valkyrja\HttpKernel\Kernel as ValkyrjaKernel;
+use Valkyrja\Http\Message\Request\Contract\ServerRequest;
+use Valkyrja\Http\Message\Response\Contract\Response;
+use Valkyrja\Http\Server\RequestHandler as ValkyrjaKernel;
 
 /**
  * Class Kernel.

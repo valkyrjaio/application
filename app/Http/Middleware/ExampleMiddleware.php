@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
-use Valkyrja\Http\Request\Contract\ServerRequest;
-use Valkyrja\Http\Response\Contract\Response;
+use Valkyrja\Http\Message\Request\Contract\ServerRequest;
+use Valkyrja\Http\Message\Response\Contract\Response;
 use Valkyrja\Routing\Middleware\Middleware;
 
 /**

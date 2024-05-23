@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Valkyrja\Container\Annotation\Service;
-use Valkyrja\Http\Factory\Contract\ResponseFactory;
-use Valkyrja\Http\Response\Contract\Response;
+use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
+use Valkyrja\Http\Message\Response\Contract\Response;
 use Valkyrja\Routing\Annotation\Route;
 
 use function Valkyrja\app;
