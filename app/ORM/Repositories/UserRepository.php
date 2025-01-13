@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\ORM\Repositories;
 
-use Valkyrja\Orm\Repositories\Repository;
+use Valkyrja\Orm\Repository\Repository;
 
 /**
  * Class UserRepository.

@@ -6,7 +6,7 @@ namespace App\Http\Middleware;
 
 use Valkyrja\Http\Message\Request\Contract\ServerRequest;
 use Valkyrja\Http\Message\Response\Contract\Response;
-use Valkyrja\Routing\Middleware\Middleware;
+use Valkyrja\Http\MiddlewareOld\Middleware;
 
 /**
  * Class ExampleMiddleware.

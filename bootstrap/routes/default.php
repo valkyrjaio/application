@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
-use Valkyrja\Routing\Collector\Contract\Collector;
+use Valkyrja\Http\Routing\Collector\Contract\Collector;
 
 /** @var Collector $collector */
 
