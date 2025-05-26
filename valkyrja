@@ -5,8 +5,9 @@ declare(strict_types=1);
 
 use App\App;
 use Config\Config;
+use Config\DataConfig;
 use Env\EnvConsole;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-App::console(__DIR__, EnvConsole::class, Config::class);
+App::console(__DIR__, EnvConsole::class, Config::class, DataConfig::class);
