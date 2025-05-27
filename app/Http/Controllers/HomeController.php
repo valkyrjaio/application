@@ -112,6 +112,6 @@ class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
     #[Patch(path: '/version', name: 'version.patch.redirect', to: '/version/patch')]
     public static function version(ResponseFactory $responseFactory): Response
     {
-        return $responseFactory->createResponse(app()->version());
+        return $responseFactory->createResponse(app()->getVersion());
     }
 }
