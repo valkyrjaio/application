@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Config;
 
+use App\Http\Controllers\HomeController;
 use App\ORM\Entities\User;
 use App\Providers\AppServiceProvider;
 use Valkyrja\Config\Config\ValkyrjaDataConfig;
@@ -23,5 +24,7 @@ class DataConfig extends ValkyrjaDataConfig
         $this->auth->defaultUserEntity = User::class;
 
         $this->container->providers[] = AppServiceProvider::class;
+
+        $this->httpRouting->controllers[] = HomeController::class;
     }
 }
