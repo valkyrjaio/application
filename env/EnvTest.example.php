@@ -9,8 +9,13 @@ namespace Env;
  */
 class EnvTest extends Env
 {
-    /**
-     * Console env variables.
-     */
-    public const CONSOLE_QUIET = true;
+    /************************************************************
+     *
+     * Console component env variables.
+     *
+     ************************************************************/
+
+    /** @var bool|null */
+    public const bool|null CONSOLE_SHOULD_RUN_QUIETLY = true;
+
 }
