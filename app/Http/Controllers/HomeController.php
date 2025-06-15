@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use Valkyrja\Application\Contract\Application;
 use Valkyrja\Http\Message\Enum\RequestMethod;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
 use Valkyrja\Http\Message\Response\Contract\Response;
@@ -12,8 +13,6 @@ use Valkyrja\Http\Routing\Attribute\Route;
 use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Any;
 use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Get;
 use Valkyrja\View\Factory\Contract\ResponseFactory as ViewResponseFactory;
-
-use function Valkyrja\app;
 
 /**
  * Class HomeController.
@@ -77,8 +76,8 @@ class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
     #[Route(path: '/version', name: 'version.post', methods: [RequestMethod::POST])]
     #[Route(path: '/version', name: 'version.put', methods: [RequestMethod::PUT])]
     #[Route(path: '/version', name: 'version.patch.redirect', methods: [RequestMethod::PATCH], to: '/version/patch')]
-    public static function version(ResponseFactory $responseFactory): Response
+    public static function version(Application $app, ResponseFactory $responseFactory): Response
     {
-        return $responseFactory->createResponse(app()->getVersion());
+        return $responseFactory->createResponse($app->getVersion());
     }
 }

@@ -4,18 +4,27 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Config\Config\Valkyrja as Model;
+use App\Http\Controllers\HomeController;
+use App\ORM\Entities\User;
+use App\Providers\AppServiceProvider;
+use Valkyrja\Application\Config\Valkyrja;
 
 /**
  * Class Config.
  */
-class Config extends Model
+class Config extends Valkyrja
 {
     /**
      * @inheritDoc
      */
-    protected function setup(array|null $properties = null): void
+    protected function setConfigFromEnv(string $env): void
     {
-        parent::setup($properties);
+        parent::setConfigFromEnv($env);
+
+        $this->auth->defaultUserEntity = User::class;
+
+        $this->container->providers[] = AppServiceProvider::class;
+
+        $this->httpRouting->controllers[] = HomeController::class;
     }
 }

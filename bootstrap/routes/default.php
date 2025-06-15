@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
+use Valkyrja\Application\Contract\Application;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
 use Valkyrja\Http\Routing\Collector\Contract\Collector;
 
@@ -35,7 +36,8 @@ $collector->withController(HomeController::class)->withName('home')->group(
          *
          * @path /version
          */
-        $collector->get('/version', '::version()', 'version');
+        $collector->get('/version', '::version()', 'version')
+                  ->setDependencies([Application::class, ResponseFactory::class]);
 
         /**
          * Property Routing Example Route.
