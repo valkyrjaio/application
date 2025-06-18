@@ -12,6 +12,7 @@ use Valkyrja\Http\Routing\Attribute\Parameter;
 use Valkyrja\Http\Routing\Attribute\Route;
 use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Any;
 use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Get;
+use Valkyrja\Http\Routing\Constant\Regex;
 use Valkyrja\View\Factory\Contract\ResponseFactory as ViewResponseFactory;
 
 /**
@@ -20,6 +21,16 @@ use Valkyrja\View\Factory\Contract\ResponseFactory as ViewResponseFactory;
 #[Route(path: '/', name: 'home')]
 class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
 {
+    /**
+     * Const routing example.
+     *
+     * @var string
+     */
+    #[Route(path: '/version', name: 'version', requestMethods: [RequestMethod::GET])]
+    #[Route(path: '/version', name: 'version.post', requestMethods: [RequestMethod::POST])]
+    #[Route(path: '/version', name: 'version.put', requestMethods: [RequestMethod::PUT])]
+    public const string VERSION = Application::VERSION;
+
     /**
      * Property routing example.
      *
@@ -51,11 +62,11 @@ class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
      * Dynamic action.
      * - Example of a view being returned.
      */
-    #[Route(path: '/{dynamicValue}', name: 'dynamicValue')]
-    #[Parameter(name: 'dynamicValue', regex: '[a-zA-Z]+')]
-    public function dynamic(ViewResponseFactory $responseFactory): Response
+    #[Route(path: '/{value}', name: 'dynamicValue')]
+    #[Parameter(name: 'value', regex: Regex::ALPHA)]
+    public function dynamic(ViewResponseFactory $responseFactory, string $value): Response
     {
-        return $responseFactory->createResponseFromView('index');
+        return $responseFactory->createResponseFromView('dynamic/dynamic', ['value' => $value]);
     }
 
     /**
@@ -72,10 +83,9 @@ class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
      * Application version action.
      * - Example of string being returned.
      */
-    #[Route(path: '/version', name: 'version', methods: [RequestMethod::GET])]
-    #[Route(path: '/version', name: 'version.post', methods: [RequestMethod::POST])]
-    #[Route(path: '/version', name: 'version.put', methods: [RequestMethod::PUT])]
-    #[Route(path: '/version', name: 'version.patch.redirect', methods: [RequestMethod::PATCH], to: '/version/patch')]
+    #[Route(path: '/version-method', name: 'version-method', requestMethods: [RequestMethod::GET])]
+    #[Route(path: '/version-method', name: 'version-method.post', requestMethods: [RequestMethod::POST])]
+    #[Route(path: '/version-method', name: 'version-method.put', requestMethods: [RequestMethod::PUT])]
     public static function version(Application $app, ResponseFactory $responseFactory): Response
     {
         return $responseFactory->createResponse($app->getVersion());

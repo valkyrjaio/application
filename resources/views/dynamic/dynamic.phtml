@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var Template $template
+ * @var string   $value
+ */
+
+use Valkyrja\View\Template\Contract\Template;
+
+$template->setLayout('layout');
+?>
+
+<?php $template->startBlock('title'); ?>
+Dynamic
+<?php $template->endBlock('title'); ?>
+
+<?php $template->startBlock('content'); ?>
+<article>
+    Test Php Dynamic Url with value: <?= $value ?>
+</article>
+<?php $template->endBlock('content'); ?>
