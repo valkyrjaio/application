@@ -19,7 +19,7 @@ use Valkyrja\View\Factory\Contract\ResponseFactory as ViewResponseFactory;
  * Class HomeController.
  */
 #[Route(path: '/', name: 'home')]
-class HomeController extends \Valkyrja\Http\Routing\Controller\Controller
+class HomeController extends Controller
 {
     /**
      * Const routing example.
