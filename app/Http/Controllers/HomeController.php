@@ -49,6 +49,15 @@ class HomeController extends Controller
     public static string $staticPropertyRouting = 'Static Property Routing Example';
 
     /**
+     * Static property json routing example.
+     *
+     * @var array<array-key, string>
+     */
+    #[Any]
+    #[Route(path: '/json', name: 'json')]
+    public static array $jsonPropertyRouting = ['Static Property Routing Json Example'];
+
+    /**
      * Welcome action.
      * - Example of a view being returned.
      */
