@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Cli\Controllers\TestCommand;
 use App\Http\Controllers\HomeController;
+use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactory;
+use Valkyrja\Cli\Interaction\Input\Contract\Input;
 use Valkyrja\Container\Contract\Container;
 use Valkyrja\Container\Support\Provider;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
@@ -21,6 +24,7 @@ final class AppServiceProvider extends Provider
     public static function publishers(): array
     {
         return [
+            TestCommand::class    => [self::class, 'publishTestCommand'],
             HomeController::class => [self::class, 'publishHomeController'],
         ];
     }
@@ -31,16 +35,20 @@ final class AppServiceProvider extends Provider
     public static function provides(): array
     {
         return [
+            TestCommand::class,
             HomeController::class,
         ];
     }
 
-    /**
-     * @inheritDoc
-     */
-    public static function publish(Container $container): void
+    public static function publishTestCommand(Container $container): void
     {
-        //
+        $container->setSingleton(
+            TestCommand::class,
+            new TestCommand(
+                $container->getSingleton(Input::class),
+                $container->getSingleton(OutputFactory::class)
+            )
+        );
     }
 
     public static function publishHomeController(Container $container): void
