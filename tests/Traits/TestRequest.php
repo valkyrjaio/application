@@ -5,7 +5,9 @@ namespace Tests\Traits;
 use Valkyrja\Http\Message\Enum\RequestMethod;
 use Valkyrja\Http\Message\Enum\StatusCode;
 use Valkyrja\Http\Message\Factory\RequestFactory;
+use Valkyrja\Http\Message\Response\Contract\RedirectResponse;
 use Valkyrja\Http\Message\Response\Contract\Response;
+use Valkyrja\Http\Server\Contract\RequestHandler;
 
 /**
  * Trait TestRequest.
@@ -34,24 +36,11 @@ trait TestRequest
         array $server = [],
         string $content = null
     ): Response {
-        // If all routes should have a trailing slash
-        // and the uri doesn't already end with a slash
-        if ($this->app->config('routing.trailingSlash') && false === strpos($uri, '/', -1)) {
-            // Add a trailing slash
-            $uri .= '/';
-        }
-
         $request = RequestFactory::fromGlobals(
-            $uri,
-            $method,
-            $parameters,
-            $cookies,
-            $files,
             $server,
-            $content
         );
 
-        return $this->app->kernel()->handle($request);
+        return $this->app->container()->getSingleton(RequestHandler::class)->handle($request);
     }
 
     /**
@@ -132,33 +121,6 @@ trait TestRequest
     ): void {
         $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
 
-        $this->assertEquals(true, $response->isRedirect());
-    }
-
-    /**
-     * Assert that a given call has a redirect or not found status code.
-     *
-     * @param string        $uri        The uri to call
-     * @param RequestMethod $method     [optional] The method to use
-     * @param array         $parameters [optional] Query parameters for the request
-     * @param array         $cookies    [optional] Cookies for the request
-     * @param array         $files      [optional] Files for the request
-     * @param array         $server     [optional] Server variables for the request
-     * @param string|null   $content    [optional] Content for the request
-     *
-     * @return void
-     */
-    public function assertCallRedirectsOrNotFound(
-        string $uri,
-        RequestMethod $method = RequestMethod::GET,
-        array $parameters = [],
-        array $cookies = [],
-        array $files = [],
-        array $server = [],
-        string $content = null
-    ): void {
-        $response = $this->call($uri, $method, $parameters, $cookies, $files, $server, $content);
-
-        $this->assertEquals(true, $response->isRedirect() || $response->isNotFound());
+        self::assertInstanceOf(RedirectResponse::class, $response);
     }
 }
