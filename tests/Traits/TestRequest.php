@@ -40,7 +40,7 @@ trait TestRequest
             $server,
         );
 
-        return $this->app->container()->getSingleton(RequestHandler::class)->handle($request);
+        return $this->app->getContainer()->getSingleton(RequestHandler::class)->handle($request);
     }
 
     /**
