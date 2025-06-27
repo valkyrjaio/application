@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Config;
 
-use Valkyrja\Application\Config\Valkyrja;
+use Valkyrja\Application\Config\ValkyrjaConfig;
 
 /**
  * Class Config.
  */
-class Config extends Valkyrja
+class Config extends ValkyrjaConfig
 {
     /**
      * @inheritDoc
