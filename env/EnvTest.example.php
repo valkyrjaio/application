@@ -11,11 +11,11 @@ class EnvTest extends Env
 {
     /************************************************************
      *
-     * Console component env variables.
+     * Cli Interaction component env variables.
      *
      ************************************************************/
 
     /** @var bool|null */
-    public const bool|null CONSOLE_SHOULD_RUN_QUIETLY = true;
+    public const bool|null CLI_INTERACTION_IS_QUIET = true;
 
 }

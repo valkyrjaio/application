@@ -39,7 +39,7 @@
   "scripts"           : {
     "post-root-package-install" : [
       "php -r \"file_exists('env/Env.php') || copy('env/Env.example.php', 'env/Env.php');\"",
-      "php -r \"file_exists('env/EnvConsole.php') || copy('env/EnvConsole.example.php', 'env/EnvConsole.php');\"",
+      "php -r \"file_exists('env/EnvCli.php') || copy('env/EnvCli.example.php', 'env/EnvCli.php');\"",
       "php -r \"file_exists('env/EnvTest.php') || copy('env/EnvTest.example.php', 'env/EnvTest.php');\""
     ]
   },

@@ -2,24 +2,23 @@
 
 namespace Tests;
 
+use App\App;
+use Config\Config;
 use Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
-use Tests\Traits\TestRequest;
 use Valkyrja\Application\Contract\Application;
-use Valkyrja\Application\Valkyrja;
-use Valkyrja\Support\Directory;
+use Valkyrja\Http\Message\Factory\RequestFactory;
+use Valkyrja\Http\Message\Request\Contract\ServerRequest;
 
 /**
  * Class TestCase.
  */
 class TestCase extends PHPUnitTestCase
 {
-    use TestRequest;
-
     /**
      * @var Application
      */
-    protected $app;
+    protected Application $app;
 
     /**
      * Setup the test environment.
@@ -28,10 +27,14 @@ class TestCase extends PHPUnitTestCase
      */
     public function setUp(): void
     {
-        Directory::$BASE_PATH = __DIR__ . '/../';
+        App::directory(dir: __DIR__ . '/../');
 
-        Valkyrja::setEnv(EnvTest::class);
+        $this->app = $app = App::app(
+            env: EnvTest::class,
+            config: Config::class,
+        );
 
-        $this->app = new Valkyrja();
+        $container = App::getContainer($app);
+        $container->setSingleton(ServerRequest::class, RequestFactory::fromGlobals());
     }
 }
