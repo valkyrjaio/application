@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Cli\Controllers;
+namespace App\Cli\Controller;
 
 use Valkyrja\Cli\Routing\Controller\Controller as ValkyrjaController;
 

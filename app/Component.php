@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\Providers\AppServiceProvider;
+use App\Provider\AppServiceProvider;
 use Valkyrja\Application\Support\Component as AppComponent;
 
 /**
@@ -44,14 +44,14 @@ class Component extends AppComponent
     public static function getCliControllers(): array
     {
         return [
-            Cli\Controllers\TestCommand::class,
+            Cli\Controller\TestCommand::class,
         ];
     }
 
     public static function getHttpControllers(): array
     {
         return [
-            Http\Controllers\HomeController::class,
+            Http\Controller\HomeController::class,
         ];
     }
 }

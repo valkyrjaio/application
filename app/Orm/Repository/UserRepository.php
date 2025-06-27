@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ORM\Repositories;
+namespace App\Orm\Repository;
 
 use Valkyrja\Orm\Repository\Repository;
 

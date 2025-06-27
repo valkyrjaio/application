@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Providers;
+namespace App\Provider;
 
-use App\Cli\Controllers\TestCommand;
-use App\Http\Controllers\HomeController;
+use App\Cli\Controller\TestCommand;
+use App\Http\Controller\HomeController;
 use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactory;
 use Valkyrja\Cli\Interaction\Input\Contract\Input;
 use Valkyrja\Container\Contract\Container;

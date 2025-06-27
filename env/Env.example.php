@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Env;
 
 use App\Component;
-use App\ORM\Entities\User;
+use App\Orm\Entity\User;
 use Valkyrja\Application\Constant\ComponentClass;
 use Valkyrja\Application\Env as AppEnv;
 use Valkyrja\Http\Routing\Middleware\ViewRouteNotMatchedMiddleware;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ORM\Entities;
+namespace App\Orm\Entity;
 
 use Valkyrja\Auth\Entity\Contract\User as Contract;
 use Valkyrja\Auth\Entity\Contract\VerifiableUser;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace App\Http\Controller;
 
 use Valkyrja\Application\Contract\Application;
 use Valkyrja\Http\Message\Enum\RequestMethod;
