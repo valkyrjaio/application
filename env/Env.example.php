@@ -33,7 +33,6 @@ class Env extends AppEnv
         ComponentClass::CACHE,
         ComponentClass::CRYPT,
         ComponentClass::FILESYSTEM,
-        ComponentClass::HTTP_CLIENT,
         ComponentClass::JWT,
         ComponentClass::LOG,
         ComponentClass::MAIL,
