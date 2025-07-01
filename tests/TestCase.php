@@ -34,7 +34,7 @@ class TestCase extends PHPUnitTestCase
             config: Config::class,
         );
 
-        $container = App::getContainer($app);
+        $container = $app->getContainer();
         $container->setSingleton(ServerRequest::class, RequestFactory::fromGlobals());
     }
 }
