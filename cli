@@ -4,13 +4,12 @@
 declare(strict_types=1);
 
 use App\App;
-use Config\Config;
 use Env\EnvCli;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 try {
-    App::cli(__DIR__, EnvCli::class, Config::class);
+    App::cli(EnvCli::APP_DIR, new EnvCli());
 } catch (Throwable $throwable) {
     var_dump($throwable);
 }

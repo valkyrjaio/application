@@ -15,7 +15,6 @@ class EnvTest extends Env
      *
      ************************************************************/
 
-    /** @var bool|null */
-    public const bool|null CLI_INTERACTION_IS_QUIET = true;
+    public const bool CLI_INTERACTION_IS_QUIET = true;
 
 }

@@ -23,9 +23,9 @@ class Env extends AppEnv
      *
      ************************************************************/
 
-    public const bool|null APP_DEBUG_MODE = true;
+    public const bool APP_DEBUG_MODE = true;
 
-    public const array|null APP_COMPONENTS = [
+    public const array APP_COMPONENTS = [
         ComponentClass::API,
         ComponentClass::ASSET,
         ComponentClass::AUTH,
@@ -43,6 +43,10 @@ class Env extends AppEnv
         ComponentClass::VIEW,
         Component::class,
     ];
+    /** @var string */
+    public const string APP_DIR = __DIR__ . '/..';
+    /** @var string */
+    public const string APP_CACHE_FILE_PATH = __DIR__ . '/../storage/framework/cache/cache.php';
 
     /************************************************************
      *
@@ -50,7 +54,7 @@ class Env extends AppEnv
      *
      ************************************************************/
 
-    public const string|null AUTH_DEFAULT_USER_ENTITY = User::class;
+    public const string AUTH_DEFAULT_USER_ENTITY = User::class;
 
     /************************************************************
      *
@@ -58,11 +62,11 @@ class Env extends AppEnv
      *
      ************************************************************/
 
-    public const array|null HTTP_MIDDLEWARE_ROUTE_NOT_MATCHED = [
+    public const array HTTP_MIDDLEWARE_ROUTE_NOT_MATCHED = [
         ViewRouteNotMatchedMiddleware::class,
     ];
 
-    public const array|null HTTP_MIDDLEWARE_THROWABLE_CAUGHT = [
+    public const array HTTP_MIDDLEWARE_THROWABLE_CAUGHT = [
         LogThrowableCaughtMiddleware::class,
         ViewThrowableCaughtMiddleware::class,
     ];
