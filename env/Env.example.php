@@ -69,4 +69,17 @@ class Env extends AppEnv
         LogThrowableCaughtMiddleware::class,
         ViewThrowableCaughtMiddleware::class,
     ];
+
+    /************************************************************
+     *
+     * View component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string */
+    public const string VIEW_ORKA_DIR = __DIR__ . '/../resources/views';
+    /** @var non-empty-string */
+    public const string VIEW_PHP_DIR = __DIR__ . '/../resources/views';
+    /** @var non-empty-string */
+    public const string VIEW_TWIG_COMPILED_DIR = __DIR__ . '/../storage/views';
 }
