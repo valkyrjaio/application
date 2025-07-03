@@ -27,7 +27,6 @@ class Env extends AppEnv
 
     public const array APP_COMPONENTS = [
         ComponentClass::API,
-        ComponentClass::ASSET,
         ComponentClass::AUTH,
         ComponentClass::BROADCAST,
         ComponentClass::CACHE,
