@@ -23,14 +23,6 @@ use Valkyrja\Application\Support\Component as AppComponent;
  */
 class Component extends AppComponent
 {
-    /**
-     * @inheritDoc
-     */
-    public static function getName(): string
-    {
-        return 'application_name';
-    }
-
     public static function getContainerProviders(): array
     {
         return [
