@@ -59,10 +59,12 @@ class TestCommand extends Controller
             return $output
                 ->withAddedMessages(
                     new Message('You answered yes!!!'),
+                    new NewLine(),
+                    new NewLine(),
                 )
                 ->writeMessages();
         }
 
-        return $output;
+        return $output->withAddedMessages(new NewLine());
     }
 }
