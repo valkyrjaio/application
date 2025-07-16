@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-use App\App;
+use App\Entry\App;
 use Env\EnvCli;
 
 require_once __DIR__ . '/vendor/autoload.php';

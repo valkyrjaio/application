@@ -24,6 +24,8 @@ class Env extends AppEnv
      ************************************************************/
 
     public const bool APP_DEBUG_MODE = true;
+    /** @var non-empty-string */
+    public const string APP_NAMESPACE = 'App';
 
     public const array APP_COMPONENTS = [
         ComponentClass::API,

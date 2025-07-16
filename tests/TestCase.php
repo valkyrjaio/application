@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use App\App;
+use App\Entry\App;
 use Config\Config;
 use Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;

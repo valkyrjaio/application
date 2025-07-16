@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\App;
+use App\Entry\App;
 use Env\Env;
 
 define('INDEX_START', microtime(true));
