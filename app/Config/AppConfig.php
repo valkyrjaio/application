@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config;
+namespace App\Config;
 
 use Valkyrja\Application\Config;
 

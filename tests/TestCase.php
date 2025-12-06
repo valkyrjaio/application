@@ -3,8 +3,7 @@
 namespace Tests;
 
 use App\Entry\App;
-use Config\Config;
-use Env\EnvTest;
+use App\Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Valkyrja\Application\Contract\Application;
 use Valkyrja\Http\Message\Factory\RequestFactory;
@@ -31,7 +30,6 @@ class TestCase extends PHPUnitTestCase
 
         $this->app = $app = App::app(
             env: EnvTest::class,
-            config: Config::class,
         );
 
         $container = $app->getContainer();

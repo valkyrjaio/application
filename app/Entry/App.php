@@ -2,8 +2,8 @@
 
 namespace App\Entry;
 
+use App\Config\AppConfig;
 use App\Exception\ExceptionHandler;
-use Config\AppConfig;
 use Valkyrja\Application\Config;
 use Valkyrja\Application\Entry\App as Valkyrja;
 use Valkyrja\Exception\Contract\ExceptionHandler as ErrorHandlerContract;

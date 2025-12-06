@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Env;
+namespace App\Env;
 
 /**
  * Class EnvCli.

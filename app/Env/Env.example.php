@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Env;
+namespace App\Env;
 
 use App\Component;
 use App\Orm\Entity\User;
@@ -45,9 +45,9 @@ class Env extends AppEnv
         Component::class,
     ];
     /** @var string */
-    public const string APP_DIR = __DIR__ . '/..';
+    public const string APP_DIR = __DIR__ . '/../..';
     /** @var string */
-    public const string APP_CACHE_FILE_PATH = __DIR__ . '/../storage/framework/cache/cache.php';
+    public const string APP_CACHE_FILE_PATH = self::APP_DIR . '/storage/framework/cache/cache.php';
 
     /************************************************************
      *
@@ -79,9 +79,9 @@ class Env extends AppEnv
      ************************************************************/
 
     /** @var non-empty-string */
-    public const string VIEW_ORKA_DIR = __DIR__ . '/../resources/views';
+    public const string VIEW_ORKA_DIR = self::APP_DIR . '/resources/views';
     /** @var non-empty-string */
-    public const string VIEW_PHP_DIR = __DIR__ . '/../resources/views';
+    public const string VIEW_PHP_DIR = self::APP_DIR . '/resources/views';
     /** @var non-empty-string */
-    public const string VIEW_TWIG_COMPILED_DIR = __DIR__ . '/../storage/views';
+    public const string VIEW_TWIG_COMPILED_DIR = self::APP_DIR . '/storage/views';
 }

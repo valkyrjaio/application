@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Entry\App;
-use Env\Env;
+use App\Env\Env;
 
 define('INDEX_START', microtime(true));
 
