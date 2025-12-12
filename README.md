@@ -2,25 +2,35 @@
     <img src="https://i.imgur.com/bnZA2RT.png" width="400">
 </a></p>
 <p align="center">
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/php.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/php.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/v/stable.svg" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/d/total.svg" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/license.svg" alt="License"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="http://poser.pugx.org/valkyrja/valkyrja/v" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="http://poser.pugx.org/valkyrja/valkyrja/downloads" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="http://poser.pugx.org/valkyrja/valkyrja/license" alt="License"></a>
+    <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="http://poser.pugx.org/valkyrja/valkyrja/require/php" alt="PHP Version Require"></a>
 </p>
 <p align="center">
-    <!-- <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/v/unstable" alt="Unstable Version"></a> -->
     <a href="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/"><img src="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/badges/quality-score.png?b=master" alt="Scrutinizer"></a>
     <a href="https://styleci.io/repos/304247237"><img src="https://styleci.io/repos/304247237/shield?branch=master&style=flat" alt="StyleCI"></a>
-    <!-- <a href="https://coveralls.io/github/valkyrjaio/valkyrja?branch=master"><img src="https://coveralls.io/repos/github/valkyrjaio/valkyrja/badge.svg?branch=master" alt="Coverage Status" /></a> -->
-    <a href="https://codecov.io/gh/valkyrjaio/valkyrja"><img src="https://codecov.io/gh/valkyrjaio/valkyrja/branch/master/graph/badge.svg" alt="Codecov" /></a>
-    <a href="https://codeclimate.com/github/valkyrjaio/application/maintainability"><img src="https://api.codeclimate.com/v1/badges/064a68073fd300f90f7e/maintainability" /></a>
+    <a href='https://coveralls.io/github/valkyrjaio/valkyrja'><img src='https://coveralls.io/repos/github/valkyrjaio/valkyrja/badge.svg' alt='Coverage Status' /></a>
+    <!-- <a href="https://codecov.io/gh/valkyrjaio/valkyrja"><img src="https://codecov.io/gh/valkyrjaio/valkyrja/branch/master/graph/badge.svg" alt="Codecov" /></a>-->
+    <a href="https://shepherd.dev/github/valkyrjaio/valkyrja"><img src="https://shepherd.dev/github/valkyrjaio/valkyrja/coverage.svg" alt="Psalm Shepherd" /></a>
+</p>
+<p align="center">
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml/badge.svg" alt="PHPArkitect Build Status"></a>
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml/badge.svg" alt="PHP Code Sniffer Build Status"></a>
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml/badge.svg" alt="PHP CS Fixer Build Status"></a>
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml/badge.svg" alt="PHPStan Build Status"></a>
+</p>
+<p align="center">
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml/badge.svg" alt="PHPUnit Build Status"></a>
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml/badge.svg" alt="Psalm Build Status"></a>
+    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml/badge.svg" alt="Rector Build Status"></a>
 </p>
 
 About Valkyrja
 ------------
 
-> **Note:** This repository contains the application code of the Valkyrja framework.
-> If you want to see the core source framework code, visit the [Valkyrja Framework repository][github framework repo].
+> **Note:** This repository contains the core code of the Valkyrja framework.
+> If you want to build an application using Valkyrja, visit the [Valkyrja App repository][github app repo].
 
 [Valkyrja][Valkyrja] is a PHP framework for web and console applications.
 
@@ -65,33 +75,33 @@ The Valkyrja framework is open-sourced software licensed under the [MIT license]
 
 [github main]: https://github.com/valkyrjaio
 
-[github framework repo]: https://github.com/valkyrjaio/valkyrja
+[github app repo]: https://github.com/valkyrjaio/application
 
 [github demo app repo]: https://github.com/valkyrjaio/application
 
-[docs]: https://github.com/valkyrjaio/valkyrja/docs
+[docs]: ./docs
 
-[getting started]: https://github.com/valkyrjaio/valkyrja/docs/getting-started
+[getting started]: ./docs/getting-started
 
-[install]: https://github.com/valkyrjaio/valkyrja/docs/getting-started/installation
+[install]: ./docs/getting-started/installation
 
-[requirements]: https://github.com/valkyrjaio/valkyrja/docs/getting-started/requirements
+[requirements]: ./docs/getting-started/requirements
 
-[basics]: https://github.com/valkyrjaio/valkyrja/docs/basics
+[basics]: ./docs/basics
 
-[best practices]: https://github.com/valkyrjaio/valkyrja/docs/basics/best-practices
+[best practices]: ./docs/basics/best-practices
 
-[advanced]: https://github.com/valkyrjaio/valkyrja/docs/advanced
+[advanced]: ./docs/advanced
 
-[modules]: https://github.com/valkyrjaio/valkyrja/docs/Modules
+[modules]: ./docs/Modules
 
-[contributing]: https://github.com/valkyrjaio/valkyrja/docs/contributing
+[contributing]: ./docs/contributing
 
-[code of conduct]: https://github.com/valkyrjaio/valkyrja/docs/contributing/code-of-conduct
+[code of conduct]: ./docs/contributing/code-of-conduct
 
-[contribute code]: https://github.com/valkyrjaio/valkyrja/docs/contributing/code
+[contribute code]: ./docs/contributing/code
 
-[security vulnerabilities]: https://github.com/valkyrjaio/valkyrja/docs/contributing/security-vulnerabilities
+[security vulnerabilities]: ./docs/contributing/security-vulnerabilities
 
 [semantic versioning]: https://semver.org/
 
