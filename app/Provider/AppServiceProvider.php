@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Provider;
 
-use App\Cli\Controller\TestCommand;
+use App\Cli\Command\TestCommand;
 use App\Http\Controller\HomeController;
 use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactory;
 use Valkyrja\Cli\Interaction\Input\Contract\Input;

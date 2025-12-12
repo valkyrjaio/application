@@ -33,10 +33,10 @@ class Component extends AppComponent
     /**
      * @inheritDoc
      */
-    public static function getCliControllers(): array
+    public static function getCliCommands(): array
     {
         return [
-            Cli\Controller\TestCommand::class,
+            Cli\Command\TestCommand::class,
         ];
     }
 

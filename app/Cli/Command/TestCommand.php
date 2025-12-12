@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Cli\Controller;
+namespace App\Cli\Command;
 
 use Valkyrja\Cli\Interaction\Message\Answer as AnswerMessage;
 use Valkyrja\Cli\Interaction\Message\Banner;
@@ -12,17 +12,17 @@ use Valkyrja\Cli\Interaction\Message\NewLine;
 use Valkyrja\Cli\Interaction\Message\Question;
 use Valkyrja\Cli\Interaction\Message\SuccessMessage;
 use Valkyrja\Cli\Interaction\Output\Contract\Output;
-use Valkyrja\Cli\Routing\Attribute\Command;
+use Valkyrja\Cli\Routing\Attribute\Route;
 
 /**
  * Class TestCommand.
  */
-class TestCommand extends Controller
+class TestCommand extends Command
 {
     protected const string YES_ANSWER = 'yes';
     protected const string NO_ANSWER  = 'no';
 
-    #[Command(
+    #[Route(
         name: 'test',
         description: 'Test command',
         helpText: new Message('A command to showcase possibilities for commands.')
