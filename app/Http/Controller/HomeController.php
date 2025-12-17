@@ -36,6 +36,7 @@ class HomeController extends Controller
      */
     #[Route(path: '/{value}', name: 'dynamicValue')]
     public function dynamic(
+        \Valkyrja\Http\Routing\Data\Contract\Route $route,
         ViewResponseFactory $responseFactory,
         #[Parameter(name: 'value', regex: Regex::ALPHA)]
         string $value
