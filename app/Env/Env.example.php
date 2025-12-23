@@ -7,15 +7,15 @@ namespace App\Env;
 use App\Component;
 use App\Orm\Entity\User;
 use Valkyrja\Application\Constant\ComponentClass;
-use Valkyrja\Application\Env as AppEnv;
 use Valkyrja\Http\Routing\Middleware\ViewRouteNotMatchedMiddleware;
 use Valkyrja\Http\Server\Middleware\LogThrowableCaughtMiddleware;
 use Valkyrja\Http\Server\Middleware\ViewThrowableCaughtMiddleware;
+use Valkyrja\Application\Env as ValkyrjaEnv;
 
 /**
  * Class Env.
  */
-class Env extends AppEnv
+class Env extends ValkyrjaEnv
 {
     /************************************************************
      *
@@ -23,25 +23,12 @@ class Env extends AppEnv
      *
      ************************************************************/
 
+    /** @var bool */
     public const bool APP_DEBUG_MODE = true;
     /** @var non-empty-string */
     public const string APP_NAMESPACE = 'App';
-
-    public const array APP_COMPONENTS = [
-        ComponentClass::API,
-        ComponentClass::AUTH,
-        ComponentClass::BROADCAST,
-        ComponentClass::CACHE,
-        ComponentClass::CRYPT,
-        ComponentClass::FILESYSTEM,
-        ComponentClass::JWT,
-        ComponentClass::LOG,
-        ComponentClass::MAIL,
-        ComponentClass::NOTIFICATION,
-        ComponentClass::ORM,
-        ComponentClass::SESSION,
-        ComponentClass::SMS,
-        ComponentClass::VIEW,
+    /** @var class-string<\Valkyrja\Application\Support\Component>[] */
+    public const array APP_CUSTOM_COMPONENTS = [
         Component::class,
     ];
     /** @var string */
