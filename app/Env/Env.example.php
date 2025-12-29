@@ -6,11 +6,10 @@ namespace App\Env;
 
 use App\Component;
 use App\Orm\Entity\User;
-use Valkyrja\Application\Constant\ComponentClass;
+use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 use Valkyrja\Http\Routing\Middleware\ViewRouteNotMatchedMiddleware;
 use Valkyrja\Http\Server\Middleware\LogThrowableCaughtMiddleware;
 use Valkyrja\Http\Server\Middleware\ViewThrowableCaughtMiddleware;
-use Valkyrja\Application\Env as ValkyrjaEnv;
 
 /**
  * Class Env.
