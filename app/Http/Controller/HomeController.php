@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
-use Valkyrja\Application\Contract\Application;
+use Valkyrja\Application\Kernel\Contract\Application;
 use Valkyrja\Http\Message\Enum\RequestMethod;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
 use Valkyrja\Http\Message\Response\Contract\JsonResponse;
