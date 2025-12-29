@@ -9,7 +9,7 @@ use App\Http\Controller\HomeController;
 use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactory;
 use Valkyrja\Cli\Interaction\Input\Contract\Input;
 use Valkyrja\Container\Manager\Contract\Container;
-use Valkyrja\Container\Support\Provider;
+use Valkyrja\Container\Provider\Provider;
 use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
 use Valkyrja\Http\Message\Request\Contract\ServerRequest;
 
