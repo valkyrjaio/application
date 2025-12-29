@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Exception;
 
-use Valkyrja\Exception\ExceptionHandler as ValkyrjaExceptionHandler;
+use Valkyrja\Exception\Handler\ExceptionHandler as ValkyrjaExceptionHandler;
 
 /**
  * Class ExceptionHandler.
