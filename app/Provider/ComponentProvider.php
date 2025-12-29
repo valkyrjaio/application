@@ -11,17 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App;
+namespace App\Provider;
 
-use App\Provider\AppServiceProvider;
-use Valkyrja\Application\Support\Component as AppComponent;
+use App\Cli;
+use App\Http;
+use Valkyrja\Application\Provider\Provider as AppComponent;
 
 /**
  * Final Class Component.
  *
  * @author Melech Mizrachi
  */
-class Component extends AppComponent
+class ComponentProvider extends AppComponent
 {
     public static function getContainerProviders(): array
     {

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Env;
 
-use App\Component;
 use App\Orm\Entity\User;
+use App\Provider\ComponentProvider;
 use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 use Valkyrja\Http\Routing\Middleware\ViewRouteNotMatchedMiddleware;
 use Valkyrja\Http\Server\Middleware\LogThrowableCaughtMiddleware;
@@ -26,9 +26,9 @@ class Env extends ValkyrjaEnv
     public const bool APP_DEBUG_MODE = true;
     /** @var non-empty-string */
     public const string APP_NAMESPACE = 'App';
-    /** @var class-string<\Valkyrja\Application\Support\Component>[] */
+    /** @var class-string<\Valkyrja\Application\Provider\Provider>[] */
     public const array APP_CUSTOM_COMPONENTS = [
-        Component::class,
+        ComponentProvider::class,
     ];
     /** @var string */
     public const string APP_DIR = __DIR__ . '/../..';
