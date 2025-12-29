@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Exception;
+namespace App\Throwable\Handler;
 
-use Valkyrja\Exception\Handler\ExceptionHandler as ValkyrjaExceptionHandler;
+use Valkyrja\Throwable\Handler\ThrowableHandler as ValkyrjaExceptionHandler;
 
 /**
- * Class ExceptionHandler.
+ * Class ThrowableHandler.
  */
-class ExceptionHandler extends ValkyrjaExceptionHandler
+class ThrowableHandler extends ValkyrjaExceptionHandler
 {
     /**
      * Enable debug mode.

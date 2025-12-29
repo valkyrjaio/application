@@ -3,10 +3,10 @@
 namespace App\Entry;
 
 use App\Config\AppConfig;
-use App\Exception\ExceptionHandler;
+use App\Throwable\Handler\ThrowableHandler;
 use Valkyrja\Application\Data\Config;
 use Valkyrja\Application\Entry\App as Valkyrja;
-use Valkyrja\Exception\Handler\Contract\ExceptionHandler as ErrorHandlerContract;
+use Valkyrja\Throwable\Handler\Contract\ThrowableHandler as ErrorHandlerContract;
 
 /**
  * Class App.
@@ -26,7 +26,7 @@ class App extends Valkyrja
      */
     protected static function defaultExceptionHandler(): void
     {
-        ExceptionHandler::enable(
+        ThrowableHandler::enable(
             displayErrors: true
         );
     }
@@ -34,8 +34,8 @@ class App extends Valkyrja
     /**
      * @inheritDoc
      */
-    protected static function getExceptionHandler(): ErrorHandlerContract
+    protected static function getThrowableHandler(): ErrorHandlerContract
     {
-        return new ExceptionHandler();
+        return new ThrowableHandler();
     }
 }
