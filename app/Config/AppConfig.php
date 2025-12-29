@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Config;
 
-use Valkyrja\Application\Config;
+use Valkyrja\Application\Data\Config;
 
 /**
  * Class AppConfig.

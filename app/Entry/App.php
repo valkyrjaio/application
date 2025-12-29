@@ -4,7 +4,7 @@ namespace App\Entry;
 
 use App\Config\AppConfig;
 use App\Exception\ExceptionHandler;
-use Valkyrja\Application\Config;
+use Valkyrja\Application\Data\Config;
 use Valkyrja\Application\Entry\App as Valkyrja;
 use Valkyrja\Exception\Contract\ExceptionHandler as ErrorHandlerContract;
 
