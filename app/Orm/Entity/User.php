@@ -6,16 +6,16 @@ namespace App\Orm\Entity;
 
 use Valkyrja\Auth\Entity\Contract\User as Contract;
 use Valkyrja\Auth\Entity\Contract\VerifiableUser;
-use Valkyrja\Auth\Entity\MailableUserTrait;
-use Valkyrja\Auth\Entity\UserTrait;
-use Valkyrja\Auth\Entity\VerifiableUserTrait;
+use Valkyrja\Auth\Entity\Trait\MailableUserTrait;
+use Valkyrja\Auth\Entity\Trait\UserTrait;
+use Valkyrja\Auth\Entity\Trait\VerifiableUserTrait;
 use Valkyrja\Notification\Entity\Contract\NotifiableUser;
-use Valkyrja\Notification\Entity\NotifiableUserTrait;
+use Valkyrja\Notification\Entity\Trait\NotifiableUserTrait;
 use Valkyrja\Orm\Entity\Contract\DatedEntity;
 use Valkyrja\Orm\Entity\Contract\SoftDeleteEntity;
-use Valkyrja\Orm\Entity\Dateable;
+use Valkyrja\Orm\Entity\Trait\Dateable;
 use Valkyrja\Orm\Entity\Entity;
-use Valkyrja\Orm\Entity\SoftDeletable;
+use Valkyrja\Orm\Entity\Trait\SoftDeletable;
 
 /**
  * Entity User.
