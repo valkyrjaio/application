@@ -32,8 +32,6 @@ class Env extends ValkyrjaEnv
     ];
     /** @var string */
     public const string APP_DIR = __DIR__ . '/../..';
-    /** @var string */
-    public const string APP_CACHE_FILE_PATH = self::APP_DIR . '/storage/framework/cache/cache.php';
 
     /************************************************************
      *
