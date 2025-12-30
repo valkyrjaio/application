@@ -55,17 +55,4 @@ class Env extends ValkyrjaEnv
         LogThrowableCaughtMiddleware::class,
         ViewThrowableCaughtMiddleware::class,
     ];
-
-    /************************************************************
-     *
-     * View component env variables.
-     *
-     ************************************************************/
-
-    /** @var non-empty-string */
-    public const string VIEW_ORKA_DIR = self::APP_DIR . '/resources/views';
-    /** @var non-empty-string */
-    public const string VIEW_PHP_DIR = self::APP_DIR . '/resources/views';
-    /** @var non-empty-string */
-    public const string VIEW_TWIG_COMPILED_DIR = self::APP_DIR . '/storage/views';
 }
