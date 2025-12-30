@@ -14,7 +14,7 @@ use Valkyrja\Notification\Entity\Trait\NotifiableUserTrait;
 use Valkyrja\Orm\Entity\Contract\DatedEntity;
 use Valkyrja\Orm\Entity\Contract\SoftDeleteEntity;
 use Valkyrja\Orm\Entity\Trait\Dateable;
-use Valkyrja\Orm\Entity\Entity;
+use Valkyrja\Orm\Entity\Abstract\Entity;
 use Valkyrja\Orm\Entity\Trait\SoftDeletable;
 
 /**
