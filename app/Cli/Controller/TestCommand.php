@@ -2,16 +2,25 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Valkyrja Framework package.
+ *
+ * (c) Melech Mizrachi <melechmizrachi@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Cli\Controller;
 
-use Valkyrja\Cli\Interaction\Message\Answer as AnswerMessage;
+use Valkyrja\Cli\Interaction\Message\Answer;
 use Valkyrja\Cli\Interaction\Message\Banner;
-use Valkyrja\Cli\Interaction\Message\Contract\Answer;
+use Valkyrja\Cli\Interaction\Message\Contract\AnswerContract;
 use Valkyrja\Cli\Interaction\Message\Message;
 use Valkyrja\Cli\Interaction\Message\NewLine;
 use Valkyrja\Cli\Interaction\Message\Question;
 use Valkyrja\Cli\Interaction\Message\SuccessMessage;
-use Valkyrja\Cli\Interaction\Output\Contract\Output;
+use Valkyrja\Cli\Interaction\Output\Contract\OutputContract;
 use Valkyrja\Cli\Routing\Attribute\Route;
 
 /**
@@ -27,7 +36,7 @@ class TestCommand extends Controller
         description: 'Test command',
         helpText: new Message('A command to showcase possibilities for commands.')
     )]
-    public function run(): Output
+    public function run(): OutputContract
     {
         return $this->outputFactory
             ->createOutput()
@@ -39,7 +48,7 @@ class TestCommand extends Controller
                 new Question(
                     text: 'This is a question, right?',
                     callable: [$this, 'answered'],
-                    answer: new AnswerMessage(
+                    answer: new Answer(
                         defaultResponse: self::NO_ANSWER,
                         allowedResponses: [
                             self::YES_ANSWER,
@@ -53,7 +62,7 @@ class TestCommand extends Controller
     /**
      * Callback for once the question is answered.
      */
-    public function answered(Output $output, Answer $answer): Output
+    public function answered(OutputContract $output, AnswerContract $answer): OutputContract
     {
         if ($answer->getUserResponse() === self::YES_ANSWER) {
             return $output

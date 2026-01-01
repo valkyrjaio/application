@@ -2,16 +2,25 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Valkyrja Framework package.
+ *
+ * (c) Melech Mizrachi <melechmizrachi@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Provider;
 
 use App\Cli\Controller\TestCommand;
 use App\Http\Controller\HomeController;
-use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactory;
-use Valkyrja\Cli\Interaction\Input\Contract\Input;
-use Valkyrja\Container\Manager\Contract\Container;
+use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactoryContract;
+use Valkyrja\Cli\Interaction\Input\Contract\InputContract;
+use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Container\Provider\Provider;
-use Valkyrja\Http\Message\Factory\Contract\ResponseFactory;
-use Valkyrja\Http\Message\Request\Contract\ServerRequest;
+use Valkyrja\Http\Message\Factory\Contract\ResponseFactoryContract;
+use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
 
 /**
  * Class AppServiceProvider.
@@ -40,24 +49,24 @@ final class AppServiceProvider extends Provider
         ];
     }
 
-    public static function publishTestCommand(Container $container): void
+    public static function publishTestCommand(ContainerContract $container): void
     {
         $container->setSingleton(
             TestCommand::class,
             new TestCommand(
-                $container->getSingleton(Input::class),
-                $container->getSingleton(OutputFactory::class)
+                $container->getSingleton(InputContract::class),
+                $container->getSingleton(OutputFactoryContract::class)
             )
         );
     }
 
-    public static function publishHomeController(Container $container): void
+    public static function publishHomeController(ContainerContract $container): void
     {
         $container->setSingleton(
             HomeController::class,
             new HomeController(
-                $container->getSingleton(ServerRequest::class),
-                $container->getSingleton(ResponseFactory::class)
+                $container->getSingleton(ServerRequestContract::class),
+                $container->getSingleton(ResponseFactoryContract::class)
             )
         );
     }

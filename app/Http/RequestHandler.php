@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http;
 
-use Valkyrja\Http\Message\Request\Contract\ServerRequest;
-use Valkyrja\Http\Message\Response\Contract\Response;
+use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
+use Valkyrja\Http\Message\Response\Contract\ResponseContract;
 use Valkyrja\Http\Server\Handler\RequestHandler as ValkyrjaRequestHandler;
 
 /**
@@ -16,7 +16,7 @@ class RequestHandler extends ValkyrjaRequestHandler
     /**
      * @inheritDoc
      */
-    public function handle(ServerRequest $request): Response
+    public function handle(ServerRequestContract $request): ResponseContract
     {
         return parent::handle($request);
     }
@@ -24,7 +24,7 @@ class RequestHandler extends ValkyrjaRequestHandler
     /**
      * @inheritDoc
      */
-    public function terminate(ServerRequest $request, Response $response): void
+    public function terminate(ServerRequestContract $request, ResponseContract $response): void
     {
         parent::terminate($request, $response);
     }
@@ -32,7 +32,7 @@ class RequestHandler extends ValkyrjaRequestHandler
     /**
      * @inheritDoc
      */
-    public function run(ServerRequest $request): void
+    public function run(ServerRequestContract $request): void
     {
         parent::run($request);
     }

@@ -2,31 +2,40 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Valkyrja Framework package.
+ *
+ * (c) Melech Mizrachi <melechmizrachi@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Orm\Entity;
 
-use Valkyrja\Auth\Entity\Contract\User as Contract;
-use Valkyrja\Auth\Entity\Contract\VerifiableUser;
+use Valkyrja\Auth\Entity\Contract\UserContract;
+use Valkyrja\Auth\Entity\Contract\VerifiableUserContract;
 use Valkyrja\Auth\Entity\Trait\MailableUserTrait;
 use Valkyrja\Auth\Entity\Trait\UserTrait;
 use Valkyrja\Auth\Entity\Trait\VerifiableUserTrait;
-use Valkyrja\Notification\Entity\Contract\NotifiableUser;
+use Valkyrja\Notification\Entity\Contract\NotifiableUserContract;
 use Valkyrja\Notification\Entity\Trait\NotifiableUserTrait;
-use Valkyrja\Orm\Entity\Contract\DatedEntity;
-use Valkyrja\Orm\Entity\Contract\SoftDeleteEntity;
-use Valkyrja\Orm\Entity\Trait\Dateable;
 use Valkyrja\Orm\Entity\Abstract\Entity;
+use Valkyrja\Orm\Entity\Contract\DatedEntityContract;
+use Valkyrja\Orm\Entity\Contract\SoftDeleteEntityContract;
+use Valkyrja\Orm\Entity\Trait\Dateable;
 use Valkyrja\Orm\Entity\Trait\SoftDeletable;
 
 /**
  * Entity User.
  */
-class User extends Entity implements Contract, DatedEntity, NotifiableUser, SoftDeleteEntity, VerifiableUser
+class User extends Entity implements UserContract, DatedEntityContract, NotifiableUserContract, SoftDeleteEntityContract, VerifiableUserContract
 {
-    use UserTrait;
     use Dateable;
     use MailableUserTrait;
     use NotifiableUserTrait;
     use SoftDeletable;
+    use UserTrait;
     use VerifiableUserTrait;
 
     /**

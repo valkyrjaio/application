@@ -1,16 +1,16 @@
 <?php
 /**
- * @var \Valkyrja\View\Template\Contract\Template $template
- * @var Exception                                 $exception
+ * @var TemplateContract $template
+ * @var Exception        $exception
  */
 
-use Valkyrja\View\Template\Contract\Template;
+use Valkyrja\View\Template\Contract\TemplateContract;
 
 $template->setLayout('layout');
 ?>
 
 <?php
 $template->startBlock('title'); ?>
-Error - <?= $template->escape($exception->getMessage()) ?>
+Error - <?php echo $template->escape($exception->getMessage()); ?>
 <?php
 $template->endBlock(); ?>
