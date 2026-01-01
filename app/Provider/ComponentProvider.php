@@ -13,14 +13,14 @@ declare(strict_types=1);
 
 namespace App\Provider;
 
-use App\Cli;
-use App\Http;
-use Valkyrja\Application\Provider\Provider as AppComponent;
+use App\Cli\Controller\TestCommand;
+use App\Http\Controller\HomeController;
+use Valkyrja\Application\Provider\Provider;
 
 /**
  * Final Class Component.
  */
-class ComponentProvider extends AppComponent
+class ComponentProvider extends Provider
 {
     public static function getContainerProviders(): array
     {
@@ -35,14 +35,14 @@ class ComponentProvider extends AppComponent
     public static function getCliControllers(): array
     {
         return [
-            Cli\Controller\TestCommand::class,
+            TestCommand::class,
         ];
     }
 
     public static function getHttpControllers(): array
     {
         return [
-            Http\Controller\HomeController::class,
+            HomeController::class,
         ];
     }
 }
