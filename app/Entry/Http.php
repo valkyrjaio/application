@@ -16,13 +16,13 @@ namespace App\Entry;
 use App\Config\AppConfig;
 use App\Throwable\Handler\ThrowableHandler;
 use Valkyrja\Application\Data\Config;
-use Valkyrja\Application\Entry\App as Valkyrja;
+use Valkyrja\Application\Entry\Http as Valkyrja;
 use Valkyrja\Throwable\Handler\Contract\ThrowableHandlerContract;
 
 /**
  * Class App.
  */
-class App extends Valkyrja
+class Http extends Valkyrja
 {
     /**
      * @inheritDoc

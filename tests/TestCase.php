@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\Entry\App;
+use App\Entry\Http;
 use App\Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
@@ -37,9 +37,9 @@ class TestCase extends PHPUnitTestCase
      */
     protected function setUp(): void
     {
-        App::directory(dir: __DIR__ . '/../');
+        Http::directory(dir: __DIR__ . '/../');
 
-        $this->app = $app = App::app(
+        $this->app = $app = Http::app(
             env: EnvTest::class,
         );
 

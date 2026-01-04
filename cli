@@ -3,13 +3,22 @@
 
 declare(strict_types=1);
 
-use App\Entry\App;
+/*
+ * This file is part of the Valkyrja Framework package.
+ *
+ * (c) Melech Mizrachi <melechmizrachi@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 use App\Env\EnvCli;
+use Valkyrja\Application\Entry\Cli;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 try {
-    App::cli(EnvCli::APP_DIR, new EnvCli());
+    Cli::run(EnvCli::APP_DIR, new EnvCli());
 } catch (Throwable $throwable) {
     var_dump($throwable);
 }
