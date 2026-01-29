@@ -15,9 +15,9 @@ namespace App\Orm\Entity;
 
 use Valkyrja\Auth\Entity\Contract\UserContract;
 use Valkyrja\Auth\Entity\Contract\VerifiableUserContract;
-use Valkyrja\Auth\Entity\Trait\MailableUserTrait;
-use Valkyrja\Auth\Entity\Trait\UserTrait;
-use Valkyrja\Auth\Entity\Trait\VerifiableUserTrait;
+use Valkyrja\Auth\Entity\Trait\MailableUserMethods;
+use Valkyrja\Auth\Entity\Trait\UserMethods;
+use Valkyrja\Auth\Entity\Trait\VerifiableUserMethods;
 use Valkyrja\Notification\Entity\Contract\NotifiableUserContract;
 use Valkyrja\Notification\Entity\Trait\NotifiableUserTrait;
 use Valkyrja\Orm\Entity\Abstract\Entity;
@@ -32,11 +32,11 @@ use Valkyrja\Orm\Entity\Trait\SoftDeletable;
 class User extends Entity implements UserContract, DatedEntityContract, NotifiableUserContract, SoftDeleteEntityContract, VerifiableUserContract
 {
     use Dateable;
-    use MailableUserTrait;
+    use MailableUserMethods;
     use NotifiableUserTrait;
     use SoftDeletable;
-    use UserTrait;
-    use VerifiableUserTrait;
+    use UserMethods;
+    use VerifiableUserMethods;
 
     /**
      * A field that requires extra logic.
