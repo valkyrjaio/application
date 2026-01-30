@@ -16,9 +16,9 @@ namespace App\Env;
 use App\Orm\Entity\User;
 use App\Provider\ComponentProvider;
 use Valkyrja\Application\Env\Env as ValkyrjaEnv;
-use Valkyrja\Http\Routing\Middleware\RouteNotMatched\ViewRouteNotMatchedMiddleware;
-use Valkyrja\Http\Server\Middleware\LogThrowableCaughtMiddleware;
-use Valkyrja\Http\Server\Middleware\ViewThrowableCaughtMiddleware;
+use Valkyrja\Http\Server\Middleware\RouteNotMatched\ViewRouteNotMatchedMiddleware;
+use Valkyrja\Http\Server\Middleware\ThrowableCaught\LogThrowableCaughtMiddleware;
+use Valkyrja\Http\Server\Middleware\ThrowableCaught\ViewThrowableCaughtMiddleware;
 
 /**
  * Class Env.
