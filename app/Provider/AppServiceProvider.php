@@ -15,8 +15,8 @@ namespace App\Provider;
 
 use App\Cli\Controller\TestCommand;
 use App\Http\Controller\HomeController;
-use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactoryContract;
 use Valkyrja\Cli\Interaction\Input\Contract\InputContract;
+use Valkyrja\Cli\Interaction\Output\Factory\Contract\OutputFactoryContract;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Container\Provider\Provider;
 use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
