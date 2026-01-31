@@ -15,10 +15,10 @@ namespace App\Http\Controller;
 
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Http\Message\Enum\RequestMethod;
-use Valkyrja\Http\Message\Factory\Contract\ResponseFactoryContract;
 use Valkyrja\Http\Message\Response\Contract\JsonResponseContract;
 use Valkyrja\Http\Message\Response\Contract\ResponseContract;
 use Valkyrja\Http\Message\Response\Contract\TextResponseContract;
+use Valkyrja\Http\Message\Response\Factory\Contract\ResponseFactoryContract;
 use Valkyrja\Http\Routing\Attribute\Parameter;
 use Valkyrja\Http\Routing\Attribute\Route;
 use Valkyrja\Http\Routing\Constant\Regex;

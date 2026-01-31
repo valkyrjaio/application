@@ -17,8 +17,8 @@ use App\Entry\Http;
 use App\Env\EnvTest;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Http\Message\Factory\RequestFactory;
 use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
+use Valkyrja\Http\Message\Request\Factory\RequestFactory;
 
 /**
  * Class TestCase.

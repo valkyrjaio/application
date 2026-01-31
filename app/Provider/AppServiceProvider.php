@@ -19,8 +19,8 @@ use Valkyrja\Cli\Interaction\Factory\Contract\OutputFactoryContract;
 use Valkyrja\Cli\Interaction\Input\Contract\InputContract;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Container\Provider\Provider;
-use Valkyrja\Http\Message\Factory\Contract\ResponseFactoryContract;
 use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
+use Valkyrja\Http\Message\Response\Factory\Contract\ResponseFactoryContract;
 
 /**
  * Class AppServiceProvider.
