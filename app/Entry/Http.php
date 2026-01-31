@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace App\Entry;
 
-use App\Config\AppConfig;
 use App\Throwable\Handler\ThrowableHandler;
-use Valkyrja\Application\Data\Config;
 use Valkyrja\Application\Entry\Http as Valkyrja;
 use Valkyrja\Throwable\Handler\Contract\ThrowableHandlerContract;
 
@@ -24,14 +22,6 @@ use Valkyrja\Throwable\Handler\Contract\ThrowableHandlerContract;
  */
 class Http extends Valkyrja
 {
-    /**
-     * @inheritDoc
-     */
-    protected static function getConfig(): Config
-    {
-        return new AppConfig();
-    }
-
     /**
      * @inheritDoc
      */
