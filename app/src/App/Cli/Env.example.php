@@ -25,4 +25,13 @@ final class Env extends AppEnv
         ComponentProvider::class,
         HttpComponentProvider::class,
     ];
+
+    /************************************************************
+     *
+     * Container component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string|null */
+    public const string|null CONTAINER_CACHE_FILE_PATH = 'cli/container.php';
 }

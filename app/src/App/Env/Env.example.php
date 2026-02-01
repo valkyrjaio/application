@@ -35,7 +35,7 @@ class Env extends ValkyrjaEnv
         ComponentProvider::class,
     ];
     /** @var string */
-    public const string APP_DIR = __DIR__ . '/../..';
+    public const string APP_DIR = __DIR__ . '/../../..';
 
     /************************************************************
      *

@@ -17,4 +17,12 @@ use App\Env\Env as AppEnv;
 
 final class Env extends AppEnv
 {
+    /************************************************************
+     *
+     * Container component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string|null */
+    public const string|null CONTAINER_CACHE_FILE_PATH = 'http/container.php';
 }
