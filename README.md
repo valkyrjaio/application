@@ -28,23 +28,18 @@ lifting for your app.
 ### Coverage Status
 
 <p>
-    <a href="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/"><img src="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/badges/quality-score.png?b=master" alt="Scrutinizer"></a>
-    <a href='https://coveralls.io/github/valkyrjaio/valkyrja'><img src='https://coveralls.io/repos/github/valkyrjaio/valkyrja/badge.svg' alt='Coverage Status' /></a>
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/?branch=master"><img src="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja/badges/quality-score.png?b=master" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/valkyrja?branch=master"><img src="https://coveralls.io/repos/github/valkyrjaio/valkyrja/badge.svg?branch=master" alt="Coverage Status" /></a>
     <a href="https://shepherd.dev/github/valkyrjaio/valkyrja"><img src="https://shepherd.dev/github/valkyrjaio/valkyrja/coverage.svg" alt="Psalm Shepherd" /></a>
 </p>
 
 ### Build Status
-
-<p>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml/badge.svg" alt="PHPArkitect Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml/badge.svg" alt="PHP Code Sniffer Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml/badge.svg" alt="PHP CS Fixer Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml/badge.svg" alt="PHPStan Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml/badge.svg" alt="PHPUnit Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml/badge.svg" alt="Psalm Build Status"></a>
-    <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml/badge.svg" alt="Rector Build Status"></a>
-    <!--<a href="https://styleci.io/repos/304247237"><img src="https://styleci.io/repos/304247237/shield?branch=master&style=flat" alt="StyleCI Status"></a>-->
-</p>
+|                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                            |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml/badge.svg?branch=master" alt="PHPArkitect Build Status"></a>            | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml/badge.svg?branch=master" alt="PHPUnit Build Status"></a>                               |
+| <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcodesniffer.yml/badge.svg?branch=master" alt="PHP Code Sniffer Build Status"></a> | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/psalm.yml/badge.svg?branch=master" alt="Psalm Build Status"></a>                                     |
+| <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpcsfixer.yml/badge.svg?branch=master" alt="PHP CS Fixer Build Status"></a>             | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/rector.yml/badge.svg?branch=master" alt="Rector Build Status"></a>                                  |
+| <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpstan.yml/badge.svg?branch=master" alt="PHPStan Build Status"></a>                        | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/validate-composer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/validate-composer.yml/badge.svg?branch=master" alt="Validate Composer Build Status"></a> |
 
 Installation
 ------------
@@ -53,12 +48,14 @@ Installation
 
 ```
 git clone git@github.com:valkyrjaio/application.git ./your-project
+cd your-project
+composer install
 ```
 
 ### Install via composer
 
 ```
-composer install
+composer create-project valkyrja/application your-project
 ```
 
 ### Start coding
