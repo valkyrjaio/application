@@ -15,7 +15,7 @@ declare(strict_types=1);
 use App\Cli\App;
 use App\Cli\Env;
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 try {
     App::run(Env::APP_DIR, new Env());
