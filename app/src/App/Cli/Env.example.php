@@ -46,6 +46,15 @@ final class Env extends AppEnv
 
     /************************************************************
      *
+     * Event component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string|null */
+    public const string|null EVENT_COLLECTION_FILE_PATH = 'cli/events.php';
+
+    /************************************************************
+     *
      * Http Routing component env variables.
      *
      ************************************************************/
