@@ -25,4 +25,13 @@ final class Env extends AppEnv
 
     /** @var non-empty-string|null */
     public const string|null CONTAINER_CACHE_FILE_PATH = 'http/container.php';
+
+    /************************************************************
+     *
+     * Http Routing component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string|null */
+    public const string|null HTTP_ROUTING_COLLECTION_FILE_PATH = 'http/route.php';
 }
