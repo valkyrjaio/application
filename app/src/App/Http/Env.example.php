@@ -28,6 +28,15 @@ final class Env extends AppEnv
 
     /************************************************************
      *
+     * Cli Routing component env variables.
+     *
+     ************************************************************/
+
+    /** @var non-empty-string|null */
+    public const string|null CLI_ROUTING_COLLECTION_FILE_PATH = 'cli/routes.php';
+
+    /************************************************************
+     *
      * Http Routing component env variables.
      *
      ************************************************************/
