@@ -15,6 +15,7 @@ namespace App\Cli\Provider;
 
 use App\Cli\Controller\TestCommand;
 use Valkyrja\Application\Provider\Provider;
+use Valkyrja\Http\Routing\Cli\Command\ListCommand;
 
 final class ComponentProvider extends Provider
 {
@@ -34,6 +35,7 @@ final class ComponentProvider extends Provider
     public static function getCliControllers(): array
     {
         return [
+            ListCommand::class,
             TestCommand::class,
         ];
     }
