@@ -16,6 +16,7 @@ namespace App\Cli\Controller;
 use Valkyrja\Cli\Interaction\Message\Answer;
 use Valkyrja\Cli\Interaction\Message\Banner;
 use Valkyrja\Cli\Interaction\Message\Contract\AnswerContract;
+use Valkyrja\Cli\Interaction\Message\Contract\MessageContract;
 use Valkyrja\Cli\Interaction\Message\Message;
 use Valkyrja\Cli\Interaction\Message\NewLine;
 use Valkyrja\Cli\Interaction\Message\Question;
@@ -28,10 +29,18 @@ class TestCommand extends Controller
     protected const string YES_ANSWER = 'yes';
     protected const string NO_ANSWER  = 'no';
 
+    /**
+     * The help text.
+     */
+    public static function help(): MessageContract
+    {
+        return new Message('A command to showcase possibilities for commands.');
+    }
+
     #[Route(
         name: 'test',
         description: 'Test command',
-        helpText: new Message('A command to showcase possibilities for commands.')
+        helpText: [self::class, 'help'],
     )]
     public function run(): OutputContract
     {
