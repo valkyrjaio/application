@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Orm\Entity;
 
+use Override;
 use Valkyrja\Auth\Entity\Contract\UserContract;
 use Valkyrja\Auth\Entity\Contract\VerifiableUserContract;
 use Valkyrja\Auth\Entity\Trait\MailableUserMethods;
@@ -33,16 +34,25 @@ class User extends Entity implements UserContract, DatedEntityContract, SoftDele
     use VerifiableUserMethods;
 
     /**
-     * A field that requires extra logic.
+     * A field that requires extra logic too complex for a property hook.
      *
-     * @var string
+     * @var non-empty-string
      */
     protected string $needsExtraLogic;
 
     /**
+     * @inheritDoc
+     */
+    #[Override]
+    public static function getTableName(): string
+    {
+        return 'users';
+    }
+
+    /**
      * Getter for a property that needs extra logic before getting.
      *
-     * @return string
+     * @return non-empty-string
      */
     protected function getNeedsExtraLogic(): string
     {
@@ -54,14 +64,32 @@ class User extends Entity implements UserContract, DatedEntityContract, SoftDele
     /**
      * Setter for a property that needs extra logic before setting.
      *
-     * @param string $needsExtraLogic
-     *
-     * @return void
+     * @param non-empty-string $needsExtraLogic The value
      */
     protected function setNeedsExtraLogic(string $needsExtraLogic): void
     {
         // Do extra checks before setting
 
         $this->needsExtraLogic = $needsExtraLogic;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function internalGetCallables(): array
+    {
+        return [
+            'needsExtraLogic' => [$this, 'getNeedsExtraLogic'],
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function internalSetCallables(): array
+    {
+        return [
+            'needsExtraLogic' => [$this, 'setNeedsExtraLogic'],
+        ];
     }
 }
