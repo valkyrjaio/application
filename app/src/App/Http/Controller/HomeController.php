@@ -21,8 +21,10 @@ use Valkyrja\Http\Message\Response\Contract\TextResponseContract;
 use Valkyrja\Http\Message\Response\Factory\Contract\ResponseFactoryContract;
 use Valkyrja\Http\Routing\Attribute\Parameter;
 use Valkyrja\Http\Routing\Attribute\Route;
+use Valkyrja\Http\Routing\Attribute\Route\Middleware;
 use Valkyrja\Http\Routing\Constant\Regex;
 use Valkyrja\Http\Routing\Data\Contract\RouteContract;
+use Valkyrja\Http\Server\Middleware\CacheResponseMiddleware;
 use Valkyrja\View\Factory\Contract\ResponseFactoryContract as ViewResponseFactoryContract;
 
 class HomeController extends Controller
@@ -44,6 +46,17 @@ class HomeController extends Controller
      */
     #[Route(path: '/', name: 'welcome')]
     public function welcome(ViewResponseFactoryContract $responseFactory): ResponseContract
+    {
+        return $responseFactory->createResponseFromView('index/index');
+    }
+
+    /**
+     * Welcome cached action.
+     * - Example of a cacheable view being returned.
+     */
+    #[Route(path: '/cached', name: 'welcome.cached')]
+    #[Middleware(CacheResponseMiddleware::class)]
+    public function welcomeCached(ViewResponseFactoryContract $responseFactory): ResponseContract
     {
         return $responseFactory->createResponseFromView('index/index');
     }
