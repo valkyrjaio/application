@@ -24,7 +24,7 @@ final class Env extends AppEnv
      ************************************************************/
 
     /** @var non-empty-string|null */
-    public const string|null CONTAINER_CACHE_FILE_PATH = 'http/container.php';
+    public const string|null CONTAINER_DATA_FILE_PATH = 'http/container.php';
 
     /************************************************************
      *
@@ -33,7 +33,7 @@ final class Env extends AppEnv
      ************************************************************/
 
     /** @var non-empty-string|null */
-    public const string|null CLI_ROUTING_COLLECTION_FILE_PATH = 'cli/routes.php';
+    public const string|null CLI_ROUTING_COLLECTION_DATA_FILE_PATH = 'cli/routes.php';
 
     /************************************************************
      *
@@ -42,7 +42,7 @@ final class Env extends AppEnv
      ************************************************************/
 
     /** @var non-empty-string|null */
-    public const string|null EVENT_COLLECTION_FILE_PATH = 'http/events.php';
+    public const string|null EVENT_COLLECTION_DATA_FILE_PATH = 'http/events.php';
 
     /************************************************************
      *
@@ -51,5 +51,5 @@ final class Env extends AppEnv
      ************************************************************/
 
     /** @var non-empty-string|null */
-    public const string|null HTTP_ROUTING_COLLECTION_FILE_PATH = 'http/route.php';
+    public const string|null HTTP_ROUTING_COLLECTION_DATA_FILE_PATH = 'http/route.php';
 }
