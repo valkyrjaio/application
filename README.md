@@ -9,14 +9,14 @@
 About Valkyrja
 ------------
 
-> This repository contains the skeleton code of an application built with the 
+> This repository contains the skeleton code of an application built with the
 > Valkyrja framework.
 
-Valkyrja is the Old Norse spelling for Valkryries, a mythical creature that
-would guide warriors to Valhallah (the afterlife and a better place) after
-death. In a similar sense, the Valkyrja framework guides your application to be
-in a better state. Let this fast, light, and robust framework do the heavy
-lifting for your app.
+Valkyrja (pronounced "Valk-ear-ya") is the Old Norse spelling for Valkyrie, a
+mythical creature that would guide warriors to Valhalla (the afterlife and a
+better place) after death. In a similar sense, the Valkyrja framework guides
+your application to be in a better state. Let this fast, light, and robust
+framework do the heavy lifting for your app.
 
 <p>
     <a href="https://packagist.org/packages/valkyrja/valkyrja"><img src="https://poser.pugx.org/valkyrja/valkyrja/require/php" alt="PHP Version Require"></a>
@@ -34,6 +34,7 @@ lifting for your app.
 </p>
 
 ### Build Status
+
 |                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phparkitect.yml/badge.svg?branch=master" alt="PHPArkitect Build Status"></a>            | <a href="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/valkyrja/actions/workflows/phpunit.yml/badge.svg?branch=master" alt="PHPUnit Build Status"></a>                               |
@@ -60,9 +61,9 @@ composer create-project valkyrja/application your-project
 
 ### Start coding
 
-You're now able to start coding your application. Feel free to remove any 
-code that you don't need from this skeleton. All of this code exists as an 
-example. Read the documentation if you need to know how to do something 
+You're now able to start coding your application. Feel free to remove any
+code that you don't need from this skeleton. All of this code exists as an
+example. Read the documentation if you need to know how to do something
 specific and don't yet know how to do it.
 
 Documentation
