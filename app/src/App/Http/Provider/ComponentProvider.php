@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace App\Http\Provider;
 
-use App\Http\Controller\HomeController;
+use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Provider;
 
 final class ComponentProvider extends Provider
@@ -21,7 +21,7 @@ final class ComponentProvider extends Provider
     /**
      * @inheritDoc
      */
-    public static function getContainerProviders(): array
+    public static function getContainerProviders(ApplicationContract $app): array
     {
         return [
             ServiceProvider::class,
@@ -31,10 +31,10 @@ final class ComponentProvider extends Provider
     /**
      * @inheritDoc
      */
-    public static function getHttpControllers(): array
+    public static function getHttpProviders(ApplicationContract $app): array
     {
         return [
-            HomeController::class,
+            RouteProvider::class,
         ];
     }
 }

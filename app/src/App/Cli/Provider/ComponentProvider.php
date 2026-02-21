@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace App\Cli\Provider;
 
-use App\Cli\Controller\TestCommand;
+use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Provider;
 
 final class ComponentProvider extends Provider
@@ -21,7 +21,7 @@ final class ComponentProvider extends Provider
     /**
      * @inheritDoc
      */
-    public static function getContainerProviders(): array
+    public static function getContainerProviders(ApplicationContract $app): array
     {
         return [
             ServiceProvider::class,
@@ -31,10 +31,10 @@ final class ComponentProvider extends Provider
     /**
      * @inheritDoc
      */
-    public static function getCliControllers(): array
+    public static function getCliProviders(ApplicationContract $app): array
     {
         return [
-            TestCommand::class,
+            RouteProvider::class,
         ];
     }
 }
