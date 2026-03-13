@@ -17,39 +17,8 @@ use App\Env\Env as AppEnv;
 
 final class Env extends AppEnv
 {
-    /************************************************************
-     *
-     * Container component env variables.
-     *
-     ************************************************************/
-
-    /** @var non-empty-string|null */
-    public const string|null CONTAINER_DATA_FILE_PATH = 'http/container.php';
-
-    /************************************************************
-     *
-     * Cli Routing component env variables.
-     *
-     ************************************************************/
-
-    /** @var non-empty-string|null */
-    public const string|null CLI_ROUTING_COLLECTION_DATA_FILE_PATH = 'cli/routes.php';
-
-    /************************************************************
-     *
-     * Event component env variables.
-     *
-     ************************************************************/
-
-    /** @var non-empty-string|null */
-    public const string|null EVENT_COLLECTION_DATA_FILE_PATH = 'http/events.php';
-
-    /************************************************************
-     *
-     * Http Routing component env variables.
-     *
-     ************************************************************/
-
-    /** @var non-empty-string|null */
-    public const string|null HTTP_ROUTING_COLLECTION_DATA_FILE_PATH = 'http/route.php';
+    /** @var non-empty-string */
+    public const string APP_DATA_PATH = 'App/Http/Provider/Data';
+    /** @var non-empty-string */
+    public const string APP_DATA_NAMESPACE = 'App\\Http\\Provider\\Data';
 }

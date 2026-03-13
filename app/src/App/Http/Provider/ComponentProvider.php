@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 namespace App\Http\Provider;
 
+use App\Cli\Provider\Data\ContainerDataProvider;
+use App\Http\Provider\Data\EventDataProvider;
+use App\Http\Provider\Data\HttpRoutingDataProvider;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Provider;
 
@@ -25,6 +28,9 @@ final class ComponentProvider extends Provider
     {
         return [
             ServiceProvider::class,
+            ContainerDataProvider::class,
+            EventDataProvider::class,
+            HttpRoutingDataProvider::class,
         ];
     }
 

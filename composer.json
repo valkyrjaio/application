@@ -34,9 +34,15 @@
   },
   "scripts"           : {
     "post-root-package-install" : [
-      "php -r \"file_exists('env/Env.php') || copy('env/Env.example.php', 'env/Env.php');\"",
-      "php -r \"file_exists('env/EnvCli.php') || copy('env/EnvCli.example.php', 'env/EnvCli.php');\"",
-      "php -r \"file_exists('env/EnvTest.php') || copy('env/EnvTest.example.php', 'env/EnvTest.php');\""
+      "php -r \"file_exists('app/src/App/Cli/Provider/Data/CliRoutingDataProvider.php') || copy('app/src/App/Cli/Provider/Data/CliRoutingDataProvider.example.php', 'app/src/App/Cli/Provider/Data/CliRoutingDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Cli/Provider/Data/ContainerDataProvider.php') || copy('app/src/App/Cli/Provider/Data/ContainerDataProvider.example.php', 'app/src/App/Cli/Provider/Data/ContainerDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Cli/Provider/Data/EventDataProvider.php') || copy('app/src/App/Cli/Provider/Data/EventDataProvider.example.php', 'app/src/App/Cli/Provider/Data/EventDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php') || copy('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.example.php', 'app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Http/Provider/Data/ContainerDataProvider.php') || copy('app/src/App/Http/Provider/Data/ContainerDataProvider.example.php', 'app/src/App/Http/Provider/Data/ContainerDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Http/Provider/Data/EventDataProvider.php') || copy('app/src/App/Http/Provider/Data/EventDataProvider.example.php', 'app/src/App/Http/Provider/Data/EventDataProvider.php');\"",
+      "php -r \"file_exists('app/src/App/Http/Env.php') || copy('app/src/App/Http/Env.example.php', 'app/src/App/Http/Env.php');\"",
+      "php -r \"file_exists('app/src/Cli/Http/Env.php') || copy('app/src/App/Cli/Env.example.php', 'app/src/Cli/Http/Env.php');\"",
+      "php -r \"file_exists('app/tests/Tests/Env.php') || copy('app/tests/Tests/Env.example.php', 'app/tests/Tests/EnvTest.php');\""
     ]
   },
   "suggest"           : {
