@@ -14,6 +14,8 @@ declare(strict_types=1);
 namespace App\Http;
 
 use App\Env\Env as AppEnv;
+use App\Http\Provider\ComponentProvider;
+use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 
 final class Env extends AppEnv
 {
@@ -21,4 +23,8 @@ final class Env extends AppEnv
     public const string APP_DATA_PATH = 'App/Http/Provider/Data';
     /** @var non-empty-string */
     public const string APP_DATA_NAMESPACE = 'App\\Http\\Provider\\Data';
+    /** @var (callable(ApplicationContract):void)[] */
+    public const array APP_PUBLISHABLE_CALLBACKS = [
+        [ComponentProvider::class, 'publish'],
+    ];
 }

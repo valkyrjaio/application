@@ -13,12 +13,9 @@ declare(strict_types=1);
 
 namespace App\Http;
 
-use App\Http\Provider\Data\ContainerDataProvider;
 use App\Throwable\Handler\ThrowableHandler;
 use Override;
 use Valkyrja\Application\Entry\Http;
-use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Throwable\Handler\Contract\ThrowableHandlerContract;
 
 final class App extends Http
@@ -41,22 +38,5 @@ final class App extends Http
     protected static function getThrowableHandler(): ThrowableHandlerContract
     {
         return new ThrowableHandler();
-    }
-
-    /**
-     * @inheritDoc
-     */
-    #[Override]
-    protected static function publishContainerData(ContainerContract $container): void
-    {
-        $app = $container->getSingleton(ApplicationContract::class);
-
-        if ($app->getDebugMode()) {
-            parent::publishContainerData($container);
-
-            return;
-        }
-
-        ContainerDataProvider::publishData(container: $container);
     }
 }

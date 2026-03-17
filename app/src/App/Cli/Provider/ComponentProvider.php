@@ -18,9 +18,11 @@ use App\Cli\Provider\Data\ContainerDataProvider;
 use App\Cli\Provider\Data\EventDataProvider;
 use App\Http\Provider\Data\HttpRoutingDataProvider;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
+use Valkyrja\Application\Provider\Contract\PublishableProviderContract;
 use Valkyrja\Application\Provider\Provider;
+use Valkyrja\Container\Provider\ServiceProvider as ContainerServiceProvider;
 
-final class ComponentProvider extends Provider
+final class ComponentProvider extends Provider implements PublishableProviderContract
 {
     /**
      * @inheritDoc
@@ -44,5 +46,21 @@ final class ComponentProvider extends Provider
         return [
             RouteProvider::class,
         ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public static function publish(ApplicationContract $app): void
+    {
+        $container = $app->getContainer();
+
+        if ($app->getDebugMode()) {
+            ContainerServiceProvider::publishData(container: $container);
+
+            return;
+        }
+
+        ContainerDataProvider::publishData(container: $container);
     }
 }
