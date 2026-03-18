@@ -40,7 +40,6 @@
       "php -r \"file_exists('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php') || copy('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.example.php', 'app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php');\"",
       "php -r \"file_exists('app/src/App/Http/Provider/Data/ContainerDataProvider.php') || copy('app/src/App/Http/Provider/Data/ContainerDataProvider.example.php', 'app/src/App/Http/Provider/Data/ContainerDataProvider.php');\"",
       "php -r \"file_exists('app/src/App/Http/Provider/Data/EventDataProvider.php') || copy('app/src/App/Http/Provider/Data/EventDataProvider.example.php', 'app/src/App/Http/Provider/Data/EventDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Env/Env.php') || copy('app/src/App/Env/Env.example.php', 'app/src/App/Env/Env.php');\"",
       "php -r \"file_exists('app/src/App/Http/Env.php') || copy('app/src/App/Http/Env.example.php', 'app/src/App/Http/Env.php');\"",
       "php -r \"file_exists('app/src/App/Cli/Env.php') || copy('app/src/App/Cli/Env.example.php', 'app/src/App/Cli/Env.php');\"",
       "php -r \"file_exists('app/tests/Tests/Env.php') || copy('app/tests/Tests/Env.example.php', 'app/tests/Tests/EnvTest.php');\""

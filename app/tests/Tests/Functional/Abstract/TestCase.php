@@ -27,6 +27,8 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function setUp(): void
     {
+        App::directory(__DIR__ . '/../../../..');
+
         $this->app = App::app(
             env: new Env(),
         );

@@ -13,15 +13,11 @@ declare(strict_types=1);
 
 namespace App\Http\Provider;
 
-use App\Http\Provider\Data\ContainerDataProvider;
-use App\Http\Provider\Data\EventDataProvider;
-use App\Http\Provider\Data\HttpRoutingDataProvider;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Application\Provider\Contract\PublishableProviderContract;
 use Valkyrja\Application\Provider\Provider;
 use Valkyrja\Container\Provider\ServiceProvider as ContainerServiceProvider;
 
-final class ComponentProvider extends Provider implements PublishableProviderContract
+final class ComponentProvider extends Provider
 {
     /**
      * @inheritDoc
@@ -29,10 +25,8 @@ final class ComponentProvider extends Provider implements PublishableProviderCon
     public static function getContainerProviders(ApplicationContract $app): array
     {
         return [
+            DataProvider::class,
             ServiceProvider::class,
-            ContainerDataProvider::class,
-            EventDataProvider::class,
-            HttpRoutingDataProvider::class,
         ];
     }
 
@@ -59,6 +53,6 @@ final class ComponentProvider extends Provider implements PublishableProviderCon
             return;
         }
 
-        ContainerDataProvider::publishData(container: $container);
+        DataProvider::publishContainerData(container: $container);
     }
 }

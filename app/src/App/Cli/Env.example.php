@@ -14,18 +14,20 @@ declare(strict_types=1);
 namespace App\Cli;
 
 use App\Cli\Provider\ComponentProvider;
-use App\Env\Env as AppEnv;
-use App\Http\Provider\ComponentProvider as HttpComponentProvider;
+use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Application\Provider\Provider;
+use Valkyrja\Application\Provider\Contract\ProviderContract;
 
-final class Env extends AppEnv
+final class Env extends ValkyrjaEnv
 {
-    /** @var class-string<Provider>[] */
+    /** @var bool */
+    public const bool APP_DEBUG_MODE = true;
+    /** @var class-string<ProviderContract>[] */
     public const array APP_CUSTOM_COMPONENTS = [
         ComponentProvider::class,
-        HttpComponentProvider::class,
     ];
+    /** @var non-empty-string */
+    public const string APP_NAMESPACE = 'App';
     /** @var non-empty-string */
     public const string APP_DATA_PATH = 'App/Cli/Provider/Data';
     /** @var non-empty-string */
@@ -34,4 +36,6 @@ final class Env extends AppEnv
     public const array APP_PUBLISHABLE_CALLBACKS = [
         [ComponentProvider::class, 'publish'],
     ];
+    /** @var string */
+    public const string APP_DIR = __DIR__ . '/../../..';
 }

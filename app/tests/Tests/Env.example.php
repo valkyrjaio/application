@@ -13,10 +13,13 @@ declare(strict_types=1);
 
 namespace App\Tests;
 
-use App\Env\Env as AppEnv;
+use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 
-class Env extends AppEnv
+class Env extends ValkyrjaEnv
 {
+    /** @var string */
+    public const string APP_DIR = __DIR__ . '/../..';
+
     /************************************************************
      *
      * Cli Interaction component env variables.
