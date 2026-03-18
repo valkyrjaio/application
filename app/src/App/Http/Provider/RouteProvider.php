@@ -15,7 +15,7 @@ namespace App\Http\Provider;
 
 use App\Http\Controller\HomeController;
 use Override;
-use Valkyrja\Http\Routing\Provider\Provider;
+use Valkyrja\Http\Routing\Provider\Abstract\Provider;
 
 final class RouteProvider extends Provider
 {
