@@ -15,7 +15,7 @@ namespace App\Cli\Provider;
 
 use App\Cli\Controller\TestCommand;
 use Override;
-use Valkyrja\Cli\Routing\Provider\Provider;
+use Valkyrja\Cli\Routing\Provider\Abstract\Provider;
 
 final class RouteProvider extends Provider
 {
