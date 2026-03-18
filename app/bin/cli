@@ -13,12 +13,13 @@ declare(strict_types=1);
  */
 
 use App\Cli\App;
+use App\Cli\Config;
 use App\Cli\Env;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 try {
-    App::run(Env::APP_DIR, new Env());
+    App::run(new Env(), new Config());
 } catch (Throwable $throwable) {
     var_dump($throwable);
 }

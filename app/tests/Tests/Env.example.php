@@ -17,9 +17,6 @@ use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 
 class Env extends ValkyrjaEnv
 {
-    /** @var string */
-    public const string APP_DIR = __DIR__ . '/../..';
-
     /************************************************************
      *
      * Cli Interaction component env variables.
