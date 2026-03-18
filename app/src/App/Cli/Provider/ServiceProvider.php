@@ -18,7 +18,7 @@ use Override;
 use Valkyrja\Cli\Interaction\Input\Contract\InputContract;
 use Valkyrja\Cli\Interaction\Output\Factory\Contract\OutputFactoryContract;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
-use Valkyrja\Container\Provider\Provider;
+use Valkyrja\Container\Provider\Abstract\Provider;
 
 final class ServiceProvider extends Provider
 {

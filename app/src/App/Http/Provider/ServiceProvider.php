@@ -16,7 +16,7 @@ namespace App\Http\Provider;
 use App\Http\Controller\HomeController;
 use Override;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
-use Valkyrja\Container\Provider\Provider;
+use Valkyrja\Container\Provider\Abstract\Provider;
 use Valkyrja\Http\Message\Request\Contract\ServerRequestContract;
 use Valkyrja\Http\Message\Response\Factory\Contract\ResponseFactoryContract;
 

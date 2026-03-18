@@ -21,7 +21,7 @@ use Override;
 use Valkyrja\Cli\Routing\Data\Data as ValkyrjaCliRoutingData;
 use Valkyrja\Container\Data\Data;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
-use Valkyrja\Container\Provider\Provider;
+use Valkyrja\Container\Provider\Abstract\Provider;
 use Valkyrja\Event\Data\Data as ValkyrjaEventData;
 use Valkyrja\Http\Routing\Data\Data as ValkyrjaHttpRoutingData;
 
