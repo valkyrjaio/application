@@ -17,6 +17,7 @@ use App\Cli\Provider\Data\CliRoutingData;
 use App\Cli\Provider\Data\ContainerData;
 use App\Cli\Provider\Data\EventData;
 use App\Http\Provider\Data\HttpRoutingData;
+use Override;
 use Valkyrja\Cli\Routing\Data\Data as ValkyrjaCliRoutingData;
 use Valkyrja\Container\Data\Data;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
@@ -29,6 +30,7 @@ final class DataProvider extends Provider
     /**
      * @inheritDoc
      */
+    #[Override]
     public static function publishers(): array
     {
         return [
@@ -42,6 +44,7 @@ final class DataProvider extends Provider
     /**
      * @inheritDoc
      */
+    #[Override]
     public static function provides(): array
     {
         return [

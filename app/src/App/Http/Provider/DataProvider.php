@@ -16,6 +16,7 @@ namespace App\Http\Provider;
 use App\Http\Provider\Data\ContainerData;
 use App\Http\Provider\Data\EventData;
 use App\Http\Provider\Data\HttpRoutingData;
+use Override;
 use Valkyrja\Container\Data\Data;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Container\Provider\Provider;
@@ -27,6 +28,7 @@ final class DataProvider extends Provider
     /**
      * @inheritDoc
      */
+    #[Override]
     public static function publishers(): array
     {
         return [
@@ -39,6 +41,7 @@ final class DataProvider extends Provider
     /**
      * @inheritDoc
      */
+    #[Override]
     public static function provides(): array
     {
         return [
