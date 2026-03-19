@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4540bb42620b4e8fd6a148b3d09194b",
+    "content-hash": "23e83f22168ac519e4b34319685f86bb",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -373,16 +373,16 @@
         },
         {
             "name": "valkyrja/valkyrja",
-            "version": "v25.34.2",
+            "version": "v25.34.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/valkyrja.git",
-                "reference": "566dc78947939de0b36e002398723b918d964808"
+                "reference": "ca37bb6dfeb4a650438f31aee1a42c180015f7fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/valkyrja/zipball/566dc78947939de0b36e002398723b918d964808",
-                "reference": "566dc78947939de0b36e002398723b918d964808",
+                "url": "https://api.github.com/repos/valkyrjaio/valkyrja/zipball/ca37bb6dfeb4a650438f31aee1a42c180015f7fe",
+                "reference": "ca37bb6dfeb4a650438f31aee1a42c180015f7fe",
                 "shasum": ""
             },
             "require": {
@@ -471,9 +471,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/valkyrja/issues",
-                "source": "https://github.com/valkyrjaio/valkyrja/tree/v25.34.2"
+                "source": "https://github.com/valkyrjaio/valkyrja/tree/v25.34.3"
             },
-            "time": "2026-03-19T04:34:36+00:00"
+            "time": "2026-03-19T06:37:11+00:00"
         }
     ],
     "packages-dev": [
