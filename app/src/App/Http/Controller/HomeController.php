@@ -19,6 +19,7 @@ use Valkyrja\Http\Message\Response\Contract\JsonResponseContract;
 use Valkyrja\Http\Message\Response\Contract\ResponseContract;
 use Valkyrja\Http\Message\Response\Contract\TextResponseContract;
 use Valkyrja\Http\Message\Response\Factory\Contract\ResponseFactoryContract;
+use Valkyrja\Http\Message\Response\TextResponse;
 use Valkyrja\Http\Routing\Attribute\Parameter;
 use Valkyrja\Http\Routing\Attribute\Route;
 use Valkyrja\Http\Routing\Attribute\Route\Middleware;
@@ -38,6 +39,15 @@ class HomeController extends Controller
     public static function version(ApplicationContract $app, ResponseFactoryContract $responseFactory): TextResponseContract
     {
         return $responseFactory->createTextResponse($app->getVersion());
+    }
+
+    /**
+     * Text action.
+     */
+    #[Route(path: '/text', name: 'text', requestMethods: [RequestMethod::GET])]
+    public static function text(): TextResponseContract
+    {
+        return new TextResponse('Hello World!');
     }
 
     /**
