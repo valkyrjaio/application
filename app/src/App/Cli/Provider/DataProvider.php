@@ -16,7 +16,7 @@ namespace App\Cli\Provider;
 use App\Cli\Provider\Data\CliRoutingData;
 use App\Cli\Provider\Data\ContainerData;
 use App\Cli\Provider\Data\EventData;
-use App\Http\Provider\Data\HttpRoutingData;
+use App\Cli\Provider\Data\HttpRoutingData;
 use Override;
 use Valkyrja\Cli\Routing\Data\Data as ValkyrjaCliRoutingData;
 use Valkyrja\Container\Data\Data;
@@ -50,6 +50,7 @@ final class DataProvider extends Provider
         return [
             Data::class,
             ValkyrjaEventData::class,
+            ValkyrjaCliRoutingData::class,
             ValkyrjaHttpRoutingData::class,
         ];
     }

@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Cli\Provider;
 
+use App\Http\Provider\ComponentProvider as HttpComponentProvider;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Abstract\Provider;
 use Valkyrja\Container\Provider\ServiceProvider as ContainerServiceProvider;
@@ -38,6 +39,14 @@ final class ComponentProvider extends Provider
         return [
             RouteProvider::class,
         ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public static function getHttpProviders(ApplicationContract $app): array
+    {
+        return HttpComponentProvider::getHttpProviders($app);
     }
 
     /**
