@@ -34,12 +34,6 @@
   },
   "scripts"           : {
     "post-root-package-install" : [
-      "php -r \"file_exists('app/src/App/Cli/Provider/Data/CliRoutingDataProvider.php') || copy('app/src/App/Cli/Provider/Data/CliRoutingDataProvider.example.php', 'app/src/App/Cli/Provider/Data/CliRoutingDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Cli/Provider/Data/ContainerDataProvider.php') || copy('app/src/App/Cli/Provider/Data/ContainerDataProvider.example.php', 'app/src/App/Cli/Provider/Data/ContainerDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Cli/Provider/Data/EventDataProvider.php') || copy('app/src/App/Cli/Provider/Data/EventDataProvider.example.php', 'app/src/App/Cli/Provider/Data/EventDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php') || copy('app/src/App/Http/Provider/Data/HttpRoutingDataProvider.example.php', 'app/src/App/Http/Provider/Data/HttpRoutingDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Http/Provider/Data/ContainerDataProvider.php') || copy('app/src/App/Http/Provider/Data/ContainerDataProvider.example.php', 'app/src/App/Http/Provider/Data/ContainerDataProvider.php');\"",
-      "php -r \"file_exists('app/src/App/Http/Provider/Data/EventDataProvider.php') || copy('app/src/App/Http/Provider/Data/EventDataProvider.example.php', 'app/src/App/Http/Provider/Data/EventDataProvider.php');\"",
       "php -r \"file_exists('app/src/App/Http/Config.php') || copy('app/src/App/Http/Config.example.php', 'app/src/App/Http/Config.php');\"",
       "php -r \"file_exists('app/src/App/Cli/Config.php') || copy('app/src/App/Cli/Config.example.php', 'app/src/App/Cli/Config.php');\"",
       "php -r \"file_exists('app/src/App/Http/Env.php') || copy('app/src/App/Http/Env.example.php', 'app/src/App/Http/Env.php');\"",
