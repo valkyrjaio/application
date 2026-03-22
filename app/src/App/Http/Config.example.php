@@ -19,7 +19,7 @@ use Valkyrja\Application\Data\HttpConfig as ValkyrjaConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ProviderContract;
 
-final readonly class Config extends ValkyrjaConfig
+final class Config extends ValkyrjaConfig
 {
     /**
      * @param non-empty-string                          $namespace

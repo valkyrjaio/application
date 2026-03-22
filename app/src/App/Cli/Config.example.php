@@ -22,7 +22,7 @@ use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ProviderContract;
 use Valkyrja\Cli\Server\Constant\CommandName;
 
-final readonly class Config extends ValkyrjaConfig
+final class Config extends ValkyrjaConfig
 {
     /**
      * @param non-empty-string                          $namespace

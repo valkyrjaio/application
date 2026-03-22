@@ -17,12 +17,4 @@ use Valkyrja\Application\Env\Env as ValkyrjaEnv;
 
 class Env extends ValkyrjaEnv
 {
-    /************************************************************
-     *
-     * Cli Interaction component env variables.
-     *
-     ************************************************************/
-
-    /** @var bool */
-    public const bool CLI_INTERACTION_IS_QUIET = true;
 }
