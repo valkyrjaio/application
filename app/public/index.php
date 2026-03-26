@@ -13,10 +13,9 @@ declare(strict_types=1);
 
 use App\Http\App;
 use App\Http\Config;
-use App\Http\Env;
 
 define('INDEX_START', microtime(true));
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-App::run(new Env(), new Config());
+App::run(config: new Config());

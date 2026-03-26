@@ -14,8 +14,9 @@ declare(strict_types=1);
 namespace App\Tests\Functional\Abstract;
 
 use App\Http\App;
-use App\Tests\Env;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
+use Valkyrja\Application\Data\Config;
+use Valkyrja\Application\Env\Env;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 
 abstract class TestCase extends PHPUnitTestCase
@@ -31,6 +32,7 @@ abstract class TestCase extends PHPUnitTestCase
 
         $this->app = App::app(
             env: new Env(),
+            config: new Config()
         );
     }
 }
