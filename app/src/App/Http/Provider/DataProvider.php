@@ -19,11 +19,11 @@ use App\Http\Provider\Data\HttpRoutingData;
 use Override;
 use Valkyrja\Container\Data\Data;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
-use Valkyrja\Container\Provider\Abstract\Provider;
+use Valkyrja\Container\Provider\Contract\ServiceProviderContract;
 use Valkyrja\Event\Data\Data as ValkyrjaEventData;
 use Valkyrja\Http\Routing\Data\Data as ValkyrjaHttpRoutingData;
 
-final class DataProvider extends Provider
+final class DataProvider implements ServiceProviderContract
 {
     /**
      * @inheritDoc
@@ -35,19 +35,6 @@ final class DataProvider extends Provider
             Data::class                    => [self::class, 'publishContainerData'],
             ValkyrjaEventData::class       => [self::class, 'publishEventData'],
             ValkyrjaHttpRoutingData::class => [self::class, 'publishHttpRoutingData'],
-        ];
-    }
-
-    /**
-     * @inheritDoc
-     */
-    #[Override]
-    public static function provides(): array
-    {
-        return [
-            Data::class,
-            ValkyrjaEventData::class,
-            ValkyrjaHttpRoutingData::class,
         ];
     }
 
