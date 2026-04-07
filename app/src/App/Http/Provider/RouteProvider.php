@@ -15,9 +15,9 @@ namespace App\Http\Provider;
 
 use App\Http\Controller\HomeController;
 use Override;
-use Valkyrja\Http\Routing\Provider\Abstract\Provider;
+use Valkyrja\Http\Routing\Provider\Contract\HttpRouteProviderContract;
 
-final class RouteProvider extends Provider
+final class RouteProvider implements HttpRouteProviderContract
 {
     /**
      * @inheritDoc
@@ -28,5 +28,14 @@ final class RouteProvider extends Provider
         return [
             HomeController::class,
         ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    #[Override]
+    public static function getRoutes(): array
+    {
+        return [];
     }
 }
