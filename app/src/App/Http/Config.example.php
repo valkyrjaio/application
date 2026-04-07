@@ -17,7 +17,7 @@ use App\Http\Provider\ComponentProvider;
 use Valkyrja\Application\Constant\ComponentClass;
 use Valkyrja\Application\Data\HttpConfig as ValkyrjaConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Application\Provider\Contract\ProviderContract;
+use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Http\Middleware\Contract\RequestReceivedMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\RouteDispatchedMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\RouteMatchedMiddlewareContract;
@@ -39,7 +39,7 @@ final class Config extends ValkyrjaConfig implements ConfigContract
      * @param non-empty-string                                  $key
      * @param non-empty-string                                  $dataPath
      * @param non-empty-string                                  $dataNamespace
-     * @param class-string<ProviderContract>[]                  $providers
+     * @param class-string<ComponentProviderContract>[]         $providers
      * @param array<callable(ApplicationContract):void>         $callbacks
      * @param class-string<RequestReceivedMiddlewareContract>[] $requestReceivedMiddleware
      * @param class-string<RouteMatchedMiddlewareContract>[]    $routeMatchedMiddleware

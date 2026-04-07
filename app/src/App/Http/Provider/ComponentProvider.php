@@ -13,15 +13,17 @@ declare(strict_types=1);
 
 namespace App\Http\Provider;
 
+use Override;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Application\Provider\Abstract\Provider;
+use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Container\Provider\ServiceProvider as ContainerServiceProvider;
 
-final class ComponentProvider extends Provider
+final class ComponentProvider implements ComponentProviderContract
 {
     /**
      * @inheritDoc
      */
+    #[Override]
     public static function getContainerProviders(ApplicationContract $app): array
     {
         return [
@@ -33,6 +35,25 @@ final class ComponentProvider extends Provider
     /**
      * @inheritDoc
      */
+    #[Override]
+    public static function getEventProviders(ApplicationContract $app): array
+    {
+        return [];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    #[Override]
+    public static function getCliProviders(ApplicationContract $app): array
+    {
+        return [];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    #[Override]
     public static function getHttpProviders(ApplicationContract $app): array
     {
         return [

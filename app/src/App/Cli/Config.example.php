@@ -19,7 +19,7 @@ use Valkyrja\Application\Constant\ComponentClass;
 use Valkyrja\Application\Data\CliConfig as ValkyrjaConfig;
 use Valkyrja\Application\Data\HttpConfig as ValkyrjaHttpConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
-use Valkyrja\Application\Provider\Contract\ProviderContract;
+use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Cli\Server\Constant\CommandName;
 
 final class Config extends ValkyrjaConfig
@@ -35,7 +35,7 @@ final class Config extends ValkyrjaConfig
      * @param non-empty-string                          $dataNamespace
      * @param non-empty-string                          $applicationName
      * @param non-empty-string                          $defaultCommandName
-     * @param class-string<ProviderContract>[]          $providers
+     * @param class-string<ComponentProviderContract>[] $providers
      * @param array<callable(ApplicationContract):void> $callbacks
      */
     public function __construct(
