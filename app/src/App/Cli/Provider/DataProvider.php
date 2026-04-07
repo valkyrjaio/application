@@ -13,17 +13,17 @@ declare(strict_types=1);
 
 namespace App\Cli\Provider;
 
-use App\Cli\Provider\Data\CliRoutingData;
-use App\Cli\Provider\Data\ContainerData;
-use App\Cli\Provider\Data\EventData;
-use App\Cli\Provider\Data\HttpRoutingData;
+use App\Cli\Provider\Data\AppCliRoutingData;
+use App\Cli\Provider\Data\AppContainerData;
+use App\Cli\Provider\Data\AppEventData;
+use App\Cli\Provider\Data\AppHttpRoutingData;
 use Override;
-use Valkyrja\Cli\Routing\Data\Data as ValkyrjaCliRoutingData;
-use Valkyrja\Container\Data\Data;
+use Valkyrja\Cli\Routing\Data\CliRoutingData;
+use Valkyrja\Container\Data\ContainerData;
 use Valkyrja\Container\Manager\Contract\ContainerContract;
 use Valkyrja\Container\Provider\Contract\ServiceProviderContract;
-use Valkyrja\Event\Data\Data as ValkyrjaEventData;
-use Valkyrja\Http\Routing\Data\Data as ValkyrjaHttpRoutingData;
+use Valkyrja\Event\Data\EventData;
+use Valkyrja\Http\Routing\Data\HttpRoutingData;
 
 final class DataProvider implements ServiceProviderContract
 {
@@ -34,10 +34,10 @@ final class DataProvider implements ServiceProviderContract
     public static function publishers(): array
     {
         return [
-            Data::class                    => [self::class, 'publishContainerData'],
-            ValkyrjaEventData::class       => [self::class, 'publishEventData'],
-            ValkyrjaCliRoutingData::class  => [self::class, 'publishCliRoutingData'],
-            ValkyrjaHttpRoutingData::class => [self::class, 'publishHttpRoutingData'],
+            ContainerData::class   => [self::class, 'publishContainerData'],
+            EventData::class       => [self::class, 'publishEventData'],
+            CliRoutingData::class  => [self::class, 'publishCliRoutingData'],
+            HttpRoutingData::class => [self::class, 'publishHttpRoutingData'],
         ];
     }
 
@@ -46,7 +46,7 @@ final class DataProvider implements ServiceProviderContract
      */
     public static function publishContainerData(ContainerContract $container): void
     {
-        $container->setSingleton(Data::class, new ContainerData());
+        $container->setSingleton(ContainerData::class, new AppContainerData());
     }
 
     /**
@@ -54,7 +54,7 @@ final class DataProvider implements ServiceProviderContract
      */
     public static function publishEventData(ContainerContract $container): void
     {
-        $container->setSingleton(ValkyrjaEventData::class, new EventData());
+        $container->setSingleton(EventData::class, new AppEventData());
     }
 
     /**
@@ -62,7 +62,7 @@ final class DataProvider implements ServiceProviderContract
      */
     public static function publishCliRoutingData(ContainerContract $container): void
     {
-        $container->setSingleton(ValkyrjaCliRoutingData::class, new CliRoutingData());
+        $container->setSingleton(CliRoutingData::class, new AppCliRoutingData());
     }
 
     /**
@@ -70,6 +70,6 @@ final class DataProvider implements ServiceProviderContract
      */
     public static function publishHttpRoutingData(ContainerContract $container): void
     {
-        $container->setSingleton(ValkyrjaHttpRoutingData::class, new HttpRoutingData());
+        $container->setSingleton(HttpRoutingData::class, new AppHttpRoutingData());
     }
 }
