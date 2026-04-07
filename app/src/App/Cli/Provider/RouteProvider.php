@@ -15,9 +15,9 @@ namespace App\Cli\Provider;
 
 use App\Cli\Controller\TestCommand;
 use Override;
-use Valkyrja\Cli\Routing\Provider\Abstract\Provider;
+use Valkyrja\Cli\Routing\Provider\Contract\CliRouteProviderContract;
 
-final class RouteProvider extends Provider
+final class RouteProvider implements CliRouteProviderContract
 {
     /**
      * @inheritDoc
@@ -28,5 +28,14 @@ final class RouteProvider extends Provider
         return [
             TestCommand::class,
         ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    #[Override]
+    public static function getRoutes(): array
+    {
+        return [];
     }
 }
