@@ -15,7 +15,7 @@ namespace App\Http;
 
 use App\Http\Provider\ComponentProvider;
 use Valkyrja\Application\Constant\ComponentClass;
-use Valkyrja\Application\Data\HttpConfig as ValkyrjaConfig;
+use Valkyrja\Application\Data\HttpConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Http\Middleware\Contract\RequestReceivedMiddlewareContract;
@@ -28,7 +28,7 @@ use Valkyrja\Http\Middleware\Contract\ThrowableCaughtMiddlewareContract;
 use Valkyrja\Http\Middleware\Data\Contract\ConfigContract;
 use Valkyrja\Http\Server\Middleware\CacheResponseMiddleware;
 
-final class Config extends ValkyrjaConfig implements ConfigContract
+final class Config extends HttpConfig implements ConfigContract
 {
     /**
      * @param non-empty-string                                  $namespace

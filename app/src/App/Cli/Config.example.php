@@ -14,15 +14,15 @@ declare(strict_types=1);
 namespace App\Cli;
 
 use App\Cli\Provider\ComponentProvider;
-use App\Http\Config as HttpConfig;
+use App\Http\Config as AppHttpConfig;
 use Valkyrja\Application\Constant\ComponentClass;
-use Valkyrja\Application\Data\CliConfig as ValkyrjaConfig;
-use Valkyrja\Application\Data\HttpConfig as ValkyrjaHttpConfig;
+use Valkyrja\Application\Data\CliConfig;
+use Valkyrja\Application\Data\HttpConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Cli\Server\Constant\CommandName;
 
-final class Config extends ValkyrjaConfig
+final class Config extends CliConfig
 {
     /**
      * @param non-empty-string                          $namespace
@@ -69,7 +69,7 @@ final class Config extends ValkyrjaConfig
         array $callbacks = [
             [ComponentProvider::class, 'publish'],
         ],
-        ValkyrjaHttpConfig $http = new HttpConfig(),
+        HttpConfig $http = new AppHttpConfig(),
     ) {
         parent::__construct(
             namespace: $namespace,
