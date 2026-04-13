@@ -14,10 +14,13 @@ declare(strict_types=1);
 namespace App\Http;
 
 use App\Http\Provider\ComponentProvider;
-use Valkyrja\Application\Constant\ComponentClass;
 use Valkyrja\Application\Data\HttpConfig;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
+use Valkyrja\Container\Provider\ContainerComponentProvider;
+use Valkyrja\Dispatch\Provider\DispatchComponentProvider;
+use Valkyrja\Event\Provider\EventComponentProvider;
+use Valkyrja\Http\Message\Provider\HttpMessageComponentProvider;
 use Valkyrja\Http\Middleware\Contract\RequestReceivedMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\RouteDispatchedMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\RouteMatchedMiddlewareContract;
@@ -26,7 +29,12 @@ use Valkyrja\Http\Middleware\Contract\SendingResponseMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\TerminatedMiddlewareContract;
 use Valkyrja\Http\Middleware\Contract\ThrowableCaughtMiddlewareContract;
 use Valkyrja\Http\Middleware\Data\Contract\ConfigContract;
+use Valkyrja\Http\Middleware\Provider\HttpMiddlewareComponentProvider;
+use Valkyrja\Http\Routing\Provider\HttpRoutingComponentProvider;
 use Valkyrja\Http\Server\Middleware\CacheResponseMiddleware;
+use Valkyrja\Http\Server\Provider\HttpServerComponentProvider;
+use Valkyrja\Log\Provider\LogComponentProvider;
+use Valkyrja\View\Provider\ViewComponentProvider;
 
 final class Config extends HttpConfig implements ConfigContract
 {
@@ -60,15 +68,15 @@ final class Config extends HttpConfig implements ConfigContract
         string $dataPath = 'App/Http/Provider/Data',
         string $dataNamespace = 'App\\Http\\Provider\\Data',
         array $providers = [
-            ComponentClass::CONTAINER,
-            ComponentClass::DISPATCHER,
-            ComponentClass::EVENT,
-            ComponentClass::HTTP_MESSAGE,
-            ComponentClass::HTTP_MIDDLEWARE,
-            ComponentClass::HTTP_ROUTING,
-            ComponentClass::HTTP_SERVER,
-            ComponentClass::LOG,
-            ComponentClass::VIEW,
+            ContainerComponentProvider::class,
+            DispatchComponentProvider::class,
+            EventComponentProvider::class,
+            HttpMessageComponentProvider::class,
+            HttpMiddlewareComponentProvider::class,
+            HttpRoutingComponentProvider::class,
+            HttpServerComponentProvider::class,
+            LogComponentProvider::class,
+            ViewComponentProvider::class,
             ComponentProvider::class,
         ],
         array $callbacks = [
