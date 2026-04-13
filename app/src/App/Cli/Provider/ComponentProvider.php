@@ -17,7 +17,7 @@ use App\Http\Provider\ComponentProvider as HttpComponentProvider;
 use Override;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
-use Valkyrja\Container\Provider\ServiceProvider as ContainerServiceProvider;
+use Valkyrja\Container\Provider\ContainerServiceProvider;
 
 final class ComponentProvider implements ComponentProviderContract
 {
