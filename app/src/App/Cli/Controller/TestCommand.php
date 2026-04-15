@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Cli\Controller;
 
+use App\Cli\Provider\RouteProvider;
 use Valkyrja\Cli\Interaction\Message\Answer;
 use Valkyrja\Cli\Interaction\Message\Banner;
 use Valkyrja\Cli\Interaction\Message\Contract\AnswerContract;
@@ -23,6 +24,7 @@ use Valkyrja\Cli\Interaction\Message\Question;
 use Valkyrja\Cli\Interaction\Message\SuccessMessage;
 use Valkyrja\Cli\Interaction\Output\Contract\OutputContract;
 use Valkyrja\Cli\Routing\Attribute\Route;
+use Valkyrja\Cli\Routing\Attribute\Route\RouteHandler;
 
 class TestCommand extends Controller
 {
@@ -42,6 +44,7 @@ class TestCommand extends Controller
         description: 'Test command',
         helpText: [self::class, 'help'],
     )]
+    #[RouteHandler([RouteProvider::class, 'testCommandHandler'])]
     public function run(): OutputContract
     {
         return $this->outputFactory
