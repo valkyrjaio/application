@@ -24,7 +24,7 @@ final class App extends Cli
      * @inheritDoc
      */
     #[Override]
-    protected static function defaultExceptionHandler(): void
+    public static function defaultExceptionHandler(): void
     {
         ThrowableHandler::enable(
             displayErrors: true
@@ -35,7 +35,7 @@ final class App extends Cli
      * @inheritDoc
      */
     #[Override]
-    protected static function getThrowableHandler(): ThrowableHandlerContract
+    public static function getThrowableHandler(): ThrowableHandlerContract
     {
         return new ThrowableHandler();
     }
