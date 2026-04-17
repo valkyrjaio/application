@@ -51,6 +51,7 @@
     "phpcsfixer-outdated-check-major-release"     : "cd .github/ci/phpcsfixer && composer install && composer outdated --direct",
     "phpcsfixer-composer-update"                  : "cd .github/ci/phpcsfixer && composer update",
     "phpstan"                                     : "cd .github/ci/phpstan && composer check",
+    "phpstan-baseline"                            : "cd .github/ci/phpstan && composer baseline",
     "phpstan-outdated-check"                      : "cd .github/ci/phpstan && composer install && composer outdated --direct --minor-only",
     "phpstan-outdated-check-major-release"        : "cd .github/ci/phpstan && composer install && composer outdated --direct",
     "phpstan-composer-update"                     : "cd .github/ci/phpstan && composer update",

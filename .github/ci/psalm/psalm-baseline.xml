@@ -1,3 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="6.16.1@">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
+  <file src="../../../app/src/App/Cli/Provider/DataServiceProvider.php">
+    <MixedArgument>
+      <code><![CDATA[new AppCliRoutingData()]]></code>
+      <code><![CDATA[new AppContainerData()]]></code>
+      <code><![CDATA[new AppEventData()]]></code>
+      <code><![CDATA[new AppHttpRoutingData()]]></code>
+    </MixedArgument>
+    <UndefinedClass>
+      <code><![CDATA[AppCliRoutingData]]></code>
+      <code><![CDATA[AppContainerData]]></code>
+      <code><![CDATA[AppEventData]]></code>
+      <code><![CDATA[AppHttpRoutingData]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="../../../app/src/App/Http/Provider/DataServiceProvider.php">
+    <MixedArgument>
+      <code><![CDATA[new AppContainerData()]]></code>
+      <code><![CDATA[new AppEventData()]]></code>
+      <code><![CDATA[new AppHttpRoutingData()]]></code>
+    </MixedArgument>
+    <UndefinedClass>
+      <code><![CDATA[AppContainerData]]></code>
+      <code><![CDATA[AppEventData]]></code>
+      <code><![CDATA[AppHttpRoutingData]]></code>
+    </UndefinedClass>
+  </file>
 </files>
