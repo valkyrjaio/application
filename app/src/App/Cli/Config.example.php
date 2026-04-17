@@ -48,8 +48,8 @@ final class Config extends CliConfig
         bool $debugMode = true,
         string $timezone = 'UTC',
         string $key = 'some_secret_app_key',
-        string $dataPath = 'App/Cli/Provider/Data',
-        string $dataNamespace = 'App\\Cli\\Provider\\Data',
+        string $dataPath = 'App/Cli/Data',
+        string $dataNamespace = 'App\\Cli\\Data',
         string $applicationName = 'cli',
         string $defaultCommandName = CommandName::LIST,
         array $providers = [
