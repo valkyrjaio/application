@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace App\Cli\Provider;
 
-use App\Cli\Controller\TestCommand;
+use App\Cli\Command\TestCommand;
 use Override;
 use Valkyrja\Cli\Interaction\Input\Contract\InputContract;
 use Valkyrja\Cli\Interaction\Output\Factory\Contract\OutputFactoryContract;

@@ -1,4 +1,4 @@
-<ruleset name="ValkyrjaProjectStandards">
+<ruleset name="ApplicationProjectStandards">
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
         <properties>
             <property name="rootNamespaces" type="array">

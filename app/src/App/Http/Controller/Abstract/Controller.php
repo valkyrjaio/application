@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Cli\Controller;
+namespace App\Http\Controller\Abstract;
 
-use Valkyrja\Cli\Routing\Controller\Controller as ValkyrjaController;
+use Valkyrja\Http\Routing\Controller\Controller as ValkyrjaController;
 
 abstract class Controller extends ValkyrjaController
 {

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
+use App\Http\Controller\Abstract\Controller;
 use App\Http\Provider\RouteProvider;
 use Valkyrja\Application\Kernel\Contract\ApplicationContract;
 use Valkyrja\Http\Message\Enum\RequestMethod;
@@ -24,6 +25,8 @@ use Valkyrja\Http\Message\Response\TextResponse;
 use Valkyrja\Http\Routing\Attribute\Parameter;
 use Valkyrja\Http\Routing\Attribute\Route;
 use Valkyrja\Http\Routing\Attribute\Route\Middleware;
+use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Get;
+use Valkyrja\Http\Routing\Attribute\Route\RequestMethod\Head;
 use Valkyrja\Http\Routing\Attribute\Route\RouteHandler;
 use Valkyrja\Http\Routing\Constant\Regex;
 use Valkyrja\Http\Routing\Data\Contract\RouteContract;
@@ -95,8 +98,8 @@ class HomeController extends Controller
     /**
      * Home action.
      */
-    #[Route\RequestMethod\Get]
-    #[Route\RequestMethod\Head]
+    #[Get]
+    #[Head]
     #[Route(path: '/home', name: 'home')]
     #[RouteHandler([RouteProvider::class, 'homeHandler'])]
     public function home(ViewResponseFactoryContract $responseFactory): ResponseContract

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -29,8 +29,6 @@ class Data extends Model
 
     /**
      * Getter for a property with extra logic.
-     *
-     * @return string
      */
     protected function getNeedsExtraLogic(): string
     {
@@ -42,9 +40,7 @@ class Data extends Model
     /**
      * Setter for a property with extra logic.
      *
-     * @param string $needsExtraLogic
      *
-     * @return void
      */
     protected function setNeedsExtraLogic(string $needsExtraLogic): void
     {

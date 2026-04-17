@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -23,7 +23,7 @@ use Valkyrja\Container\Provider\Contract\ServiceProviderContract;
 use Valkyrja\Event\Data\EventData;
 use Valkyrja\Http\Routing\Data\HttpRoutingData;
 
-final class DataProvider implements ServiceProviderContract
+final class DataServiceProvider implements ServiceProviderContract
 {
     /**
      * @inheritDoc
