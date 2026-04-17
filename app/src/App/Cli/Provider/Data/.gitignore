@@ -1,5 +1,5 @@
 *
-!ContainerDataProvider.example.php
-!CliRoutingDataProvider.example.php
-!EventDataProvider.example.php
-!HttpRoutingDataProvider.example.php
+!AppContainerData.example.php
+!AppCliRoutingData.example.php
+!AppEventData.example.php
+!AppHttpRoutingData.example.php
