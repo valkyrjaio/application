@@ -89,10 +89,13 @@ final class RouteProvider implements HttpRouteProviderContract
      */
     public static function dynamicHandler(ContainerContract $container, array $arguments): ResponseContract
     {
+        /** @var string $value */
+        $value = $arguments['value'] ?? 'default';
+
         return $container->getSingleton(HomeController::class)->dynamic(
             $container->getSingleton(RouteContract::class),
             $container->getSingleton(ViewResponseFactoryContract::class),
-            ...$arguments
+            $value
         );
     }
 

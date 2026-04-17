@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Throwable\Handler;
 
+use Override;
 use Valkyrja\Throwable\Handler\WhoopsThrowableHandler;
 
 use const E_ALL;
@@ -25,6 +26,7 @@ class ThrowableHandler extends WhoopsThrowableHandler
      * @param int  $errorReportingLevel [optional] The error reporting level
      * @param bool $displayErrors       [optional] Whether to display errors
      */
+    #[Override]
     public static function enable(int $errorReportingLevel = E_ALL, bool $displayErrors = false): void
     {
     }

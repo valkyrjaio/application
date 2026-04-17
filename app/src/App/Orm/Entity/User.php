@@ -76,6 +76,7 @@ class User extends Entity implements UserContract, DatedEntityContract, SoftDele
     /**
      * @inheritDoc
      */
+    #[Override]
     protected function internalGetCallables(): array
     {
         return [
@@ -86,6 +87,7 @@ class User extends Entity implements UserContract, DatedEntityContract, SoftDele
     /**
      * @inheritDoc
      */
+    #[Override]
     protected function internalSetCallables(): array
     {
         return [

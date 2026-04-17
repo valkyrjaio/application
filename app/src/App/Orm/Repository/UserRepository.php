@@ -13,8 +13,12 @@ declare(strict_types=1);
 
 namespace App\Orm\Repository;
 
+use App\Orm\Entity\User;
 use Valkyrja\Orm\Repository\Repository;
 
+/**
+ * @extends Repository<User>
+ */
 class UserRepository extends Repository
 {
     // We can do custom stuff for all User entities.
