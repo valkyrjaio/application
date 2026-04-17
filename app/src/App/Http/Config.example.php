@@ -59,8 +59,8 @@ final class Config extends HttpConfig implements ConfigContract
         bool $debugMode = true,
         string $timezone = 'UTC',
         string $key = 'some_secret_app_key',
-        string $dataPath = 'App/Http/Provider/Data',
-        string $dataNamespace = 'App\\Http\\Provider\\Data',
+        string $dataPath = 'App/Http/Data',
+        string $dataNamespace = 'App\\Http\\Data',
         array $providers = [
             HttpApplicationComponentProvider::class,
             ComponentProvider::class,

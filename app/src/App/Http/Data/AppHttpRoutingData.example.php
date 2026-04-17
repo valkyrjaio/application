@@ -13,16 +13,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Http\Provider\Data;
+namespace App\Http\Data;
 
-use Valkyrja\Container\Data\ContainerData;
+use Valkyrja\Http\Routing\Data\HttpRoutingData;
 
-final readonly class AppContainerData extends ContainerData
+final readonly class AppHttpRoutingData extends HttpRoutingData
 {
     public function __construct()
     {
         parent::__construct(
-            aliases: [],
+            routes: [],
         );
     }
 }

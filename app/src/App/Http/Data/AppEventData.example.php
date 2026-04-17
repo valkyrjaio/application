@@ -13,16 +13,17 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Http\Provider\Data;
+namespace App\Http\Data;
 
-use Valkyrja\Http\Routing\Data\HttpRoutingData;
+use Valkyrja\Event\Data\EventData;
 
-final readonly class AppHttpRoutingData extends HttpRoutingData
+final readonly class AppEventData extends EventData
 {
     public function __construct()
     {
         parent::__construct(
-            routes: [],
+            events: [],
+            listeners: [],
         );
     }
 }

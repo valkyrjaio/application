@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace App\Http\Provider;
 
-use App\Http\Provider\Data\AppContainerData;
-use App\Http\Provider\Data\AppEventData;
-use App\Http\Provider\Data\AppHttpRoutingData;
+use App\Http\Data\AppContainerData;
+use App\Http\Data\AppEventData;
+use App\Http\Data\AppHttpRoutingData;
 use Override;
 use Valkyrja\Container\Data\ContainerData;
 use Valkyrja\Container\Manager\Contract\ContainerContract;

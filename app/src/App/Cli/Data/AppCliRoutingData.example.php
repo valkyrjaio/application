@@ -13,11 +13,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Cli\Provider\Data;
+namespace App\Cli\Data;
 
-use Valkyrja\Http\Routing\Data\HttpRoutingData;
+use Valkyrja\Cli\Routing\Data\CliRoutingData;
 
-final readonly class AppHttpRoutingData extends HttpRoutingData
+final readonly class AppCliRoutingData extends CliRoutingData
 {
     public function __construct()
     {

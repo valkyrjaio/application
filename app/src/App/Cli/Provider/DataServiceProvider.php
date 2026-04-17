@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace App\Cli\Provider;
 
-use App\Cli\Provider\Data\AppCliRoutingData;
-use App\Cli\Provider\Data\AppContainerData;
-use App\Cli\Provider\Data\AppEventData;
-use App\Cli\Provider\Data\AppHttpRoutingData;
+use App\Cli\Data\AppCliRoutingData;
+use App\Cli\Data\AppContainerData;
+use App\Cli\Data\AppEventData;
+use App\Cli\Data\AppHttpRoutingData;
 use Override;
 use Valkyrja\Cli\Routing\Data\CliRoutingData;
 use Valkyrja\Container\Data\ContainerData;

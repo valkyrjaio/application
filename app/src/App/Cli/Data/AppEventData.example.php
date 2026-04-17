@@ -13,7 +13,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Http\Provider\Data;
+namespace App\Cli\Data;
 
 use Valkyrja\Event\Data\EventData;
 

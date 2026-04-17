@@ -13,17 +13,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Cli\Provider\Data;
+namespace App\Http\Data;
 
-use Valkyrja\Event\Data\EventData;
+use Valkyrja\Container\Data\ContainerData;
 
-final readonly class AppEventData extends EventData
+final readonly class AppContainerData extends ContainerData
 {
     public function __construct()
     {
         parent::__construct(
-            events: [],
-            listeners: [],
+            aliases: [],
         );
     }
 }

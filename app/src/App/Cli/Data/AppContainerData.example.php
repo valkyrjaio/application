@@ -13,16 +13,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Cli\Provider\Data;
+namespace App\Cli\Data;
 
-use Valkyrja\Cli\Routing\Data\CliRoutingData;
+use Valkyrja\Container\Data\ContainerData;
 
-final readonly class AppCliRoutingData extends CliRoutingData
+final readonly class AppContainerData extends ContainerData
 {
     public function __construct()
     {
         parent::__construct(
-            routes: [],
+            aliases: [],
         );
     }
 }
