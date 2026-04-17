@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -13,8 +13,12 @@ declare(strict_types=1);
 
 namespace App\Orm\Repository;
 
+use App\Orm\Entity\User;
 use Valkyrja\Orm\Repository\Repository;
 
+/**
+ * @extends Repository<User>
+ */
 class UserRepository extends Repository
 {
     // We can do custom stuff for all User entities.

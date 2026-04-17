@@ -1,0 +1,43 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Instantiated class App\\Cli\\Provider\\Data\\AppCliRoutingData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Cli/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Cli\\Provider\\Data\\AppContainerData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Cli/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Cli\\Provider\\Data\\AppEventData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Cli/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Cli\\Provider\\Data\\AppHttpRoutingData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Cli/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Http\\Provider\\Data\\AppContainerData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Http/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Http\\Provider\\Data\\AppEventData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Http/Provider/DataServiceProvider.php
+
+		-
+			message: '#^Instantiated class App\\Http\\Provider\\Data\\AppHttpRoutingData not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: ../../../app/src/App/Http/Provider/DataServiceProvider.php

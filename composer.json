@@ -11,7 +11,7 @@
   "require"           : {
     "php"               : ">=8.4",
     "monolog/monolog"   : "^3.10.0",
-    "valkyrja/valkyrja" : "^25.34.3"
+    "valkyrja/valkyrja" : "^26.1.0"
   },
   "require-dev"       : {
     "filp/whoops"     : "^2.18.4",
@@ -33,18 +33,52 @@
     }
   },
   "scripts"           : {
-    "post-root-package-install" : [
+    "post-root-package-install"                   : [
       "php -r \"file_exists('app/src/App/Http/Config.php') || copy('app/src/App/Http/Config.example.php', 'app/src/App/Http/Config.php');\"",
       "php -r \"file_exists('app/src/App/Cli/Config.php') || copy('app/src/App/Cli/Config.example.php', 'app/src/App/Cli/Config.php');\""
-    ]
+    ],
+    "phparkitect"                                 : "cd .github/ci/phparkitect && composer check",
+    "phparkitect-outdated-check"                  : "cd .github/ci/phparkitect && composer install && composer outdated --direct --minor-only",
+    "phparkitect-outdated-check-major-release"    : "cd .github/ci/phparkitect && composer install && composer outdated --direct",
+    "phparkitect-composer-update"                 : "cd .github/ci/phparkitect && composer update",
+    "phpcodesniffer"                              : "cd .github/ci/phpcodesniffer && composer check",
+    "phpcodesniffer-outdated-check"               : "cd .github/ci/phpcodesniffer && composer install && composer outdated --direct --minor-only",
+    "phpcodesniffer-outdated-check-major-release" : "cd .github/ci/phpcodesniffer && composer install && composer outdated --direct",
+    "phpcodesniffer-composer-update"              : "cd .github/ci/phpcodesniffer && composer update",
+    "phpcsfixer"                                  : "cd .github/ci/phpcsfixer && composer fix",
+    "phpcsfixer-check"                            : "cd .github/ci/phpcsfixer && composer check",
+    "phpcsfixer-outdated-check"                   : "cd .github/ci/phpcsfixer && composer install && composer outdated --direct --minor-only",
+    "phpcsfixer-outdated-check-major-release"     : "cd .github/ci/phpcsfixer && composer install && composer outdated --direct",
+    "phpcsfixer-composer-update"                  : "cd .github/ci/phpcsfixer && composer update",
+    "phpstan"                                     : "cd .github/ci/phpstan && composer check",
+    "phpstan-baseline"                            : "cd .github/ci/phpstan && composer baseline",
+    "phpstan-outdated-check"                      : "cd .github/ci/phpstan && composer install && composer outdated --direct --minor-only",
+    "phpstan-outdated-check-major-release"        : "cd .github/ci/phpstan && composer install && composer outdated --direct",
+    "phpstan-composer-update"                     : "cd .github/ci/phpstan && composer update",
+    "phpunit"                                     : "cd .github/ci/phpunit && composer check",
+    "phpunit-coverage"                            : "cd .github/ci/phpunit && composer coverage",
+    "phpunit-outdated-check"                      : "cd .github/ci/phpunit && composer install && composer outdated --direct --minor-only",
+    "phpunit-outdated-check-major-release"        : "cd .github/ci/phpunit && composer install && composer outdated --direct",
+    "phpunit-composer-update"                     : "cd .github/ci/phpunit && composer update",
+    "psalm"                                       : "cd .github/ci/psalm && composer check",
+    "psalm-no-cache"                              : "cd .github/ci/psalm && composer no-cache",
+    "psalm-shepherd"                              : "cd .github/ci/psalm && composer shepherd",
+    "psalm-shepherd-with-stats"                   : "cd .github/ci/psalm && composer shepherd-with-stats",
+    "psalm-stats"                                 : "cd .github/ci/psalm && composer stats",
+    "psalm-update-baseline"                       : "cd .github/ci/psalm && composer update-baseline",
+    "psalm-outdated-check"                        : "cd .github/ci/psalm && composer install && composer outdated --direct --minor-only",
+    "psalm-outdated-check-major-release"          : "cd .github/ci/psalm && composer install && composer outdated --direct",
+    "psalm-composer-update"                       : "cd .github/ci/psalm && composer update",
+    "rector"                                      : "cd .github/ci/rector && composer fix",
+    "rector-check"                                : "cd .github/ci/rector && composer check",
+    "rector-outdated-check"                       : "cd .github/ci/rector && composer install && composer outdated --direct --minor-only",
+    "rector-outdated-check-major-release"         : "cd .github/ci/rector && composer install && composer outdated --direct",
+    "rector-composer-update"                      : "cd .github/ci/rector && composer update",
+    "root-outdated-check"                         : "composer install && composer outdated --direct --minor-only",
+    "root-outdated-check-major-release"           : "composer install && composer outdated --direct"
   },
   "suggest"           : {
   },
   "minimum-stability" : "dev",
-  "prefer-stable"     : true,
-  "extra"             : {
-    "valkyrja" : {
-      "dont-discover" : []
-    }
-  }
+  "prefer-stable"     : true
 }

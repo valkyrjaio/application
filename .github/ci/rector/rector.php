@@ -11,11 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\Cli\Controller;
+use Valkyrja\Rector\Rules;
 
-use Valkyrja\Cli\Routing\Controller\Controller as ValkyrjaController;
-
-abstract class Controller extends ValkyrjaController
-{
-    // Implement application shared controller methods here then make sure all your controllers extends this one
-}
+return Rules::getConfig()
+    ->withAutoloadPaths([
+        __DIR__ . '/../../../vendor/autoload.php',
+    ])
+    ->withPaths([
+        __DIR__ . '/../../../app/src',
+        __DIR__ . '/../../../app/tests',
+    ]);

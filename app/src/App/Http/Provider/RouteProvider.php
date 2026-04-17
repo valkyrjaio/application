@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -89,10 +89,13 @@ final class RouteProvider implements HttpRouteProviderContract
      */
     public static function dynamicHandler(ContainerContract $container, array $arguments): ResponseContract
     {
+        /** @var string $value */
+        $value = $arguments['value'] ?? 'default';
+
         return $container->getSingleton(HomeController::class)->dynamic(
             $container->getSingleton(RouteContract::class),
             $container->getSingleton(ViewResponseFactoryContract::class),
-            ...$arguments
+            $value
         );
     }
 

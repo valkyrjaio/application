@@ -1,0 +1,57 @@
+name: Create a New Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version component to bump'
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+run-name: "Release ${{ inputs.bump }} bump on ${{ github.ref_name }}"
+
+permissions:
+  contents: write
+
+jobs:
+  check-version:
+    uses: valkyrjaio/.github/.github/workflows/_get-version-for-release.yml@master
+    secrets: inherit
+    with:
+      bump: ${{ inputs.bump }}
+
+  check-outdated-dependencies:
+    needs: check-version
+    uses: valkyrjaio/.github/.github/workflows/_check-outdated-php-dependencies.yml@master
+    secrets: inherit
+    with:
+      php-version: '8.4'
+      dependencies: |
+        [
+          {"name": "Root Packages",    "command": "root-outdated-check"},
+          {"name": "PHPArkitect",      "command": "phparkitect-outdated-check"},
+          {"name": "PHP Code Sniffer", "command": "phpcodesniffer-outdated-check"},
+          {"name": "PHP CS Fixer",     "command": "phpcsfixer-outdated-check"},
+          {"name": "PHPStan",          "command": "phpstan-outdated-check"},
+          {"name": "PHPUnit",          "command": "phpunit-outdated-check"},
+          {"name": "Psalm",            "command": "psalm-outdated-check"},
+          {"name": "Rector",           "command": "rector-outdated-check"}
+        ]
+
+  update-version-files:
+    needs: [check-outdated-dependencies, check-version]
+    uses: valkyrjaio/.github/.github/workflows/_update-version-files.yml@master
+    secrets: inherit
+    with:
+      version: ${{ needs.check-version.outputs.version }}
+
+  release:
+    needs: [update-version-files, check-version]
+    uses: valkyrjaio/.github/.github/workflows/_release.yml@master
+    secrets: inherit
+    with:
+      version: ${{ needs.check-version.outputs.version }}

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Application package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -36,7 +36,7 @@ final class ComponentProvider implements ComponentProviderContract
     public static function getContainerProviders(ApplicationContract $app): array
     {
         return [
-            DataProvider::class,
+            DataServiceProvider::class,
             ServiceProvider::class,
         ];
     }
@@ -83,6 +83,6 @@ final class ComponentProvider implements ComponentProviderContract
             return;
         }
 
-        DataProvider::publishContainerData(container: $container);
+        DataServiceProvider::publishContainerData(container: $container);
     }
 }

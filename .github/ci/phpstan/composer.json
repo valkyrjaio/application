@@ -1,0 +1,14 @@
+{
+  "require"           : {
+    "php" : ">=8.4"
+  },
+  "require-dev"       : {
+    "valkyrja/phpstan" : "^26.1.1"
+  },
+  "scripts"           : {
+    "check"    : "vendor/bin/phpstan --memory-limit=-1",
+    "baseline" : "vendor/bin/phpstan --memory-limit=-1 --generate-baseline"
+  },
+  "minimum-stability" : "dev",
+  "prefer-stable"     : true
+}
