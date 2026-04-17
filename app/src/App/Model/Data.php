@@ -39,8 +39,6 @@ class Data extends Model
 
     /**
      * Setter for a property with extra logic.
-     *
-     *
      */
     protected function setNeedsExtraLogic(string $needsExtraLogic): void
     {
