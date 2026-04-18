@@ -21,7 +21,7 @@ cleaning up the foundation.
     <a href="https://github.com/valkyrjaio/valkyrja-starter-app-php/actions/workflows/ci.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/valkyrja-starter-app-php/actions/workflows/ci.yml/badge.svg?branch=26.x" alt="CI Status"></a>
     <a href="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja-starter-app-php/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/valkyrja-starter-app-php/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
     <a href="https://shepherd.dev/github/valkyrjaio/valkyrja-starter-app-php"><img src="https://shepherd.dev/github/valkyrjaio/valkyrja-starter-app-php/coverage.svg" alt="Psalm Shepherd"></a>
-    <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_valkyrja-starter-app-php"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_valkyrja-starter-app-php&metric=sqale_rating" alt="Maintainability Rating" /></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_application"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_application&metric=sqale_rating" alt="Maintainability Rating" /></a>
 </p>
 
 What's in the Box
@@ -37,9 +37,6 @@ What's in the Box
   structure used across Valkyrja's own components
 - **Full CI pipeline** — PHPStan, Psalm, PHPCodeSniffer, PHP CS Fixer,
   PHPArkitect, and Rector all configured and passing on a clean clone
-- **Docker support** _(optional)_ — via
-  [`valkyrja-docker-php`][docker url] for containerized development and
-  deployment
 - **Worker runtime integrations** _(optional)_ — OpenSwoole, FrankenPHP, or
   RoadRunner for persistent-worker deployments
 
