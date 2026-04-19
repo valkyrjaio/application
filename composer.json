@@ -14,8 +14,7 @@
     "valkyrja/valkyrja" : "^26.1.0"
   },
   "require-dev"       : {
-    "filp/whoops"     : "^2.18.4",
-    "phpunit/phpunit" : "^13.1.7"
+    "filp/whoops"     : "^2.18.4"
   },
   "config"            : {
     "optimize-autoloader" : true,
